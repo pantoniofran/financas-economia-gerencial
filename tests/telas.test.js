@@ -179,6 +179,24 @@ test('texto: parágrafos separados e data em formato brasileiro', () => {
   assert.ok(html.includes('27/09/2020'));
 });
 
+test('endereço no meio de um texto vira link, sem levar a pontuação nem abrir brecha', () => {
+  const c = conteudoExemplo();
+  c.textos[0].corpo = 'Saiu no jornal: https://www.exemplo.com.br/noticia/escolhas-estrategicas/ , em 2013.\n\nVeja (https://exemplo.com/a?x=1&y=2). E "https://exemplo.com/b" <script>alert(1)</script>';
+  const html = ver('#t-financas-verdes', leitura, c);
+  assert.ok(html.includes('<a href="https://www.exemplo.com.br/noticia/escolhas-estrategicas/" target="_blank" rel="noopener">https://www.exemplo.com.br/noticia/escolhas-estrategicas/</a> , em 2013.'));
+  assert.ok(html.includes('(<a href="https://exemplo.com/a?x=1&amp;y=2" target="_blank" rel="noopener">https://exemplo.com/a?x=1&amp;y=2</a>).'));
+  assert.ok(html.includes('&quot;<a href="https://exemplo.com/b" target="_blank" rel="noopener">https://exemplo.com/b</a>&quot;'));
+  assert.ok(!html.includes('<script>alert'));
+});
+
+test('nome com barra pode quebrar depois da barra', () => {
+  const c = conteudoExemplo();
+  c.disciplinas[0].nome = 'Finanças Sustentáveis/Verdes';
+  assert.ok(ver('#inicio', leitura, c).includes('Finanças Sustentáveis/<wbr>Verdes'));
+  assert.ok(ver('#d-eg', leitura, c).includes('<h1>Finanças Sustentáveis/<wbr>Verdes</h1>'));
+  assert.ok(!ver('#d-eg', edicao, c).includes('<wbr>'));
+});
+
 test('capa e abertura só aparecem quando há mídia', () => {
   // A faixa de abertura existe sempre, com o resumo do site; a arte de fundo só com mídia.
   assert.match(ver('#inicio'), /class="abertura-resumo">2 disciplinas · 3 aulas · 2 materiais</);

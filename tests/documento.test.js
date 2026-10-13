@@ -30,6 +30,12 @@ test('corpoDaPagina tem os quatro blocos com os ids que o programa lê', () => {
   assert.deepEqual(JSON.parse(dados), { nome: '</script><b>oi</b>' });
 });
 
+test('as fontes vêm depois do programa, para não segurar a primeira tela', () => {
+  const html = corpoDaPagina(partes());
+  assert.ok(html.indexOf('<link rel="stylesheet"') > html.indexOf('id="programa"'));
+  assert.ok(html.endsWith('display=swap">'));
+});
+
 test('corpoDaPagina fecha exatamente três tags script', () => {
   assert.equal(corpoDaPagina(partes()).split('</script>').length - 1, 3);
 });

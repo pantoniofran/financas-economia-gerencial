@@ -200,7 +200,6 @@ function tocar(botao) {
   quadro.className = 'player';
   quadro.src = `https://www.youtube-nocookie.com/embed/${botao.dataset.yt}?autoplay=1&rel=0`;
   quadro.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
-  quadro.allowFullscreen = true;
   quadro.title = botao.getAttribute('aria-label');
   botao.replaceWith(quadro);
 }
@@ -267,6 +266,11 @@ function aoDigitar(e) {
     mudar({ op: 'gravar', caminho: el.dataset.campo, valor }, { semDesenho: true });
   } else if (estado.formulario && el.form?.id === 'form-material' && (el.name === 'url' || el.name === 'nome')) {
     estado.formulario[el.name] = el.value;
+    // Quem está corrigindo o campo não precisa continuar vendo o erro antigo. Sem redesenhar, para não perder o cursor.
+    if (estado.formulario.erro) {
+      estado.formulario.erro = '';
+      app.querySelector('#form-material .erro')?.remove();
+    }
   }
 }
 

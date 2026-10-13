@@ -17,12 +17,14 @@ export function jsonSeguro(valor) {
 export function corpoDaPagina({ titulo, fontes, css, js, conteudo, config }) {
   return (
     `<title>${escHtml(titulo)}</title>` +
-    (fontes ? `<link rel="stylesheet" href="${escHtml(fontes)}">` : '') +
     `<style id="estilo">${css}</style>` +
     `<div id="app"></div>` +
     `<script type="application/json" id="conteudo">${jsonSeguro(conteudo)}<\/script>` +
     `<script type="application/json" id="config">${jsonSeguro(config)}<\/script>` +
-    `<script id="programa">${js}<\/script>`
+    `<script id="programa">${js}<\/script>` +
+    // As fontes vêm por último: uma folha de estilo externa antes do programa seguraria a
+    // primeira tela até o servidor de fontes responder. Assim o site aparece e as fontes entram depois.
+    (fontes ? `<link rel="stylesheet" href="${escHtml(fontes)}">` : '')
   );
 }
 

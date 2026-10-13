@@ -3,3 +3,4 @@ node_modules/
 dist/
 migracao/bruto/html/
 midia/bruto/
+.gstack/

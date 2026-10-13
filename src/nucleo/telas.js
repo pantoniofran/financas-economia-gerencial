@@ -19,8 +19,18 @@ export function interpretarRota(hash) {
 
 const tem = (v) => Boolean(String(v ?? '').trim());
 
+// Endereço escrito no meio do texto vira link. Roda sobre o texto já escapado, então não abre brecha para HTML.
+// O endereço para em aspas e sinais já escapados (&#39; &quot; &lt; &gt;) e não leva a pontuação do fim da frase.
+const comLinks = (escapado) => escapado.replace(/https?:\/\/(?:(?!&(?:#39|quot|lt|gt);)[^\s<>"'])+/g, (achado) => {
+  const url = achado.replace(/[.,;:!?)]+$/, '');
+  return `<a href="${url}" target="_blank" rel="noopener">${url}</a>${achado.slice(url.length)}`;
+});
+
 const paragrafos = (t) => String(t ?? '').split(/\n{2,}/).map((p) => p.trim()).filter(Boolean)
-  .map((p) => `<p>${esc(p).replace(/\n/g, '<br>')}</p>`).join('');
+  .map((p) => `<p>${comLinks(esc(p)).replace(/\n/g, '<br>')}</p>`).join('');
+
+// Nome com barra ("Sustentáveis/Verdes") pode quebrar depois da barra, e não no meio da palavra.
+const nomeQuebravel = (t) => esc(t).replace(/\//g, '/<wbr>');
 
 // Texto de uma linha: em leitura devolve o texto; em edição, um trecho editável ligado ao caminho.
 function campo(caminho, valor, ctx, vazio) {
@@ -148,7 +158,7 @@ function telaInicio(c, ctx) {
     const capa = ctx.midia[`capa-${d.id}`];
     const nAvisos = avisosValidos(d.avisos, ctx.hoje).length;
     const info = d.modulos.length ? `${plural(d.modulos.length, 'módulo', 'módulos')} · ${plural(contarAulas(d), 'aula', 'aulas')}` : '';
-    return `<li><a class="caixa${capa ? ' com-arte' : ''}" href="#d-${d.id}">${capa ? `<img src="${esc(capa)}" alt="" loading="lazy" width="1280" height="720">` : ''}<span class="caixa-corpo"><span class="caixa-titulo">${esc(d.nome)}</span>${info ? `<span class="caixa-info">${info}</span>` : ''}${nAvisos ? `<span class="caixa-destaque">${plural(nAvisos, 'aviso', 'avisos')}</span>` : ''}<span class="caixa-acao">Ver aulas ›</span></span></a></li>`;
+    return `<li><a class="caixa${capa ? ' com-arte' : ''}" href="#d-${d.id}">${capa ? `<img src="${esc(capa)}" alt="" loading="lazy" width="1280" height="720">` : ''}<span class="caixa-corpo"><span class="caixa-titulo">${nomeQuebravel(d.nome)}</span>${info ? `<span class="caixa-info">${info}</span>` : ''}${nAvisos ? `<span class="caixa-destaque">${plural(nAvisos, 'aviso', 'avisos')}</span>` : ''}<span class="caixa-acao">Ver aulas ›</span></span></a></li>`;
   };
   const nivel = (chave) => {
     const lista = c.disciplinas.filter((d) => d.nivel === chave);
@@ -224,7 +234,7 @@ function telaDisciplina(c, id, ctx) {
   const indice = ctx.editando || d.modulos.length < 3 ? '' : `<nav aria-label="Módulos desta disciplina"><ul class="caixas compactas indice">${d.modulos.map((m, im) => `<li><button type="button" class="caixa" data-ir="m-${m.id}"><span class="caixa-info">Módulo ${im + 1} · ${plural(m.aulas.filter((a) => tem(a.titulo)).length, 'aula', 'aulas')}</span><span class="caixa-titulo">${esc(m.titulo)}</span></button></li>`).join('')}</ul></nav>`;
   return `<div class="col">
 ${capa ? `<div class="capa"><img src="${esc(capa)}" alt="" width="1280" height="720"></div>` : ''}<p class="eye"><a href="#inicio">‹ Disciplinas</a> · ${NIVEIS[d.nivel]}</p>
-<h1>${campo(`${base}.nome`, d.nome, ctx, 'Nome da disciplina')}</h1>
+<h1>${ctx.editando ? campo(`${base}.nome`, d.nome, ctx, 'Nome da disciplina') : nomeQuebravel(d.nome)}</h1>
 ${avisos(d, base, ctx)}${ficha(d, base, ctx)}${indice}
 ${d.modulos.map((m, im) => modulo(m, im, d, base, ctx)).join('')}
 ${d.modulos.length || ctx.editando ? '' : '<p class="suave">As aulas desta disciplina ainda não foram publicadas.</p>'}
