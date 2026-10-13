@@ -24,10 +24,11 @@ function fundoMaisEscuro(arquivo, instantes = [0]) {
 const branquear = ([r, g, b], folga) => `colorlevels=rimax=${(r * folga / 255).toFixed(3)}:gimax=${(g * folga / 255).toFixed(3)}:bimax=${(b * folga / 255).toFixed(3)}`;
 
 for (const id of ['eg', 'fc1', 'fc2', 'sem', 'pfc', 'aep', 'fv']) {
-  const origem = `${BRUTO}/capa-${id}.png`;
+  // As capas (segunda versão) são ilustrações cheias, com o assunto da disciplina: só redimensionar.
+  const origem = `${BRUTO}/v2/capa-${id}.png`;
   if (!existsSync(origem)) { console.log(`capa-${id}: sem original, pulada`); continue; }
   const destino = `midia/capa-${id}.webp`;
-  ff('-i', origem, '-vf', `${branquear(fundoMaisEscuro(origem), 0.95)},scale=1280:720`, '-c:v', 'libwebp', '-quality', '78', destino);
+  ff('-i', origem, '-vf', 'scale=1200:675', '-c:v', 'libwebp', '-quality', '72', destino);
   console.log(`${destino}: ${Math.round(statSync(destino).size / 1024)} KB`);
 }
 

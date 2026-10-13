@@ -5,7 +5,8 @@
   --verde: #1d5a44; --sobre-verde: #fbfcfa; --erro: #9a3412;
   --palco: #141b17; --sobre-palco: #f4f7f5; --sombra: rgba(20, 27, 23, .55);
   /* As ilustrações são traço verde sobre branco: no claro o branco some por multiplicação; no escuro a imagem é invertida e o preto some. */
-  --arte-filtro: none; --arte-mistura: multiply;
+  --faixa: #143f30; --sobre-faixa: #f4f7f1; --faixa-suave: #b4cfc1;
+  --ouro: #855710; --ouro-claro: #e9bf6b; --ouro-fundo: #f6ecd6;
 
   /* Tipo: cinco tamanhos, com razão de cerca de 1,25 entre eles, mais um para leitura longa. */
   --serifa: 'Literata', Georgia, 'Times New Roman', serif;
@@ -33,7 +34,7 @@
     --fundo: #111613; --papel: #1a221d; --tinta: #e8eee9; --suave: #9aa8a0; --linha: #2a342e;
     --verde: #86c9ab; --sobre-verde: #111613; --erro: #f0a27c;
     --palco: #0b0f0d; --sobre-palco: #f4f7f5; --sombra: rgba(0, 0, 0, .65);
-    --arte-filtro: invert(1) hue-rotate(180deg); --arte-mistura: screen;
+    --faixa: #0f2e23; --sobre-faixa: #f4f7f1; --faixa-suave: #a9c7b8; --ouro: #e3b55a; --ouro-claro: #e9bf6b; --ouro-fundo: #2a2415;
     --entrelinha: 1.62;
     color-scheme: dark;
   }
@@ -42,7 +43,7 @@
   --fundo: #111613; --papel: #1a221d; --tinta: #e8eee9; --suave: #9aa8a0; --linha: #2a342e;
   --verde: #86c9ab; --sobre-verde: #111613; --erro: #f0a27c;
   --palco: #0b0f0d; --sobre-palco: #f4f7f5; --sombra: rgba(0, 0, 0, .65);
-  --arte-filtro: invert(1) hue-rotate(180deg); --arte-mistura: screen;
+  --faixa: #0f2e23; --sobre-faixa: #f4f7f1; --faixa-suave: #a9c7b8; --ouro: #e3b55a; --ouro-claro: #e9bf6b; --ouro-fundo: #2a2415;
   --entrelinha: 1.62;
   color-scheme: dark;
 }
@@ -84,7 +85,8 @@ small { font-size: var(--t-meta); }
 .topo nav a[aria-current] { background: var(--tinta); border-color: var(--tinta); color: var(--fundo); }
 .col { max-width: calc(var(--largura) + 2 * var(--margem)); margin-inline: auto; padding-inline: var(--margem); padding-block: clamp(var(--e5), 6vw, var(--e7)); display: grid; gap: var(--e5); }
 .col > * { min-width: 0; }
-.col.larga { max-width: calc(62rem + 2 * var(--margem)); }
+.col.larga { max-width: calc(62rem + 2 * var(--margem)); gap: var(--e6); }
+.col.larga section { gap: var(--e4); }
 .col section { display: grid; gap: var(--e3); }
 .rodape { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--e2) var(--e5); padding: var(--e5) var(--margem); border-top: 1px solid var(--linha); font-size: var(--t-meta); color: var(--suave); }
 
@@ -93,49 +95,79 @@ small { font-size: var(--t-meta); }
 .caixas { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 13.5rem), 1fr)); gap: var(--e3); }
 .caixas.compactas { grid-template-columns: repeat(auto-fill, minmax(min(100%, 12.5rem), 1fr)); }
 .caixas.uma { grid-template-columns: 1fr; }
+/* Índice de módulos: quatro por linha no desktop e dois no celular, para a disciplina inteira caber à vista. */
+.caixas.indice { grid-template-columns: repeat(auto-fill, minmax(min(100%, 9.5rem), 1fr)); }
+.caixas.indice .caixa { padding: var(--e3); }
+/* Palavra longa numa caixa estreita quebra com hífen ("Desenvolvi-mento"), e não no meio da sílaba. */
+.caixas.indice .caixa-titulo { font-size: var(--t-corpo); overflow-wrap: break-word; hyphens: auto; }
 .caixa { display: flex; flex-direction: column; gap: var(--e1); width: 100%; height: 100%; min-height: 3.5rem; padding: var(--e4); border: 1px solid var(--linha); border-radius: var(--raio); background: var(--fundo); color: var(--tinta); font: inherit; text-align: left; text-decoration: none; transition: border-color var(--rapido) var(--saida), background-color var(--rapido) var(--saida), transform var(--rapido) var(--saida); }
 .caixa:hover { border-color: var(--verde); background: var(--papel); }
 .caixa:active { transform: scale(.985); }
-.caixa img { display: block; height: 76px; width: auto; align-self: flex-start; margin: 0 0 var(--e1) -5%; filter: var(--arte-filtro); mix-blend-mode: var(--arte-mistura); }
+.caixa:hover { transform: translateY(-2px); }
+.caixa:active { transform: scale(.985); }
 .caixa-corpo { display: flex; flex-direction: column; gap: var(--e1); flex: 1; min-width: 0; }
 .caixa-titulo { font: 500 var(--t-titulo)/1.25 var(--serifa); text-wrap: balance; overflow-wrap: anywhere; }
 .caixas.compactas .caixa-titulo { font-size: var(--t-leitura); }
 .caixa-info { font-size: var(--t-meta); color: var(--suave); }
 .caixa-texto { color: var(--suave); text-wrap: pretty; }
-.caixa-destaque { align-self: flex-start; padding: 0 var(--e2); border-radius: 999px; background: var(--verde); color: var(--sobre-verde); font-size: var(--t-meta); font-weight: 600; }
+.caixa-destaque { align-self: flex-start; padding: 0 var(--e2); border-radius: 999px; background: var(--ouro-fundo); color: var(--ouro); font-size: var(--t-meta); font-weight: 600; }
 .caixa-acao { margin-top: auto; padding-top: var(--e2); font-size: var(--t-meta); font-weight: 600; color: var(--verde); }
 /* Aviso: fundo tingido em vez de borda, para se destacar das caixas de navegação. */
-.caixa-aviso { background: var(--papel); border-color: var(--papel); }
-.caixa-aviso .caixa-info { color: var(--verde); font-weight: 600; }
+.caixa-aviso { background: var(--ouro-fundo); border-color: var(--ouro-fundo); }
+.caixa-aviso .caixa-info { color: var(--ouro); font-weight: 600; }
+.caixa-aviso:hover { background: var(--ouro-fundo); border-color: var(--ouro); }
+/* Ícone do tipo de material: nos botões, ao lado do nome; nas caixas, no topo. */
+.ic { flex: none; width: 1.125rem; height: 1.125rem; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+.caixa-material .ic { width: 1.75rem; height: 1.75rem; margin-bottom: var(--e1); color: var(--verde); }
+/* Título de seção do Início: grande, com a contagem ao lado. */
+.secao { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--e1) var(--e3); font: 500 var(--t-secao)/1.2 var(--serifa); letter-spacing: -.005em; }
+.secao small { font: 400 var(--t-meta) var(--sans); letter-spacing: 0; }
+/* As caixas sobem alguns pixels ao aparecer, uma depois da outra. Só posição: o conteúdo nunca fica invisível. */
+@keyframes subir { from { transform: translateY(12px); } }
+.caixas > li { animation: subir .5s var(--saida) backwards; }
+.caixas > li:nth-child(2) { animation-delay: .04s; }
+.caixas > li:nth-child(3) { animation-delay: .08s; }
+.caixas > li:nth-child(4) { animation-delay: .12s; }
+.caixas > li:nth-child(n+5) { animation-delay: .16s; }
 /* No celular a ilustração vai ao lado do texto, para caberem mais disciplinas na primeira tela. */
 /* Em linha, a seta à direita faz o papel do "Ver aulas", e o título cabe numa linha só. */
-.caixa.com-arte { flex-direction: row; align-items: center; gap: var(--e3); padding-block: var(--e3); }
-.caixa.com-arte img { height: 48px; margin: 0 0 0 calc(-1 * var(--e2)); flex: none; }
+.caixa.com-arte { flex-direction: row; align-items: stretch; gap: 0; padding: 0; overflow: hidden; }
+.caixa.com-arte img { display: block; flex: none; width: 108px; height: auto; align-self: stretch; object-fit: cover; transition: transform .5s var(--saida); }
+.caixa.com-arte:hover img { transform: scale(1.05); }
+.caixa.com-arte .caixa-corpo { justify-content: center; padding: var(--e3) var(--e4); }
 .caixa.com-arte .caixa-titulo { font-size: var(--t-leitura); text-wrap: wrap; }
-.caixa.com-arte .caixa-acao { display: none; }
-.caixa.com-arte::after { content: '›'; flex: none; color: var(--verde); font: 400 var(--t-secao)/1 var(--serifa); }
+.caixa.com-arte .caixa-acao { padding-top: 0; }
 @media (min-width: 40rem) {
-  .caixa.com-arte { flex-direction: column; align-items: stretch; gap: var(--e1); padding-block: var(--e4); }
-  .caixa.com-arte img { height: 76px; margin: 0 0 var(--e1) -5%; }
+  .caixa.com-arte { flex-direction: column; }
+  .caixa.com-arte img { width: 100%; aspect-ratio: 16 / 10; align-self: auto; }
+  .caixa.com-arte .caixa-corpo { justify-content: flex-start; padding: var(--e4); }
   .caixa.com-arte .caixa-titulo { font-size: var(--t-titulo); text-wrap: balance; }
-  .caixa.com-arte .caixa-acao { display: block; }
-  .caixa.com-arte::after { content: none; }
+  .caixa.com-arte .caixa-acao { padding-top: var(--e2); }
 }
 
 /* Imagens de abertura e capa */
-.abertura, .capa { position: relative; overflow: hidden; isolation: isolate; background: var(--fundo); }
-.abertura img, .abertura video, .capa img { filter: var(--arte-filtro); mix-blend-mode: var(--arte-mistura); }
+/* Faixa de abertura: verde cheio, texto claro e, ao fundo, as curvas em movimento. */
+.abertura { position: relative; overflow: hidden; isolation: isolate; background: var(--faixa); color: var(--sobre-faixa); }
+.abertura-texto { position: relative; display: grid; gap: var(--e3); max-width: calc(62rem + 2 * var(--margem)); margin-inline: auto; padding: clamp(var(--e6), 7vw, 5rem) var(--margem); }
+.abertura .eye { color: var(--ouro-claro); }
+.abertura h1 { max-width: 17ch; font-size: clamp(2.25rem, 1.5rem + 3.6vw, 3.75rem); }
+.abertura-resumo { color: var(--faixa-suave); }
+.abertura .ed { outline-color: var(--faixa-suave); }
+.abertura .ed:hover { background: none; }
+/* As curvas são verdes sobre branco no arquivo: invertidas, ficam claras, e o fundo some sobre o verde. */
+/* A opacidade vai na imagem, e não no contêiner: um contêiner translúcido isolaria a mistura e o fundo preto apareceria. */
+.abertura-arte { position: absolute; inset: 0; --arte-opacidade: .45; }
+@media (min-width: 48rem) { .abertura-arte { left: 38%; --arte-opacidade: .7; } }
+.abertura-arte img, .abertura-arte video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: var(--arte-opacidade); filter: invert(1) hue-rotate(180deg); mix-blend-mode: screen; transition: opacity .8s var(--saida); }
 /* Abertura baixa: as caixas das disciplinas precisam aparecer sem rolar. */
-.abertura img { display: block; width: 100%; height: auto; aspect-ratio: 8 / 3; max-height: min(26vh, 220px); object-fit: cover; transition: opacity .8s var(--saida); }
-.abertura video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .8s var(--saida); }
-.abertura.tocando video { opacity: 1; }
-.abertura.tocando img { opacity: 0; }
+.abertura-arte video { opacity: 0; }
+.abertura-arte.tocando video { opacity: var(--arte-opacidade); }
+.abertura-arte.tocando img { opacity: 0; }
 /* A capa é uma ilustração pequena acima do título, alinhada à coluna. */
-.capa img { display: block; height: clamp(104px, 20vw, 176px); width: auto; margin-left: -4%; }
+.capa { overflow: hidden; border-radius: var(--raio); background: var(--papel); }
+.capa img { display: block; width: 100%; height: auto; aspect-ratio: 21 / 9; object-fit: cover; }
 @media (max-width: 40rem) {
-  main .abertura img { max-height: 104px; }
   main .col.larga { padding-block: var(--e5) var(--e6); }
-  .col.larga > h1 { font-size: var(--t-secao); }
 }
 
 /* Listas (modo de edição) */
@@ -149,9 +181,9 @@ small { font-size: var(--t-meta); }
 
 /* Avisos e ficha */
 .avisos { display: grid; gap: var(--e2); }
-.aviso { display: flex; justify-content: space-between; gap: var(--e3); background: var(--papel); border-radius: var(--raio); padding: var(--e3) var(--e4); }
+.aviso { display: flex; justify-content: space-between; gap: var(--e3); background: var(--ouro-fundo); border-radius: var(--raio); padding: var(--e3) var(--e4); }
 .aviso > div { min-width: 0; flex: 1; }
-.aviso b { display: block; font: 600 var(--t-meta)/1.4 var(--sans); letter-spacing: .07em; text-transform: uppercase; color: var(--verde); }
+.aviso b { display: block; font: 600 var(--t-meta)/1.4 var(--sans); letter-spacing: .07em; text-transform: uppercase; color: var(--ouro); }
 .aviso .ate { display: block; font-size: var(--t-meta); margin-top: var(--e2); }
 .ficha { border-top: 1px solid var(--linha); gap: 0; }
 .ficha details { border-bottom: 1px solid var(--linha); }
@@ -167,7 +199,7 @@ small { font-size: var(--t-meta); }
 .col section.modulo:focus { outline: 0; border-color: var(--verde); }
 .linha-titulo { display: flex; justify-content: space-between; align-items: baseline; gap: var(--e3); }
 .linha-titulo h2 { min-width: 0; }
-.num { color: var(--verde); }
+.num { display: inline-grid; place-items: center; width: 2rem; height: 2rem; margin-right: var(--e3); border-radius: 50%; background: var(--faixa); color: var(--sobre-faixa); font: 600 var(--t-meta)/1 var(--sans); letter-spacing: 0; vertical-align: .25em; }
 .aulas { border-top: 1px solid var(--linha); }
 .aula { display: flex; justify-content: space-between; gap: var(--e3); padding: var(--e4) 0; border-bottom: 1px solid var(--linha); }
 .aula:last-child { border-bottom: 0; }
@@ -189,7 +221,6 @@ a.chip:active, button.chip:active { transform: scale(.97); }
 .player { position: relative; display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; padding: 0; border-radius: var(--raio); overflow: hidden; background: var(--palco); color: var(--sobre-palco); text-decoration: none; }
 .player img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .5; }
 /* No player o fundo é sempre escuro, então a ilustração entra sempre invertida. */
-.player img.arte { filter: invert(1) hue-rotate(180deg); mix-blend-mode: screen; opacity: .85; }
 .play { position: absolute; left: 50%; top: 50%; width: 64px; height: 64px; margin: -32px 0 0 -32px; border-radius: 50%; background: var(--sobre-palco); transition: transform var(--rapido) var(--saida); }
 /* O triângulo fica 2 px à direita do centro geométrico: é onde ele parece centrado. */
 .play::after { content: ''; position: absolute; left: 26px; top: 20px; border-left: 18px solid var(--palco); border-top: 12px solid transparent; border-bottom: 12px solid transparent; }

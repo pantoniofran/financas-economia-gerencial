@@ -82,11 +82,23 @@ function formato(mat) {
   return 'Link';
 }
 
+// Um desenho por tipo de material, para o aluno reconhecer de relance. Sempre acompanhado do nome.
+const ICONES = {
+  slides: '<rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M12 16v4M8 20h8"/>',
+  notas: '<path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/>',
+  video: '<circle cx="12" cy="12" r="9"/><path d="M10 8.5v7l6-3.5z" fill="currentColor" stroke="none"/>',
+  exercicios: '<path d="M10 6h10M10 12h10M10 18h10"/><path d="M3.5 6l1.2 1.2L7 5M3.5 12l1.2 1.2L7 11M3.5 18l1.2 1.2L7 17"/>',
+  planilha: '<rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M3 10h18M3 15h18M9 4v16"/>',
+  codigo: '<path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 6l-3 12"/>',
+  link: '<path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/>',
+};
+const icone = (tipo) => `<svg class="ic" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">${ICONES[tipo] ?? ICONES.link}</svg>`;
+
 // Caixa de material: o que é e de onde vem, com a área inteira clicável.
 // O tipo só aparece quando o nome não o diz: "Slides da aula" já basta, "Sorvete" precisa de "Planilha".
 function caixaDoMaterial(mat) {
   const info = mat.nome === TIPOS[mat.tipo]?.nome ? formato(mat) : `${esc(rotuloDoTipo(mat))} · ${formato(mat)}`;
-  return `<li><a class="caixa" href="${esc(mat.url)}" target="_blank" rel="noopener"><span class="caixa-info">${info}</span><span class="caixa-titulo">${esc(mat.nome)}</span><span class="caixa-acao">Abrir ↗<span class="sr"> em nova aba</span></span></a></li>`;
+  return `<li><a class="caixa caixa-material" href="${esc(mat.url)}" target="_blank" rel="noopener">${icone(mat.tipo)}<span class="caixa-info">${info}</span><span class="caixa-titulo">${esc(mat.nome)}</span><span class="caixa-acao">Abrir ↗<span class="sr"> em nova aba</span></span></a></li>`;
 }
 
 function cabecalho(c, rota) {
@@ -113,13 +125,21 @@ const tela404 = () => '<div class="col"><h1>Página não encontrada</h1><p>O end
 
 // ---------- início ----------
 
-function abertura(ctx) {
+// Faixa de abertura: quem é, o que tem no site e, ao fundo, as curvas em movimento.
+function abertura(c, ctx) {
   const m = ctx.midia;
-  if (!m.poster) return '';
   const video = m.hero && !ctx.editando
     ? `<video muted loop playsinline preload="none" aria-hidden="true" data-src="${esc(m.hero)}"></video>`
     : '';
-  return `<div class="abertura"><img src="${esc(m.poster)}" alt="" width="1600" height="600">${video}</div>`;
+  const arte = m.poster ? `<div class="abertura-arte"><img src="${esc(m.poster)}" alt="" width="1280" height="480">${video}</div>` : '';
+  const aulas = c.disciplinas.reduce((n, d) => n + contarAulas(d), 0);
+  const materiais = c.disciplinas.reduce((n, d) => n + d.modulos.reduce((k, mo) => k + mo.aulas.reduce((j, a) => j + a.materiais.length, 0), 0), 0);
+  const resumo = [plural(c.disciplinas.length, 'disciplina', 'disciplinas'), plural(aulas, 'aula', 'aulas'), plural(materiais, 'material', 'materiais')].join(' · ');
+  return `<div class="abertura">${arte}<div class="abertura-texto">
+<p class="eye">${esc(c.site.professor)} · ${esc(c.site.instituicao)}</p>
+<h1>${campo('site.chamada', c.site.chamada, ctx, 'Frase de abertura')}</h1>
+<p class="abertura-resumo">${resumo}</p>
+</div></div>`;
 }
 
 function telaInicio(c, ctx) {
@@ -133,7 +153,7 @@ function telaInicio(c, ctx) {
   const nivel = (chave) => {
     const lista = c.disciplinas.filter((d) => d.nivel === chave);
     if (!lista.length) return '';
-    return `<section><h2 class="eye">${NIVEIS[chave]}</h2><ul class="caixas">${lista.map(caixaDaDisciplina).join('')}</ul></section>`;
+    return `<section><h2 class="secao">${NIVEIS[chave]} <small>${plural(lista.length, 'disciplina', 'disciplinas')}</small></h2><ul class="caixas">${lista.map(caixaDaDisciplina).join('')}</ul></section>`;
   };
   const nLab = c.laboratorio.reduce((n, g) => n + g.itens.length, 0);
   const nTextos = c.textos.filter((t) => tem(t.titulo)).length;
@@ -143,12 +163,10 @@ function telaInicio(c, ctx) {
     ['pesquisa', 'Pesquisa', `${plural(c.pesquisa.projetos.length, 'projeto', 'projetos')} · ${plural(c.pesquisa.publicacoes.length, 'publicação', 'publicações')}`],
     ['sobre', 'Sobre o professor', 'Formação, orientações e contato'],
   ];
-  return `${abertura(ctx)}<div class="col larga">
-<p class="eye">${esc(c.site.professor)} · ${esc(c.site.instituicao)}</p>
-<h1>${campo('site.chamada', c.site.chamada, ctx, 'Frase de abertura')}</h1>
-${recentes.length ? `<section><h2 class="eye">Avisos</h2><ul class="caixas">${recentes.map(({ disciplina, aviso }) => `<li><a class="caixa caixa-aviso" href="#d-${disciplina.id}"><span class="caixa-info">${esc(disciplina.nome)}</span><span class="caixa-titulo">${esc(aviso.texto)}</span></a></li>`).join('')}</ul></section>` : ''}
+  return `${abertura(c, ctx)}<div class="col larga">
+${recentes.length ? `<section><h2 class="secao">Avisos</h2><ul class="caixas">${recentes.map(({ disciplina, aviso }) => `<li><a class="caixa caixa-aviso" href="#d-${disciplina.id}"><span class="caixa-info">${esc(disciplina.nome)}</span><span class="caixa-titulo">${esc(aviso.texto)}</span></a></li>`).join('')}</ul></section>` : ''}
 ${nivel('graduacao')}${nivel('pos')}
-<section><h2 class="eye">Mais no site</h2><ul class="caixas compactas">${atalhos.map(([r, nome, info]) => `<li><a class="caixa" href="#${r}"><span class="caixa-titulo">${nome}</span><span class="caixa-info">${info}</span></a></li>`).join('')}</ul></section>
+<section><h2 class="secao">Mais no site</h2><ul class="caixas compactas">${atalhos.map(([r, nome, info]) => `<li><a class="caixa" href="#${r}"><span class="caixa-titulo">${nome}</span><span class="caixa-info">${info}</span></a></li>`).join('')}</ul></section>
 </div>`;
 }
 
@@ -173,7 +191,7 @@ function ficha(d, base, ctx) {
 
 function chip(mat, lista, k, ctx) {
   if (!ctx.editando) {
-    return `<a class="chip" href="${esc(mat.url)}" target="_blank" rel="noopener" title="${esc(mat.nome)}">${esc(rotuloDoChip(mat))}<span class="sr"> (${esc(mat.nome)}, abre em nova aba)</span></a>`;
+    return `<a class="chip" href="${esc(mat.url)}" target="_blank" rel="noopener" title="${esc(mat.nome)}">${icone(mat.tipo)}${esc(rotuloDoChip(mat))}<span class="sr"> (${esc(mat.nome)}, abre em nova aba)</span></a>`;
   }
   const alvo = `data-lista="${lista}" data-i="${k}"`;
   if (ctx.confirmando === `${lista}.${k}`) {
@@ -193,7 +211,7 @@ function linhaDaAula(a, ia, m, bm, ctx) {
 function modulo(m, im, d, base, ctx) {
   const bm = `${base}.modulos.${im}`;
   const aulas = m.aulas.map((a, ia) => ({ a, ia })).filter(({ a }) => ctx.editando || tem(a.titulo));
-  return `<section class="modulo" id="m-${m.id}" tabindex="-1"><div class="linha-titulo"><h2><span class="num">${im + 1}.</span> ${campo(`${bm}.titulo`, m.titulo, ctx, 'Título do módulo')}</h2>${ferramentas(`${base}.modulos`, im, d.modulos.length, ctx, 'módulo')}</div><ol class="aulas">${aulas.map(({ a, ia }) => linhaDaAula(a, ia, m, bm, ctx)).join('')}</ol>${adicionar(ctx, 'aula', `${bm}.aulas`, 'Nova aula')}</section>`;
+  return `<section class="modulo" id="m-${m.id}" tabindex="-1"><div class="linha-titulo"><h2><span class="num" aria-hidden="true">${im + 1}</span><span class="sr">Módulo ${im + 1}: </span>${campo(`${bm}.titulo`, m.titulo, ctx, 'Título do módulo')}</h2>${ferramentas(`${base}.modulos`, im, d.modulos.length, ctx, 'módulo')}</div><ol class="aulas">${aulas.map(({ a, ia }) => linhaDaAula(a, ia, m, bm, ctx)).join('')}</ol>${adicionar(ctx, 'aula', `${bm}.aulas`, 'Nova aula')}</section>`;
 }
 
 function telaDisciplina(c, id, ctx) {
@@ -203,7 +221,7 @@ function telaDisciplina(c, id, ctx) {
   const base = `disciplinas.${i}`;
   const capa = ctx.midia[`capa-${d.id}`];
   // Índice de módulos em caixas: o aluno vê a disciplina inteira e pula direto para o módulo.
-  const indice = ctx.editando || d.modulos.length < 3 ? '' : `<nav aria-label="Módulos desta disciplina"><ul class="caixas compactas">${d.modulos.map((m, im) => `<li><button type="button" class="caixa" data-ir="m-${m.id}"><span class="caixa-info">Módulo ${im + 1} · ${plural(m.aulas.filter((a) => tem(a.titulo)).length, 'aula', 'aulas')}</span><span class="caixa-titulo">${esc(m.titulo)}</span></button></li>`).join('')}</ul></nav>`;
+  const indice = ctx.editando || d.modulos.length < 3 ? '' : `<nav aria-label="Módulos desta disciplina"><ul class="caixas compactas indice">${d.modulos.map((m, im) => `<li><button type="button" class="caixa" data-ir="m-${m.id}"><span class="caixa-info">Módulo ${im + 1} · ${plural(m.aulas.filter((a) => tem(a.titulo)).length, 'aula', 'aulas')}</span><span class="caixa-titulo">${esc(m.titulo)}</span></button></li>`).join('')}</ul></nav>`;
   return `<div class="col">
 ${capa ? `<div class="capa"><img src="${esc(capa)}" alt="" width="1280" height="720"></div>` : ''}<p class="eye"><a href="#inicio">‹ Disciplinas</a> · ${NIVEIS[d.nivel]}</p>
 <h1>${campo(`${base}.nome`, d.nome, ctx, 'Nome da disciplina')}</h1>
@@ -227,7 +245,7 @@ function player(video, aula, disciplina, ctx) {
     return `<button type="button" class="player" data-op="tocar" data-yt="${id}" aria-label="Assistir: ${esc(aula.titulo)}"><img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt="" loading="lazy"><span class="play"></span></button>`;
   }
   const capa = ctx.midia[`capa-${disciplina.id}`];
-  return `<a class="player" href="${esc(video.url)}" target="_blank" rel="noopener">${capa ? `<img class="arte" src="${esc(capa)}" alt="" loading="lazy">` : ''}<span class="play"></span><span class="legenda">Assistir no YouTube ↗</span></a>`;
+  return `<a class="player" href="${esc(video.url)}" target="_blank" rel="noopener">${capa ? `<img src="${esc(capa)}" alt="" loading="lazy">` : ''}<span class="play"></span><span class="legenda">Assistir no YouTube ↗</span></a>`;
 }
 
 function telaAula(c, id, ctx) {

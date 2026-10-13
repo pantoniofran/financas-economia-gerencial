@@ -35,7 +35,7 @@ test('início lista disciplinas por nível e só os avisos válidos', () => {
 
 test('disciplina em leitura: material com nome visível e nenhum controle de edição', () => {
   const html = ver('#d-eg');
-  assert.match(html, /<a class="chip" href="https:\/\/exemplo\.com\/a\.pdf" target="_blank" rel="noopener"[^>]*>Slides</);
+  assert.match(html, /<a class="chip" href="https:\/\/exemplo\.com\/a\.pdf" target="_blank" rel="noopener"[^>]*><svg class="ic"[\s\S]*?<\/svg>Slides</);
   assert.ok(html.includes('href="#a-eg-1-1"'));
   assert.ok(!/data-op=|contenteditable|data-campo/.test(html));
 });
@@ -71,7 +71,7 @@ test('navegação em caixas: disciplinas, materiais e aulas vizinhas', () => {
 
   const aula = ver('#a-eg-1-1');
   // "Slides da aula" já diz o tipo, então a linha de apoio traz só o formato.
-  assert.match(aula, /<a class="caixa" href="https:\/\/exemplo\.com\/a\.pdf" target="_blank" rel="noopener"><span class="caixa-info">PDF<\/span><span class="caixa-titulo">Slides da aula</);
+  assert.match(aula, /<a class="caixa caixa-material" href="https:\/\/exemplo\.com\/a\.pdf" target="_blank" rel="noopener"><svg class="ic"[\s\S]*?<\/svg><span class="caixa-info">PDF<\/span><span class="caixa-titulo">Slides da aula</);
   const c = conteudoExemplo();
   c.disciplinas[0].modulos[0].aulas[0].materiais[0].nome = 'Caso do sorvete';
   assert.ok(ver('#a-eg-1-1', leitura, c).includes('<span class="caixa-info">Slides · PDF</span><span class="caixa-titulo">Caso do sorvete'));
@@ -180,7 +180,9 @@ test('texto: parágrafos separados e data em formato brasileiro', () => {
 });
 
 test('capa e abertura só aparecem quando há mídia', () => {
-  assert.ok(!ver('#inicio').includes('class="abertura"'));
+  // A faixa de abertura existe sempre, com o resumo do site; a arte de fundo só com mídia.
+  assert.match(ver('#inicio'), /class="abertura-resumo">2 disciplinas · 3 aulas · 2 materiais</);
+  assert.ok(!ver('#inicio').includes('abertura-arte'));
   const midia = { poster: '/_blob/p', hero: '/_blob/h', 'capa-eg': '/_blob/c' };
   assert.match(ver('#inicio', { ...leitura, midia }), /<video[^>]*data-src="\/_blob\/h"/);
   assert.ok(ver('#d-eg', { ...leitura, midia }).includes('<div class="capa"><img src="/_blob/c"'));
