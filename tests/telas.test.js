@@ -1,0 +1,153 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { renderizar, interpretarRota, barraEdicao, esc, dataBR } from '../src/nucleo/telas.js';
+import { conteudoExemplo } from './fixtura.js';
+
+const leitura = {
+  editando: false, podeEditar: false, alteracoes: 0, publicando: false, confirmando: null,
+  formulario: null, mensagem: '', hoje: '2026-10-13', ambiente: 'artifact', midia: {},
+};
+const edicao = { ...leitura, editando: true, podeEditar: true };
+const ver = (hash, ctx = leitura, c = conteudoExemplo()) => renderizar(c, interpretarRota(hash), ctx);
+
+test('interpretarRota', () => {
+  assert.deepEqual(interpretarRota(''), { nome: 'inicio' });
+  assert.deepEqual(interpretarRota('#inicio'), { nome: 'inicio' });
+  assert.deepEqual(interpretarRota('#d-eg'), { nome: 'disciplina', id: 'eg' });
+  assert.deepEqual(interpretarRota('#a-eg-1-3'), { nome: 'aula', id: 'eg-1-3' });
+  assert.deepEqual(interpretarRota('#t-financas-verdes'), { nome: 'texto', id: 'financas-verdes' });
+  assert.deepEqual(interpretarRota('#textos'), { nome: 'textos' });
+});
+
+test('esc e dataBR', () => {
+  assert.equal(esc('<a href="x">&\'</a>'), '&lt;a href=&quot;x&quot;&gt;&amp;&#39;&lt;/a&gt;');
+  assert.equal(dataBR('2020-09-27'), '27/09/2020');
+  assert.equal(dataBR(''), '');
+});
+
+test('início lista disciplinas por nível e só os avisos válidos', () => {
+  const html = ver('#inicio');
+  assert.match(html, /Graduação[\s\S]*Economia Gerencial[\s\S]*Pós-graduação[\s\S]*Avaliação Econômica de Projetos/);
+  assert.ok(html.includes('Prova na quinta'));
+  assert.ok(!html.includes('Aviso vencido'));
+  assert.ok(html.includes('href="#d-eg"'));
+});
+
+test('disciplina em leitura: material com nome visível e nenhum controle de edição', () => {
+  const html = ver('#d-eg');
+  assert.match(html, /<a class="chip" href="https:\/\/exemplo\.com\/a\.pdf" target="_blank" rel="noopener"[^>]*>Slides</);
+  assert.ok(html.includes('href="#a-eg-1-1"'));
+  assert.ok(!/data-op=|contenteditable|data-campo/.test(html));
+});
+
+test('ficha vazia não aparece em leitura; campo preenchido aparece sozinho', () => {
+  assert.ok(!ver('#d-eg').includes('class="ficha"'));
+  const c = conteudoExemplo();
+  c.disciplinas[0].ficha.ementa = 'Microeconomia aplicada.';
+  const html = ver('#d-eg', leitura, c);
+  assert.ok(html.includes('<summary>Ementa</summary>'));
+  assert.ok(!html.includes('<summary>Bibliografia</summary>'));
+});
+
+test('aviso vencido some em leitura e continua visível em edição', () => {
+  assert.ok(!ver('#d-eg').includes('Aviso vencido'));
+  assert.ok(ver('#d-eg', edicao).includes('Aviso vencido'));
+});
+
+test('aula no Claude: player é link para o YouTube, sem iframe nem imagem externa', () => {
+  const html = ver('#a-eg-1-1');
+  assert.match(html, /<a class="player" href="https:\/\/youtu\.be\/YHzoeE7-0sc" target="_blank" rel="noopener">/);
+  assert.ok(!html.includes('<iframe'));
+  assert.ok(!html.includes('ytimg'));
+  assert.equal(html.split('youtu.be').length - 1, 1);
+  assert.ok(html.includes('Slides da aula'));
+  assert.match(html, /href="#a-eg-1-2">Custos da Firma ›/);
+});
+
+test('aula na versão local: player é botão que carrega o vídeo', () => {
+  const html = ver('#a-eg-1-1', { ...leitura, ambiente: 'local' });
+  assert.match(html, /<button type="button" class="player" data-op="tocar" data-yt="YHzoeE7-0sc"/);
+});
+
+test('aula sem vídeo não tem player', () => {
+  assert.ok(!ver('#a-eg-1-2').includes('class="player"'));
+});
+
+test('edição: campos, ferramentas e botões de adicionar', () => {
+  const html = ver('#d-eg', edicao);
+  assert.ok(html.includes('data-campo="disciplinas.0.modulos.0.aulas.0.titulo"'));
+  assert.ok(html.includes('data-campo="disciplinas.0.ficha.ementa"'));
+  assert.ok(html.includes('data-op="novo-material" data-lista="disciplinas.0.modulos.0.aulas.0.materiais"'));
+  assert.ok(html.includes('data-op="adicionar" data-novo="aula" data-lista="disciplinas.0.modulos.0.aulas"'));
+  assert.ok(html.includes('data-op="adicionar" data-novo="aviso" data-lista="disciplinas.0.avisos"'));
+  assert.match(html, /data-op="subir" data-lista="disciplinas\.0\.modulos" data-i="0"[^>]*disabled/);
+  assert.match(html, /data-op="descer" data-lista="disciplinas\.0\.modulos" data-i="1"[^>]*disabled/);
+});
+
+test('remover pede confirmação na própria linha', () => {
+  const html = ver('#d-eg', { ...edicao, confirmando: 'disciplinas.0.modulos.1' });
+  assert.match(html, /Remover\?[\s\S]*data-op="remover-sim" data-lista="disciplinas\.0\.modulos" data-i="1"/);
+});
+
+test('barra de edição', () => {
+  assert.equal(barraEdicao(leitura), '');
+  assert.ok(barraEdicao({ ...leitura, podeEditar: true }).includes('data-op="editar"'));
+  assert.ok(barraEdicao({ ...edicao, alteracoes: 3 }).includes('Editando · 3 alterações'));
+  assert.ok(barraEdicao({ ...edicao, alteracoes: 1 }).includes('1 alteração<'));
+  assert.match(barraEdicao(edicao), /data-op="publicar"[^>]*disabled/);
+  assert.ok(barraEdicao({ ...edicao, alteracoes: 2, confirmando: 'descartar' }).includes('data-op="descartar-sim"'));
+});
+
+test('formulário de material', () => {
+  const formulario = { lista: 'x', tipo: 'video', url: 'https://youtu.be/abc', nome: 'Vídeo da aula', arquivo: '', erro: 'Endereço inválido', enviando: false, podeEnviar: true };
+  const html = ver('#d-eg', { ...edicao, formulario });
+  assert.ok(html.includes('id="form-material"'));
+  assert.match(html, /value="video" checked/);
+  assert.ok(html.includes('Endereço inválido'));
+  assert.ok(html.includes('id="mat-arquivo"'));
+  assert.ok(!ver('#d-eg', { ...edicao, formulario: { ...formulario, podeEnviar: false } }).includes('id="mat-arquivo"'));
+});
+
+test('texto vindo do conteúdo é sempre escapado', () => {
+  const c = conteudoExemplo();
+  c.disciplinas[0].nome = '<img src=x onerror=alert(1)>';
+  for (const ctx of [leitura, edicao]) {
+    const html = ver('#d-eg', ctx, c);
+    assert.ok(html.includes('&lt;img src=x'));
+    assert.ok(!html.includes('<img src=x'));
+  }
+});
+
+test('rota desconhecida mostra página não encontrada', () => {
+  assert.ok(ver('#d-nada').includes('Página não encontrada'));
+  assert.ok(ver('#a-nada').includes('Página não encontrada'));
+  assert.ok(ver('#qualquer').includes('Página não encontrada'));
+});
+
+test('sobre: monograma sem foto, e-mail copiável e nenhum mailto', () => {
+  const html = ver('#sobre');
+  assert.ok(html.includes('class="foto mono"'));
+  assert.ok(html.includes('p.antoniofran@gmail.com'));
+  assert.ok(html.includes('data-op="copiar"'));
+  assert.ok(!html.includes('mailto:'));
+  assert.ok(ver('#sobre', { ...leitura, midia: { foto: '/_blob/abc' } }).includes('<img class="foto" src="/_blob/abc"'));
+});
+
+test('pesquisa agrupa publicações por ano, do mais novo para o mais antigo', () => {
+  const html = ver('#pesquisa');
+  assert.ok(html.indexOf('>2023<') < html.indexOf('>2021<'));
+  assert.ok(html.includes('Grupo de Pesquisa em Finanças - UFBA'));
+});
+
+test('texto: parágrafos separados e data em formato brasileiro', () => {
+  const html = ver('#t-financas-verdes');
+  assert.ok(html.includes('<p>Primeiro parágrafo.</p><p>Segundo parágrafo.</p>'));
+  assert.ok(html.includes('27/09/2020'));
+});
+
+test('capa e abertura só aparecem quando há mídia', () => {
+  assert.ok(!ver('#inicio').includes('class="abertura"'));
+  const midia = { poster: '/_blob/p', hero: '/_blob/h', 'capa-eg': '/_blob/c' };
+  assert.match(ver('#inicio', { ...leitura, midia }), /<video[^>]*data-src="\/_blob\/h"/);
+  assert.ok(ver('#d-eg', { ...leitura, midia }).includes('<div class="capa"><img src="/_blob/c"'));
+});
