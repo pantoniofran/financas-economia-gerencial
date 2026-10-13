@@ -1,1 +1,11 @@
-{}
+{
+  "poster": "midia/poster.webp",
+  "hero": "midia/hero.mp4",
+  "capa-eg": "midia/capa-eg.webp",
+  "capa-fc1": "midia/capa-fc1.webp",
+  "capa-fc2": "midia/capa-fc2.webp",
+  "capa-sem": "midia/capa-sem.webp",
+  "capa-pfc": "midia/capa-pfc.webp",
+  "capa-aep": "midia/capa-aep.webp",
+  "capa-fv": "midia/capa-fv.webp"
+}

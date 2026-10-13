@@ -29,7 +29,9 @@ if (/<\/style/i.test(css)) throw new Error('estilo.css contém "</style"');
 if (js.includes('<!--')) throw new Error('o programa contém "<!--"');
 
 await mkdir('dist/local', { recursive: true });
-await cp('midia', 'dist/local/midia', { recursive: true }).catch(() => { /* ainda sem mídia */ });
+// Só os arquivos finais; os originais em midia/bruto não vão para a saída.
+await cp('midia', 'dist/local/midia', { recursive: true, filter: (origem) => !/[\\/]bruto$/.test(origem) })
+  .catch(() => { /* ainda sem mídia */ });
 
 const saidas = [
   ['artifact', 'dist/artifact.html', corpoDaPagina],

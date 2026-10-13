@@ -3,6 +3,8 @@
   --fundo: #fbfcfa; --papel: #eef3ef; --tinta: #17201b; --suave: #5a665f; --linha: #dfe5e0;
   --verde: #1d5a44; --sobre-verde: #fbfcfa; --erro: #9a3412;
   --palco: #141b17; --sobre-palco: #f4f7f5; --sombra: rgba(20, 27, 23, .55);
+  /* As ilustrações são traço verde sobre branco: no claro o branco some por multiplicação; no escuro a imagem é invertida e o preto some. */
+  --arte-filtro: none; --arte-mistura: multiply;
   --serifa: 'Newsreader', Georgia, 'Times New Roman', serif;
   --sans: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --margem: clamp(16px, 5vw, 40px);
@@ -13,6 +15,7 @@
     --fundo: #111613; --papel: #1a221d; --tinta: #e8eee9; --suave: #9aa8a0; --linha: #2a342e;
     --verde: #86c9ab; --sobre-verde: #111613; --erro: #f0a27c;
     --palco: #0b0f0d; --sobre-palco: #f4f7f5; --sombra: rgba(0, 0, 0, .65);
+    --arte-filtro: invert(1) hue-rotate(180deg); --arte-mistura: screen;
     color-scheme: dark;
   }
 }
@@ -20,6 +23,7 @@
   --fundo: #111613; --papel: #1a221d; --tinta: #e8eee9; --suave: #9aa8a0; --linha: #2a342e;
   --verde: #86c9ab; --sobre-verde: #111613; --erro: #f0a27c;
   --palco: #0b0f0d; --sobre-palco: #f4f7f5; --sombra: rgba(0, 0, 0, .65);
+    --arte-filtro: invert(1) hue-rotate(180deg); --arte-mistura: screen;
   color-scheme: dark;
 }
 
@@ -62,12 +66,16 @@ small { font-size: .8125rem; }
 .rodape { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding: 20px var(--margem); border-top: 1px solid var(--linha); font-size: .8125rem; color: var(--suave); }
 
 /* Imagens de abertura e capa */
-.abertura, .capa { position: relative; overflow: hidden; background: var(--papel); }
-.abertura img, .capa img { display: block; width: 100%; height: auto; object-fit: cover; }
+.abertura, .capa { position: relative; overflow: hidden; isolation: isolate; background: var(--fundo); }
+.abertura img, .abertura video, .capa img { filter: var(--arte-filtro); mix-blend-mode: var(--arte-mistura); }
+.abertura img { display: block; width: 100%; height: auto; object-fit: cover; }
 .abertura img { aspect-ratio: 8 / 3; max-height: 42vh; }
-.capa img { aspect-ratio: 4 / 1; max-height: 30vh; }
+/* A capa é uma ilustração pequena acima do título, alinhada à coluna. */
+.capa img { display: block; height: clamp(104px, 20vw, 176px); width: auto; margin-left: -4%; }
 .abertura video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .8s ease; }
-.abertura video.tocando { opacity: 1; }
+.abertura img { transition: opacity .8s ease; }
+.abertura.tocando video { opacity: 1; }
+.abertura.tocando img { opacity: 0; }
 
 /* Listas */
 .lista { border-top: 1px solid var(--linha); }
@@ -113,6 +121,8 @@ a.chip:hover { background: var(--verde); color: var(--sobre-verde); }
 /* Aula: player e vizinhas */
 .player { position: relative; display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; padding: 0; border-radius: 6px; overflow: hidden; background: var(--palco); color: var(--sobre-palco); text-decoration: none; }
 .player img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .5; }
+/* No player o fundo é sempre escuro, então a ilustração entra sempre invertida. */
+.player img.arte { filter: invert(1) hue-rotate(180deg); mix-blend-mode: screen; opacity: .85; }
 .play { position: absolute; left: 50%; top: 50%; width: 64px; height: 64px; margin: -32px 0 0 -32px; border-radius: 50%; background: var(--sobre-palco); transition: transform .2s ease; }
 .play::after { content: ''; position: absolute; left: 26px; top: 20px; border-left: 18px solid var(--palco); border-top: 12px solid transparent; border-bottom: 12px solid transparent; }
 .player:hover .play { transform: scale(1.06); }

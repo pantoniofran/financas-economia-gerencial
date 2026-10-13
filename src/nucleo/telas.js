@@ -164,8 +164,8 @@ function telaDisciplina(c, id, ctx) {
   const d = c.disciplinas[i];
   const base = `disciplinas.${i}`;
   const capa = ctx.midia[`capa-${d.id}`];
-  return `${capa ? `<div class="capa"><img src="${esc(capa)}" alt="" width="1600" height="400"></div>` : ''}<div class="col">
-<p class="eye"><a href="#inicio">${NIVEIS[d.nivel]}</a></p>
+  return `<div class="col">
+${capa ? `<div class="capa"><img src="${esc(capa)}" alt="" width="1280" height="720"></div>` : ''}<p class="eye"><a href="#inicio">${NIVEIS[d.nivel]}</a></p>
 <h1>${campo(`${base}.nome`, d.nome, ctx, 'Nome da disciplina')}</h1>
 ${avisos(d, base, ctx)}${ficha(d, base, ctx)}
 ${d.modulos.map((m, im) => modulo(m, im, d, base, ctx)).join('')}
@@ -188,7 +188,7 @@ function player(video, aula, disciplina, ctx) {
     return `<button type="button" class="player" data-op="tocar" data-yt="${id}" aria-label="Assistir: ${esc(aula.titulo)}"><img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt="" loading="lazy"><span class="play"></span></button>`;
   }
   const capa = ctx.midia[`capa-${disciplina.id}`];
-  return `<a class="player" href="${esc(video.url)}" target="_blank" rel="noopener">${capa ? `<img src="${esc(capa)}" alt="" loading="lazy">` : ''}<span class="play"></span><span class="legenda">Assistir no YouTube ↗</span></a>`;
+  return `<a class="player" href="${esc(video.url)}" target="_blank" rel="noopener">${capa ? `<img class="arte" src="${esc(capa)}" alt="" loading="lazy">` : ''}<span class="play"></span><span class="legenda">Assistir no YouTube ↗</span></a>`;
 }
 
 function telaAula(c, id, ctx) {

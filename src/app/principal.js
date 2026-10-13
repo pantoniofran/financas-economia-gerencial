@@ -79,7 +79,8 @@ function iniciarVideo() {
   const video = app.querySelector('video[data-src]');
   if (!video || movimentoReduzido.matches) return;
   const carregar = () => {
-    video.addEventListener('playing', () => video.classList.add('tocando'), { once: true });
+    // A classe vai no contêiner: o vídeo aparece e a imagem de espera some, senão as duas linhas se sobrepõem.
+    video.addEventListener('playing', () => video.parentElement.classList.add('tocando'), { once: true });
     video.src = video.dataset.src;
     video.play().catch(() => { /* reprodução automática recusada: fica a imagem */ });
   };
