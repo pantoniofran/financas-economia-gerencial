@@ -1,0 +1,12 @@
+{
+  "name": "site-prof-antonio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "build": "node build.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.0"
+  }
+}
