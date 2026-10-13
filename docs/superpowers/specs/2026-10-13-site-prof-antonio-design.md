@@ -35,7 +35,7 @@ O MVP é publicado como Artifact no Claude e serve para mostrar ao professor. Do
 | Visual | Direção "Caderno acadêmico", enxugada: fundo quase branco, títulos em serifa, um único verde escuro, minimalista |
 | Arquitetura | Página única que se republica (capacidade `artifact`, forma `html`) |
 | Vídeo | Estrutura de player em cada aula; no Claude abre o YouTube em nova aba; fora do Claude toca embutido |
-| Anexos | Colar link ou enviar arquivo (até 20 MB) |
+| Anexos | Colar link ou enviar arquivo PDF (até 20 MB). O armazenamento do Claude não aceita planilhas (.xlsx); para elas, colar um link |
 | Imagens | Higgsfield: 1 vídeo em loop na abertura e 7 capas estáticas, abstratas; nenhuma imagem do professor gerada por IA |
 
 ## 4. Páginas
@@ -107,7 +107,7 @@ O conteúdo fica num bloco `<script type="application/json">`. Ao publicar, a p�
 
 Usa-se a forma `html`, e não a de arquivos, porque esta é recusada em artifacts com link público.
 
-Capacidades declaradas: `artifact`, `assets`, `user`.
+Capacidades declaradas: `artifact`, `assets`. A checagem `user.canEdit()` não exige declaração.
 
 ### Mídia
 
@@ -115,7 +115,7 @@ Imagens, vídeo de abertura e miniaturas ficam no armazenamento de arquivos do A
 
 - Vídeo de abertura: sem som, em loop, até 1,5 MB, carregado depois do texto, com imagem de espera. Com "reduzir movimento" ativo, fica só a imagem.
 - Capas: WebP, cerca de 60 KB cada, carregamento tardio.
-- Miniaturas do YouTube: baixadas uma vez na migração. Vídeo novo adicionado no Claude usa um quadro padrão.
+- Player no Claude: quadro padrão com a capa da disciplina e o botão de assistir, igual para vídeos migrados e novos. Miniaturas do YouTube só aparecem na versão local e no domínio, onde carregam direto do YouTube. (Revisado em 13/10: baixar cerca de 100 miniaturas não compensava.)
 
 ### Modelo de dados (resumo)
 
