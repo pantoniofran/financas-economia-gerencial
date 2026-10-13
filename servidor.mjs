@@ -3,7 +3,9 @@ import { createServer } from 'node:http';
 import { readFile } from 'node:fs/promises';
 import { extname, join, normalize, sep } from 'node:path';
 
-const RAIZ = join(import.meta.dirname, 'dist', 'local');
+// Uso: node servidor.mjs [pasta dentro de dist] [porta]. Padrão: a versão local, na porta 4173.
+const RAIZ = join(import.meta.dirname, 'dist', process.argv[2] ?? 'local');
+const PORTA = Number(process.argv[3] ?? 4173);
 const TIPOS = {
   '.html': 'text/html; charset=utf-8', '.webp': 'image/webp', '.jpg': 'image/jpeg',
   '.png': 'image/png', '.mp4': 'video/mp4',
@@ -22,4 +24,4 @@ createServer(async (req, res) => {
   } catch {
     res.writeHead(404, { 'content-type': 'text/plain; charset=utf-8' }).end('Não encontrado');
   }
-}).listen(4173, '127.0.0.1', () => console.log('http://localhost:4173'));
+}).listen(PORTA, '127.0.0.1', () => console.log(`http://localhost:${PORTA}`));

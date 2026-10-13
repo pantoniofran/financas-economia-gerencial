@@ -27,7 +27,8 @@ const fonte = {
   css: document.getElementById('estilo').textContent,
   js: document.getElementById('programa').textContent,
 };
-const ENSAIO = config.ambiente === 'local' && new URLSearchParams(location.search).has('ensaio');
+// O modo de ensaio (edição simulada, salva só no navegador) existe na versão local; a versão pública o desliga.
+const ENSAIO = config.ambiente === 'local' && config.ensaio !== false && new URLSearchParams(location.search).has('ensaio');
 const publicado = (ENSAIO && cofre.ler(CHAVE_ENSAIO)) || lerBloco('conteudo');
 const hashPublicado = hash(JSON.stringify(publicado));
 const app = document.getElementById('app');

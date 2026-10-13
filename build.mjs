@@ -43,3 +43,34 @@ for (const [ambiente, arquivo, montar] of saidas) {
   await writeFile(arquivo, html);
   console.log(`${arquivo}: ${Math.round(Buffer.byteLength(html) / 1024)} KB`);
 }
+
+// Versão pública (GitHub Pages): só leitura, sem o modo de ensaio, com o player embutido.
+// Ganha o que uma página aberta na internet precisa: idioma, descrição, ícone e a prévia
+// que aparece quando o link é colado no WhatsApp.
+const URL_DO_SITE = (process.env.SITE_URL ?? 'https://pedrolofiego.github.io/financas-economia-gerencial/').replace(/\/?$/, '/');
+const DESCRICAO = 'Material de aula, pesquisa e textos do Prof. Dr. Antonio Francisco, da Escola de Administração da UFBA.';
+const ICONE = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23143f30'/%3E%3Cpath d='M6 22c6-12 12-12 20-4' fill='none' stroke='%23e9bf6b' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E";
+const cabeca = [
+  // O título também vai na cabeça: é onde buscadores e prévias de link o procuram.
+  `<title>${TITULO}</title>`,
+  `<meta name="description" content="${DESCRICAO}">`,
+  // Enquanto o site está em teste com os alunos, fica fora dos buscadores. Apagar esta linha quando for oficial.
+  '<meta name="robots" content="noindex">',
+  `<link rel="icon" href="${ICONE}">`,
+  '<meta property="og:type" content="website">',
+  `<meta property="og:title" content="${TITULO}">`,
+  `<meta property="og:description" content="${DESCRICAO}">`,
+  `<meta property="og:url" content="${URL_DO_SITE}">`,
+  `<meta property="og:image" content="${URL_DO_SITE}midia/compartilhar.jpg">`,
+  '<meta property="og:locale" content="pt_BR">',
+  '<meta name="twitter:card" content="summary_large_image">',
+].join('');
+await mkdir('dist/site', { recursive: true });
+await cp('midia', 'dist/site/midia', { recursive: true, filter: (origem) => !/[\\/]bruto$/.test(origem) }).catch(() => {});
+const configDoSite = { ambiente: 'local', ensaio: false, titulo: TITULO, fontes: FONTES, midia: await lerJSON('src/midia.local.json', {}) };
+const site = documentoCompleto({ titulo: TITULO, fontes: FONTES, css, js, conteudo, config: configDoSite })
+  .replace('<html>', '<html lang="pt-BR">')
+  .replace('<meta charset=utf8>', `<meta charset=utf8>${cabeca}`);
+await writeFile('dist/site/index.html', site);
+await writeFile('dist/site/.nojekyll', ''); // o GitHub Pages serve os arquivos como estão
+console.log(`dist/site/index.html: ${Math.round(Buffer.byteLength(site) / 1024)} KB (${URL_DO_SITE})`);

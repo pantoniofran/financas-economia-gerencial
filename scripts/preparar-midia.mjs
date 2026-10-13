@@ -32,6 +32,12 @@ for (const id of ['eg', 'fc1', 'fc2', 'sem', 'pfc', 'aep', 'fv']) {
   console.log(`${destino}: ${Math.round(statSync(destino).size / 1024)} KB`);
 }
 
+// Imagem da prévia do link (WhatsApp e redes), no formato 1200x630 que essas prévias pedem.
+if (existsSync(`${BRUTO}/v2/capa-eg.png`)) {
+  ff('-i', `${BRUTO}/v2/capa-eg.png`, '-vf', 'scale=1200:-2,crop=1200:630', '-q:v', '4', 'midia/compartilhar.jpg');
+  console.log(`midia/compartilhar.jpg: ${Math.round(statSync('midia/compartilhar.jpg').size / 1024)} KB`);
+}
+
 const video = `${BRUTO}/hero.mp4`;
 if (existsSync(video)) {
   const fundo = fundoMaisEscuro(video, [0, 1, 2, 3, 3.9]);
