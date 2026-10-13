@@ -38,8 +38,8 @@ test('documentoCompleto tem o esqueleto que a ferramenta Artifact reconhece', ()
   const html = documentoCompleto(partes());
   const inicio = '<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>';
   assert.ok(html.startsWith(inicio));
-  assert.ok(html.includes(`${RESET_PADRAO}</style></head><body><title>`));
-  assert.ok(html.endsWith('</body></html>'));
+  assert.ok(html.includes(`${RESET_PADRAO}</style></head><body>\n<title>`));
+  assert.ok(html.endsWith('\n</body></html>'));
 });
 
 test('documentoCompleto usa o reset informado', () => {
