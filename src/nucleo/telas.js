@@ -1,4 +1,4 @@
-import { TIPOS, NIVEIS, avisosValidos, avisosRecentes, acharAula, videoPrincipal } from './conteudo.js';
+import { TIPOS, NIVEIS, CATEGORIAS_PUBLICACAO, avisosValidos, avisosRecentes, acharAula, videoPrincipal } from './conteudo.js';
 import { idDoYoutube } from './youtube.js';
 
 // ---------- utilidades ----------
@@ -236,14 +236,21 @@ function telaTexto(c, id, ctx) {
 
 function telaPesquisa(c, ctx) {
   const p = c.pesquisa;
-  const anos = [...new Set(p.publicacoes.map((x) => String(x.ano)))].sort((a, b) => b.localeCompare(a));
+  const tipoValido = (x) => (CATEGORIAS_PUBLICACAO.some(([t]) => t === x.tipo) ? x.tipo : 'outro');
+  const seletor = (x, k) => `<select id="tipo-${x.id}" data-campo="pesquisa.publicacoes.${k}.tipo" aria-label="Categoria">${CATEGORIAS_PUBLICACAO.map(([t, rotulo]) => `<option value="${t}"${t === tipoValido(x) ? ' selected' : ''}>${rotulo}</option>`).join('')}</select> `;
   const projeto = (x, k) => `<li><div><h3>${campo(`pesquisa.projetos.${k}.titulo`, x.titulo, ctx, 'Título do projeto')}</h3>${tem(x.descricao) || ctx.editando ? `<p class="suave">${campo(`pesquisa.projetos.${k}.descricao`, x.descricao, ctx, 'Descrição (opcional)')}</p>` : ''}</div>${ferramentas('pesquisa.projetos', k, p.projetos.length, ctx, 'projeto')}</li>`;
-  const publicacao = ({ x, k }) => `<li><div>${ctx.editando ? `<input class="ano-in" id="ano-${x.id}" data-campo="pesquisa.publicacoes.${k}.ano" value="${esc(x.ano)}" inputmode="numeric" size="4" aria-label="Ano"> ` : ''}${campo(`pesquisa.publicacoes.${k}.referencia`, x.referencia, ctx, 'Referência completa')}</div>${ferramentas('pesquisa.publicacoes', k, p.publicacoes.length, ctx, 'publicação', false)}</li>`;
-  const doAno = (ano) => p.publicacoes.map((x, k) => ({ x, k })).filter(({ x }) => String(x.ano) === ano && (ctx.editando || tem(x.referencia)));
+  const publicacao = ({ x, k }) => `<li><div>${ctx.editando ? `${seletor(x, k)}<input class="ano-in" id="ano-${x.id}" data-campo="pesquisa.publicacoes.${k}.ano" value="${esc(x.ano)}" inputmode="numeric" size="4" aria-label="Ano"> ` : ''}${campo(`pesquisa.publicacoes.${k}.referencia`, x.referencia, ctx, 'Referência completa')}</div>${ferramentas('pesquisa.publicacoes', k, p.publicacoes.length, ctx, 'publicação', false)}</li>`;
+  // Dentro de cada categoria, da mais recente para a mais antiga; sem ano (ainda não publicada) vem primeiro.
+  const grupos = CATEGORIAS_PUBLICACAO.map(([tipo, rotulo]) => ({
+    rotulo,
+    itens: p.publicacoes.map((x, k) => ({ x, k }))
+      .filter(({ x }) => tipoValido(x) === tipo && (ctx.editando || tem(x.referencia)))
+      .sort((a, b) => String(b.x.ano || '9999').localeCompare(String(a.x.ano || '9999'))),
+  })).filter((g) => g.itens.length);
   return `<div class="col"><h1>Pesquisa</h1><div class="prosa">${bloco('pesquisa.linhas', p.linhas, ctx, 'Linhas de pesquisa')}</div>
 ${p.grupo?.url ? `<p><a href="${esc(p.grupo.url)}" target="_blank" rel="noopener">${esc(p.grupo.nome)} ↗</a></p>` : ''}
 <section><h2 class="eye">Projetos</h2><ul class="projetos">${p.projetos.map(projeto).join('')}</ul>${adicionar(ctx, 'projeto', 'pesquisa.projetos', 'Novo projeto')}</section>
-<section><h2 class="eye">Publicações</h2>${adicionar(ctx, 'publicacao', 'pesquisa.publicacoes', 'Nova publicação')}${anos.map((ano) => `<h3 class="ano">${esc(ano)}</h3><ul class="pubs">${doAno(ano).map(publicacao).join('')}</ul>`).join('')}</section></div>`;
+<section><h2 class="eye">Publicações</h2>${adicionar(ctx, 'publicacao', 'pesquisa.publicacoes', 'Nova publicação')}${grupos.map((g) => `<h3 class="ano">${g.rotulo}</h3><ul class="pubs">${g.itens.map(publicacao).join('')}</ul>`).join('')}</section></div>`;
 }
 
 // ---------- sobre ----------

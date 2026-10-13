@@ -10,6 +10,16 @@ export const TIPOS = {
 
 export const NIVEIS = { graduacao: 'Graduação', pos: 'Pós-graduação' };
 
+// Categorias de publicação, na ordem em que aparecem na página Pesquisa.
+export const CATEGORIAS_PUBLICACAO = [
+  ['artigo', 'Artigos em periódicos'],
+  ['capitulo', 'Capítulos de livros'],
+  ['anais', 'Trabalhos em anais de eventos'],
+  ['jornal', 'Artigos em jornais'],
+  ['palestra', 'Apresentações e palestras'],
+  ['outro', 'Demais produções'],
+];
+
 export function hojeISO(d = new Date()) {
   const p = (n) => String(n).padStart(2, '0');
   return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;

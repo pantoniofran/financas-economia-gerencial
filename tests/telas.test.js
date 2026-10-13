@@ -133,9 +133,14 @@ test('sobre: monograma sem foto, e-mail copiável e nenhum mailto', () => {
   assert.ok(ver('#sobre', { ...leitura, midia: { foto: '/_blob/abc' } }).includes('<img class="foto" src="/_blob/abc"'));
 });
 
-test('pesquisa agrupa publicações por ano, do mais novo para o mais antigo', () => {
-  const html = ver('#pesquisa');
-  assert.ok(html.indexOf('>2023<') < html.indexOf('>2021<'));
+test('pesquisa agrupa publicações por categoria, da mais nova para a mais antiga', () => {
+  const c = conteudoExemplo();
+  c.pesquisa.publicacoes.reverse();
+  c.pesquisa.publicacoes.push({ id: 'pb-3', ano: '2011', tipo: 'capitulo', referencia: 'SILVA JUNIOR, A. F. A. Performance Attribution.' });
+  const html = ver('#pesquisa', leitura, c);
+  assert.ok(html.indexOf('SANTOS, J. P.') < html.indexOf('CALDAS, A. V. S.'));
+  assert.ok(html.indexOf('Artigos em periódicos') < html.indexOf('Capítulos de livros'));
+  assert.ok(!html.includes('Trabalhos em anais de eventos'));
   assert.ok(html.includes('Grupo de Pesquisa em Finanças - UFBA'));
 });
 

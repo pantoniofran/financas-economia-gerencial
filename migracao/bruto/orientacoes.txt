@@ -1,0 +1,26 @@
+2021|M|O|Andreia Nunes Teixeira|Modelo da Avaliação da Maturidade de um Programa de Compliance: uma aplicação no SENAC Bahia
+2021|M|O|Isabela de Abrantes Ludovice|Gestão de Riscos na Cadeia de Suprimentos e sua Integração à Gestão Estratégica das Organizações: estudo de caso do SENAC Bahia
+2021|M|O|JAQUELINE PEREIRA SANTOS|Análise Envoltória de Dados (DEA) como instrumento de gestão na auditoria do SUS
+2021|M|O|Luciana Alves Araújo|Comunicação em auditoria: um estudo na Secretaria da Saúde do Estado da Bahia baseado nas Teorias da Agência e da Informação
+2021|M|O|Robson Amaral Santos|Análise do uso de debêntures conversíveis para financiamento de projetos de energias solar
+2020|M|O|JOSIANE FERNANDES DE OLIVEIRA|A implantação da Gestão Integrada de Riscos em uma Instituição Pública de Ensino : uma análise no Instituto Federal do Norte de Minas Gerais (IFMG)
+2019|M|O|Daniel Castro Mota|Educação Financeira no Youtube: Uma análise de conteúdo baseada em aprendizagem de máquina com modelos de tópicos
+2018|M|O|Rafaela Costa Lima|A indústria de aerogeradores e o desenvolvimento regional: perspectivas de consolidação na Bahia
+2017|M|C|Vitor Quintella|Dois ensaios sobre finanças corporativas e gestão de riscos de mercado
+2017|M|O|Nilson Andrade|AVALIAÇÃO DA ECONOMICIDADE DA POLÍTICA PÚBLICA DE ASSISTÊNCIA FARMACÊUTICA BÁSICA
+2017|M|O|Renata Regina Galdino Sa|AVALIAÇÃO DO NÍVEL DE TRANSPARÊNCIA DAS EMPRESAS: Um exame de websites corporativos de relações com investidores
+2017|M|O|Leonardo Lins Camara Marinho|A capacidade da atividade de auditoria interna no Executivo federal brasileiro
+2017|M|O|João Victor da Fonseca Galvão|Da visão baseada em recursos às capacidades dinâmicas: um estudo de caso na Subway
+2016|M|O|Wilson Cedraz da Silva|Governança, Gestão de Riscos e Conformidade: Petrobras e Eletrobras, antes e depois da Operação Lavahato
+2015|M|O|Danillo Teixeira de Souza|Avaliação ex post do Novo Siafi com base na satisfação dos usuários finais
+2015|M|O|Maria da Glória Brasil Nunes|O Financiamento da Educação Profissional Técnica Integrada ao Ensino Médio na Rede Pública Estadual do Ceará: O Caso da Alimentação Escolar
+2010|M|O|Raquel Angelo Araújo|Gestão de Riscos e Governança Corporativa: Impacto da Crise Financeira de 2008 em duas Companhias do Setor Alimentício
+2023|D|O|Alisson Barbosa Calasãs Pereira|Múltiplas Accountabilities e a Capacidade de Responsabilização nas Organizações Policiais
+2022|D|O|VIVIANE HELENA TORINELLI|Environmental and Climate Risk Management: a Framework for a resilient management of the international reserves by central banks
+2019|D|O|ANTÔNIO VINICIUS SILVA CALDAS|Contribuição aos Métodos de Análise de Investimentos: uma avaliação dos leilões de energia de reserva da ANEEL
+2018|D|O|Alisson Barbosa Calasãs Pereira|Accouuntability em Corregedorias
+2013|E|O|Eduardo Antonio Panza Bretas|Técnicas e Mecanismos de Redução de Risco em Contratos de Construção e Montagem tipo EPC da Gerência Executiva de Engenharia da Petrobras
+2011|E|O|Júlio César Hayashi|AVALIAÇÃO ECONÔMICA DE PROJETO DE REDUÇÃO DE EFLUENTES DE UMA PLANTA DE DIBP
+2011|E|O|Roberto Oenning|ANÁLISE DA VIABILIDADE ECONÔMICA DE UM PROJETO DE IMPLANTAÇÃO DE VARIADORES DE VELOCIDADE EM BOMBAS CENTRÍFUGAS INDUSTRIAIS
+2006|E|O|Zulmar da Silva Peixoto|A integração como solução para maior eficiência no processo de liquidação de operações envolvendo ativos financeiros
+2006|E|O|Paulo Araújo Caixeta|A integração como solução para maior eficiência no processo de liquidação de operações envolvendo ativos financeiros

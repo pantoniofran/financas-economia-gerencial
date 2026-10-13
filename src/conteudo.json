@@ -5,97 +5,117 @@
     "instituicao": "Escola de Administração da UFBA",
     "chamada": "Material de aula, pesquisa e textos em um só lugar.",
     "laboratorio": "Planilhas, scripts e vídeos de apoio às disciplinas.",
-    "proposito": "Texto do propósito."
+    "proposito": "Economia Gerencial é um campo de estudos que aplica técnicas e conceitos de microeconomia, teoria da decisão, pesquisa operacional, matemática, estatística, contabilidade, engenharia de produção e administração, para apoio na solução de problemas enfrentados pelas organizações. Em geral, esses problemas se associam às decisões sobre o que e como produzir, para quem produzir e qual a quantidade a ser produzida, considerando a escassez de recursos e o ambiente competitivo.\n\nFinanças é um campo de estudos dedicado a administração do dinheiro e dos investimentos, que utiliza técnicas e conceitos de matemática, estatística, economia, contabilidade e administração. Este sítio tem o propósito de promover educação e pesquisa em Finanças e Economia Gerencial.\n\nFoi criado para contribuir no desenvolvimento da capacidade analítica de estudantes e pessoas envolvidas no processo de decisão e formulação de estratégias para o crescimento sustentável."
   },
-  "disciplinas": [
+  "disciplinas": [],
+  "laboratorio": [
     {
-      "id": "eg",
-      "nivel": "graduacao",
-      "nome": "Economia Gerencial",
-      "ficha": {
-        "ementa": "",
-        "objetivos": "",
-        "avaliacao": "",
-        "bibliografia": ""
-      },
-      "avisos": [
+      "grupo": "Notas",
+      "itens": [
         {
-          "id": "av-1",
-          "texto": "Prova na quinta",
-          "ate": "2026-11-12"
-        },
-        {
-          "id": "av-2",
-          "texto": "Aviso vencido",
-          "ate": "2026-01-01"
-        }
-      ],
-      "modulos": [
-        {
-          "id": "eg-1",
-          "titulo": "Princípios de Microeconomia",
-          "aulas": [
-            {
-              "id": "eg-1-1",
-              "titulo": "Curva de Demanda",
-              "materiais": [
-                {
-                  "id": "eg-1-1-m1",
-                  "tipo": "slides",
-                  "nome": "Slides da aula",
-                  "url": "https://exemplo.com/a.pdf"
-                },
-                {
-                  "id": "eg-1-1-m2",
-                  "tipo": "video",
-                  "nome": "Vídeo da aula",
-                  "url": "https://youtu.be/YHzoeE7-0sc"
-                }
-              ]
-            },
-            {
-              "id": "eg-1-2",
-              "titulo": "Custos da Firma",
-              "materiais": []
-            }
-          ]
-        },
-        {
-          "id": "eg-2",
-          "titulo": "Teoria dos Jogos",
-          "aulas": [
-            {
-              "id": "eg-2-1",
-              "titulo": "Definições",
-              "materiais": []
-            }
-          ]
+          "id": "lab-1",
+          "tipo": "material",
+          "nome": "Notas de aula",
+          "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_64690564c2964022bf20e44f480469fd.pdf"
         }
       ]
     },
     {
-      "id": "aep",
-      "nivel": "pos",
-      "nome": "Avaliação Econômica de Projetos",
-      "ficha": {
-        "ementa": "",
-        "objetivos": "",
-        "avaliacao": "",
-        "bibliografia": ""
-      },
-      "avisos": [],
-      "modulos": []
-    }
-  ],
-  "laboratorio": [
-    {
       "grupo": "Planilhas",
       "itens": [
         {
-          "id": "lab-1",
+          "id": "lab-2",
+          "tipo": "planilha",
+          "nome": "Planilha de índices financeiros",
+          "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_96d4cd3638c04948af9c0ecdd6b479f1.xlsx?dn=DemFinExemploNotaAulaExerc.xlsx"
+        },
+        {
+          "id": "lab-3",
           "tipo": "planilha",
           "nome": "Planilha do modelo CAPM",
-          "url": "https://exemplo.com/capm.xls"
+          "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_64bde3209e87470d9cd45c65fbb645be.xls?dn=Exerc%C3%ADciosCAPM.xls"
+        },
+        {
+          "id": "lab-4",
+          "tipo": "planilha",
+          "nome": "Planilha: opções reais em projeto solar",
+          "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_d4dfa6c069c04f09946da5803d8658ed.xlsx?dn=ProjEnergiaSolar.xlsx"
+        },
+        {
+          "id": "lab-5",
+          "tipo": "planilha",
+          "nome": "Planilha: projeto de hidrogênio verde",
+          "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_d2403d0f96c14331898d518070a61f0e.xlsx?dn=ProjH2v1.xlsx"
+        },
+        {
+          "id": "lab-6",
+          "tipo": "planilha",
+          "nome": "Planilha: maximização com três produtos",
+          "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_dd3b3e2fd9224ba8b3243272e06d1bc9.xlsx?dn=MaxiTresProdutos1.xlsx"
+        }
+      ]
+    },
+    {
+      "grupo": "R e código",
+      "itens": [
+        {
+          "id": "lab-7",
+          "tipo": "video",
+          "nome": "Vídeo: instalação do R",
+          "url": "https://youtu.be/Af1-qAA4obQ"
+        },
+        {
+          "id": "lab-8",
+          "tipo": "video",
+          "nome": "Vídeo: introdução ao R",
+          "url": "https://youtu.be/Su1A-nCVIGg"
+        },
+        {
+          "id": "lab-9",
+          "tipo": "video",
+          "nome": "Vídeo: cálculo de retornos no R",
+          "url": "https://youtu.be/d50KqrSEjoA"
+        },
+        {
+          "id": "lab-10",
+          "tipo": "codigo",
+          "nome": "Script em R: dados do Banco Central",
+          "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_521de55ea5164928abc02906c034d97b.txt?dn=PegandoDadosBCB_R.txt"
+        },
+        {
+          "id": "lab-11",
+          "tipo": "codigo",
+          "nome": "Repositório no GitHub: Seminários em Finanças",
+          "url": "https://github.com/pantoniofran/GitSeminarioFinancas.git"
+        }
+      ]
+    },
+    {
+      "grupo": "Vídeos",
+      "itens": [
+        {
+          "id": "lab-12",
+          "tipo": "video",
+          "nome": "Vídeo: maximização de lucro",
+          "url": "https://youtu.be/doa8B8igc4c"
+        },
+        {
+          "id": "lab-13",
+          "tipo": "video",
+          "nome": "Vídeo: programação linear",
+          "url": "https://youtu.be/5DjOnAk-06E"
+        },
+        {
+          "id": "lab-14",
+          "tipo": "video",
+          "nome": "Vídeo: critérios de decisão",
+          "url": "https://youtu.be/Crbl1Qikqlc"
+        },
+        {
+          "id": "lab-15",
+          "tipo": "video",
+          "nome": "Vídeo: árvore de decisão",
+          "url": "https://youtu.be/-AiFIq5Hhgg"
         }
       ]
     }
@@ -105,12 +125,26 @@
       "id": "financas-verdes",
       "titulo": "Finanças Verdes",
       "data": "2020-09-27",
-      "resumo": "Como financiar projetos.",
-      "corpo": "Primeiro parágrafo.\n\nSegundo parágrafo."
+      "resumo": "Como financiar projetos que mitigam os efeitos da ação humana no meio ambiente.",
+      "corpo": "Finanças Verdes é um campo de pesquisa que ganha espaço entre acadêmicos, e envolve profissionais do setor financeiro, do setor real da economia, do Estado e da sociedade de maneira geral. O objetivo principal, mas não único, é evitar que a temperatura da Terra suba mais de 2º C, quando comparada às temperaturas do período pré-industrial. Para que isso ocorra, esforços devem ser empreendidos para que projetos ambientalmente mais sustentáveis sejam executados.\n\nDois riscos principais estão presentes: os físicos, como secas, derretimento das calotas polares e elevação dos níveis dos oceanos; e os riscos de transição, que envolvem os efeitos da acomodação econômica à nova realidade.\n\nO financiamento de projetos que envolvem redução de emissão de gases de efeito estufa, como o CO2, está na pauta das discussões. As ferramentas à disposição envolvem redução de carga tributária para setores como indústria eólica e solar, criação de um mercado de carbono e incentivo à emissão de títulos verdes para captação de recursos financeiros destinados a projetos de tecnologia limpa.\n\nDesafios\n\nDentre os vários desafios, podemos destacar a dificuldade em se estabelecer uma tipologia para projetos que são considerados verdes, encontrar uma metodologia aceita de forma abrangente para associar a emissão ao seu emissor (quem gera e quem consome), quantificar as emissões e encontrar o preço justo para a emissão. As diversas escolhas terão implicações econômicas, onde alguns setores deverão ser penalizados e outros estimulados. O balanço adequado das consequências das decisões deve ser bem avaliado, para que o financiamento verde se dê de forma equilibrada, dentro do possível, uma vez que o planeta já está dando sinais de que a intervenção humana deve ser melhor planejada."
+    },
+    {
+      "id": "integrar-ou-nao-verticalmente",
+      "titulo": "Integrar ou não verticalmente – Petrobras, Ferbasa e Hapvida",
+      "data": "2020-09-26",
+      "resumo": "A decisão que exige visão estratégica.",
+      "corpo": "Uma cadeia de produção tem diferentes etapas. Na indústria do petróleo, a cadeia de produção envolve a extração, o refino e a distribuição dos combustíveis. Na indústria siderúrgica e metalúrgica, temos a exploração do minério a montante da cadeia de produção. Nos serviços de saúde, temos os hospitais, as clínicas que fazem exames e os planos de saúde.\n\nA integração vertical é uma decisão que envolve colocar vantagens e desvantagens em uma balança e escolher o arranjo mais adequado.\n\nHapvida\n\nA rede Hapvida adota a estratégia de integrar os serviços, o que permite obter os lucros ao longo da cadeia de produção de serviços de saúde. Recentemente, a empresa adquiriu planos de saúde e hospitais em Goiás, Minas Gerais e São Paulo. Nas diversas entrevistas que se sucedem às aquisições do grupo, são destacados os fatores de padronização dos serviços, integração de sistemas de informação e ganhos de escala.\n\nFerbasa\n\nA Ferbasa é uma empresa sediada em Pojuca que atua em atividades de metalurgia, mineração, energia eólica e de plantios de florestas. A integração vertical entre a mineração e a metalurgia é clara, pois as ligas produzidas pela empresa têm como matéria prima o minério de ferro. As florestas renováveis de eucalipto são usadas como matéria prima para produção de biorredutor que também é matéria prima para a produção de ferroligas. Como a empresa é intensiva em energia, o parque eólico reduz a exposição da companhia à variação de preços de energia elétrica.\n\nPetrobras\n\nVejamos o caso da Petrobras que conduz plano de venda de refinarias. Nesse caso, temos uma empresa decidindo em reduzir sua integração vertical. A lógica nesse último caso deve ser a diferença entre margens de lucro do negócio de exploração e do negócio de refino. Como a empresa necessita de grandes investimentos para explorar o pré-sal, há uma pressão pela venda de ativos para financiar sua expansão de produção de óleo.\n\nA decisão\n\nNos três casos, a integração vertical (ou não) é uma decisão estratégica, já que afeta a sustentabilidade econômica do negócio no longo prazo, envolvendo planejamento detalhado e esforço da companhia na realização de seus planos. A integração vertical permite que a empresa reduza riscos na produção e incorpore os lucros na cadeia de produção. No entanto, a integração vertical é uma tarefa que exige muito esforço para a gestão dos diferentes negócios, o que pode eventualmente trazer ineficiências se algum deles for deixado de lado por ter menor prioridade estratégica."
+    },
+    {
+      "id": "porto-sul-e-fiol",
+      "titulo": "Porto Sul (Ilhéus) e a Ferrovia de Integração Oeste-Leste",
+      "data": "2020-05-31",
+      "resumo": "",
+      "corpo": "Estamos em 2020 e os projetos da ferrovia de integração oeste-leste (FIOL) e do porto de Ilhéus ainda estão em em andamento! Em 2009, escrevi um artigo em co-autoria com o professor Sandro Cabral sobre alternativas de investimentos na construção da FIOL. Dentre as escolhas estratégicas para o empreendimento, discutimos a possibilidade de se realizar o primeiro trecho da ferrovia com interligação a outra já existente, como alternativa inicial à ligação direta a Ilhéus, que foi a opção escolhida. O artigo foi publicado pela revista BASE, da Unisinos. Em 2013, publicamos juntos um texto no Jornal Correio da Bahia: https://www.correio24horas.com.br/noticia/nid/escolhas-estrategicas-para-uma-ferrovia-e-a-universidade/, que trazia essa discussão do artigo para a mídia.\n\nEscolhas estratégicas - O que havíamos concluído já em 2009\n\n...Nesse caso, o trecho entre Brumado e Ilhéus seria construído posteriormente, e seria resultado de opções estratégicas associadas às incertezas e riscos do negócio, como por exemplo, fatores políticos, ambientais e decorrentes da dinâmica de interação estratégica entre os entes empresariais e governamentais envolvidos. Diferentemente do projeto em curso, nossas análises à época indicaram a superioridade da segunda alternativa, em que pese a necessidade de resolução de questões ligadas aos direitos de passagem junto a concessionária do trecho atual e de eventuais modificações físicas no trajeto já existente.\n\nPois é, as várias incertezas que envolvem o projeto conduziram a muitas idas e vindas de licenças ambientais, discussões sobre os potenciais impactos ambientais no distrito de Aritaguá, na cidade de Ilhéus, e os impactos sociais do projeto, principalmente no que diz respeito ao negócio do turismo e do plantio do cacau. Uma discussão interessante pode ser vista no link: https://www.nossailheus.org.br/construcao-do-porto-sul-na-bahia-poe-ativistas-contra-governo/.\n\nAgora em 2020, foi assinado o acordo para gestão dos recursos socioambientais do Porto Sul, a Bahia Mineração (BAMIN) assinou a ordem de serviço para início das obras do Porto Sul, e o governo do Estado da Bahia estuda emitir título verde para a obra em construção da FIOL (ver http://www.ilheus24h.com.br/v1/category/porto-sul/).\n\nQual a causa de tanta demora?\n\nO projeto sem dúvida é complexo. No entanto, é difícil entender porque projetos dessa importância econômica e social levam tanto tempo para serem implementados. Tudo indica que o problema desse projeto iniciou ainda em sua fase de concepção. As ideias talvez não tenham sido corretamente discutidas e avaliadas antes de ter se dado o início às etapas seguintes do projeto.\n\nGoverno, instituições, empresários, sociedade civil e Universidade\n\nPrecisamos discutir projetos de uma maneira coletiva e eficiente, para evitar a sensação de que não conseguimos realizar as coisas com eficácia.\n\nA discussão coletiva não pode ser feita sob a lógica simplificadora de que uns estão certos e outros errados. O processo de discussão coletiva deve levar as pessoas a um consenso de tal forma que as coisas avancem de maneira positiva para todos.\n\nOs mecanismos de participação no processo decisório devem ser estimulados de tal forma que as partes interessadas não sejam apenas ouvidas! As ideias precisam ser bem estudadas e discutidas. Governo, instituições, empresários, universidade e sociedade civil em geral precisam discutir juntos e de maneira eficiente questões da importância de um projeto dessa natureza, para evitar judicializações que prejudicam todo o processo."
     }
   ],
   "pesquisa": {
-    "linhas": "Análise de investimentos e gestão de riscos.",
+    "linhas": "As pesquisas desenvolvidas estão no campo das Finanças e Economia Gerencial e se concentram em análise de investimentos, gestão de riscos, finanças verdes e governança corporativa.\n\nOs projetos de pesquisa estão em sintonia com as linhas definidas no grupo de pesquisa cadastrado no CNPq.\n\nOs projetos de Finanças Verdes buscam identificar alternativas de financiamento e de análise de carteiras com ativos relacionados à sustentabilidade.\n\nOs projetos em parceria com a Deten Química tiveram entre seus objetivos o desenvolvimento e aplicação de ferramentas de gestão de riscos financeiros como apoio ao processo de decisão da empresa. Um deles contou com apoio do CNPq e da Fieb, no âmbito do projeto Inovatec.",
     "grupo": {
       "nome": "Grupo de Pesquisa em Finanças - UFBA",
       "url": "http://dgp.cnpq.br/dgp/espelhogrupo/185576"
@@ -118,8 +152,38 @@
     "projetos": [
       {
         "id": "pj-1",
-        "titulo": "Green Finance no Brasil",
+        "titulo": "Seleção de carteiras de investimentos com responsabilidade ambiental",
         "descricao": ""
+      },
+      {
+        "id": "pj-2",
+        "titulo": "Avaliação de alternativas para a promoção de Green Finance no Brasil",
+        "descricao": ""
+      },
+      {
+        "id": "pj-3",
+        "titulo": "Avaliação de Projetos de Energia Renovável com o uso de Opções Reais e de alternativas de financiamento",
+        "descricao": ""
+      },
+      {
+        "id": "pj-4",
+        "titulo": "Modelagem de riscos financeiros e o processo de tomada de decisão",
+        "descricao": "Em parceria com a Deten Química."
+      },
+      {
+        "id": "pj-5",
+        "titulo": "Desenvolvimento de inovações em simulador para análise de riscos financeiros",
+        "descricao": "Em parceria com a Deten Química."
+      },
+      {
+        "id": "pj-6",
+        "titulo": "Gestão de Riscos Financeiros na Deten Química",
+        "descricao": "Em parceria com a Deten Química."
+      },
+      {
+        "id": "pj-7",
+        "titulo": "Desenvolvimento de ferramenta para apoio à decisão financeira na indústria",
+        "descricao": "Em parceria com a Deten Química."
       }
     ],
     "publicacoes": [
@@ -127,41 +191,642 @@
         "id": "pb-1",
         "ano": "2023",
         "tipo": "artigo",
-        "referencia": "SANTOS, J. P. Análise envoltória de dados."
+        "referencia": "SANTOS, J. P., SILVA JUNIOR, A. F. A.; CALDAS, A. V. S. Análise envoltória de dados como instrumento de gestão na auditoria do SUS. Journal of Management & Technology,Vol. 23, n. 3, p. 230-256, 2023."
       },
       {
         "id": "pb-2",
+        "ano": "2022",
+        "tipo": "artigo",
+        "referencia": "TORINELLI, V. H.; SILVA JUNIOR, A. F. A. Gestão de Risco Ambiental das Reservas Internacionais: uma discussão aplicada com os bancos centrais da América Latina e do Caribe, Cadernos de Finanças Públicas, v. 1, p. 1-34, 2022."
+      },
+      {
+        "id": "pb-3",
         "ano": "2021",
         "tipo": "artigo",
-        "referencia": "CALDAS, A. V. S. Comparative evaluation."
+        "referencia": "CALDAS, A. V. S.; SILVA JUNIOR, A. F. A. Comparative evaluation of investment analysis methods: an application in renewable energy auctions between 2011 e 2015. Revista de Administração da Universidade Federal de Santa Maria 14 (3), 693-715, 2021."
+      },
+      {
+        "id": "pb-4",
+        "ano": "2021",
+        "tipo": "artigo",
+        "referencia": "GALVÃO, J. V. F.; SILVA JUNIOR, A. F. A. Da VBR às Capacidades Dinâmicas no Franchising: o caso Subway. Revista Eletrônica de Estratégia & Negócios, V, 14, S. 3, P. 1-27, 2021."
+      },
+      {
+        "id": "pb-5",
+        "ano": "2020",
+        "tipo": "artigo",
+        "referencia": "SILVA JUNIOR, A. F. A. International Reserves: self-insurance and monetary policy in crisis. International Journal of Emerging Markets, ahead of print, 2020."
+      },
+      {
+        "id": "pb-6",
+        "ano": "2021",
+        "tipo": "artigo",
+        "referencia": "TORINELLI, V. H.; SILVA JUNIOR, A. F. A. Environmental risk analysis (ERA) in the strategic asset allocation (SAA) of the international reserves (IRs) managed by central banks (CBs). Latin American Journal of Central Banking 2, 1-17, 2021."
+      },
+      {
+        "id": "pb-7",
+        "ano": "2020",
+        "tipo": "artigo",
+        "referencia": "CALDAS, A. V. S.; SILVA JUNIOR, A. F. A. FATORES DETERMINANTES DE SUCESSO: Uma análise dos projetos eólicos dos leilões de energia reserva da ANEEL. CONTEXTUS - REVISTA CONTEMPORÂNEA DE ECONOMIA E GESTÃO, v.18, p.1 - 13, 2020."
+      },
+      {
+        "id": "pb-8",
+        "ano": "2021",
+        "tipo": "artigo",
+        "referencia": "CALDAS, A. V. S.; SILVA, E.; SILVA JUNIOR, A. F. A; CRUZ, U. Os efeitos da COVID-19 sobre os desempenhos das ações dos setores da B3. Contextus – Revista Contemporânea de Economia e Gestão 19 (2), 15-28, 2021."
+      },
+      {
+        "id": "pb-9",
+        "ano": "2020",
+        "tipo": "artigo",
+        "referencia": "TORINELLI, V. H.; SILVA JUNIOR, A. F. A.; SOUZA, A. L. R.; GOMES, S. M. S.; ANDRADE, J. C. S. The impacts of environmental disasters on share value and sustainability index: an analysis of Vale company facing Mariana and Brumadinho disasters - Brazil. LATIN AMERICAN JOURNAL OF MANAGEMENT FOR SUSTAINABLE DEVELOPMENT. , v.5, p.75 - 94, 2020."
+      },
+      {
+        "id": "pb-10",
+        "ano": "2019",
+        "tipo": "artigo",
+        "referencia": "QUINTELLA, VITOR DA MATA; QUINTELLA, C. M.; SILVA JUNIOR, A. F. A.; FONTES, C. Estudo Prospectivo Exploratório das Patentes de Métodos de Aprendizagem de Máquina Aplicados ao Mercado Financeiro. Cadernos de Prospecção, v.12, p.113 - , 2019."
+      },
+      {
+        "id": "pb-11",
+        "ano": "2019",
+        "tipo": "artigo",
+        "referencia": "SOUZA, D. T.; SILVA JUNIOR, A. F. A.; SOARES JUNIOR, J. S.; Quintella, Vitor SIAFIWEB: uma avaliação a partir da pesquisa de satisfação de usuários finais. REVISTA DE SISTEMAS E COMPUTAÇÃO - RSC, v.9, p.286 - 295, 2019."
+      },
+      {
+        "id": "pb-12",
+        "ano": "2018",
+        "tipo": "artigo",
+        "referencia": "MARINHO, L. L. C.; Silva Júnior, Antonio Francisco. A institucionalização da atividade de auditoria interna no Poder Executivo Federal. Revista da CGU, v.10, p.842 - 877, 2018."
+      },
+      {
+        "id": "pb-13",
+        "ano": "2018",
+        "tipo": "artigo",
+        "referencia": "SOUZA, A. L. R.; SILVA JUNIOR, A. F. A.; ANDRADE, J. C. S.; FERNANDES, M. E. S. T. Retorno das ações e sensibilidade ao risco de mercado das empresas participantes do índice carbono eficiente (ICO2) da B3 S.A: Um Estudo Comparativo. REVISTA UNIVERSO CONTÁBIL, v.14, p.30 - 60, 2018."
+      },
+      {
+        "id": "pb-14",
+        "ano": "2018",
+        "tipo": "artigo",
+        "referencia": "TORINELLI, V. H.; SILVA JUNIOR, A. F. A.; ANDRADE, J. C. S. Wind power energy in Brazil: public financing and future perspectives. LATIN AMERICAN JOURNAL OF MANAGEMENT FOR SUSTAINABLE DEVELOPMENT, v.4, p.41 - 54, 2018."
+      },
+      {
+        "id": "pb-15",
+        "ano": "2017",
+        "tipo": "artigo",
+        "referencia": "ANDRADE, N. N.; SILVA JUNIOR, A. F. A. Economicidade na Assistência Farmacêutica Básica: Uma Comparação dos custos do Programa de Assistência Farmacêutica Básica e do Programa Farmácia Popular do Brasil em Alagoas. Revista da CGU, v.9, p.700 - 737, 2017."
+      },
+      {
+        "id": "pb-16",
+        "ano": "2017",
+        "tipo": "artigo",
+        "referencia": "QUINTELLA, VITOR DA MATA; SILVA JR, ANTÔNIO FRANCISCO DE ALMEIDA DA; ALMEIDA, JOSE RICARDO UCHOA CAVALCANTI; EMBIRUÇU, MARCELO Financial exposure and technology innovation investment. Academia-Revista Latinoamericana de Administracion, v.30, p.547 - 564, 2017."
+      },
+      {
+        "id": "pb-17",
+        "ano": "2016",
+        "tipo": "artigo",
+        "referencia": "Silva Júnior, Antonio Francisco. The Self-Insurance Role of International Reserves and the 2008-2010 Crisis. Journal of Insurance and Financial Management, v.1, p.1 - , 2016."
+      },
+      {
+        "id": "pb-18",
+        "ano": "2015",
+        "tipo": "artigo",
+        "referencia": "Ornelas, José Renato; SILVA JUNIOR, A. F. A. Testing the liquidity preference hypothesis using survey forecasts. Emerging Markets Review, p.173 - 185, 2015."
+      },
+      {
+        "id": "pb-19",
+        "ano": "2013",
+        "tipo": "artigo",
+        "referencia": "Cabral, Sandro; Silva, Antonio Francisco. An approach for evaluating the risk management role of governments in public-private partnerships for mega-event stadiums. EUR SPORT MANAG Q. , v.13, p.472 - 490, 2013."
+      },
+      {
+        "id": "pb-20",
+        "ano": "2013",
+        "tipo": "artigo",
+        "referencia": "Silva Júnior, Antonio Francisco; ARAUJO, R. A.; Cabral, Sandro. Integração da Gestão Estratégica, Governança e Gestão de Riscos: Impacto da crise de 2008 em duas companhias de alimentos. Revista Iberoamericana de Estratégia. , v.12, p.150 - 180, 2013."
+      },
+      {
+        "id": "pb-21",
+        "ano": "2012",
+        "tipo": "artigo",
+        "referencia": "Ornelas, José Renato Haas; Silva Júnior, Antonio Francisco; Fernandes, José Luiz Barros. Yes, the choice of performance measure does matter for ranking of us mutual funds. International Journal of Finance and Economics (Print), v.17, p.61 - 72, 2012."
+      },
+      {
+        "id": "pb-22",
+        "ano": "2011",
+        "tipo": "artigo",
+        "referencia": "CABRAL, S.; SILVA JUNIOR, A. F. A. Escolhas estratégicas para expansão de uma malha ferroviária: uma análise baseada em opções reais. Base (São Leopoldo. Online). , v.8, p.78 - 90, 2011."
+      },
+      {
+        "id": "pb-23",
+        "ano": "2009",
+        "tipo": "artigo",
+        "referencia": "Ornelas, José Renato; Farias, Aquiles; SILVA JUNIOR, A. F. A. Accounting for Skewness in Performance Evaluation of Brazilian Mutual Fund. Banking and Finance Review (Print), v.1, p.119 - 130, 2009."
+      },
+      {
+        "id": "pb-24",
+        "ano": "2009",
+        "tipo": "artigo",
+        "referencia": "CABRAL, S.; SILVA JUNIOR, A. F. A. PPP e Decisões de Investimento em Estádios de Futebol. Organizações & Sociedade (Impresso), v.16, p.39 - 58, 2009."
+      },
+      {
+        "id": "pb-25",
+        "ano": "2009",
+        "tipo": "artigo",
+        "referencia": "Souza, Marcelo; FONTES, C.; MELO, S.; SILVA JUNIOR, A. F. A. Valuation of Clean Technology Projects: An Application of Real Options Theory. Computer-Aided Chemical Engineering, v.27, p.2079 - 2084, 2009."
+      },
+      {
+        "id": "pb-26",
+        "ano": "2003",
+        "tipo": "artigo",
+        "referencia": "SILVA JUNIOR, A. F. A.; CAMARGO, L.; LOURES, P.; HOLMO, R.; CABRAL, A. Estudo de Caso Sobre o Perfil das Estruturas de Capital e Rentabilidade de Indústrias Brasileiras. Revista Produção Online, v.3, p.1 - , 2003."
+      },
+      {
+        "id": "pb-27",
+        "ano": "2000",
+        "tipo": "artigo",
+        "referencia": "SILVA JUNIOR, A. F. A. Análise das estratégias competitivas de quatro bancos utilizando um conjunto de abordagens teóricas. Organizações & Sociedade (Online), v.7, p.43 - 58, 2000."
+      },
+      {
+        "id": "pb-28",
+        "ano": "2000",
+        "tipo": "artigo",
+        "referencia": "SILVA JUNIOR, A. F. A. Planejamento estratégico e proatividade: um estudo de caso em duas unidades regionais do Banco Central do Brasil. RAC. Revista de Administração Contemporânea (Impresso), v.4, p.177 - 199, 2000."
+      },
+      {
+        "id": "pb-29",
+        "ano": "2011",
+        "tipo": "capitulo",
+        "referencia": "SILVA JUNIOR, A. F. A.; Ornelas, José Renato; Carvalho. A Performance Attribution Methodology for Fixed Income Portfolios. In: Portfolio and Risk Management for Central Banks and Sovereign Wealth Funds In: Portfolio and Risk Management for Central Banks and Sovereign Wealth Funds ed.: Palgrave Macmillan, 2011"
+      },
+      {
+        "id": "pb-30",
+        "ano": "2004",
+        "tipo": "capitulo",
+        "referencia": "SILVA JUNIOR, A. F. A. Dívida Pública, Reservas Cambiais e Estratégia Ótima em Eventos de Crises Financeiras In: IX Premio Tesouro Nacional ed.Brasília: ESAF, 2004."
+      },
+      {
+        "id": "pb-31",
+        "ano": "2004",
+        "tipo": "capitulo",
+        "referencia": "SILVA JUNIOR, A. F. A. Performance Attribution for Fixed Income Portfolios in Central Bank of Brazil International Reserves Management In: Risk Management for Central Bank Foreign Reserves.1 ed.Frankfurft: European Central Bank, 2004, p. 315-329."
+      },
+      {
+        "id": "pb-32",
+        "ano": "2019",
+        "tipo": "anais",
+        "referencia": "CALDAS, A. V. S.; SILVA JUNIOR, A. F. A. Avaliação Ex-Post dos Métodos de Análise de Investimentos In: XLIII Enanpad 2019, 2019, São Paulo. XLIII Enanpad 2019. , 2019."
+      },
+      {
+        "id": "pb-33",
+        "ano": "2019",
+        "tipo": "anais",
+        "referencia": "CALDAS, A. V. S.; SILVA JUNIOR, A. F. A. Fatores Determinantes de Sucesso e Fracasso: Uma Análise dos Projetos Eólicos e Fotovoltaicos dos Leilões de Energia de Reserva da ANEEL In: XLIII Enanpad, 2019, São Paulo. XLIII Enanpad. , 2019."
+      },
+      {
+        "id": "pb-34",
+        "ano": "2019",
+        "tipo": "anais",
+        "referencia": "SILVA JUNIOR, A. F. A.; UCHOA, J. R.; QUINTELLA, V. M.; TEIXEIRA, G. S.; MENDONCA, R. P. Governança e Gestão de Riscos Financeiros em uma Empresa do Setor Petroquímico: da Aplicação de técnicas ao apoio à tomada de decisão In: Congresso Internacional de Administração - ADM 2019, 2019, Ponta Grossa. Congresso Internacional de Administração - ADM 2019. , 2019."
+      },
+      {
+        "id": "pb-35",
+        "ano": "2019",
+        "tipo": "anais",
+        "referencia": "TORINELLI, V. H.; SILVA JUNIOR, A. F. A. The Exposure of Institutional Investors to Environmental Risks: A Study Focused on the Management of International Reserves by Central Banks In: XXI Encontro Internacional sobre Gestão Ambiental e Meio Ambiente, 2019, São Paulo. XXI ENGEMA. , 2019."
+      },
+      {
+        "id": "pb-36",
+        "ano": "2019",
+        "tipo": "anais",
+        "referencia": "TORINELLI, V. H.; SILVA JUNIOR, A. F. A.; SOUZA, A. L. R.; GOMES, S. M. S.; ANDRADE, J. C. S. The Impacts of Environmental Disasters on Share Value and Sustainability Index: An Analysis of VALE Company Facing Mariana and Brumadinho Disasters-Brazil In: VI Conferência Sulamericana de Contabilidade Ambiental, 2019, Florianópolis. VI Conferência Sulamericana de Contabilidade Ambiental. , 2019."
+      },
+      {
+        "id": "pb-37",
+        "ano": "2017",
+        "tipo": "anais",
+        "referencia": "LIMA, R. C.; FONTES, C. H. O.; Silva Júnior, Antonio Francisco. Aspectos Institucionais do Setor de Energia Eólica na Bahia In: Congresso Nacional de Excelência em Gestão, 2017. Congresso Nacional de Excelência em Gestão. , 2017."
+      },
+      {
+        "id": "pb-38",
+        "ano": "2017",
+        "tipo": "anais",
+        "referencia": "LIMA, R. C.; SILVA JUNIOR, A. F. A.; FONTES, C. Fatores de Atração da Indústria de Turbinas Eólicas para a Bahia In: XIX Engema Encontro Internacional sobre Gestão Empresarial e Meio Ambiente, 2017, São Paulo. XIX Engema Encontro Internacional sobre Gestão Empresarial e Meio Ambiente. , 2017."
+      },
+      {
+        "id": "pb-39",
+        "ano": "2017",
+        "tipo": "anais",
+        "referencia": "TORINELLI, V. H.; SILVA JUNIOR, A. F. A. FINANCING WIND POWER ENERGY INDUSTRY IN BRAZIL In: Brazil Windpower 2017, 2017, Rio de Janeiro. Brazil Windpower 2017. , 2017."
+      },
+      {
+        "id": "pb-40",
+        "ano": "2016",
+        "tipo": "anais",
+        "referencia": "SILVA JUNIOR, A. F. A.; RIBEIRO, S. S. Avaliação de Leilões de Energia Solar Utilizando Opções Reais In: X Congresso Brasileiro de Planejamento Energético, 2016, Gramado. X CBPE. , 2016."
+      },
+      {
+        "id": "pb-41",
+        "ano": "2016",
+        "tipo": "anais",
+        "referencia": "RIBEIRO, S. S.; SILVA JUNIOR, A. F. A. Avaliação de Políticas Promovidas pela ANEEL para Incentivo da Geração de Energia Elétrica por Fonte Solar In: XL Enanpad, 2016, Salvador. XL Enanpad. , 2016."
+      },
+      {
+        "id": "pb-42",
+        "ano": "2016",
+        "tipo": "anais",
+        "referencia": "SANTOS, J. V.; SILVA JUNIOR, A. F. A. Diferenciais competitivos de uma franquia: um estudo de caso no segmento de alimentação In: XIX Semead, 2016, São Paulo. XIX Semead. , 2016."
+      },
+      {
+        "id": "pb-43",
+        "ano": "2016",
+        "tipo": "anais",
+        "referencia": "SOUZA, A. L. R.; SILVA JUNIOR, A. F. A.; ANDRADE, J. C. S.; GOMES, S. M. S.; FERNANDES, M. E. S. T. Empresas Participantes do Índice Carbono Eficiente (ICO2) - BM&FBOVESPA: Análise Comparativa do retorno das ações e sensibilidade ao risco de mercado In: Congresso Nacional de Excelência em Gestão & Inovarse, 2016, Rio de Janeiro. Congresso Nacional de Excelência em Gestão & Inovarse. , 2016."
+      },
+      {
+        "id": "pb-44",
+        "ano": "2015",
+        "tipo": "anais",
+        "referencia": "Quintella, Vitor; SILVA JUNIOR, A. F. A.; EMBIRUÇU, M.; ALMEIDA, R. U. C. Mensuração do risco financeiro da implantação de novas tecnologias em uma indústria In: XVI Congresso Latino-Iberoamericano de Gestão da Tecnologia - Altec 2015, 2015, Porto Alegre. XVI Congresso Latino-Iberoamericano de Gestão da Tecnologia - Altec 2015. , 2015."
+      },
+      {
+        "id": "pb-45",
+        "ano": "2013",
+        "tipo": "anais",
+        "referencia": "Cabral, Sandro; Silva Júnior, Antonio Francisco. An Approach for Evaluating the Risk Management Role of Governments in Public-Private Partnerships for Mega-Event Stadiums In: XVII IRSPM CONFERENCE, 2013, 2013, Praga. XVII IRSPM CONFERENCE, 2013. , 2013."
+      },
+      {
+        "id": "pb-46",
+        "ano": "2010",
+        "tipo": "anais",
+        "referencia": "CABRAL, S.; SILVA JUNIOR, A. F. A. Addressing the Demand Risk in PPP for the FIFA World Cup™ Stadiums: A Real-Options Approach In: EnAPG, 2010."
+      },
+      {
+        "id": "pb-47",
+        "ano": "2009",
+        "tipo": "anais",
+        "referencia": "CABRAL, S.; SILVA JUNIOR, A. F. A. Escolhas de Estruturas de Governança para o Setor Ferroviário Uma Análise Baseada em Opções Reais In: XXXIII Enanpad, 2009 Encontro Nacional de Pós-graduação em Administração. , 2009."
+      },
+      {
+        "id": "pb-48",
+        "ano": "2008",
+        "tipo": "anais",
+        "referencia": "Ornelas, José Renato; SILVA JUNIOR, A. F. A.; Farias, Aquiles. Manipulation-Proof Performance Evaluation of Brazilian Fixed Income and Multimarket Funds In: Encontro Nacional da SBFIN, 2008, Rio de Janeiro. Encontro Nacional da SBFIN e Prêmio da Apimec 2008 (4. lugar). , 2008."
+      },
+      {
+        "id": "pb-49",
+        "ano": "2004",
+        "tipo": "anais",
+        "referencia": "SILVA JUNIOR, A. F. A.; Silva. Optimal International Holdings in Emerging Markets Economies: The Brazilian Case In: Encontro Nacional de Economia, 2004, João Pessoa. Optimal International Reserves Holdings in Emerging Markets Economies: The Brazilian Case. , 2004."
+      },
+      {
+        "id": "pb-50",
+        "ano": "2003",
+        "tipo": "anais",
+        "referencia": "SILVA JUNIOR, A. F. A. Estudo de Caso sobre o Perfil das Estruturas de Capital e Rentabilidade de Indústrias Brasileiras In: ENEGEP, 2003, Ouro Preto. Edição Especial Enegep 2003 - Volume 3, Número 4, Novembro de 2003. Revista Cientifica Eletronica de Engenharia de Produção, 2003. v.3."
+      },
+      {
+        "id": "pb-51",
+        "ano": "2000",
+        "tipo": "anais",
+        "referencia": "MEIRELLES, A. M.; SILVA JUNIOR, A. F. A. Uma Abordagem para Estratégias utilizando Analogias In: Encontro Nacional de Pós-Graduação em Administração, 2000. Anais do ENANPAD - 2000. , 2000."
+      },
+      {
+        "id": "pb-52",
+        "ano": "1999",
+        "tipo": "anais",
+        "referencia": "SILVA JUNIOR, A. F. A. Análise das Estratégias Competitivas de Quatro Bancos do Sistema Financeiro Nacional In: Encontro Nacional de Pós-Graduação em Administração - ENANPAD e revista Organizações e Sociedade, 1999, Foz do Iguaçu. Anais do ENANPAD e revista Organizações e Sociedade n. 17, jan/2000. , 1999."
+      },
+      {
+        "id": "pb-53",
+        "ano": "1999",
+        "tipo": "anais",
+        "referencia": "SILVA JUNIOR, A. F. A.; GHIRARDI, A. G. Estudo Comparativo de Modelos de Gerenciamento de Risco de Mercado em uma Carteira Tipica de um Fundo de Ações In: Encontro Nacional de Pós Graduação em Administração, 1999, Foz do Iguaçu. Anais do ENANPAD. , 1999."
+      },
+      {
+        "id": "pb-54",
+        "ano": "1999",
+        "tipo": "anais",
+        "referencia": "SILVA JUNIOR, A. F. A. Planejamento Estratégico e Proatividade: Um Estudo de Caso In: Encontro Nacional de Pós-Graduação em Administração, publicado também na Revista de Administração Conteporânea (RAC), 1999, Foz do Iguaçu. Anais do Enanpad 1999 e RAC n.3, vol 4, set/2000. , 1999."
+      },
+      {
+        "id": "pb-55",
+        "ano": "1998",
+        "tipo": "anais",
+        "referencia": "SILVA JUNIOR, A. F. A.; EMBIRUÇU, M. Sintonia de Controladores PID In: II Conferência de Engenharia de Processos do MERCOSUL, 1998, Florianópolis. Anais da II Conferëncia de Engenharia de Processos do MERCOSUL. , 1998."
+      },
+      {
+        "id": "pb-56",
+        "ano": "1997",
+        "tipo": "anais",
+        "referencia": "SILVA JUNIOR, A. F. A.; EMBIRUÇU, M. Metodologia de Sintonia de Controladores PID e suas Aplicações Industriais In: I Seminário Nacional de Controle e Automação Industrial, 1997, Salvador. Anais do I Seminário Nacional de Controle e Automação Industrial. , 1997."
+      },
+      {
+        "id": "pb-57",
+        "ano": "2018",
+        "tipo": "jornal",
+        "referencia": "SILVA JUNIOR, A. F. A. Devemos entender que a discussão democrática conduz às melhores escolhas. Correio da Bahia. , 2018."
+      },
+      {
+        "id": "pb-58",
+        "ano": "2017",
+        "tipo": "jornal",
+        "referencia": "Silva Júnior, Antonio Francisco. Energia dos Ventos na Bahia. Jornal Correio da Bahia. , 2017."
+      },
+      {
+        "id": "pb-59",
+        "ano": "2014",
+        "tipo": "jornal",
+        "referencia": "CABRAL, S.; SILVA JUNIOR, A. F. A. Custos dos Estádios para a Copa FIFA 2014: Alguns Fatos Estilizados. Jornal A Tarde. , 2014."
+      },
+      {
+        "id": "pb-60",
+        "ano": "2013",
+        "tipo": "jornal",
+        "referencia": "CABRAL, S.; SILVA JUNIOR, A. F. A. Escolhas Estratégicas para uma ferrovia e a Universidade. Jornal Correio da Bahia. , 2013."
+      },
+      {
+        "id": "pb-61",
+        "ano": "2019",
+        "tipo": "palestra",
+        "referencia": "SILVA JUNIOR, A. F. A. Monetary Policy and Foreign Exchange Rate Policy, 2019. (Conferência ou palestra, Apresentação de Trabalho)"
+      },
+      {
+        "id": "pb-62",
+        "ano": "",
+        "tipo": "outro",
+        "referencia": "SILVA JUNIOR, A. F; LOPO, R.; LOFIEGO, P. ESG Integration Strategy for Stocks Portfolios Based on a Resampling Methodology with a Multivariate Normal Distribution. Available at SSRN 3935364"
+      },
+      {
+        "id": "pb-63",
+        "ano": "",
+        "tipo": "outro",
+        "referencia": "SA, R.; SILVA JUNIOR, A. F; GOMES, O. A methodology for corporate transparency evaluation applied to Brazilian companies: legal x voluntary information. SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3703208."
+      },
+      {
+        "id": "pb-64",
+        "ano": "2005",
+        "tipo": "outro",
+        "referencia": "Silva Júnior, Antonio Francisco. Intervenções Cambiais em Crises, uma Abordagem de Controle Estocástico com Impulso / Tese Doutorado. Dissertação. , 2005. (Outra produção bibliográfica)"
+      },
+      {
+        "id": "pb-65",
+        "ano": "2000",
+        "tipo": "outro",
+        "referencia": "SILVA JUNIOR, A. F. A. Análise de Modelos de Gerenciamento de Risco de Mercado. Dissertação. , 2000. (Outra produção bibliográfica)"
+      },
+      {
+        "id": "pb-66",
+        "ano": "1998",
+        "tipo": "outro",
+        "referencia": "SILVA JUNIOR, A. F. A. Sintonia de Controladores PID. Dissertação. Salvador:Universidade Federal da Bahia, 1998. (Outra produção bibliográfica)"
       }
     ]
   },
   "sobre": {
     "nome": "Antonio Francisco de Almeida da Silva Junior",
-    "cargo": "Professor da Escola de Administração da UFBA",
-    "resumo": "Resumo do currículo.",
+    "cargo": "Professor da Escola de Administração da UFBA, onde leciona disciplinas nas áreas de Finanças e Economia Gerencial.",
+    "resumo": "Pós-doutorado como Pesquisador visitante na New York University 2015-2016 (Finance and Risk Engineering Department). Doutor em Engenharia Aeronáutica e Mecânica, em 2006, pelo departamento de Engenharia de Produção, do Instituto Tecnológico de Aeronáutica (ITA), com tese em intervenções cambiais em crises financeiras. Graduado em 1988 em Engenharia Química, concluiu mestrado em Engenharia, em 1998, com dissertação na área de Automação de Processos Industriais, e mestrado em Administração, em 2000, com dissertação na área de gerenciamento de risco de mercado, pela Universidade Federal da Bahia - UFBA.\n\nTrabalha na área de gestão de riscos, é professor na faculdade de Administração da UFBA, atua como professor participante do Programa de Pós-graduação em Engenharia Industrial, da UFBA, e é professor permanente do Núcleo de Pós-graduação em Administração NPGA-UFBA. Seus trabalhos acadêmicos estão orientados para a gestão de riscos e decisões de investimento em condições de incerteza, com ênfase em investimentos que consideram impactos ESG.",
     "formacao": [
       {
         "id": "fo-1",
+        "periodo": "2015 – 2016",
+        "titulo": "Pós-doutorado",
+        "instituicao": "New York University, Finance and Risk Engineering Department",
+        "detalhe": "Pesquisador visitante, com bolsa da CAPES."
+      },
+      {
+        "id": "fo-2",
+        "periodo": "2014 – 2015",
+        "titulo": "Financial Risk Manager (FRM)",
+        "instituicao": "Global Association of Risk Professionals (GARP)",
+        "detalhe": ""
+      },
+      {
+        "id": "fo-3",
         "periodo": "2004 – 2006",
-        "titulo": "Doutorado",
-        "instituicao": "ITA",
+        "titulo": "Doutorado em Engenharia Aeronáutica e Mecânica",
+        "instituicao": "Instituto Tecnológico de Aeronáutica (ITA)",
+        "detalhe": "Tese: Intervenções cambiais em crises: uma abordagem de controle estocástico com impulso."
+      },
+      {
+        "id": "fo-4",
+        "periodo": "1998 – 2000",
+        "titulo": "Mestrado em Administração",
+        "instituicao": "Universidade Federal da Bahia",
+        "detalhe": "Dissertação: Avaliação de Modelos de Gerenciamento de Risco de Mercado."
+      },
+      {
+        "id": "fo-5",
+        "periodo": "1994 – 1998",
+        "titulo": "Mestrado em Engenharia Química",
+        "instituicao": "Universidade Federal da Bahia",
+        "detalhe": "Dissertação: Sintonia de Controladores Proporcional, Integral e Derivativo."
+      },
+      {
+        "id": "fo-6",
+        "periodo": "1988 – 1989",
+        "titulo": "Aperfeiçoamento em Engenharia de Processamento Petroquímico",
+        "instituicao": "Petrobras",
+        "detalhe": ""
+      },
+      {
+        "id": "fo-7",
+        "periodo": "1984 – 1988",
+        "titulo": "Graduação em Engenharia Química",
+        "instituicao": "Universidade Federal da Bahia",
         "detalhe": ""
       }
     ],
-    "areas": "Finanças: risco\nFinanças: investimento",
+    "areas": "Administração › Finanças › Risco\nAdministração › Finanças › Investimento",
     "orientacoes": [
       {
         "id": "or-1",
+        "ano": "2021",
+        "nivel": "Mestrado",
+        "aluno": "Andreia Nunes Teixeira",
+        "titulo": "Modelo da Avaliação da Maturidade de um Programa de Compliance: uma aplicação no SENAC Bahia"
+      },
+      {
+        "id": "or-2",
+        "ano": "2021",
+        "nivel": "Mestrado",
+        "aluno": "Isabela de Abrantes Ludovice",
+        "titulo": "Gestão de Riscos na Cadeia de Suprimentos e sua Integração à Gestão Estratégica das Organizações: estudo de caso do SENAC Bahia"
+      },
+      {
+        "id": "or-3",
+        "ano": "2021",
+        "nivel": "Mestrado",
+        "aluno": "Jaqueline Pereira Santos",
+        "titulo": "Análise Envoltória de Dados (DEA) como instrumento de gestão na auditoria do SUS"
+      },
+      {
+        "id": "or-4",
+        "ano": "2021",
+        "nivel": "Mestrado",
+        "aluno": "Luciana Alves Araújo",
+        "titulo": "Comunicação em auditoria: um estudo na Secretaria da Saúde do Estado da Bahia baseado nas Teorias da Agência e da Informação"
+      },
+      {
+        "id": "or-5",
+        "ano": "2021",
+        "nivel": "Mestrado",
+        "aluno": "Robson Amaral Santos",
+        "titulo": "Análise do uso de debêntures conversíveis para financiamento de projetos de energias solar"
+      },
+      {
+        "id": "or-6",
+        "ano": "2020",
+        "nivel": "Mestrado",
+        "aluno": "Josiane Fernandes de Oliveira",
+        "titulo": "A implantação da Gestão Integrada de Riscos em uma Instituição Pública de Ensino : uma análise no Instituto Federal do Norte de Minas Gerais (IFMG)"
+      },
+      {
+        "id": "or-7",
+        "ano": "2019",
+        "nivel": "Mestrado",
+        "aluno": "Daniel Castro Mota",
+        "titulo": "Educação Financeira no Youtube: Uma análise de conteúdo baseada em aprendizagem de máquina com modelos de tópicos"
+      },
+      {
+        "id": "or-8",
+        "ano": "2018",
+        "nivel": "Mestrado",
+        "aluno": "Rafaela Costa Lima",
+        "titulo": "A indústria de aerogeradores e o desenvolvimento regional: perspectivas de consolidação na Bahia"
+      },
+      {
+        "id": "or-9",
+        "ano": "2017",
+        "nivel": "Mestrado",
+        "aluno": "Vitor Quintella",
+        "titulo": "Dois ensaios sobre finanças corporativas e gestão de riscos de mercado"
+      },
+      {
+        "id": "or-10",
+        "ano": "2017",
+        "nivel": "Mestrado",
+        "aluno": "Nilson Andrade",
+        "titulo": "AVALIAÇÃO DA ECONOMICIDADE DA POLÍTICA PÚBLICA DE ASSISTÊNCIA FARMACÊUTICA BÁSICA"
+      },
+      {
+        "id": "or-11",
+        "ano": "2017",
+        "nivel": "Mestrado",
+        "aluno": "Renata Regina Galdino Sa",
+        "titulo": "AVALIAÇÃO DO NÍVEL DE TRANSPARÊNCIA DAS EMPRESAS: Um exame de websites corporativos de relações com investidores"
+      },
+      {
+        "id": "or-12",
+        "ano": "2017",
+        "nivel": "Mestrado",
+        "aluno": "Leonardo Lins Camara Marinho",
+        "titulo": "A capacidade da atividade de auditoria interna no Executivo federal brasileiro"
+      },
+      {
+        "id": "or-13",
+        "ano": "2017",
+        "nivel": "Mestrado",
+        "aluno": "João Victor da Fonseca Galvão",
+        "titulo": "Da visão baseada em recursos às capacidades dinâmicas: um estudo de caso na Subway"
+      },
+      {
+        "id": "or-14",
+        "ano": "2016",
+        "nivel": "Mestrado",
+        "aluno": "Wilson Cedraz da Silva",
+        "titulo": "Governança, Gestão de Riscos e Conformidade: Petrobras e Eletrobras, antes e depois da Operação Lavahato"
+      },
+      {
+        "id": "or-15",
+        "ano": "2015",
+        "nivel": "Mestrado",
+        "aluno": "Danillo Teixeira de Souza",
+        "titulo": "Avaliação ex post do Novo Siafi com base na satisfação dos usuários finais"
+      },
+      {
+        "id": "or-16",
+        "ano": "2015",
+        "nivel": "Mestrado",
+        "aluno": "Maria da Glória Brasil Nunes",
+        "titulo": "O Financiamento da Educação Profissional Técnica Integrada ao Ensino Médio na Rede Pública Estadual do Ceará: O Caso da Alimentação Escolar"
+      },
+      {
+        "id": "or-17",
+        "ano": "2010",
+        "nivel": "Mestrado",
+        "aluno": "Raquel Angelo Araújo",
+        "titulo": "Gestão de Riscos e Governança Corporativa: Impacto da Crise Financeira de 2008 em duas Companhias do Setor Alimentício"
+      },
+      {
+        "id": "or-18",
+        "ano": "2023",
+        "nivel": "Doutorado",
+        "aluno": "Alisson Barbosa Calasãs Pereira",
+        "titulo": "Múltiplas Accountabilities e a Capacidade de Responsabilização nas Organizações Policiais"
+      },
+      {
+        "id": "or-19",
         "ano": "2022",
         "nivel": "Doutorado",
         "aluno": "Viviane Helena Torinelli",
-        "titulo": "Environmental and Climate Risk Management"
+        "titulo": "Environmental and Climate Risk Management: a Framework for a resilient management of the international reserves by central banks"
+      },
+      {
+        "id": "or-20",
+        "ano": "2019",
+        "nivel": "Doutorado",
+        "aluno": "Antônio Vinicius Silva Caldas",
+        "titulo": "Contribuição aos Métodos de Análise de Investimentos: uma avaliação dos leilões de energia de reserva da ANEEL"
+      },
+      {
+        "id": "or-21",
+        "ano": "2018",
+        "nivel": "Doutorado",
+        "aluno": "Alisson Barbosa Calasãs Pereira",
+        "titulo": "Accouuntability em Corregedorias"
+      },
+      {
+        "id": "or-22",
+        "ano": "2013",
+        "nivel": "Especialização",
+        "aluno": "Eduardo Antonio Panza Bretas",
+        "titulo": "Técnicas e Mecanismos de Redução de Risco em Contratos de Construção e Montagem tipo EPC da Gerência Executiva de Engenharia da Petrobras"
+      },
+      {
+        "id": "or-23",
+        "ano": "2011",
+        "nivel": "Especialização",
+        "aluno": "Júlio César Hayashi",
+        "titulo": "AVALIAÇÃO ECONÔMICA DE PROJETO DE REDUÇÃO DE EFLUENTES DE UMA PLANTA DE DIBP"
+      },
+      {
+        "id": "or-24",
+        "ano": "2011",
+        "nivel": "Especialização",
+        "aluno": "Roberto Oenning",
+        "titulo": "ANÁLISE DA VIABILIDADE ECONÔMICA DE UM PROJETO DE IMPLANTAÇÃO DE VARIADORES DE VELOCIDADE EM BOMBAS CENTRÍFUGAS INDUSTRIAIS"
+      },
+      {
+        "id": "or-25",
+        "ano": "2006",
+        "nivel": "Especialização",
+        "aluno": "Zulmar da Silva Peixoto",
+        "titulo": "A integração como solução para maior eficiência no processo de liquidação de operações envolvendo ativos financeiros"
+      },
+      {
+        "id": "or-26",
+        "ano": "2006",
+        "nivel": "Especialização",
+        "aluno": "Paulo Araújo Caixeta",
+        "titulo": "A integração como solução para maior eficiência no processo de liquidação de operações envolvendo ativos financeiros"
       }
     ],
     "lattes": "http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4796527A6",
     "email": "p.antoniofran@gmail.com",
-    "english": "Short vitae."
+    "english": "Antonio Francisco de A. da Silva Junior teaches Finance and Managerial Economics at the Federal University of Bahia. He has experience in Risk Management working in the public sector. He is Chemical Engineer (1988) and he has a master degree in engineering (process control, in 1998) and a master degree in Finance (market risk management, in 2000) by the Federal University of Bahia. His PhD is in Industrial Engineering (2006) by the Technological Institute of Aeronautics in São Paulo (foreign exchange rate interventions in emerging markets). He held a position as visitor researcher at the Department of Finance and Risk Engineering of the New York University (2016).\n\nManagerial Economics. This is an undergraduate course for students in the fifth semester of Business Administration. In this course I present introductory concepts of microeconomics, game theory, market structure, agency theory and competitive strategy.\n\nCorporate Finance 1. This is an undergraduate course for students in the fourth semester of Business Administration. In this course I present introductory concepts balance sheet, income statement, financial analysis, risk and return, financial products and CAPM.\n\nCorporate Finance 2. In this course I teach the concepts of cash flow forecast, net present value, internal rate of return, payback, cost of capital, and capital structure.\n\nGreen Finance. This is a graduate course. I present in this course concepts of global warming, physical and transition risks, climate related financial disclosure, green bonds and clean energy finance.\n\nInvestment analysis. This is an advanced course for graduate students. The main concepts are projects evaluation, stochastic process, real options and risk management."
   }
 }
