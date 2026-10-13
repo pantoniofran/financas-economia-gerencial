@@ -61,7 +61,31 @@ test('aula no Claude: player é link para o YouTube, sem iframe nem imagem exter
   assert.ok(!html.includes('ytimg'));
   assert.equal(html.split('youtu.be').length - 1, 1);
   assert.ok(html.includes('Slides da aula'));
-  assert.match(html, /href="#a-eg-1-2">Custos da Firma ›/);
+});
+
+test('navegação em caixas: disciplinas, materiais e aulas vizinhas', () => {
+  const inicio = ver('#inicio');
+  assert.match(inicio, /<a class="caixa" href="#d-eg">[\s\S]*?Economia Gerencial[\s\S]*?2 módulos · 3 aulas[\s\S]*?1 aviso/);
+  assert.match(inicio, /<a class="caixa caixa-aviso" href="#d-eg">[\s\S]*?Prova na quinta/);
+  assert.match(inicio, /<a class="caixa" href="#laboratorio">[\s\S]*?1 material/);
+
+  const aula = ver('#a-eg-1-1');
+  assert.match(aula, /<a class="caixa" href="https:\/\/exemplo\.com\/a\.pdf" target="_blank" rel="noopener"><span class="caixa-info">Slides · PDF<\/span>/);
+  assert.match(aula, /<a class="caixa" href="#a-eg-1-2"><span class="caixa-info">Próxima aula ›<\/span><span class="caixa-titulo">Custos da Firma</);
+  assert.ok(!aula.includes('Aula anterior'));
+
+  assert.match(ver('#textos'), /<a class="caixa" href="#t-financas-verdes">[\s\S]*?27\/09\/2020[\s\S]*?Como financiar projetos\./);
+  assert.match(ver('#d-eg'), /aria-current="page">Disciplinas</);
+});
+
+test('índice de módulos aparece a partir de três módulos e só em leitura', () => {
+  const c = conteudoExemplo();
+  assert.ok(!ver('#d-eg', leitura, c).includes('data-ir='));
+  c.disciplinas[0].modulos.push({ id: 'eg-3', titulo: 'Escala e escopo', aulas: [] });
+  const html = ver('#d-eg', leitura, c);
+  assert.match(html, /<button type="button" class="caixa" data-ir="m-eg-3"><span class="caixa-info">Módulo 3 · 0 aulas</);
+  assert.ok(html.includes('<section class="modulo" id="m-eg-3"'));
+  assert.ok(!ver('#d-eg', edicao, c).includes('data-ir='));
 });
 
 test('aula na versão local: player é botão que carrega o vídeo', () => {

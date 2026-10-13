@@ -62,10 +62,32 @@ const rotuloDoChip = (mat) => (mat.nome === TIPOS[mat.tipo]?.nome ? rotuloDoTipo
 
 // ---------- moldura ----------
 
-const MENU = [['inicio', 'Início'], ['laboratorio', 'Laboratório'], ['textos', 'Textos'], ['pesquisa', 'Pesquisa'], ['sobre', 'Sobre']];
+const MENU = [['inicio', 'Disciplinas'], ['laboratorio', 'Laboratório'], ['textos', 'Textos'], ['pesquisa', 'Pesquisa'], ['sobre', 'Sobre']];
+// Em qual item do menu o aluno está, inclusive dentro de uma disciplina, aula ou texto.
+const SECAO = { disciplina: 'inicio', aula: 'inicio', texto: 'textos' };
+
+const plural = (n, um, varios) => `${n} ${n === 1 ? um : varios}`;
+const contarAulas = (d) => d.modulos.reduce((n, m) => n + m.aulas.filter((a) => tem(a.titulo)).length, 0);
+
+// De onde vem o arquivo, para o aluno saber o que vai abrir.
+function formato(mat) {
+  if (idDoYoutube(mat.url)) return 'YouTube';
+  const base = String(mat.url).split(/[?#]/)[0].toLowerCase();
+  if (base.endsWith('.pdf')) return 'PDF';
+  if (/\.xlsx?$/.test(base)) return 'Excel';
+  if (base.endsWith('.ipynb')) return 'Jupyter';
+  if (base.endsWith('.zip')) return 'ZIP';
+  if (base.endsWith('.txt')) return 'Texto';
+  if (base.includes('github.com')) return 'GitHub';
+  return 'Link';
+}
+
+// Caixa de material: o que é, de que tipo e de onde vem, com a área inteira clicável.
+const caixaDoMaterial = (mat) => `<li><a class="caixa" href="${esc(mat.url)}" target="_blank" rel="noopener"><span class="caixa-info">${esc(rotuloDoTipo(mat))} · ${formato(mat)}</span><span class="caixa-titulo">${esc(mat.nome)}</span><span class="caixa-acao">Abrir ↗</span></a></li>`;
 
 function cabecalho(c, rota) {
-  const itens = MENU.map(([r, nome]) => `<a href="#${r}"${rota.nome === r ? ' aria-current="page"' : ''}>${nome}</a>`).join('');
+  const atual = SECAO[rota.nome] ?? rota.nome;
+  const itens = MENU.map(([r, nome]) => `<a href="#${r}"${atual === r ? ' aria-current="page"' : ''}>${nome}</a>`).join('');
   return `<header class="topo"><a class="marca" href="#inicio">${esc(c.site.titulo)}</a><nav aria-label="Seções">${itens}</nav></header>`;
 }
 
@@ -98,19 +120,31 @@ function abertura(ctx) {
 
 function telaInicio(c, ctx) {
   const recentes = avisosRecentes(c, ctx.hoje);
-  const contagem = (d) => (d.modulos.length ? `${d.modulos.length} ${d.modulos.length === 1 ? 'módulo' : 'módulos'}` : '');
+  const caixaDaDisciplina = (d) => {
+    const capa = ctx.midia[`capa-${d.id}`];
+    const nAvisos = avisosValidos(d.avisos, ctx.hoje).length;
+    const info = d.modulos.length ? `${plural(d.modulos.length, 'módulo', 'módulos')} · ${plural(contarAulas(d), 'aula', 'aulas')}` : '';
+    return `<li><a class="caixa${capa ? ' com-arte' : ''}" href="#d-${d.id}">${capa ? `<img src="${esc(capa)}" alt="" loading="lazy" width="1280" height="720">` : ''}<span class="caixa-corpo"><span class="caixa-titulo">${esc(d.nome)}</span>${info ? `<span class="caixa-info">${info}</span>` : ''}${nAvisos ? `<span class="caixa-destaque">${plural(nAvisos, 'aviso', 'avisos')}</span>` : ''}<span class="caixa-acao">Ver aulas ›</span></span></a></li>`;
+  };
   const nivel = (chave) => {
     const lista = c.disciplinas.filter((d) => d.nivel === chave);
     if (!lista.length) return '';
-    return `<section><h2 class="eye">${NIVEIS[chave]}</h2><ul class="lista">${lista.map((d) => `<li><a href="#d-${d.id}"><span>${esc(d.nome)}</span><small>${contagem(d)}</small></a></li>`).join('')}</ul></section>`;
+    return `<section><h2 class="eye">${NIVEIS[chave]}</h2><ul class="caixas">${lista.map(caixaDaDisciplina).join('')}</ul></section>`;
   };
-  const textos = c.textos.filter((t) => tem(t.titulo)).slice(0, 3);
-  return `${abertura(ctx)}<div class="col">
+  const nLab = c.laboratorio.reduce((n, g) => n + g.itens.length, 0);
+  const nTextos = c.textos.filter((t) => tem(t.titulo)).length;
+  const atalhos = [
+    ['laboratorio', 'Laboratório', `${plural(nLab, 'material', 'materiais')}: planilhas, código e vídeos`],
+    ['textos', 'Textos', plural(nTextos, 'texto do professor', 'textos do professor')],
+    ['pesquisa', 'Pesquisa', `${plural(c.pesquisa.projetos.length, 'projeto', 'projetos')} · ${plural(c.pesquisa.publicacoes.length, 'publicação', 'publicações')}`],
+    ['sobre', 'Sobre o professor', 'Formação, orientações e contato'],
+  ];
+  return `${abertura(ctx)}<div class="col larga">
 <p class="eye">${esc(c.site.professor)} · ${esc(c.site.instituicao)}</p>
 <h1>${campo('site.chamada', c.site.chamada, ctx, 'Frase de abertura')}</h1>
-${recentes.length ? `<section><h2 class="eye">Avisos recentes</h2><ul class="lista">${recentes.map(({ disciplina, aviso }) => `<li><a href="#d-${disciplina.id}"><span>${esc(aviso.texto)}</span><small>${esc(disciplina.nome)}</small></a></li>`).join('')}</ul></section>` : ''}
+${recentes.length ? `<section><h2 class="eye">Avisos</h2><ul class="caixas">${recentes.map(({ disciplina, aviso }) => `<li><a class="caixa caixa-aviso" href="#d-${disciplina.id}"><span class="caixa-info">${esc(disciplina.nome)}</span><span class="caixa-titulo">${esc(aviso.texto)}</span></a></li>`).join('')}</ul></section>` : ''}
 ${nivel('graduacao')}${nivel('pos')}
-${textos.length ? `<section><h2 class="eye">Últimos textos</h2><ul class="lista">${textos.map((t) => `<li><a href="#t-${t.id}"><span>${esc(t.titulo)}</span><small>${dataBR(t.data)}</small></a></li>`).join('')}</ul></section>` : ''}
+<section><h2 class="eye">Mais no site</h2><ul class="caixas compactas">${atalhos.map(([r, nome, info]) => `<li><a class="caixa" href="#${r}"><span class="caixa-titulo">${nome}</span><span class="caixa-info">${info}</span></a></li>`).join('')}</ul></section>
 </div>`;
 }
 
@@ -155,7 +189,7 @@ function linhaDaAula(a, ia, m, bm, ctx) {
 function modulo(m, im, d, base, ctx) {
   const bm = `${base}.modulos.${im}`;
   const aulas = m.aulas.map((a, ia) => ({ a, ia })).filter(({ a }) => ctx.editando || tem(a.titulo));
-  return `<section class="modulo"><div class="linha-titulo"><h2><span class="num">${im + 1}.</span> ${campo(`${bm}.titulo`, m.titulo, ctx, 'Título do módulo')}</h2>${ferramentas(`${base}.modulos`, im, d.modulos.length, ctx, 'módulo')}</div><ol class="aulas">${aulas.map(({ a, ia }) => linhaDaAula(a, ia, m, bm, ctx)).join('')}</ol>${adicionar(ctx, 'aula', `${bm}.aulas`, 'Nova aula')}</section>`;
+  return `<section class="modulo" id="m-${m.id}" tabindex="-1"><div class="linha-titulo"><h2><span class="num">${im + 1}.</span> ${campo(`${bm}.titulo`, m.titulo, ctx, 'Título do módulo')}</h2>${ferramentas(`${base}.modulos`, im, d.modulos.length, ctx, 'módulo')}</div><ol class="aulas">${aulas.map(({ a, ia }) => linhaDaAula(a, ia, m, bm, ctx)).join('')}</ol>${adicionar(ctx, 'aula', `${bm}.aulas`, 'Nova aula')}</section>`;
 }
 
 function telaDisciplina(c, id, ctx) {
@@ -164,10 +198,12 @@ function telaDisciplina(c, id, ctx) {
   const d = c.disciplinas[i];
   const base = `disciplinas.${i}`;
   const capa = ctx.midia[`capa-${d.id}`];
+  // Índice de módulos em caixas: o aluno vê a disciplina inteira e pula direto para o módulo.
+  const indice = ctx.editando || d.modulos.length < 3 ? '' : `<nav aria-label="Módulos desta disciplina"><ul class="caixas compactas">${d.modulos.map((m, im) => `<li><button type="button" class="caixa" data-ir="m-${m.id}"><span class="caixa-info">Módulo ${im + 1} · ${plural(m.aulas.filter((a) => tem(a.titulo)).length, 'aula', 'aulas')}</span><span class="caixa-titulo">${esc(m.titulo)}</span></button></li>`).join('')}</ul></nav>`;
   return `<div class="col">
-${capa ? `<div class="capa"><img src="${esc(capa)}" alt="" width="1280" height="720"></div>` : ''}<p class="eye"><a href="#inicio">${NIVEIS[d.nivel]}</a></p>
+${capa ? `<div class="capa"><img src="${esc(capa)}" alt="" width="1280" height="720"></div>` : ''}<p class="eye"><a href="#inicio">‹ Disciplinas</a> · ${NIVEIS[d.nivel]}</p>
 <h1>${campo(`${base}.nome`, d.nome, ctx, 'Nome da disciplina')}</h1>
-${avisos(d, base, ctx)}${ficha(d, base, ctx)}
+${avisos(d, base, ctx)}${ficha(d, base, ctx)}${indice}
 ${d.modulos.map((m, im) => modulo(m, im, d, base, ctx)).join('')}
 ${adicionar(ctx, 'modulo', `${base}.modulos`, 'Novo módulo')}
 </div>`;
@@ -198,28 +234,36 @@ function telaAula(c, id, ctx) {
   const lista = `disciplinas.${idx}.modulos.${im}.aulas.${ia}.materiais`;
   const video = videoPrincipal(a);
   const linhas = a.materiais.map((mat, k) => ({ mat, k })).filter(({ mat }) => ctx.editando || mat !== video);
-  const materiais = linhas.length || ctx.editando
+  const vazio = `<p class="suave">${video ? 'Esta aula tem apenas o vídeo.' : 'Esta aula ainda não tem materiais.'}</p>`;
+  const materiais = ctx.editando
     ? `<ul class="lista mat-lista">${linhas.map(({ mat, k }) => linhaDoMaterial(mat, lista, k, a.materiais.length, ctx)).join('')}</ul>`
-    : `<p class="suave">${video ? 'Esta aula tem apenas o vídeo.' : 'Esta aula ainda não tem materiais.'}</p>`;
+    : (linhas.length ? `<ul class="caixas compactas">${linhas.map(({ mat }) => caixaDoMaterial(mat)).join('')}</ul>` : vazio);
+  const vizinha = (aula, rotulo) => (aula ? `<a class="caixa" href="#a-${aula.id}"><span class="caixa-info">${rotulo}</span><span class="caixa-titulo">${esc(aula.titulo)}</span></a>` : '<span></span>');
   return `<div class="col">
-<p class="eye"><a href="#d-${d.id}">${esc(d.nome)}</a> · Módulo ${im + 1} · Aula ${ia + 1}</p>
+<p class="eye"><a href="#d-${d.id}">‹ ${esc(d.nome)}</a> · Módulo ${im + 1} · Aula ${ia + 1}</p>
 <h1>${campo(`disciplinas.${idx}.modulos.${im}.aulas.${ia}.titulo`, a.titulo, ctx, 'Título da aula')}</h1>
 ${video ? player(video, a, d, ctx) : ''}
 <section><h2 class="eye">Materiais desta aula</h2>${materiais}${novoMaterial(ctx, lista, 'Novo material')}</section>
-<nav class="vizinhas" aria-label="Outras aulas">${anterior ? `<a href="#a-${anterior.id}">‹ ${esc(anterior.titulo)}</a>` : '<span></span>'}${proxima ? `<a href="#a-${proxima.id}">${esc(proxima.titulo)} ›</a>` : ''}</nav>
+<nav class="vizinhas" aria-label="Outras aulas">${vizinha(anterior, '‹ Aula anterior')}${vizinha(proxima, 'Próxima aula ›')}</nav>
 </div>`;
 }
 
 // ---------- laboratório, textos ----------
 
 function telaLaboratorio(c, ctx) {
-  const grupo = (g, ig) => `<section><h2 class="eye">${campo(`laboratorio.${ig}.grupo`, g.grupo, ctx, 'Nome do grupo')}</h2><ul class="lista mat-lista">${g.itens.map((it, k) => linhaDoMaterial(it, `laboratorio.${ig}.itens`, k, g.itens.length, ctx)).join('')}</ul>${novoMaterial(ctx, `laboratorio.${ig}.itens`, 'Novo item')}</section>`;
-  return `<div class="col"><h1>Laboratório</h1><p class="lead">${campo('site.laboratorio', c.site.laboratorio, ctx, 'Apresentação do laboratório')}</p>${c.laboratorio.map(grupo).join('')}</div>`;
+  const itens = (g, ig) => (ctx.editando
+    ? `<ul class="lista mat-lista">${g.itens.map((it, k) => linhaDoMaterial(it, `laboratorio.${ig}.itens`, k, g.itens.length, ctx)).join('')}</ul>`
+    : `<ul class="caixas compactas">${g.itens.map(caixaDoMaterial).join('')}</ul>`);
+  const grupo = (g, ig) => `<section><h2 class="eye">${campo(`laboratorio.${ig}.grupo`, g.grupo, ctx, 'Nome do grupo')}</h2>${itens(g, ig)}${novoMaterial(ctx, `laboratorio.${ig}.itens`, 'Novo item')}</section>`;
+  return `<div class="col larga"><h1>Laboratório</h1><p class="lead">${campo('site.laboratorio', c.site.laboratorio, ctx, 'Apresentação do laboratório')}</p>${c.laboratorio.map(grupo).join('')}</div>`;
 }
 
 function telaTextos(c, ctx) {
   const linhas = c.textos.map((t, k) => ({ t, k })).filter(({ t }) => ctx.editando || tem(t.titulo));
-  return `<div class="col"><h1>Textos</h1><ul class="lista">${linhas.map(({ t, k }) => `<li${ctx.editando ? ' class="editavel"' : ''}><a href="#t-${t.id}"><span>${esc(t.titulo || 'Sem título')}</span><small>${dataBR(t.data)}</small></a>${ferramentas('textos', k, c.textos.length, ctx, 'texto')}</li>`).join('')}</ul>${adicionar(ctx, 'texto', 'textos', 'Novo texto')}</div>`;
+  if (!ctx.editando) {
+    return `<div class="col"><h1>Textos</h1><ul class="caixas uma">${linhas.map(({ t }) => `<li><a class="caixa" href="#t-${t.id}"><span class="caixa-info">${dataBR(t.data)}</span><span class="caixa-titulo">${esc(t.titulo)}</span>${tem(t.resumo) ? `<span class="caixa-texto">${esc(t.resumo)}</span>` : ''}<span class="caixa-acao">Ler ›</span></a></li>`).join('')}</ul></div>`;
+  }
+  return `<div class="col"><h1>Textos</h1><ul class="lista">${linhas.map(({ t, k }) => `<li class="editavel"><a href="#t-${t.id}"><span>${esc(t.titulo || 'Sem título')}</span><small>${dataBR(t.data)}</small></a>${ferramentas('textos', k, c.textos.length, ctx, 'texto')}</li>`).join('')}</ul>${adicionar(ctx, 'texto', 'textos', 'Novo texto')}</div>`;
 }
 
 function telaTexto(c, id, ctx) {

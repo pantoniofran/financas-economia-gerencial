@@ -55,21 +55,59 @@ small { font-size: .8125rem; }
 /* Moldura */
 .topo { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; padding: 16px var(--margem); border-bottom: 1px solid var(--linha); }
 .marca { font: 500 1.0625rem/1.2 var(--serifa); color: var(--tinta); text-decoration: none; }
-.topo nav { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: .875rem; }
-.topo nav a { color: var(--suave); text-decoration: none; padding: 4px 0; }
-.topo nav a:hover, .topo nav a[aria-current] { color: var(--tinta); }
-.topo nav a[aria-current] { box-shadow: 0 1px 0 var(--tinta); }
+/* Menu em caixas: alvos grandes para o dedo, e a seção atual preenchida. */
+.topo nav { display: flex; flex-wrap: wrap; gap: 6px; font-size: .9375rem; }
+.topo nav a { display: inline-flex; align-items: center; min-height: 2.75rem; padding: 0 14px; border: 1px solid var(--linha); border-radius: 8px; color: var(--tinta); text-decoration: none; transition: border-color .15s ease, background-color .15s ease; }
+.topo nav a:hover { border-color: var(--verde); background: var(--papel); }
+.topo nav a[aria-current] { background: var(--tinta); border-color: var(--tinta); color: var(--fundo); }
 .col { max-width: calc(var(--largura) + 2 * var(--margem)); margin-inline: auto; padding-inline: var(--margem); padding-block: clamp(28px, 6vw, 56px); display: grid; gap: 24px; }
 .col > * { min-width: 0; }
+.col.larga { max-width: calc(62rem + 2 * var(--margem)); }
 .col section { display: grid; gap: 10px; }
-.col section.modulo { margin-top: 12px; }
+/* Cada módulo é uma caixa: o aluno enxerga onde um termina e o outro começa. */
+.col section.modulo { border: 1px solid var(--linha); border-radius: 10px; padding: 18px 18px 6px; scroll-margin-top: 16px; }
+.col section.modulo:focus { outline: 0; border-color: var(--verde); }
+.modulo .aulas > .aula:last-child { border-bottom: 0; }
+
+/* Caixas de navegação: a área inteira é clicável e a informação principal fica à vista. */
+.caixas { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr)); gap: 12px; }
+.caixas.compactas { grid-template-columns: repeat(auto-fill, minmax(min(100%, 12.5rem), 1fr)); gap: 10px; }
+.caixas.uma { grid-template-columns: 1fr; }
+.caixa { display: flex; flex-direction: column; gap: 4px; width: 100%; height: 100%; min-height: 3.5rem; padding: 14px 16px; border: 1px solid var(--linha); border-radius: 10px; background: var(--fundo); color: var(--tinta); font: inherit; text-align: left; text-decoration: none; transition: border-color .15s ease, background-color .15s ease, transform .15s ease; }
+.caixa:hover { border-color: var(--verde); background: var(--papel); }
+.caixa:active { transform: scale(.985); }
+.caixa img { display: block; height: 76px; width: auto; align-self: flex-start; margin: -2px 0 6px -5%; filter: var(--arte-filtro); mix-blend-mode: var(--arte-mistura); }
+.caixa-corpo { display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 0; }
+/* No celular a ilustração vai ao lado do texto, para caberem mais disciplinas na primeira tela. */
+.caixa.com-arte { flex-direction: row; align-items: center; gap: 12px; }
+.caixa.com-arte img { height: 54px; margin: 0 0 0 -10px; flex: none; }
+.caixa.com-arte .caixa-acao { padding-top: 2px; }
+@media (min-width: 40rem) {
+  .caixa.com-arte { flex-direction: column; align-items: stretch; gap: 4px; }
+  .caixa.com-arte img { height: 76px; margin: -2px 0 6px -5%; }
+  .caixa.com-arte .caixa-acao { padding-top: 8px; }
+}
+@media (max-width: 40rem) {
+  main .abertura img { max-height: 104px; }
+  main .col.larga { padding-block: 20px 32px; gap: 18px; }
+  .col.larga > h1 { font-size: 1.625rem; }
+}
+.caixa-titulo { font: 500 1.1875rem/1.25 var(--serifa); text-wrap: balance; }
+.caixas.compactas .caixa-titulo { font-size: 1.0625rem; }
+.caixa-info { font-size: .8125rem; color: var(--suave); }
+.caixa-texto { font-size: .9375rem; color: var(--suave); }
+.caixa-destaque { align-self: flex-start; margin-top: 2px; padding: 2px 8px; border-radius: 999px; background: var(--verde); color: var(--sobre-verde); font-size: .75rem; font-weight: 600; }
+.caixa-acao { margin-top: auto; padding-top: 8px; font-size: .8125rem; font-weight: 600; color: var(--verde); }
+.caixa-aviso { background: var(--papel); border-color: var(--papel); }
+.caixa-aviso .caixa-info { color: var(--verde); font-weight: 600; letter-spacing: .04em; text-transform: uppercase; font-size: .75rem; }
 .rodape { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding: 20px var(--margem); border-top: 1px solid var(--linha); font-size: .8125rem; color: var(--suave); }
 
 /* Imagens de abertura e capa */
 .abertura, .capa { position: relative; overflow: hidden; isolation: isolate; background: var(--fundo); }
 .abertura img, .abertura video, .capa img { filter: var(--arte-filtro); mix-blend-mode: var(--arte-mistura); }
 .abertura img { display: block; width: 100%; height: auto; object-fit: cover; }
-.abertura img { aspect-ratio: 8 / 3; max-height: 42vh; }
+/* Abertura baixa: as caixas das disciplinas precisam aparecer sem rolar. */
+.abertura img { aspect-ratio: 8 / 3; max-height: min(26vh, 220px); }
 /* A capa é uma ilustração pequena acima do título, alinhada à coluna. */
 .capa img { display: block; height: clamp(104px, 20vw, 176px); width: auto; margin-left: -4%; }
 .abertura video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .8s ease; }
@@ -113,7 +151,7 @@ small { font-size: .8125rem; }
 .aula-titulo a:hover { color: var(--verde); }
 .aula-titulo .abrir { font: 400 .8125rem var(--sans); color: var(--verde); margin-left: 10px; }
 .mats { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
-.chip { display: inline-flex; align-items: center; gap: 6px; font: 500 .8125rem/1.2 var(--sans); color: var(--verde); border: 1px solid var(--verde); border-radius: 3px; padding: 4px 9px; background: none; text-decoration: none; transition: background-color .15s ease, color .15s ease; }
+.chip { display: inline-flex; align-items: center; gap: 6px; min-height: 2.75rem; font: 500 .875rem/1.2 var(--sans); color: var(--verde); border: 1px solid var(--verde); border-radius: 8px; padding: 0 14px; background: none; text-decoration: none; transition: background-color .15s ease, color .15s ease; }
 a.chip:hover { background: var(--verde); color: var(--sobre-verde); }
 .chip.novo { border-style: dashed; }
 .chip > button { border: 0; background: none; color: inherit; padding: 0 2px; }
@@ -127,9 +165,9 @@ a.chip:hover { background: var(--verde); color: var(--sobre-verde); }
 .play::after { content: ''; position: absolute; left: 26px; top: 20px; border-left: 18px solid var(--palco); border-top: 12px solid transparent; border-bottom: 12px solid transparent; }
 .player:hover .play { transform: scale(1.06); }
 .legenda { position: absolute; left: 0; right: 0; bottom: 14px; text-align: center; font-size: .875rem; }
-.vizinhas { display: flex; justify-content: space-between; gap: 16px; font-size: .9375rem; }
-.vizinhas a { text-decoration: none; max-width: 48%; }
-.vizinhas a:last-child { text-align: right; margin-left: auto; }
+.vizinhas { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.vizinhas > :last-child { text-align: right; }
+.vizinhas > :last-child .caixa-info, .vizinhas > :last-child .caixa-titulo { align-self: flex-end; }
 
 /* Pesquisa e Sobre */
 .projetos, .pubs, .orientacoes { display: grid; gap: 14px; }
@@ -189,7 +227,6 @@ input[type="date"], select, .ano-in { border: 1px solid var(--linha); border-rad
 }
 
 /* Movimento */
-::view-transition-old(root), ::view-transition-new(root) { animation-duration: .18s; }
 @media (prefers-reduced-motion: reduce) {
-  *, ::view-transition-old(root), ::view-transition-new(root) { transition: none !important; animation: none !important; }
+  * { transition: none !important; animation: none !important; }
 }
