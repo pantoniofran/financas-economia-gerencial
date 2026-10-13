@@ -1505,13 +1505,21 @@ function desenhar({ foco } = {}) {
 
 function navegar() {
   Object.assign(estado, { confirmando: null, formulario: null, mensagem: '' });
+  let feito = false;
   const trocar = () => {
+    if (feito) return;
+    feito = true;
     desenhar();
     scrollTo(0, 0);
     document.getElementById('conteudo-principal')?.focus({ preventScroll: true });
   };
-  if (document.startViewTransition && !movimentoReduzido.matches) document.startViewTransition(trocar);
-  else trocar();
+  const animar = document.startViewTransition && !movimentoReduzido.matches && document.visibilityState === 'visible';
+  if (!animar) return trocar();
+  // O navegador pode abortar a transição (aba em segundo plano, por exemplo): a troca de tela acontece de qualquer jeito.
+  const transicao = document.startViewTransition(trocar);
+  transicao.ready.catch(() => {});
+  transicao.updateCallbackDone.catch(() => {}).finally(trocar);
+  return undefined;
 }
 
 function iniciarVideo() {
