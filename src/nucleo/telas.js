@@ -82,8 +82,12 @@ function formato(mat) {
   return 'Link';
 }
 
-// Caixa de material: o que é, de que tipo e de onde vem, com a área inteira clicável.
-const caixaDoMaterial = (mat) => `<li><a class="caixa" href="${esc(mat.url)}" target="_blank" rel="noopener"><span class="caixa-info">${esc(rotuloDoTipo(mat))} · ${formato(mat)}</span><span class="caixa-titulo">${esc(mat.nome)}</span><span class="caixa-acao">Abrir ↗</span></a></li>`;
+// Caixa de material: o que é e de onde vem, com a área inteira clicável.
+// O tipo só aparece quando o nome não o diz: "Slides da aula" já basta, "Sorvete" precisa de "Planilha".
+function caixaDoMaterial(mat) {
+  const info = mat.nome === TIPOS[mat.tipo]?.nome ? formato(mat) : `${esc(rotuloDoTipo(mat))} · ${formato(mat)}`;
+  return `<li><a class="caixa" href="${esc(mat.url)}" target="_blank" rel="noopener"><span class="caixa-info">${info}</span><span class="caixa-titulo">${esc(mat.nome)}</span><span class="caixa-acao">Abrir ↗<span class="sr"> em nova aba</span></span></a></li>`;
+}
 
 function cabecalho(c, rota) {
   const atual = SECAO[rota.nome] ?? rota.nome;
@@ -105,7 +109,7 @@ export function barraEdicao(ctx) {
   return `<div class="barra" role="region" aria-label="Edição"><span>${estado}</span><span class="grupo"><button type="button" data-op="descartar">${n === 0 ? 'Sair' : 'Descartar'}</button><button type="button" class="pri" data-op="publicar"${parado ? ' disabled' : ''}>${ctx.publicando ? 'Publicando…' : 'Publicar'}</button></span></div>`;
 }
 
-const tela404 = () => '<div class="col"><h1>Página não encontrada</h1><p><a href="#inicio">Voltar ao início</a></p></div>';
+const tela404 = () => '<div class="col"><h1>Página não encontrada</h1><p>O endereço pode ter mudado. <a href="#inicio">Ver as disciplinas</a></p></div>';
 
 // ---------- início ----------
 
@@ -205,16 +209,15 @@ ${capa ? `<div class="capa"><img src="${esc(capa)}" alt="" width="1280" height="
 <h1>${campo(`${base}.nome`, d.nome, ctx, 'Nome da disciplina')}</h1>
 ${avisos(d, base, ctx)}${ficha(d, base, ctx)}${indice}
 ${d.modulos.map((m, im) => modulo(m, im, d, base, ctx)).join('')}
+${d.modulos.length || ctx.editando ? '' : '<p class="suave">As aulas desta disciplina ainda não foram publicadas.</p>'}
 ${adicionar(ctx, 'modulo', `${base}.modulos`, 'Novo módulo')}
 </div>`;
 }
 
 // ---------- aula ----------
 
+// Linha de material no modo de edição (em leitura, os materiais são caixas).
 function linhaDoMaterial(mat, lista, k, n, ctx) {
-  if (!ctx.editando) {
-    return `<li><a href="${esc(mat.url)}" target="_blank" rel="noopener"><span>${esc(mat.nome)}</span><small>${esc(rotuloDoTipo(mat))} ↗</small></a></li>`;
-  }
   return `<li class="editavel"><span>${campo(`${lista}.${k}.nome`, mat.nome, ctx, 'Nome do material')} <small>${esc(rotuloDoTipo(mat))}</small></span>${ferramentas(lista, k, n, ctx, 'material')}</li>`;
 }
 

@@ -51,6 +51,9 @@ const fragmento = (html) => document.createRange().createContextualFragment(html
 
 function desenhar({ foco } = {}) {
   app.innerHTML = renderizar(atual(), interpretarRota(location.hash), contexto());
+  // O título da aba acompanha a tela, para o histórico e para leitores de tela.
+  const titulo = app.querySelector('h1')?.textContent.trim();
+  document.title = titulo && location.hash && location.hash !== '#inicio' ? `${titulo} · ${config.titulo}` : config.titulo;
   if (!SO_TEXTO) for (const el of app.querySelectorAll('.ed')) el.contentEditable = 'true';
   iniciarVideo();
   if (foco) app.querySelector(foco)?.focus();
@@ -304,6 +307,8 @@ function aoColar(e) {
 // ---------- partida ----------
 
 async function iniciar() {
+  // O esqueleto da página não declara o idioma; leitores de tela precisam dele para pronunciar certo.
+  document.documentElement.lang = 'pt-BR';
   desenhar();
   armazenamento = ENSAIO ? armazenamentoDeEnsaio(publicarEnsaio) : await criarArmazenamento(config.ambiente);
   estado.podeEditar = await armazenamento.podeEditar();

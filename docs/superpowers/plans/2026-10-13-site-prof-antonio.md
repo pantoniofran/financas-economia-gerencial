@@ -3015,3 +3015,20 @@ Mensagem final com:
 - Pendências: foto real do professor; conta dele no Claude para editar sozinho; os arquivos seguem hospedados no Wix e somem se a conta for cancelada.
 - O que ficou para a fase 2: domínio, cópia dos arquivos, login fora do Claude, player embutido para os alunos.
 
+
+---
+
+## Desvios na execução (13/10/2026)
+
+O que foi feito diferente do plano acima, e por quê.
+
+- **Navegação em caixas.** Pedido do Pedro depois de ver a primeira versão: menu, disciplinas, índice de módulos, materiais, aulas vizinhas e textos viraram caixas clicáveis, com contagens à vista. As listas finas ficaram só no modo de edição.
+- **Sem transição entre telas.** A transição de tela chegou a travar no meio com a aba sem foco. A troca agora é imediata.
+- **Tipo "Nota de aula".** Os PDFs com ícone de documento são notas de aula (conferido em três amostras), então ganharam tipo próprio em vez de "Material".
+- **Publicações por categoria.** O site atual separa artigos, capítulos, anais, jornais e palestras; a página Pesquisa mantém essas categorias em vez de agrupar por ano.
+- **Conteúdo fixo por script.** `scripts/importar-fixo.mjs` lê as páginas salvas do Wix em vez de montagem à mão. As páginas de disciplina foram extraídas pelo navegador, porque dependem da posição dos ícones.
+- **Imagens.** O modelo de imagem padrão exige plano pago; foi usado o `z_image`. O vídeo é do `seedance1_5` (4 s, 720p). `scripts/preparar-midia.mjs` deixa o fundo branco para o CSS fundir a ilustração com a página nos dois temas.
+- **Capa da disciplina.** Em vez de faixa de página inteira, é uma ilustração pequena acima do título.
+- **Fontes.** Literata e Libre Franklin no lugar de Newsreader e IBM Plex Sans, no passe de polimento.
+- **Esqueleto de republicação.** `RESET_PADRAO` e as quebras de linha do corpo foram copiados da página publicada; um documento regenerado sem alterações sai idêntico ao publicado.
+- **Auditoria.** A skill `audit` foi carregada mas não gerou relatório: o pedido das caixas chegou no meio. As medições dela (contraste, alvos de toque, rolagem lateral, tamanho mínimo de fonte) foram feitas dentro do passe de `polish`.

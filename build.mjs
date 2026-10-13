@@ -4,7 +4,7 @@ import { corpoDaPagina, documentoCompleto } from './src/nucleo/documento.js';
 import { validarConteudo } from './src/nucleo/conteudo.js';
 
 const TITULO = 'Finanças e Economia Gerencial';
-const FONTES = 'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap';
+const FONTES = 'https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400..600&family=Literata:opsz,wght@7..72,400..500&display=swap';
 
 const lerJSON = async (arquivo, padrao) => {
   try { return JSON.parse(await readFile(arquivo, 'utf8')); } catch (erro) { if (padrao === undefined) throw erro; return padrao; }

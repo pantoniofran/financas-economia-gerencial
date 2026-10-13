@@ -70,7 +70,12 @@ test('navegação em caixas: disciplinas, materiais e aulas vizinhas', () => {
   assert.match(inicio, /<a class="caixa" href="#laboratorio">[\s\S]*?1 material/);
 
   const aula = ver('#a-eg-1-1');
-  assert.match(aula, /<a class="caixa" href="https:\/\/exemplo\.com\/a\.pdf" target="_blank" rel="noopener"><span class="caixa-info">Slides · PDF<\/span>/);
+  // "Slides da aula" já diz o tipo, então a linha de apoio traz só o formato.
+  assert.match(aula, /<a class="caixa" href="https:\/\/exemplo\.com\/a\.pdf" target="_blank" rel="noopener"><span class="caixa-info">PDF<\/span><span class="caixa-titulo">Slides da aula</);
+  const c = conteudoExemplo();
+  c.disciplinas[0].modulos[0].aulas[0].materiais[0].nome = 'Caso do sorvete';
+  assert.ok(ver('#a-eg-1-1', leitura, c).includes('<span class="caixa-info">Slides · PDF</span><span class="caixa-titulo">Caso do sorvete'));
+  assert.ok(ver('#d-aep').includes('ainda não foram publicadas'));
   assert.match(aula, /<a class="caixa" href="#a-eg-1-2"><span class="caixa-info">Próxima aula ›<\/span><span class="caixa-titulo">Custos da Firma</);
   assert.ok(!aula.includes('Aula anterior'));
 
