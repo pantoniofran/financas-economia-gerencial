@@ -1,0 +1,410 @@
+{
+ "linhas": [
+  {
+   "t": "Finanças Corporativas 2",
+   "r": [
+    50,
+    297,
+    779,
+    66
+   ]
+  },
+  {
+   "t": "1. Avaliação de projetos",
+   "r": [
+    164,
+    510,
+    513,
+    33
+   ]
+  },
+  {
+   "t": "Aula 1: Fluxo de caixa",
+   "r": [
+    170,
+    544,
+    354,
+    40
+   ]
+  },
+  {
+   "t": "Aula 2: VPL e TIR",
+   "r": [
+    170,
+    584,
+    354,
+    40
+   ]
+  },
+  {
+   "t": "Aula 3: Critérios adicionais",
+   "r": [
+    170,
+    624,
+    354,
+    40
+   ]
+  },
+  {
+   "t": "2. Custo de Capital",
+   "r": [
+    174,
+    705,
+    516,
+    33
+   ]
+  },
+  {
+   "t": "Aula 1: Estrutura de capital",
+   "r": [
+    172,
+    747,
+    360,
+    40
+   ]
+  },
+  {
+   "t": "Aula 2: CMPC",
+   "r": [
+    172,
+    787,
+    360,
+    40
+   ]
+  },
+  {
+   "t": "Aula 3: Financiamento",
+   "r": [
+    172,
+    827,
+    360,
+    40
+   ]
+  },
+  {
+   "t": "3. Sistema Financeiro e Instrumentos",
+   "r": [
+    171,
+    962,
+    516,
+    33
+   ]
+  },
+  {
+   "t": "Aula 1: Organização",
+   "r": [
+    168,
+    1008,
+    360,
+    40
+   ]
+  },
+  {
+   "t": "Aula 2: Instrumentos financeiros",
+   "r": [
+    168,
+    1048,
+    360,
+    40
+   ]
+  },
+  {
+   "t": "Aula 3: Termo/Futuros",
+   "r": [
+    168,
+    1088,
+    360,
+    40
+   ]
+  },
+  {
+   "t": "Aula 4: Swaps e Opções",
+   "r": [
+    168,
+    1128,
+    360,
+    40
+   ]
+  },
+  {
+   "t": "Precisa de mais informações?",
+   "r": [
+    50,
+    1405,
+    676,
+    40
+   ]
+  },
+  {
+   "t": "Estamos aqui para ajudá-lo. Entre em contato por telefone, email ou redes sociais.",
+   "r": [
+    50,
+    1445,
+    676,
+    20
+   ]
+  }
+ ],
+ "links": [
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_d41614b6672e40419494c4a9719a5000.pdf",
+   "r": [
+    554,
+    556,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://youtu.be/YpIgVKs5Okg",
+   "r": [
+    595,
+    556,
+    22,
+    25
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_c26d3799c4444147ab8506c964c61450.pdf",
+   "r": [
+    622,
+    556,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_20f74b0dc42c40febdbcf5eb3d04b6e7.pdf",
+   "r": [
+    554,
+    594,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://youtu.be/J2eGP8yMxZY",
+   "r": [
+    596,
+    594,
+    25,
+    25
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_6190c65077494e76aaa95ff1d5372174.pdf",
+   "r": [
+    626,
+    594,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_a9881d1a9a3d460097f118439ab09fe2.pdf",
+   "r": [
+    554,
+    634,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://youtu.be/v-3X4OdZauk",
+   "r": [
+    596,
+    634,
+    25,
+    25
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_6470475f5a2f42ee9d7c869737e92fc9.pdf",
+   "r": [
+    626,
+    634,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_443d77f5a63340c895c5782ce1fea807.pdf",
+   "r": [
+    549,
+    747,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://youtu.be/QhlG1oEWMi8",
+   "r": [
+    590,
+    748,
+    25,
+    25
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_a15d64b448c94185af43889a67d89732.pdf",
+   "r": [
+    620,
+    748,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_023ffed5c87243e995c27cae6d6052c5.pdf",
+   "r": [
+    549,
+    794,
+    33,
+    26
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://youtu.be/Lu0VJ4KomgE",
+   "r": [
+    590,
+    796,
+    25,
+    24
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_ae1e24f7eae24164a16e1619034ae255.pdf",
+   "r": [
+    621,
+    793,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_db5558a4b9564ad2965079255834858a.pdf",
+   "r": [
+    552,
+    831,
+    33,
+    26
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://youtu.be/x1kuVOo4L0Y",
+   "r": [
+    592,
+    829,
+    25,
+    24
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_6c3561bb82494b8f9fa82d136f3c44f7.pdf",
+   "r": [
+    620,
+    831,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_4e43f8211aa743cf83844b0174aee763.pdf",
+   "r": [
+    546,
+    1015,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_e752f14f8d414e9897bf2ad26f7cea0c.pdf",
+   "r": [
+    617,
+    1016,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_8f18b16e16024f808ceea9687c7cec10.pdf",
+   "r": [
+    546,
+    1058,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_dd7672e43a004eaf93aa4d8f3a789fb4.pdf",
+   "r": [
+    617,
+    1060,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_601e18048fb347b0aae8f2fd842c2067.pdf",
+   "r": [
+    545,
+    1096,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_b23c29138fc94f1c92a36cb6fe8f29cc.pdf",
+   "r": [
+    617,
+    1096,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_566e87e6d691492bbe3324b2ec417f6c.pdf",
+   "r": [
+    545,
+    1132,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_da0c6534d6114f36af01ec5f8c656e96.pdf",
+   "r": [
+    617,
+    1132,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  }
+ ]
+}

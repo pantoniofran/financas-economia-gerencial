@@ -32,7 +32,7 @@ const avisos = [];
 
 // ---------- laboratório ----------
 const LAB = [
-  ['Notas de Aula', 'Notas de aula', 'material', 'Notas'],
+  ['Notas de Aula', 'Notas de aula', 'notas', 'Notas'],
   ['Planilha Índices', 'Planilha de índices financeiros', 'planilha', 'Planilhas'],
   ['Planilha CAPM', 'Planilha do modelo CAPM', 'planilha', 'Planilhas'],
   ['OpReal Proj Solar', 'Planilha: opções reais em projeto solar', 'planilha', 'Planilhas'],

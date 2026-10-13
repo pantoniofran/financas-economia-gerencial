@@ -1,5 +1,6 @@
 export const TIPOS = {
   slides: { rotulo: 'Slides', nome: 'Slides da aula' },
+  notas: { rotulo: 'Nota de aula', nome: 'Nota de aula' },
   video: { rotulo: 'Vídeo', nome: 'Vídeo da aula' },
   exercicios: { rotulo: 'Exercícios', nome: 'Lista de exercícios' },
   planilha: { rotulo: 'Planilha', nome: 'Planilha' },

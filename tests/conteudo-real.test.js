@@ -55,3 +55,31 @@ test('sobre: formação, orientações e contato', () => {
 test('nada do que o Pedro pediu para deixar de fora', () => {
   assert.ok(!/Fala Razoavelmente|Compreende Bem|PARTICIPAÇÃO EM BANCAS/i.test(tudo));
 });
+
+test('as sete disciplinas, na ordem do site atual', () => {
+  assert.deepEqual(c.disciplinas.map((d) => d.id), ['eg', 'fc1', 'fc2', 'sem', 'pfc', 'aep', 'fv']);
+  assert.deepEqual(c.disciplinas.map((d) => d.nivel), ['graduacao', 'graduacao', 'graduacao', 'graduacao', 'pos', 'pos', 'pos']);
+});
+
+test('Economia Gerencial: 7 módulos, e toda aula com vídeo tem player', () => {
+  const eg = c.disciplinas[0];
+  assert.equal(eg.modulos.length, 7);
+  assert.equal(eg.modulos[0].titulo, 'Princípios de Microeconomia');
+  assert.equal(eg.modulos[0].aulas[0].titulo, 'Curva de Demanda');
+  const materiais = eg.modulos.flatMap((m) => m.aulas.flatMap((a) => a.materiais));
+  assert.ok(materiais.length >= 55, `só ${materiais.length} materiais`);
+});
+
+test('nenhum conteúdo acadêmico inventado', () => {
+  for (const d of c.disciplinas) {
+    assert.deepEqual(d.ficha, { ementa: '', objetivos: '', avaliacao: '', bibliografia: '' }, d.id);
+    assert.deepEqual(d.avisos, [], d.id);
+  }
+});
+
+test('todo material tem endereço http e nome', () => {
+  for (const d of c.disciplinas) for (const m of d.modulos) for (const a of m.aulas) for (const mat of a.materiais) {
+    assert.match(mat.url, /^https?:\/\//, `${a.id}`);
+    assert.ok(mat.nome.trim(), `${a.id}`);
+  }
+});

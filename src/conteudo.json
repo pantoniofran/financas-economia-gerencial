@@ -7,14 +7,2364 @@
     "laboratorio": "Planilhas, scripts e vídeos de apoio às disciplinas.",
     "proposito": "Economia Gerencial é um campo de estudos que aplica técnicas e conceitos de microeconomia, teoria da decisão, pesquisa operacional, matemática, estatística, contabilidade, engenharia de produção e administração, para apoio na solução de problemas enfrentados pelas organizações. Em geral, esses problemas se associam às decisões sobre o que e como produzir, para quem produzir e qual a quantidade a ser produzida, considerando a escassez de recursos e o ambiente competitivo.\n\nFinanças é um campo de estudos dedicado a administração do dinheiro e dos investimentos, que utiliza técnicas e conceitos de matemática, estatística, economia, contabilidade e administração. Este sítio tem o propósito de promover educação e pesquisa em Finanças e Economia Gerencial.\n\nFoi criado para contribuir no desenvolvimento da capacidade analítica de estudantes e pessoas envolvidas no processo de decisão e formulação de estratégias para o crescimento sustentável."
   },
-  "disciplinas": [],
+  "disciplinas": [
+    {
+      "id": "eg",
+      "nivel": "graduacao",
+      "nome": "Economia Gerencial",
+      "ficha": {
+        "ementa": "",
+        "objetivos": "",
+        "avaliacao": "",
+        "bibliografia": ""
+      },
+      "avisos": [],
+      "modulos": [
+        {
+          "id": "eg-1",
+          "titulo": "Princípios de Microeconomia",
+          "aulas": [
+            {
+              "id": "eg-1-1",
+              "titulo": "Curva de Demanda",
+              "materiais": [
+                {
+                  "id": "eg-1-1-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_092633b2cf99429cb5cf10d710f07a51.pdf"
+                },
+                {
+                  "id": "eg-1-1-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/YHzoeE7-0sc"
+                },
+                {
+                  "id": "eg-1-1-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_d27b6041258d494481f6b462f814e5cf.pdf"
+                }
+              ]
+            },
+            {
+              "id": "eg-1-2",
+              "titulo": "Custos da Firma",
+              "materiais": [
+                {
+                  "id": "eg-1-2-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_907966fa9ded4d3d8c9e0ceecf12df73.pdf"
+                },
+                {
+                  "id": "eg-1-2-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://www.youtube.com/watch?v=X7ANRp74wfk"
+                },
+                {
+                  "id": "eg-1-2-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_7a4d2934853f439a8d16f4c9040efb3e.pdf"
+                }
+              ]
+            },
+            {
+              "id": "eg-1-3",
+              "titulo": "Maximizar Lucro",
+              "materiais": [
+                {
+                  "id": "eg-1-3-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_0d2e77b09025440589063a92e62e5f23.pdf"
+                },
+                {
+                  "id": "eg-1-3-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://www.youtube.com/watch?v=_-iSF1mci-o"
+                },
+                {
+                  "id": "eg-1-3-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_00004beddb374ffaa20e8967cd790970.pdf"
+                }
+              ]
+            },
+            {
+              "id": "eg-1-4",
+              "titulo": "Exercícios",
+              "materiais": [
+                {
+                  "id": "eg-1-4-m1",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://www.youtube.com/watch?v=r3zU1NqWwG0"
+                },
+                {
+                  "id": "eg-1-4-m2",
+                  "tipo": "planilha",
+                  "nome": "Planilha",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_05f761e8e1a24589a5446f8744cc5d61.xlsx?dn=SorveteCalculosFazer.xlsx"
+                }
+              ]
+            },
+            {
+              "id": "eg-1-5",
+              "titulo": "Cesta de produtos (Pesq Oper)",
+              "materiais": [
+                {
+                  "id": "eg-1-5-m1",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/UnDA482Imdo"
+                },
+                {
+                  "id": "eg-1-5-m2",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_822dd59e02e34032a1ebc8cbf9ac31b5.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "eg-2",
+          "titulo": "Introdução à Teoria dos Jogos",
+          "aulas": [
+            {
+              "id": "eg-2-1",
+              "titulo": "Definições",
+              "materiais": [
+                {
+                  "id": "eg-2-1-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_4679e509e77f4c0ba4f8d7453914c24b.pdf?index=true"
+                },
+                {
+                  "id": "eg-2-1-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://www.youtube.com/watch?v=eJmceXNqAqc"
+                },
+                {
+                  "id": "eg-2-1-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_91444d28521a40e090f7c043ba131518.pdf"
+                }
+              ]
+            },
+            {
+              "id": "eg-2-2",
+              "titulo": "Jogo simultâneo",
+              "materiais": [
+                {
+                  "id": "eg-2-2-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_ce727d2075314ce7ae45bbf33995020c.pdf"
+                },
+                {
+                  "id": "eg-2-2-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://www.youtube.com/watch?v=ogPiOGDGc6E"
+                },
+                {
+                  "id": "eg-2-2-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_e17c1966cc3540acbe81bf0325ca9972.pdf"
+                }
+              ]
+            },
+            {
+              "id": "eg-2-3",
+              "titulo": "Equilíbrio de Nash",
+              "materiais": [
+                {
+                  "id": "eg-2-3-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_dd5fb66cf7634a5ebcbb2816e11ae63f.pdf"
+                },
+                {
+                  "id": "eg-2-3-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://www.youtube.com/watch?v=W6jKYW03XT0"
+                },
+                {
+                  "id": "eg-2-3-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_9128c17cbe4f4276b7d03b3cde99891f.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "eg-3",
+          "titulo": "Escala, escopo e fronteiras",
+          "aulas": [
+            {
+              "id": "eg-3-1",
+              "titulo": "Escala e escopo",
+              "materiais": [
+                {
+                  "id": "eg-3-1-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_0b4e748c29634ea7adeeeef8c00af648.pdf"
+                },
+                {
+                  "id": "eg-3-1-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/1gzuvW4Z148"
+                },
+                {
+                  "id": "eg-3-1-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_09a4e39acc404f3faac183f59b99b9d2.pdf"
+                }
+              ]
+            },
+            {
+              "id": "eg-3-2",
+              "titulo": "Fronteiras verticais",
+              "materiais": [
+                {
+                  "id": "eg-3-2-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_fb712ae81cd540d996ae57b94e83eb39.pdf"
+                },
+                {
+                  "id": "eg-3-2-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/zm_l4MGgPUM"
+                },
+                {
+                  "id": "eg-3-2-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_3e1523d98daa450ca8979e41a8893fba.pdf"
+                }
+              ]
+            },
+            {
+              "id": "eg-3-3",
+              "titulo": "Custo de transação",
+              "materiais": [
+                {
+                  "id": "eg-3-3-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_0662cd776e044796a7f517ecbab01080.pdf"
+                },
+                {
+                  "id": "eg-3-3-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/Ut6ytc4Havo"
+                },
+                {
+                  "id": "eg-3-3-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_fbc99e79959a4cfda6155d96bda60a93.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "eg-4",
+          "titulo": "Teoria da Agência",
+          "aulas": [
+            {
+              "id": "eg-4-1",
+              "titulo": "Problema de agência",
+              "materiais": [
+                {
+                  "id": "eg-4-1-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_5a2ff56f122e4971a24013cfbfa6b5bb.pdf"
+                },
+                {
+                  "id": "eg-4-1-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/4LvZb1Uf2bk"
+                },
+                {
+                  "id": "eg-4-1-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_04bc7b0ac277469c8149585ad94297d5.pdf"
+                }
+              ]
+            },
+            {
+              "id": "eg-4-2",
+              "titulo": "Governança",
+              "materiais": [
+                {
+                  "id": "eg-4-2-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_1c1457f596134276bd4ff09a1f51ec8d.pdf"
+                },
+                {
+                  "id": "eg-4-2-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/JR17gb-pSac"
+                },
+                {
+                  "id": "eg-4-2-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_6aea405d8b024a03b6792835c46b97ac.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "eg-5",
+          "titulo": "Estruturas de mercado",
+          "aulas": [
+            {
+              "id": "eg-5-1",
+              "titulo": "Concentração",
+              "materiais": [
+                {
+                  "id": "eg-5-1-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_437403bb994c45b28e9bbeb2d8b5e3ca.pdf"
+                },
+                {
+                  "id": "eg-5-1-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/8RhukeGLNXI"
+                },
+                {
+                  "id": "eg-5-1-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_79503a31fb7d4000b9662e810bdc715c.pdf"
+                }
+              ]
+            },
+            {
+              "id": "eg-5-2",
+              "titulo": "Concorrência perfeita e monopólio",
+              "materiais": [
+                {
+                  "id": "eg-5-2-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_2c742454ca904ba0a25766cd53c347ef.pdf"
+                },
+                {
+                  "id": "eg-5-2-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/92WZxIMHzW8"
+                },
+                {
+                  "id": "eg-5-2-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_fa121fc9831f41b0a6332144cd770947.pdf"
+                }
+              ]
+            },
+            {
+              "id": "eg-5-3",
+              "titulo": "Conc. monopolística",
+              "materiais": [
+                {
+                  "id": "eg-5-3-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_0466804cb04d4c27ab0368925898e447.pdf"
+                },
+                {
+                  "id": "eg-5-3-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/bQz6Tf8vlV8"
+                },
+                {
+                  "id": "eg-5-3-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_183c0ee52f084715ab60b4363eff6e8a.pdf"
+                }
+              ]
+            },
+            {
+              "id": "eg-5-4",
+              "titulo": "Oligopólio",
+              "materiais": [
+                {
+                  "id": "eg-5-4-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_65075ff67ab94099aeba024335b06c96.pdf"
+                },
+                {
+                  "id": "eg-5-4-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/Utba-t-Ma5Q"
+                },
+                {
+                  "id": "eg-5-4-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_09a4de39ad5640dbb01918187fa305c9.pdf"
+                }
+              ]
+            },
+            {
+              "id": "eg-5-5",
+              "titulo": "Estudo de Caso Oligopólio - Chocolate",
+              "materiais": [
+                {
+                  "id": "eg-5-5-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_a090cf039eb24b1a84f04506fe0f9eca.pdf"
+                },
+                {
+                  "id": "eg-5-5-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/PW7bjT2w4Cg"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "eg-6",
+          "titulo": "Dinâmica da concorrência",
+          "aulas": [
+            {
+              "id": "eg-6-1",
+              "titulo": "Comprometimento",
+              "materiais": [
+                {
+                  "id": "eg-6-1-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_f4681cfc137f49eb89f856bb60b7ca32.pdf"
+                },
+                {
+                  "id": "eg-6-1-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/g4hI7Si89IU"
+                },
+                {
+                  "id": "eg-6-1-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_8b7bb310d8374b6780f70b2517cca0f3.pdf"
+                }
+              ]
+            },
+            {
+              "id": "eg-6-2",
+              "titulo": "Rivalidade",
+              "materiais": [
+                {
+                  "id": "eg-6-2-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_3b7e680e60c34264953b65b63e5c17e7.pdf"
+                },
+                {
+                  "id": "eg-6-2-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/YucfitIUpNA"
+                },
+                {
+                  "id": "eg-6-2-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_f4bc1930ba45405c90fceb0d97772ef2.pdf"
+                }
+              ]
+            },
+            {
+              "id": "eg-6-3",
+              "titulo": "Análise do Setor",
+              "materiais": [
+                {
+                  "id": "eg-6-3-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_5a165ccd191f45bc8096b03d8e2cc77a.pdf"
+                },
+                {
+                  "id": "eg-6-3-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/huPWY_XZpH4"
+                },
+                {
+                  "id": "eg-6-3-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_179253a992b643d286bb8e72748a88a4.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "eg-7",
+          "titulo": "Tópicos Especiais",
+          "aulas": [
+            {
+              "id": "eg-7-1",
+              "titulo": "Regulação",
+              "materiais": [
+                {
+                  "id": "eg-7-1-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_bf2c053ca49f4c889494413f4f23d5ff.pdf"
+                }
+              ]
+            },
+            {
+              "id": "eg-7-2",
+              "titulo": "Inovação",
+              "materiais": [
+                {
+                  "id": "eg-7-2-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_05be701cd306499d9ae2e599e24dab27.pdf"
+                }
+              ]
+            },
+            {
+              "id": "eg-7-3",
+              "titulo": "Sustentabilidade",
+              "materiais": [
+                {
+                  "id": "eg-7-3-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_cc22cbd7647a4391b750028412aca8fc.pdf"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fc1",
+      "nivel": "graduacao",
+      "nome": "Finanças Corporativas 1",
+      "ficha": {
+        "ementa": "",
+        "objetivos": "",
+        "avaliacao": "",
+        "bibliografia": ""
+      },
+      "avisos": [],
+      "modulos": [
+        {
+          "id": "fc1-1",
+          "titulo": "Demonstrações Financeiras",
+          "aulas": [
+            {
+              "id": "fc1-1-1",
+              "titulo": "Introdução",
+              "materiais": [
+                {
+                  "id": "fc1-1-1-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_a445fa14942342afaba08469f41d3edf.pdf"
+                },
+                {
+                  "id": "fc1-1-1-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/YLb1WRCrkPg"
+                },
+                {
+                  "id": "fc1-1-1-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_27e24d2b960244d8b48f307080226a6d.pdf"
+                }
+              ]
+            },
+            {
+              "id": "fc1-1-2",
+              "titulo": "Análise horiz./vertical",
+              "materiais": [
+                {
+                  "id": "fc1-1-2-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_c1770514edb74a0a8c1d8c4b53d471f4.pdf"
+                },
+                {
+                  "id": "fc1-1-2-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/zr2d8ZYuOD8"
+                },
+                {
+                  "id": "fc1-1-2-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_6533deda86294d0aaf423ec36a8c2bc6.pdf"
+                }
+              ]
+            },
+            {
+              "id": "fc1-1-3",
+              "titulo": "Análise de índices",
+              "materiais": [
+                {
+                  "id": "fc1-1-3-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_51e698c28e0d414594306e95dbd9dd44.pdf"
+                },
+                {
+                  "id": "fc1-1-3-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/glY7z6vrEe0"
+                },
+                {
+                  "id": "fc1-1-3-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_a30e752b001f4d41a34088802268a636.pdf"
+                }
+              ]
+            },
+            {
+              "id": "fc1-1-4",
+              "titulo": "Ciclo financeiro",
+              "materiais": [
+                {
+                  "id": "fc1-1-4-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_108826cb3dfd4970b88039d4ba261044.pdf"
+                },
+                {
+                  "id": "fc1-1-4-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/ip9P9FowcOk"
+                },
+                {
+                  "id": "fc1-1-4-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_713fe6de4fe54fcfbe4a87bdbd353473.pdf"
+                }
+              ]
+            },
+            {
+              "id": "fc1-1-5",
+              "titulo": "Índices complementares",
+              "materiais": [
+                {
+                  "id": "fc1-1-5-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_e59c25ff698c45a8855bf0a6ec675e1c.pdf"
+                }
+              ]
+            },
+            {
+              "id": "fc1-1-6",
+              "titulo": "Laboratório Python",
+              "materiais": [
+                {
+                  "id": "fc1-1-6-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_0229cbe4c8a343339b54d6d74d442c1f.pdf"
+                },
+                {
+                  "id": "fc1-1-6-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/4aj8EJjh-qM"
+                },
+                {
+                  "id": "fc1-1-6-m3",
+                  "tipo": "codigo",
+                  "nome": "Notebook em Python",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_e81c33cea10240679a817404ded556b5.ipynb?dn=IndFinPythonKlabin.ipynb"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "fc1-2",
+          "titulo": "Planejamento de curto prazo",
+          "aulas": [
+            {
+              "id": "fc1-2-1",
+              "titulo": "Matemática financeira",
+              "materiais": [
+                {
+                  "id": "fc1-2-1-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_1bbb131de0bb4d9bb2591610d4ad49a7.pdf"
+                },
+                {
+                  "id": "fc1-2-1-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/AsSopK8T_QA"
+                },
+                {
+                  "id": "fc1-2-1-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_a0ef715b1cc5422b9846f9cd747bb089.pdf"
+                }
+              ]
+            },
+            {
+              "id": "fc1-2-2",
+              "titulo": "Desconto e prazo",
+              "materiais": [
+                {
+                  "id": "fc1-2-2-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_1e29022dfba0422887a452a0f8696bb0.pdf"
+                },
+                {
+                  "id": "fc1-2-2-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/9BXctCeQIFI"
+                },
+                {
+                  "id": "fc1-2-2-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_9cced407870f4f508b8426712d20d44e.pdf"
+                }
+              ]
+            },
+            {
+              "id": "fc1-2-3",
+              "titulo": "Planos de curto prazo",
+              "materiais": [
+                {
+                  "id": "fc1-2-3-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_4f1772bb2eb5419590cd0496997ada55.pdf"
+                },
+                {
+                  "id": "fc1-2-3-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/XeKAqsGI_ds"
+                },
+                {
+                  "id": "fc1-2-3-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_caedaf6addc14acfb147e7a9674a26b6.pdf"
+                }
+              ]
+            },
+            {
+              "id": "fc1-2-4",
+              "titulo": "Capital de giro",
+              "materiais": [
+                {
+                  "id": "fc1-2-4-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_1c4230a7dd4a4f84a23106bf4efa8d1d.pdf"
+                },
+                {
+                  "id": "fc1-2-4-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/6egGMQBgEJ8"
+                },
+                {
+                  "id": "fc1-2-4-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_34d0820a8a5a4d028228c03b89c29473.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "fc1-3",
+          "titulo": "Risco e retorno",
+          "aulas": [
+            {
+              "id": "fc1-3-1",
+              "titulo": "Métricas",
+              "materiais": [
+                {
+                  "id": "fc1-3-1-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_c5323a81276e42429fff6a9f5acb1733.pdf"
+                },
+                {
+                  "id": "fc1-3-1-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/NEr1_ud0cA4"
+                },
+                {
+                  "id": "fc1-3-1-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_f4d4d9db46b34fc1a4df16f58f83ea63.pdf"
+                }
+              ]
+            },
+            {
+              "id": "fc1-3-2",
+              "titulo": "Modelo de fator único",
+              "materiais": [
+                {
+                  "id": "fc1-3-2-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_62e3ee549daf40238ff61bd334b6a1fa.pdf"
+                },
+                {
+                  "id": "fc1-3-2-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/fTwoT_5zm54"
+                },
+                {
+                  "id": "fc1-3-2-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_8439d5973d6248c4ae335a66a938b4b8.pdf"
+                }
+              ]
+            },
+            {
+              "id": "fc1-3-3",
+              "titulo": "O modelo CAPM",
+              "materiais": [
+                {
+                  "id": "fc1-3-3-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_08950ac71e70431db0d1022378e0cfe4.pdf"
+                },
+                {
+                  "id": "fc1-3-3-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/j_K-CAxBSFM"
+                },
+                {
+                  "id": "fc1-3-3-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_1546681befb6471e90946f1823025007.pdf"
+                }
+              ]
+            },
+            {
+              "id": "fc1-3-4",
+              "titulo": "Risco de crédito",
+              "materiais": [
+                {
+                  "id": "fc1-3-4-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_726295c29c3f4c328b25163fd3e26385.pdf"
+                },
+                {
+                  "id": "fc1-3-4-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/ByBrynaSjYk"
+                },
+                {
+                  "id": "fc1-3-4-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_d8943febb8994272b676ccd5364adcd4.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "fc1-4",
+          "titulo": "Instrumentos Básicos",
+          "aulas": [
+            {
+              "id": "fc1-4-1",
+              "titulo": "Ações",
+              "materiais": [
+                {
+                  "id": "fc1-4-1-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_1098ff3085764898b277eba6212deeeb.pdf"
+                },
+                {
+                  "id": "fc1-4-1-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/Q38EGdQGOlc"
+                },
+                {
+                  "id": "fc1-4-1-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_3d32a557beca4d7d8555e683ce8c5d2b.pdf"
+                }
+              ]
+            },
+            {
+              "id": "fc1-4-2",
+              "titulo": "Títulos",
+              "materiais": [
+                {
+                  "id": "fc1-4-2-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_3a9a533238e84a3a9348db8be1b6205a.pdf"
+                },
+                {
+                  "id": "fc1-4-2-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/KnGG7sYBjjo"
+                },
+                {
+                  "id": "fc1-4-2-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_4a43037357c149e9bc6005cf05a91e8c.pdf"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fc2",
+      "nivel": "graduacao",
+      "nome": "Finanças Corporativas 2",
+      "ficha": {
+        "ementa": "",
+        "objetivos": "",
+        "avaliacao": "",
+        "bibliografia": ""
+      },
+      "avisos": [],
+      "modulos": [
+        {
+          "id": "fc2-1",
+          "titulo": "Avaliação de projetos",
+          "aulas": [
+            {
+              "id": "fc2-1-1",
+              "titulo": "Fluxo de caixa",
+              "materiais": [
+                {
+                  "id": "fc2-1-1-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_d41614b6672e40419494c4a9719a5000.pdf"
+                },
+                {
+                  "id": "fc2-1-1-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/YpIgVKs5Okg"
+                },
+                {
+                  "id": "fc2-1-1-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_c26d3799c4444147ab8506c964c61450.pdf"
+                }
+              ]
+            },
+            {
+              "id": "fc2-1-2",
+              "titulo": "VPL e TIR",
+              "materiais": [
+                {
+                  "id": "fc2-1-2-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_20f74b0dc42c40febdbcf5eb3d04b6e7.pdf"
+                },
+                {
+                  "id": "fc2-1-2-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/J2eGP8yMxZY"
+                },
+                {
+                  "id": "fc2-1-2-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_6190c65077494e76aaa95ff1d5372174.pdf"
+                }
+              ]
+            },
+            {
+              "id": "fc2-1-3",
+              "titulo": "Critérios adicionais",
+              "materiais": [
+                {
+                  "id": "fc2-1-3-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_a9881d1a9a3d460097f118439ab09fe2.pdf"
+                },
+                {
+                  "id": "fc2-1-3-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/v-3X4OdZauk"
+                },
+                {
+                  "id": "fc2-1-3-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_6470475f5a2f42ee9d7c869737e92fc9.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "fc2-2",
+          "titulo": "Custo de Capital",
+          "aulas": [
+            {
+              "id": "fc2-2-1",
+              "titulo": "Estrutura de capital",
+              "materiais": [
+                {
+                  "id": "fc2-2-1-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_443d77f5a63340c895c5782ce1fea807.pdf"
+                },
+                {
+                  "id": "fc2-2-1-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/QhlG1oEWMi8"
+                },
+                {
+                  "id": "fc2-2-1-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_a15d64b448c94185af43889a67d89732.pdf"
+                }
+              ]
+            },
+            {
+              "id": "fc2-2-2",
+              "titulo": "CMPC",
+              "materiais": [
+                {
+                  "id": "fc2-2-2-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_023ffed5c87243e995c27cae6d6052c5.pdf"
+                },
+                {
+                  "id": "fc2-2-2-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/Lu0VJ4KomgE"
+                },
+                {
+                  "id": "fc2-2-2-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_ae1e24f7eae24164a16e1619034ae255.pdf"
+                }
+              ]
+            },
+            {
+              "id": "fc2-2-3",
+              "titulo": "Financiamento",
+              "materiais": [
+                {
+                  "id": "fc2-2-3-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_db5558a4b9564ad2965079255834858a.pdf"
+                },
+                {
+                  "id": "fc2-2-3-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/x1kuVOo4L0Y"
+                },
+                {
+                  "id": "fc2-2-3-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_6c3561bb82494b8f9fa82d136f3c44f7.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "fc2-3",
+          "titulo": "Sistema Financeiro e Instrumentos",
+          "aulas": [
+            {
+              "id": "fc2-3-1",
+              "titulo": "Organização",
+              "materiais": [
+                {
+                  "id": "fc2-3-1-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_4e43f8211aa743cf83844b0174aee763.pdf"
+                },
+                {
+                  "id": "fc2-3-1-m2",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_e752f14f8d414e9897bf2ad26f7cea0c.pdf"
+                }
+              ]
+            },
+            {
+              "id": "fc2-3-2",
+              "titulo": "Instrumentos financeiros",
+              "materiais": [
+                {
+                  "id": "fc2-3-2-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_8f18b16e16024f808ceea9687c7cec10.pdf"
+                },
+                {
+                  "id": "fc2-3-2-m2",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_dd7672e43a004eaf93aa4d8f3a789fb4.pdf"
+                }
+              ]
+            },
+            {
+              "id": "fc2-3-3",
+              "titulo": "Termo/Futuros",
+              "materiais": [
+                {
+                  "id": "fc2-3-3-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_601e18048fb347b0aae8f2fd842c2067.pdf"
+                },
+                {
+                  "id": "fc2-3-3-m2",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_b23c29138fc94f1c92a36cb6fe8f29cc.pdf"
+                }
+              ]
+            },
+            {
+              "id": "fc2-3-4",
+              "titulo": "Swaps e Opções",
+              "materiais": [
+                {
+                  "id": "fc2-3-4-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_566e87e6d691492bbe3324b2ec417f6c.pdf"
+                },
+                {
+                  "id": "fc2-3-4-m2",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_da0c6534d6114f36af01ec5f8c656e96.pdf"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sem",
+      "nivel": "graduacao",
+      "nome": "Seminários em Finanças",
+      "ficha": {
+        "ementa": "",
+        "objetivos": "",
+        "avaliacao": "",
+        "bibliografia": ""
+      },
+      "avisos": [],
+      "modulos": [
+        {
+          "id": "sem-1",
+          "titulo": "Avaliação clássica de projetos",
+          "aulas": [
+            {
+              "id": "sem-1-1",
+              "titulo": "Matemática Financeira",
+              "materiais": [
+                {
+                  "id": "sem-1-1-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_e2643c6a74ca4628ba2fcf78094fbcc4.pdf"
+                },
+                {
+                  "id": "sem-1-1-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/SbVL8ZFnBso"
+                },
+                {
+                  "id": "sem-1-1-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_9d92a18d9f78424e8a15e58e03f04fe6.pdf"
+                }
+              ]
+            },
+            {
+              "id": "sem-1-2",
+              "titulo": "Fluxo de caixa",
+              "materiais": [
+                {
+                  "id": "sem-1-2-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_77a8a7d3a1cb44808511c7679fc99f36.pdf"
+                },
+                {
+                  "id": "sem-1-2-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/YpIgVKs5Okg"
+                },
+                {
+                  "id": "sem-1-2-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_d25e21783c5d45009dd16f1e8a432e18.pdf"
+                }
+              ]
+            },
+            {
+              "id": "sem-1-3",
+              "titulo": "VPL e TIR",
+              "materiais": [
+                {
+                  "id": "sem-1-3-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_ff2ab58af30342e980177a1154935424.pdf"
+                },
+                {
+                  "id": "sem-1-3-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/Yr49VBIW1Mc"
+                },
+                {
+                  "id": "sem-1-3-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_1fd392501f01481082f69f139bb589e0.pdf"
+                }
+              ]
+            },
+            {
+              "id": "sem-1-4",
+              "titulo": "Critérios adicionais",
+              "materiais": [
+                {
+                  "id": "sem-1-4-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_a9881d1a9a3d460097f118439ab09fe2.pdf"
+                },
+                {
+                  "id": "sem-1-4-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/v-3X4OdZauk"
+                },
+                {
+                  "id": "sem-1-4-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_4a70295bfbc748fca15c90933fb96dbc.pdf"
+                }
+              ]
+            },
+            {
+              "id": "sem-1-5",
+              "titulo": "Análise no R-Quarto",
+              "materiais": [
+                {
+                  "id": "sem-1-5-m1",
+                  "tipo": "codigo",
+                  "nome": "Pacote de arquivos (zip)",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/archives/911fb9_a95f76881b5d48e78da1a4472b01ca28.zip?dn=Pac_An%C3%A1liseTradicional.zip"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sem-2",
+          "titulo": "Opções reais",
+          "aulas": [
+            {
+              "id": "sem-2-1",
+              "titulo": "Árvore de decisão",
+              "materiais": [
+                {
+                  "id": "sem-2-1-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_1511f93e7522468e9dcc7df59305ea92.pdf"
+                },
+                {
+                  "id": "sem-2-1-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/-AiFIq5Hhgg"
+                },
+                {
+                  "id": "sem-2-1-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_91a0c37dff7946d2bd84a773b816db0d.pdf"
+                }
+              ]
+            },
+            {
+              "id": "sem-2-2",
+              "titulo": "Simulação de Monte Carlo",
+              "materiais": [
+                {
+                  "id": "sem-2-2-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_0880d659db974807ac912ad696dc6008.pdf"
+                },
+                {
+                  "id": "sem-2-2-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/n-dRyRxjcqk"
+                },
+                {
+                  "id": "sem-2-2-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_549db30a75894e7b9a721cb223fb0d0c.pdf"
+                }
+              ]
+            },
+            {
+              "id": "sem-2-3",
+              "titulo": "A opção de espera",
+              "materiais": [
+                {
+                  "id": "sem-2-3-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_f588f0e0dfcd4eb19c0350464abe4a7c.pdf"
+                },
+                {
+                  "id": "sem-2-3-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/N0LMjUOrn7c"
+                },
+                {
+                  "id": "sem-2-3-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_19d1eb553e714cfcbbb3b0e73c450f5c.pdf"
+                }
+              ]
+            },
+            {
+              "id": "sem-2-4",
+              "titulo": "Exercício Excel",
+              "materiais": []
+            }
+          ]
+        },
+        {
+          "id": "sem-3",
+          "titulo": "Laboratórios",
+          "aulas": [
+            {
+              "id": "sem-3-1",
+              "titulo": "Demonst. Financeiras - Python",
+              "materiais": [
+                {
+                  "id": "sem-3-1-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_e1f1c66108f7451f8950d39963dad4b1.pdf"
+                },
+                {
+                  "id": "sem-3-1-m2",
+                  "tipo": "codigo",
+                  "nome": "Notebook em Python",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_fa3c6b07b75d4e94b7e0b0e1eaceeb61.ipynb?dn=IndFinPythonKlabin.ipynb"
+                }
+              ]
+            },
+            {
+              "id": "sem-3-2",
+              "titulo": "Otimização Portfolio - Python",
+              "materiais": [
+                {
+                  "id": "sem-3-2-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_26725fb5bf7e4519bfa827d1c99de217.pdf"
+                },
+                {
+                  "id": "sem-3-2-m2",
+                  "tipo": "codigo",
+                  "nome": "Notebook em Python",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_b9483a8962ea48f3a2939a17d9aee713.ipynb?dn=PortOpt.ipynb"
+                }
+              ]
+            },
+            {
+              "id": "sem-3-3",
+              "titulo": "Risco de Mercado - Python",
+              "materiais": [
+                {
+                  "id": "sem-3-3-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_4e5ea2ab266d47a4b42a697d6cefcc49.pdf"
+                },
+                {
+                  "id": "sem-3-3-m2",
+                  "tipo": "codigo",
+                  "nome": "Notebook em Python",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_2787b613c9a84e58ae7d72a6e7ff8e84.ipynb?dn=Exemplo1_CalculoVaR_Ativo.ipynb"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sem-4",
+          "titulo": "Políticas",
+          "aulas": [
+            {
+              "id": "sem-4-1",
+              "titulo": "Política Monetária",
+              "materiais": [
+                {
+                  "id": "sem-4-1-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_29c9047a28fb430babf08187118e31f9.pdf"
+                }
+              ]
+            },
+            {
+              "id": "sem-4-2",
+              "titulo": "Política Fiscal (em construção)",
+              "materiais": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pfc",
+      "nivel": "pos",
+      "nome": "Finanças Corporativas",
+      "ficha": {
+        "ementa": "",
+        "objetivos": "",
+        "avaliacao": "",
+        "bibliografia": ""
+      },
+      "avisos": [],
+      "modulos": [
+        {
+          "id": "pfc-1",
+          "titulo": "Demonstrações Financeiras (D.F.)",
+          "aulas": [
+            {
+              "id": "pfc-1-1",
+              "titulo": "Apresentação",
+              "materiais": [
+                {
+                  "id": "pfc-1-1-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_cfdb06a7de4643aaae5afcc9747bafa0.pdf"
+                },
+                {
+                  "id": "pfc-1-1-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/AnQjQ0gT5zc"
+                },
+                {
+                  "id": "pfc-1-1-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_3058f7f199844f58ac18cae18f3cf409.pdf"
+                }
+              ]
+            },
+            {
+              "id": "pfc-1-2",
+              "titulo": "Análise das D.F.",
+              "materiais": [
+                {
+                  "id": "pfc-1-2-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_e1912ee0238b42a39d71b40e31f8579d.pdf"
+                },
+                {
+                  "id": "pfc-1-2-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/Tbl5E_IGW58"
+                },
+                {
+                  "id": "pfc-1-2-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_180974001ad84ca1983b3ad3071f60d2.pdf"
+                }
+              ]
+            },
+            {
+              "id": "pfc-1-3",
+              "titulo": "Estrutura de capital",
+              "materiais": [
+                {
+                  "id": "pfc-1-3-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_b5002988380445ff9b5b6a19a7208ee5.pdf"
+                },
+                {
+                  "id": "pfc-1-3-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/QhlG1oEWMi8"
+                },
+                {
+                  "id": "pfc-1-3-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_a15d64b448c94185af43889a67d89732.pdf"
+                }
+              ]
+            },
+            {
+              "id": "pfc-1-4",
+              "titulo": "Exercícios",
+              "materiais": []
+            }
+          ]
+        },
+        {
+          "id": "pfc-2",
+          "titulo": "Planejamento de curto prazo",
+          "aulas": [
+            {
+              "id": "pfc-2-1",
+              "titulo": "Dinheiro no tempo",
+              "materiais": [
+                {
+                  "id": "pfc-2-1-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_018190b9e8374402972a655f66fae5fb.pdf"
+                },
+                {
+                  "id": "pfc-2-1-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/A4CIypmT_QU"
+                },
+                {
+                  "id": "pfc-2-1-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_6d3eb3c18afd48b3a7c4af66c4d9fd27.pdf"
+                }
+              ]
+            },
+            {
+              "id": "pfc-2-2",
+              "titulo": "Ciclo financeiro",
+              "materiais": [
+                {
+                  "id": "pfc-2-2-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_6ba4119fe6a04c55a91b8ced6e7e9ea8.pdf"
+                },
+                {
+                  "id": "pfc-2-2-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/RyxMw0OipdE"
+                },
+                {
+                  "id": "pfc-2-2-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_23606060d1c647ceadadfb2a0692d133.pdf"
+                }
+              ]
+            },
+            {
+              "id": "pfc-2-3",
+              "titulo": "Administração de caixa",
+              "materiais": [
+                {
+                  "id": "pfc-2-3-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_32411cd3b9e34630885bdd7172c8019d.pdf"
+                },
+                {
+                  "id": "pfc-2-3-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/4qW-477eaag"
+                },
+                {
+                  "id": "pfc-2-3-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_ef551561aa274e03a48aff336cc5ac6b.pdf"
+                }
+              ]
+            },
+            {
+              "id": "pfc-2-4",
+              "titulo": "Exercícios",
+              "materiais": []
+            }
+          ]
+        },
+        {
+          "id": "pfc-3",
+          "titulo": "Risco e retorno",
+          "aulas": [
+            {
+              "id": "pfc-3-1",
+              "titulo": "Risco sistemático",
+              "materiais": [
+                {
+                  "id": "pfc-3-1-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_5170a7ac6ded4598a4b8c8a9665084fa.pdf"
+                },
+                {
+                  "id": "pfc-3-1-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/0HJb-2gEzjI"
+                },
+                {
+                  "id": "pfc-3-1-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_69905c75deb349b88a664b3a3f4254de.pdf"
+                }
+              ]
+            },
+            {
+              "id": "pfc-3-2",
+              "titulo": "CAPM e cap. de terceiros",
+              "materiais": [
+                {
+                  "id": "pfc-3-2-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_68b9c6ee31a6424591a928d2df45b138.pdf"
+                },
+                {
+                  "id": "pfc-3-2-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/i68vTYZpawo"
+                },
+                {
+                  "id": "pfc-3-2-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_5de26edd9a1249e3922247362e99194a.pdf"
+                }
+              ]
+            },
+            {
+              "id": "pfc-3-3",
+              "titulo": "Custo de capital",
+              "materiais": [
+                {
+                  "id": "pfc-3-3-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_aaba672e439243b1bf1202945854911b.pdf"
+                },
+                {
+                  "id": "pfc-3-3-m2",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_ae1e24f7eae24164a16e1619034ae255.pdf"
+                }
+              ]
+            },
+            {
+              "id": "pfc-3-4",
+              "titulo": "Exercícios",
+              "materiais": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aep",
+      "nivel": "pos",
+      "nome": "Avaliação Econômica de Projetos",
+      "ficha": {
+        "ementa": "",
+        "objetivos": "",
+        "avaliacao": "",
+        "bibliografia": ""
+      },
+      "avisos": [],
+      "modulos": [
+        {
+          "id": "aep-1",
+          "titulo": "Avaliação clássica",
+          "aulas": [
+            {
+              "id": "aep-1-1",
+              "titulo": "Matemática Financeira",
+              "materiais": [
+                {
+                  "id": "aep-1-1-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_e2643c6a74ca4628ba2fcf78094fbcc4.pdf"
+                },
+                {
+                  "id": "aep-1-1-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/SbVL8ZFnBso"
+                },
+                {
+                  "id": "aep-1-1-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_9d92a18d9f78424e8a15e58e03f04fe6.pdf"
+                }
+              ]
+            },
+            {
+              "id": "aep-1-2",
+              "titulo": "Fluxo de caixa",
+              "materiais": [
+                {
+                  "id": "aep-1-2-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_d41614b6672e40419494c4a9719a5000.pdf"
+                },
+                {
+                  "id": "aep-1-2-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/YpIgVKs5Okg"
+                },
+                {
+                  "id": "aep-1-2-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_c26d3799c4444147ab8506c964c61450.pdf"
+                }
+              ]
+            },
+            {
+              "id": "aep-1-3",
+              "titulo": "VPL e TIR",
+              "materiais": [
+                {
+                  "id": "aep-1-3-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_20f74b0dc42c40febdbcf5eb3d04b6e7.pdf"
+                },
+                {
+                  "id": "aep-1-3-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/J2eGP8yMxZY"
+                },
+                {
+                  "id": "aep-1-3-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_6190c65077494e76aaa95ff1d5372174.pdf"
+                }
+              ]
+            },
+            {
+              "id": "aep-1-4",
+              "titulo": "Critérios adicionais",
+              "materiais": [
+                {
+                  "id": "aep-1-4-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_a9881d1a9a3d460097f118439ab09fe2.pdf"
+                },
+                {
+                  "id": "aep-1-4-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/v-3X4OdZauk"
+                },
+                {
+                  "id": "aep-1-4-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_6470475f5a2f42ee9d7c869737e92fc9.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "aep-2",
+          "titulo": "Custo de capital",
+          "aulas": [
+            {
+              "id": "aep-2-1",
+              "titulo": "Estrutura de capital",
+              "materiais": [
+                {
+                  "id": "aep-2-1-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_443d77f5a63340c895c5782ce1fea807.pdf"
+                },
+                {
+                  "id": "aep-2-1-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/QhlG1oEWMi8"
+                },
+                {
+                  "id": "aep-2-1-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_a15d64b448c94185af43889a67d89732.pdf"
+                }
+              ]
+            },
+            {
+              "id": "aep-2-2",
+              "titulo": "Risco sistemático",
+              "materiais": [
+                {
+                  "id": "aep-2-2-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_1e5554b655eb45b889a84ab64699e183.pdf"
+                },
+                {
+                  "id": "aep-2-2-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/0HJb-2gEzjI"
+                },
+                {
+                  "id": "aep-2-2-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_69905c75deb349b88a664b3a3f4254de.pdf"
+                }
+              ]
+            },
+            {
+              "id": "aep-2-3",
+              "titulo": "Cap. próprio e de terc.",
+              "materiais": [
+                {
+                  "id": "aep-2-3-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_ccfb04c420ff40408a5b353afb8e92a3.pdf"
+                },
+                {
+                  "id": "aep-2-3-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/i68vTYZpawo"
+                },
+                {
+                  "id": "aep-2-3-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_5de26edd9a1249e3922247362e99194a.pdf"
+                }
+              ]
+            },
+            {
+              "id": "aep-2-4",
+              "titulo": "Custo médio",
+              "materiais": [
+                {
+                  "id": "aep-2-4-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_4750546c9de4449cb79136f9701d9250.pdf"
+                },
+                {
+                  "id": "aep-2-4-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/Lu0VJ4KomgE"
+                },
+                {
+                  "id": "aep-2-4-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_ae1e24f7eae24164a16e1619034ae255.pdf"
+                }
+              ]
+            },
+            {
+              "id": "aep-2-5",
+              "titulo": "Financiamento",
+              "materiais": [
+                {
+                  "id": "aep-2-5-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_db5558a4b9564ad2965079255834858a.pdf"
+                },
+                {
+                  "id": "aep-2-5-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/x1kuVOo4L0Y"
+                },
+                {
+                  "id": "aep-2-5-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_6c3561bb82494b8f9fa82d136f3c44f7.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "aep-3",
+          "titulo": "Abordagens alternativas",
+          "aulas": [
+            {
+              "id": "aep-3-1",
+              "titulo": "Árvore de decisão",
+              "materiais": [
+                {
+                  "id": "aep-3-1-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_1511f93e7522468e9dcc7df59305ea92.pdf"
+                },
+                {
+                  "id": "aep-3-1-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/-AiFIq5Hhgg"
+                },
+                {
+                  "id": "aep-3-1-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_91a0c37dff7946d2bd84a773b816db0d.pdf"
+                }
+              ]
+            },
+            {
+              "id": "aep-3-2",
+              "titulo": "Simulação de Monte Carlo",
+              "materiais": [
+                {
+                  "id": "aep-3-2-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_0880d659db974807ac912ad696dc6008.pdf"
+                },
+                {
+                  "id": "aep-3-2-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/n-dRyRxjcqk"
+                },
+                {
+                  "id": "aep-3-2-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_549db30a75894e7b9a721cb223fb0d0c.pdf"
+                }
+              ]
+            },
+            {
+              "id": "aep-3-3",
+              "titulo": "Opções reais",
+              "materiais": [
+                {
+                  "id": "aep-3-3-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_f588f0e0dfcd4eb19c0350464abe4a7c.pdf"
+                },
+                {
+                  "id": "aep-3-3-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/N0LMjUOrn7c"
+                },
+                {
+                  "id": "aep-3-3-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_19d1eb553e714cfcbbb3b0e73c450f5c.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "aep-4",
+          "titulo": "Estudo de caso",
+          "aulas": [
+            {
+              "id": "aep-4-1",
+              "titulo": "Caso 1: H2 verde",
+              "materiais": [
+                {
+                  "id": "aep-4-1-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_a8be2339b3b74c09b63344949c9e105a.pdf"
+                },
+                {
+                  "id": "aep-4-1-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/phW1jmePss8"
+                },
+                {
+                  "id": "aep-4-1-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_b258b24e5bf8409f8f5c61b1eb37ea12.pdf"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fv",
+      "nivel": "pos",
+      "nome": "Finanças Sustentáveis/Verdes",
+      "ficha": {
+        "ementa": "",
+        "objetivos": "",
+        "avaliacao": "",
+        "bibliografia": ""
+      },
+      "avisos": [],
+      "modulos": [
+        {
+          "id": "fv-1",
+          "titulo": "Contexto",
+          "aulas": [
+            {
+              "id": "fv-1-1",
+              "titulo": "Introdução",
+              "materiais": [
+                {
+                  "id": "fv-1-1-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_eef4c3bec2174ae98afa8f78c9daa26b.pdf"
+                },
+                {
+                  "id": "fv-1-1-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/ltlC4FmjJxE"
+                },
+                {
+                  "id": "fv-1-1-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_5cfdf0b569db4853b2aab6370f4494b1.pdf"
+                }
+              ]
+            },
+            {
+              "id": "fv-1-2",
+              "titulo": "Ativos obsoletos",
+              "materiais": [
+                {
+                  "id": "fv-1-2-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_605c4137c21d408099103066f485bf1e.pdf"
+                },
+                {
+                  "id": "fv-1-2-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/6RcPHWMELe4"
+                }
+              ]
+            },
+            {
+              "id": "fv-1-3",
+              "titulo": "Sistema Financeiro",
+              "materiais": [
+                {
+                  "id": "fv-1-3-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_70d7e7a77d6d4060b2e511144b1d2bfb.pdf"
+                },
+                {
+                  "id": "fv-1-3-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/bGIxglEc9X4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "fv-2",
+          "titulo": "Desenvolvimento do mercado",
+          "aulas": [
+            {
+              "id": "fv-2-1",
+              "titulo": "Mercado de carbono",
+              "materiais": [
+                {
+                  "id": "fv-2-1-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_b52a36bfb2594024a2a3d574288ebc58.pdf"
+                },
+                {
+                  "id": "fv-2-1-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/Ek0vsNxZgWo"
+                },
+                {
+                  "id": "fv-2-1-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_3ef356fd59dc4f35863b95b11c48db9b.pdf"
+                }
+              ]
+            },
+            {
+              "id": "fv-2-2",
+              "titulo": "RenovaBio",
+              "materiais": [
+                {
+                  "id": "fv-2-2-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_93ef7e1fcf5b4a0b9a158ec5bf9993b7.pdf"
+                },
+                {
+                  "id": "fv-2-2-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/_ym7UCaPr24"
+                },
+                {
+                  "id": "fv-2-2-m3",
+                  "tipo": "notas",
+                  "nome": "Nota de aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_aa4f7c57de7d43248bee72025eeaddf6.pdf"
+                }
+              ]
+            },
+            {
+              "id": "fv-2-3",
+              "titulo": "Green Bonds",
+              "materiais": [
+                {
+                  "id": "fv-2-3-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_b981d205e81b4123a1557980365a7b53.pdf"
+                },
+                {
+                  "id": "fv-2-3-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/yEzYGfC4Tjs"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "fv-3",
+          "titulo": "Hidrogênio verde",
+          "aulas": [
+            {
+              "id": "fv-3-1",
+              "titulo": "Regulação H2",
+              "materiais": [
+                {
+                  "id": "fv-3-1-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_36c5b3b89f394c1a9ff304d8359373b5.pdf"
+                },
+                {
+                  "id": "fv-3-1-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/LJCmay7xs_8"
+                }
+              ]
+            },
+            {
+              "id": "fv-3-2",
+              "titulo": "Certificação",
+              "materiais": [
+                {
+                  "id": "fv-3-2-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_0ee30e1807ea4945a0e5497652af09b6.pdf"
+                },
+                {
+                  "id": "fv-3-2-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/dryE6BCJn94"
+                }
+              ]
+            },
+            {
+              "id": "fv-3-3",
+              "titulo": "Financiamento",
+              "materiais": [
+                {
+                  "id": "fv-3-3-m1",
+                  "tipo": "slides",
+                  "nome": "Slides da aula",
+                  "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_ee41e501f50a4f6eb9392395c2aafa5e.pdf"
+                },
+                {
+                  "id": "fv-3-3-m2",
+                  "tipo": "video",
+                  "nome": "Vídeo da aula",
+                  "url": "https://youtu.be/6nsQfgfU1j8"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "laboratorio": [
     {
       "grupo": "Notas",
       "itens": [
         {
           "id": "lab-1",
-          "tipo": "material",
+          "tipo": "notas",
           "nome": "Notas de aula",
           "url": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_64690564c2964022bf20e44f480469fd.pdf"
         }

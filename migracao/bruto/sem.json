@@ -1,0 +1,485 @@
+{
+ "linhas": [
+  {
+   "t": "Seminários em Finanças",
+   "r": [
+    50,
+    297,
+    779,
+    66
+   ]
+  },
+  {
+   "t": "1. Avaliação clássica de projetos",
+   "r": [
+    141,
+    435,
+    513,
+    33
+   ]
+  },
+  {
+   "t": "Aula 1: Matemática Financeira",
+   "r": [
+    174,
+    469,
+    354,
+    40
+   ]
+  },
+  {
+   "t": "Aula 2: Fluxo de caixa",
+   "r": [
+    174,
+    509,
+    354,
+    40
+   ]
+  },
+  {
+   "t": "Aula 3: VPL e TIR",
+   "r": [
+    174,
+    549,
+    354,
+    40
+   ]
+  },
+  {
+   "t": "Aula 4: Critérios adicionais",
+   "r": [
+    174,
+    589,
+    354,
+    40
+   ]
+  },
+  {
+   "t": "Aula 5: Análise no R-Quarto",
+   "r": [
+    174,
+    629,
+    354,
+    40
+   ]
+  },
+  {
+   "t": "2. Opções reais",
+   "r": [
+    146,
+    743,
+    516,
+    33
+   ]
+  },
+  {
+   "t": "Aula 1: Árvore de decisão",
+   "r": [
+    168,
+    789,
+    360,
+    40
+   ]
+  },
+  {
+   "t": "Aula 2: Simulação de Monte Carlo",
+   "r": [
+    168,
+    829,
+    360,
+    40
+   ]
+  },
+  {
+   "t": "Aula 3: A opção de espera",
+   "r": [
+    168,
+    869,
+    360,
+    40
+   ]
+  },
+  {
+   "t": "Aula 4: Exercício Excel",
+   "r": [
+    168,
+    909,
+    360,
+    40
+   ]
+  },
+  {
+   "t": "3. Laboratórios",
+   "r": [
+    141,
+    1026,
+    516,
+    33
+   ]
+  },
+  {
+   "t": "Aula 1: Demonst. Financeiras - Python",
+   "r": [
+    163,
+    1072,
+    360,
+    40
+   ]
+  },
+  {
+   "t": "Aula 2: Otimização Portfolio - Python",
+   "r": [
+    163,
+    1112,
+    360,
+    40
+   ]
+  },
+  {
+   "t": "Aula 3: Risco de Mercado - Python",
+   "r": [
+    163,
+    1152,
+    360,
+    40
+   ]
+  },
+  {
+   "t": "4. Políticas",
+   "r": [
+    152,
+    1317,
+    516,
+    33
+   ]
+  },
+  {
+   "t": "Aula 1: Política Monetária",
+   "r": [
+    174,
+    1363,
+    360,
+    40
+   ]
+  },
+  {
+   "t": "Aula 2: Política Fiscal (em construção)",
+   "r": [
+    174,
+    1403,
+    360,
+    40
+   ]
+  },
+  {
+   "t": "Precisa de mais informações?",
+   "r": [
+    50,
+    1686,
+    676,
+    40
+   ]
+  },
+  {
+   "t": "Estamos aqui para ajudá-lo. Entre em contato por telefone, email ou redes sociais.",
+   "r": [
+    50,
+    1726,
+    676,
+    20
+   ]
+  }
+ ],
+ "links": [
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_77a8a7d3a1cb44808511c7679fc99f36.pdf",
+   "r": [
+    564,
+    517,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://youtu.be/YpIgVKs5Okg",
+   "r": [
+    603,
+    517,
+    25,
+    25
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_d25e21783c5d45009dd16f1e8a432e18.pdf",
+   "r": [
+    635,
+    514,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_ff2ab58af30342e980177a1154935424.pdf",
+   "r": [
+    564,
+    555,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://youtu.be/Yr49VBIW1Mc",
+   "r": [
+    603,
+    555,
+    25,
+    25
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_1fd392501f01481082f69f139bb589e0.pdf",
+   "r": [
+    636,
+    553,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_a9881d1a9a3d460097f118439ab09fe2.pdf",
+   "r": [
+    564,
+    589,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://youtu.be/v-3X4OdZauk",
+   "r": [
+    603,
+    589,
+    25,
+    25
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_4a70295bfbc748fca15c90933fb96dbc.pdf",
+   "r": [
+    637,
+    587,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/archives/911fb9_a95f76881b5d48e78da1a4472b01ca28.zip?dn=Pac_An%C3%A1liseTradicional.zip",
+   "r": [
+    569,
+    627,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_e2643c6a74ca4628ba2fcf78094fbcc4.pdf",
+   "r": [
+    562,
+    480,
+    33,
+    26
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://youtu.be/SbVL8ZFnBso",
+   "r": [
+    602,
+    481,
+    25,
+    24
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_9d92a18d9f78424e8a15e58e03f04fe6.pdf",
+   "r": [
+    632,
+    481,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_1511f93e7522468e9dcc7df59305ea92.pdf",
+   "r": [
+    555,
+    796,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://youtu.be/-AiFIq5Hhgg",
+   "r": [
+    596,
+    797,
+    25,
+    25
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_91a0c37dff7946d2bd84a773b816db0d.pdf",
+   "r": [
+    626,
+    797,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_0880d659db974807ac912ad696dc6008.pdf",
+   "r": [
+    555,
+    839,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://youtu.be/n-dRyRxjcqk",
+   "r": [
+    596,
+    841,
+    25,
+    25
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_549db30a75894e7b9a721cb223fb0d0c.pdf",
+   "r": [
+    626,
+    841,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_f588f0e0dfcd4eb19c0350464abe4a7c.pdf",
+   "r": [
+    554,
+    877,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://youtu.be/N0LMjUOrn7c",
+   "r": [
+    596,
+    879,
+    25,
+    25
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_19d1eb553e714cfcbbb3b0e73c450f5c.pdf",
+   "r": [
+    626,
+    877,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_e1f1c66108f7451f8950d39963dad4b1.pdf",
+   "r": [
+    550,
+    1079,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_fa3c6b07b75d4e94b7e0b0e1eaceeb61.ipynb?dn=IndFinPythonKlabin.ipynb",
+   "r": [
+    621,
+    1080,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_26725fb5bf7e4519bfa827d1c99de217.pdf",
+   "r": [
+    550,
+    1122,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_b9483a8962ea48f3a2939a17d9aee713.ipynb?dn=PortOpt.ipynb",
+   "r": [
+    621,
+    1124,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_4e5ea2ab266d47a4b42a697d6cefcc49.pdf",
+   "r": [
+    549,
+    1160,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_2787b613c9a84e58ae7d72a6e7ff8e84.ipynb?dn=Exemplo1_CalculoVaR_Ativo.ipynb",
+   "r": [
+    621,
+    1160,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_29c9047a28fb430babf08187118e31f9.pdf",
+   "r": [
+    561,
+    1370,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  }
+ ]
+}

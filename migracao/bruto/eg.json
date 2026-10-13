@@ -1,0 +1,969 @@
+{
+ "linhas": [
+  {
+   "t": "Economia Gerencial",
+   "r": [
+    50,
+    297,
+    780,
+    66
+   ]
+  },
+  {
+   "t": "1. Princípios de Microeconomia",
+   "r": [
+    141,
+    521,
+    513,
+    33
+   ]
+  },
+  {
+   "t": "Aula 1: Curva de Demanda",
+   "r": [
+    174,
+    555,
+    354,
+    40
+   ]
+  },
+  {
+   "t": "Aula 2: Custos da Firma",
+   "r": [
+    174,
+    595,
+    354,
+    40
+   ]
+  },
+  {
+   "t": "Aula 3: Maximizar Lucro",
+   "r": [
+    174,
+    635,
+    354,
+    40
+   ]
+  },
+  {
+   "t": "Aula 4: Exercícios",
+   "r": [
+    174,
+    675,
+    354,
+    40
+   ]
+  },
+  {
+   "t": "Aula 5: Cesta de produtos",
+   "r": [
+    174,
+    715,
+    354,
+    40
+   ]
+  },
+  {
+   "t": "(Pesq Oper)",
+   "r": [
+    174,
+    755,
+    354,
+    40
+   ]
+  },
+  {
+   "t": "2. Introdução à Teoria dos Jogos",
+   "r": [
+    144,
+    824,
+    516,
+    33
+   ]
+  },
+  {
+   "t": "Aula 1: Definições",
+   "r": [
+    168,
+    873,
+    360,
+    40
+   ]
+  },
+  {
+   "t": "Aula 2: Jogo simultâneo",
+   "r": [
+    168,
+    913,
+    360,
+    40
+   ]
+  },
+  {
+   "t": "Aula 3: Equilíbrio de Nash",
+   "r": [
+    168,
+    953,
+    360,
+    41
+   ]
+  },
+  {
+   "t": "Aula 1: Escala e escopo",
+   "r": [
+    168,
+    1080,
+    360,
+    40
+   ]
+  },
+  {
+   "t": "Aula 2: Fronteiras verticais",
+   "r": [
+    168,
+    1120,
+    360,
+    40
+   ]
+  },
+  {
+   "t": "Aula 3: Custo de transação",
+   "r": [
+    168,
+    1160,
+    360,
+    40
+   ]
+  },
+  {
+   "t": "3. Escala, escopo e fronteiras",
+   "r": [
+    144,
+    1049,
+    509,
+    33
+   ]
+  },
+  {
+   "t": "4. Teoria da Agência",
+   "r": [
+    148,
+    1241,
+    509,
+    33
+   ]
+  },
+  {
+   "t": "Aula 1: Problema de agência",
+   "r": [
+    167,
+    1285,
+    360,
+    41
+   ]
+  },
+  {
+   "t": "Aula 2: Governança",
+   "r": [
+    167,
+    1326,
+    360,
+    40
+   ]
+  },
+  {
+   "t": "5. Estruturas de mercado",
+   "r": [
+    146,
+    1404,
+    516,
+    33
+   ]
+  },
+  {
+   "t": "Aula 1: Concentração",
+   "r": [
+    168,
+    1438,
+    390,
+    40
+   ]
+  },
+  {
+   "t": "Aula 2: Concorrência perfeita",
+   "r": [
+    168,
+    1478,
+    390,
+    40
+   ]
+  },
+  {
+   "t": "e monopólio",
+   "r": [
+    168,
+    1518,
+    390,
+    40
+   ]
+  },
+  {
+   "t": "Aula 3: Conc. monopolística",
+   "r": [
+    168,
+    1558,
+    390,
+    40
+   ]
+  },
+  {
+   "t": "Aula 4: Oligopólio",
+   "r": [
+    168,
+    1598,
+    390,
+    40
+   ]
+  },
+  {
+   "t": "Aula 5: Estudo de Caso",
+   "r": [
+    168,
+    1638,
+    390,
+    40
+   ]
+  },
+  {
+   "t": "Oligopólio - Chocolate",
+   "r": [
+    168,
+    1678,
+    390,
+    40
+   ]
+  },
+  {
+   "t": "6. Dinâmica da concorrência",
+   "r": [
+    153,
+    1763,
+    516,
+    33
+   ]
+  },
+  {
+   "t": "Aula 1: Comprometimento",
+   "r": [
+    175,
+    1812,
+    390,
+    40
+   ]
+  },
+  {
+   "t": "Aula 2: Rivalidade",
+   "r": [
+    175,
+    1852,
+    390,
+    40
+   ]
+  },
+  {
+   "t": "Aula 3: Análise do Setor",
+   "r": [
+    175,
+    1892,
+    390,
+    40
+   ]
+  },
+  {
+   "t": "7. Tópicos Especiais",
+   "r": [
+    159,
+    1961,
+    516,
+    33
+   ]
+  },
+  {
+   "t": "Aula 1: Regulação",
+   "r": [
+    181,
+    1995,
+    390,
+    40
+   ]
+  },
+  {
+   "t": "Aula 2: Inovação",
+   "r": [
+    181,
+    2035,
+    390,
+    40
+   ]
+  },
+  {
+   "t": "Aula 3: Sustentabilidade",
+   "r": [
+    181,
+    2075,
+    390,
+    40
+   ]
+  },
+  {
+   "t": "Precisa de mais informações?",
+   "r": [
+    50,
+    3141,
+    676,
+    40
+   ]
+  },
+  {
+   "t": "Estamos aqui para ajudá-lo. Entre em contato por email ou redes sociais.",
+   "r": [
+    50,
+    3181,
+    676,
+    20
+   ]
+  }
+ ],
+ "links": [
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_092633b2cf99429cb5cf10d710f07a51.pdf",
+   "r": [
+    564,
+    558,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://youtu.be/YHzoeE7-0sc",
+   "r": [
+    603,
+    558,
+    25,
+    25
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_d27b6041258d494481f6b462f814e5cf.pdf",
+   "r": [
+    639,
+    555,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_907966fa9ded4d3d8c9e0ceecf12df73.pdf",
+   "r": [
+    564,
+    598,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://www.youtube.com/watch?v=X7ANRp74wfk",
+   "r": [
+    603,
+    598,
+    25,
+    25
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_7a4d2934853f439a8d16f4c9040efb3e.pdf",
+   "r": [
+    639,
+    596,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_0d2e77b09025440589063a92e62e5f23.pdf",
+   "r": [
+    564,
+    637,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://www.youtube.com/watch?v=_-iSF1mci-o",
+   "r": [
+    603,
+    637,
+    25,
+    25
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_00004beddb374ffaa20e8967cd790970.pdf",
+   "r": [
+    639,
+    635,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://www.youtube.com/watch?v=r3zU1NqWwG0",
+   "r": [
+    603,
+    676,
+    25,
+    25
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_05f761e8e1a24589a5446f8744cc5d61.xlsx?dn=SorveteCalculosFazer.xlsx",
+   "r": [
+    639,
+    674,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://youtu.be/UnDA482Imdo",
+   "r": [
+    603,
+    716,
+    25,
+    24
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_822dd59e02e34032a1ebc8cbf9ac31b5.pdf",
+   "r": [
+    638,
+    716,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_4679e509e77f4c0ba4f8d7453914c24b.pdf?index=true",
+   "r": [
+    555,
+    876,
+    33,
+    26
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://www.youtube.com/watch?v=eJmceXNqAqc",
+   "r": [
+    596,
+    876,
+    25,
+    25
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_91444d28521a40e090f7c043ba131518.pdf",
+   "r": [
+    633,
+    873,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_ce727d2075314ce7ae45bbf33995020c.pdf",
+   "r": [
+    555,
+    916,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://www.youtube.com/watch?v=ogPiOGDGc6E",
+   "r": [
+    596,
+    916,
+    25,
+    25
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_e17c1966cc3540acbe81bf0325ca9972.pdf",
+   "r": [
+    633,
+    914,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_dd5fb66cf7634a5ebcbb2816e11ae63f.pdf",
+   "r": [
+    555,
+    955,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://www.youtube.com/watch?v=W6jKYW03XT0",
+   "r": [
+    596,
+    955,
+    25,
+    25
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_9128c17cbe4f4276b7d03b3cde99891f.pdf",
+   "r": [
+    633,
+    953,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_0b4e748c29634ea7adeeeef8c00af648.pdf",
+   "r": [
+    555,
+    1083,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://youtu.be/1gzuvW4Z148",
+   "r": [
+    596,
+    1083,
+    25,
+    25
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_09a4e39acc404f3faac183f59b99b9d2.pdf",
+   "r": [
+    633,
+    1080,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_fb712ae81cd540d996ae57b94e83eb39.pdf",
+   "r": [
+    555,
+    1123,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://youtu.be/zm_l4MGgPUM",
+   "r": [
+    596,
+    1123,
+    25,
+    25
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_3e1523d98daa450ca8979e41a8893fba.pdf",
+   "r": [
+    633,
+    1121,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_0662cd776e044796a7f517ecbab01080.pdf",
+   "r": [
+    555,
+    1162,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://youtu.be/Ut6ytc4Havo",
+   "r": [
+    596,
+    1162,
+    25,
+    25
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_fbc99e79959a4cfda6155d96bda60a93.pdf",
+   "r": [
+    633,
+    1160,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_5a2ff56f122e4971a24013cfbfa6b5bb.pdf",
+   "r": [
+    554,
+    1288,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://youtu.be/4LvZb1Uf2bk",
+   "r": [
+    595,
+    1288,
+    25,
+    25
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_04bc7b0ac277469c8149585ad94297d5.pdf",
+   "r": [
+    632,
+    1285,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_1c1457f596134276bd4ff09a1f51ec8d.pdf",
+   "r": [
+    554,
+    1328,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://youtu.be/JR17gb-pSac",
+   "r": [
+    595,
+    1328,
+    25,
+    25
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_6aea405d8b024a03b6792835c46b97ac.pdf",
+   "r": [
+    632,
+    1326,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_0466804cb04d4c27ab0368925898e447.pdf",
+   "r": [
+    555,
+    1565,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_65075ff67ab94099aeba024335b06c96.pdf",
+   "r": [
+    555,
+    1604,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_437403bb994c45b28e9bbeb2d8b5e3ca.pdf",
+   "r": [
+    555,
+    1441,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_2c742454ca904ba0a25766cd53c347ef.pdf",
+   "r": [
+    555,
+    1498,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_a090cf039eb24b1a84f04506fe0f9eca.pdf",
+   "r": [
+    558,
+    1644,
+    33,
+    26
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://youtu.be/8RhukeGLNXI",
+   "r": [
+    596,
+    1441,
+    25,
+    25
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://youtu.be/92WZxIMHzW8",
+   "r": [
+    596,
+    1498,
+    25,
+    25
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://youtu.be/bQz6Tf8vlV8",
+   "r": [
+    596,
+    1565,
+    25,
+    25
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://youtu.be/Utba-t-Ma5Q",
+   "r": [
+    596,
+    1604,
+    25,
+    25
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://youtu.be/PW7bjT2w4Cg",
+   "r": [
+    598,
+    1644,
+    25,
+    24
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_79503a31fb7d4000b9662e810bdc715c.pdf",
+   "r": [
+    633,
+    1438,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_fa121fc9831f41b0a6332144cd770947.pdf",
+   "r": [
+    633,
+    1496,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_183c0ee52f084715ab60b4363eff6e8a.pdf",
+   "r": [
+    632,
+    1563,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_09a4de39ad5640dbb01918187fa305c9.pdf",
+   "r": [
+    634,
+    1602,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_f4681cfc137f49eb89f856bb60b7ca32.pdf",
+   "r": [
+    562,
+    1815,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_3b7e680e60c34264953b65b63e5c17e7.pdf",
+   "r": [
+    562,
+    1855,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_5a165ccd191f45bc8096b03d8e2cc77a.pdf",
+   "r": [
+    562,
+    1894,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://youtu.be/g4hI7Si89IU",
+   "r": [
+    603,
+    1815,
+    25,
+    25
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://youtu.be/YucfitIUpNA",
+   "r": [
+    603,
+    1855,
+    25,
+    25
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://youtu.be/huPWY_XZpH4",
+   "r": [
+    603,
+    1894,
+    25,
+    25
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_8b7bb310d8374b6780f70b2517cca0f3.pdf",
+   "r": [
+    640,
+    1812,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_f4bc1930ba45405c90fceb0d97772ef2.pdf",
+   "r": [
+    640,
+    1853,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_179253a992b643d286bb8e72748a88a4.pdf",
+   "r": [
+    640,
+    1892,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_bf2c053ca49f4c889494413f4f23d5ff.pdf",
+   "r": [
+    568,
+    1998,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_05be701cd306499d9ae2e599e24dab27.pdf",
+   "r": [
+    568,
+    2038,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_cc22cbd7647a4391b750028412aca8fc.pdf",
+   "r": [
+    568,
+    2077,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  }
+ ]
+}

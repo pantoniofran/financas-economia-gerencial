@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { agrupar, tipoDoLink } from '../scripts/agrupar.mjs';
+import { agrupar, tipoDoLink, nomeDoLink } from '../scripts/agrupar.mjs';
 
 const APRESENTACAO = '38.001 50 123.999 100';
 const VIDEO = '1.6 2 56.8 56';
@@ -31,8 +31,12 @@ const bruto = () => ({
 test('tipoDoLink usa o endereço e, para PDF, o ícone', () => {
   assert.equal(tipoDoLink({ href: 'https://youtu.be/YHzoeE7-0sc', icone: VIDEO }), 'video');
   assert.equal(tipoDoLink({ href: 'https://x/a.pdf', icone: APRESENTACAO }), 'slides');
-  assert.equal(tipoDoLink({ href: 'https://x/b.pdf', icone: DOCUMENTO }), 'material');
+  assert.equal(tipoDoLink({ href: 'https://x/b.pdf', icone: DOCUMENTO }), 'notas');
+  assert.equal(tipoDoLink({ href: 'https://x/b.pdf', icone: 'outro' }), 'material');
   assert.equal(tipoDoLink({ href: 'https://x/c.xlsx?dn=a.xlsx', icone: DOCUMENTO }), 'planilha');
+  assert.equal(tipoDoLink({ href: 'https://x/archives/p.zip?dn=Pac.zip', icone: DOCUMENTO }), 'codigo');
+  assert.equal(nomeDoLink({ href: 'https://x/n.ipynb?dn=Ind.ipynb' }, 'codigo'), 'Notebook em Python');
+  assert.equal(nomeDoLink({ href: 'https://x/a.pdf' }, 'slides'), 'Slides da aula');
 });
 
 test('agrupar ordena módulos pela posição na página, não pela ordem do HTML', () => {
@@ -50,7 +54,7 @@ test('agrupar tira o prefixo "Aula N:" e junta a linha de continuação', () => 
 
 test('agrupar liga cada ícone à aula da mesma altura, da esquerda para a direita', () => {
   const [a1, a2, a3] = agrupar(bruto(), 'eg').modulos[0].aulas;
-  assert.deepEqual(a1.materiais.map((m) => m.tipo), ['slides', 'video', 'material']);
+  assert.deepEqual(a1.materiais.map((m) => m.tipo), ['slides', 'video', 'notas']);
   assert.deepEqual(a1.materiais.map((m) => m.id), ['eg-1-1-m1', 'eg-1-1-m2', 'eg-1-1-m3']);
   assert.equal(a1.materiais[0].nome, 'Slides da aula');
   assert.deepEqual(a2.materiais.map((m) => m.tipo), ['planilha']);

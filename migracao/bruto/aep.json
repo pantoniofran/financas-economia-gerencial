@@ -1,0 +1,576 @@
+{
+ "linhas": [
+  {
+   "t": "Avaliação Econômica de Projetos",
+   "r": [
+    50,
+    297,
+    779,
+    132
+   ]
+  },
+  {
+   "t": "1. Avaliação clássica",
+   "r": [
+    141,
+    501,
+    513,
+    33
+   ]
+  },
+  {
+   "t": "Aula 1: Matemática Financeira",
+   "r": [
+    174,
+    535,
+    354,
+    40
+   ]
+  },
+  {
+   "t": "Aula 2: Fluxo de caixa",
+   "r": [
+    174,
+    575,
+    354,
+    40
+   ]
+  },
+  {
+   "t": "Aula 3: VPL e TIR",
+   "r": [
+    174,
+    615,
+    354,
+    40
+   ]
+  },
+  {
+   "t": "Aula 4: Critérios adicionais",
+   "r": [
+    174,
+    655,
+    354,
+    40
+   ]
+  },
+  {
+   "t": "Aula 1: Estrutura de capital",
+   "r": [
+    197,
+    732,
+    360,
+    40
+   ]
+  },
+  {
+   "t": "Aula 2: Risco sistemático",
+   "r": [
+    197,
+    772,
+    360,
+    40
+   ]
+  },
+  {
+   "t": "Aula 3: Cap. próprio e de terc.",
+   "r": [
+    197,
+    812,
+    360,
+    40
+   ]
+  },
+  {
+   "t": "Aula 4: Custo médio",
+   "r": [
+    197,
+    852,
+    360,
+    40
+   ]
+  },
+  {
+   "t": "Aula 5: Financiamento",
+   "r": [
+    197,
+    892,
+    360,
+    40
+   ]
+  },
+  {
+   "t": "2. Custo de capital",
+   "r": [
+    197,
+    703,
+    516,
+    33
+   ]
+  },
+  {
+   "t": "3. Abordagens alternativas",
+   "r": [
+    171,
+    972,
+    516,
+    33
+   ]
+  },
+  {
+   "t": "Aula 1: Árvore de decisão",
+   "r": [
+    168,
+    1018,
+    360,
+    40
+   ]
+  },
+  {
+   "t": "Aula 2: Simulação de Monte Carlo",
+   "r": [
+    168,
+    1058,
+    360,
+    40
+   ]
+  },
+  {
+   "t": "Aula 3: Opções reais",
+   "r": [
+    168,
+    1098,
+    360,
+    40
+   ]
+  },
+  {
+   "t": "4. Estudo de caso",
+   "r": [
+    172,
+    1179,
+    516,
+    33
+   ]
+  },
+  {
+   "t": "Caso 1: H2 verde",
+   "r": [
+    179,
+    1231,
+    360,
+    40
+   ]
+  },
+  {
+   "t": "Precisa de mais informações?",
+   "r": [
+    50,
+    1437,
+    676,
+    40
+   ]
+  },
+  {
+   "t": "Estamos aqui para ajudá-lo. Entre em contato por telefone, email ou redes sociais.",
+   "r": [
+    50,
+    1477,
+    676,
+    20
+   ]
+  }
+ ],
+ "links": [
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_d41614b6672e40419494c4a9719a5000.pdf",
+   "r": [
+    564,
+    583,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://youtu.be/YpIgVKs5Okg",
+   "r": [
+    603,
+    583,
+    25,
+    25
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_c26d3799c4444147ab8506c964c61450.pdf",
+   "r": [
+    635,
+    580,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_20f74b0dc42c40febdbcf5eb3d04b6e7.pdf",
+   "r": [
+    564,
+    621,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://youtu.be/J2eGP8yMxZY",
+   "r": [
+    603,
+    621,
+    25,
+    25
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_6190c65077494e76aaa95ff1d5372174.pdf",
+   "r": [
+    636,
+    619,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_a9881d1a9a3d460097f118439ab09fe2.pdf",
+   "r": [
+    564,
+    655,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://youtu.be/v-3X4OdZauk",
+   "r": [
+    603,
+    655,
+    25,
+    25
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_6470475f5a2f42ee9d7c869737e92fc9.pdf",
+   "r": [
+    637,
+    653,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_e2643c6a74ca4628ba2fcf78094fbcc4.pdf",
+   "r": [
+    562,
+    546,
+    33,
+    26
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://youtu.be/SbVL8ZFnBso",
+   "r": [
+    602,
+    547,
+    25,
+    24
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_9d92a18d9f78424e8a15e58e03f04fe6.pdf",
+   "r": [
+    632,
+    547,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_443d77f5a63340c895c5782ce1fea807.pdf",
+   "r": [
+    584,
+    745,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://youtu.be/QhlG1oEWMi8",
+   "r": [
+    625,
+    746,
+    25,
+    25
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_a15d64b448c94185af43889a67d89732.pdf",
+   "r": [
+    655,
+    746,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_1e5554b655eb45b889a84ab64699e183.pdf",
+   "r": [
+    584,
+    788,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://youtu.be/0HJb-2gEzjI",
+   "r": [
+    627,
+    788,
+    25,
+    25
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_69905c75deb349b88a664b3a3f4254de.pdf",
+   "r": [
+    655,
+    786,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_ccfb04c420ff40408a5b353afb8e92a3.pdf",
+   "r": [
+    584,
+    825,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://youtu.be/i68vTYZpawo",
+   "r": [
+    625,
+    826,
+    25,
+    25
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_5de26edd9a1249e3922247362e99194a.pdf",
+   "r": [
+    655,
+    825,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_4750546c9de4449cb79136f9701d9250.pdf",
+   "r": [
+    585,
+    862,
+    33,
+    26
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://youtu.be/Lu0VJ4KomgE",
+   "r": [
+    626,
+    863,
+    25,
+    24
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_ae1e24f7eae24164a16e1619034ae255.pdf",
+   "r": [
+    655,
+    862,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_db5558a4b9564ad2965079255834858a.pdf",
+   "r": [
+    587,
+    897,
+    33,
+    26
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://youtu.be/x1kuVOo4L0Y",
+   "r": [
+    627,
+    897,
+    25,
+    24
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_6c3561bb82494b8f9fa82d136f3c44f7.pdf",
+   "r": [
+    655,
+    897,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_1511f93e7522468e9dcc7df59305ea92.pdf",
+   "r": [
+    555,
+    1025,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://youtu.be/-AiFIq5Hhgg",
+   "r": [
+    596,
+    1026,
+    25,
+    25
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_91a0c37dff7946d2bd84a773b816db0d.pdf",
+   "r": [
+    626,
+    1026,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_0880d659db974807ac912ad696dc6008.pdf",
+   "r": [
+    555,
+    1068,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://youtu.be/n-dRyRxjcqk",
+   "r": [
+    596,
+    1070,
+    25,
+    25
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_549db30a75894e7b9a721cb223fb0d0c.pdf",
+   "r": [
+    626,
+    1070,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_f588f0e0dfcd4eb19c0350464abe4a7c.pdf",
+   "r": [
+    554,
+    1106,
+    33,
+    27
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://youtu.be/N0LMjUOrn7c",
+   "r": [
+    596,
+    1108,
+    25,
+    25
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_19d1eb553e714cfcbbb3b0e73c450f5c.pdf",
+   "r": [
+    626,
+    1106,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_a8be2339b3b74c09b63344949c9e105a.pdf",
+   "r": [
+    558,
+    1228,
+    33,
+    26
+   ],
+   "icone": "38.001 50 123.999 100"
+  },
+  {
+   "href": "https://youtu.be/phW1jmePss8",
+   "r": [
+    600,
+    1230,
+    25,
+    24
+   ],
+   "icone": "1.6 2 56.8 56"
+  },
+  {
+   "href": "https://2f470df7-bf81-426f-a6d0-1cf2a192cf66.filesusr.com/ugd/911fb9_b258b24e5bf8409f8f5c61b1eb37ea12.pdf",
+   "r": [
+    630,
+    1228,
+    22,
+    27
+   ],
+   "icone": "42.5 29.5 115 141"
+  }
+ ]
+}

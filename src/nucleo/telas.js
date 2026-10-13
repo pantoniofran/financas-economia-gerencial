@@ -285,7 +285,7 @@ ${tem(s.english) || ctx.editando ? `<section lang="en"><h2 class="eye">In Englis
 
 // ---------- formulário de material ----------
 
-const TIPOS_DO_FORMULARIO = ['slides', 'video', 'exercicios', 'planilha', 'codigo', 'link'];
+const TIPOS_DO_FORMULARIO = ['slides', 'notas', 'video', 'exercicios', 'planilha', 'codigo', 'link'];
 
 function formularioMaterial(f) {
   if (!f) return '';
