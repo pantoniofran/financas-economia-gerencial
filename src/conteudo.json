@@ -46,7 +46,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-1-aula-1-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "A relação entre preço e quantidade demandada, escrita como P = a − b × Q. Com o exemplo do sorvete, você vê como as demandas individuais se somam na demanda de mercado e também como funciona a curva de oferta.",
+              "dica": "Monte você mesmo a demanda de mercado do exemplo: some, a cada preço, as quantidades de cada consumidor. É o raciocínio que volta em todas as aulas seguintes."
             },
             {
               "id": "eg-1-2",
@@ -70,7 +72,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-1-aula-2-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "A função de produção Cobb-Douglas, o produto marginal e os rendimentos de escala (constantes, crescentes e decrescentes), chegando às curvas de custo da firma.",
+              "dica": "Teste a regra dos rendimentos de escala com números: dobre os dois insumos na Cobb-Douglas e veja se a produção dobra, mais que dobra ou menos."
             },
             {
               "id": "eg-1-3",
@@ -94,7 +98,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-1-aula-3-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "Receita total, receita marginal e a regra de ouro da firma: o lucro é máximo quando a receita marginal é igual ao custo marginal. A aula também separa lucro econômico de lucro contábil.",
+              "dica": "Derive RMg = a − 2bQ a partir de RT = aQ − bQ² e iguale ao custo marginal. Fazer a conta uma vez à mão fixa o procedimento."
             },
             {
               "id": "eg-1-4",
@@ -112,7 +118,9 @@
                   "nome": "Planilha",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-1-aula-4-planilha.xlsx"
                 }
-              ]
+              ],
+              "descricao": "Exercícios resolvidos sobre demanda, custos e maximização de lucro, acompanhados de uma planilha.",
+              "dica": "Abra a planilha e tente resolver cada exercício antes de ver a resolução no vídeo. Pause e compare."
             },
             {
               "id": "eg-1-5",
@@ -130,9 +138,12 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-1-aula-5-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "A maximização do lucro quando a empresa vende vários produtos, cada um com a própria curva de demanda e o próprio custo variável. A margem de contribuição de cada produto vira um problema de pesquisa operacional.",
+              "dica": "Comece com um produto só e confira se o resultado bate com a aula anterior; depois acrescente os outros. A lógica é a mesma, só a conta cresce."
             }
-          ]
+          ],
+          "descricao": "As bases de microeconomia que sustentam o resto da disciplina: como a demanda se forma, quanto custa produzir e como a empresa escolhe a quantidade que maximiza o lucro."
         },
         {
           "id": "eg-2",
@@ -160,7 +171,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-2-aula-1-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "O que é um jogo: empresas cujas decisões dependem umas das outras. A partir do exemplo da guerra entre Alfa e Beta, você vê os elementos de um jogo e como resolver jogos sequenciais.",
+              "dica": "Desenhe a árvore do jogo e resolva de trás para frente: comece pela última decisão e suba até a primeira."
             },
             {
               "id": "eg-2-2",
@@ -184,7 +197,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-2-aula-2-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "Jogos em que as empresas decidem ao mesmo tempo, sem saber a escolha do rival. A aula define estratégia dominante e dominada e mostra como achar a melhor resposta de cada jogador.",
+              "dica": "Antes de procurar o equilíbrio, risque as estratégias dominadas da tabela. Muitas vezes o jogo fica pequeno o bastante para resolver de cabeça."
             },
             {
               "id": "eg-2-3",
@@ -208,9 +223,12 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-2-aula-3-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "O equilíbrio de Nash: a combinação em que cada empresa já está na melhor resposta ao que as outras fazem. O exemplo é a empresa ALFA decidindo se amplia a capacidade diante de uma concorrente estrangeira.",
+              "dica": "Use o procedimento da nota de aula: marque na tabela a melhor resposta de um jogador, depois a do outro. A célula com as duas marcas é o equilíbrio."
             }
-          ]
+          ],
+          "descricao": "Como decidir quando o resultado depende também do que o concorrente faz: jogos sequenciais, jogos simultâneos e o equilíbrio de Nash."
         },
         {
           "id": "eg-3",
@@ -238,7 +256,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-3-aula-1-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "Economias e deseconomias de escala, a curva de custo total médio e os fatores que a movem, como o tamanho das instalações. A aula também trata das economias de escopo, quando produzir junto sai mais barato.",
+              "dica": "Pense numa empresa que você conhece e identifique onde ela ganha com escala e onde ganha com escopo. Exemplos próprios fixam melhor que os do livro."
             },
             {
               "id": "eg-3-2",
@@ -262,7 +282,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-3-aula-2-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "A cadeia vertical, da matéria-prima à venda, e a escolha entre fazer dentro de casa ou comprar de outras empresas. O exemplo é a cadeia do aço, da mineradora à siderúrgica.",
+              "dica": "Para cada etapa da cadeia do aço, pergunte: o que a siderúrgica ganha e o que perde ao integrar essa etapa? Essa lista de prós e contras é o centro da aula."
             },
             {
               "id": "eg-3-3",
@@ -286,9 +308,12 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-3-aula-3-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "Por que os contratos são quase sempre incompletos (racionalidade limitada, desempenho difícil de medir e informação assimétrica) e como os custos de transação explicam a existência e o tamanho das empresas.",
+              "dica": "Relacione esta aula com a anterior: os custos de transação são o argumento que decide entre comprar no mercado e integrar verticalmente."
             }
-          ]
+          ],
+          "descricao": "Por que algumas empresas crescem, diversificam ou compram fornecedores, e quando vale mais a pena comprar no mercado: escala, escopo, integração vertical e custos de transação."
         },
         {
           "id": "eg-4",
@@ -316,7 +341,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-4-aula-1-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "A relação entre o principal (o dono) e o agente (o administrador), por que os objetivos dos dois divergem e como monitoramento e incentivos por desempenho reduzem o problema.",
+              "dica": "Procure um caso real de conflito entre acionistas e executivos e identifique nele as duas condições do problema de agência: objetivos diferentes e informação difícil de observar."
             },
             {
               "id": "eg-4-2",
@@ -340,9 +367,12 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-4-aula-2-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "A estrutura de governança de uma empresa: Conselho de Administração, Conselho Fiscal, Comitê de Auditoria e diretoria, com o papel de cada um em riscos e controles.",
+              "dica": "Desenhe o organograma da governança, com quem se subordina a quem. Ajuda a não confundir Conselho Fiscal com Comitê de Auditoria."
             }
-          ]
+          ],
+          "descricao": "O conflito entre o dono (principal) e quem administra (agente), e os mecanismos de governança que reduzem esse problema."
         },
         {
           "id": "eg-5",
@@ -370,7 +400,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-5-aula-1-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "Como medir o grau de concentração de um mercado (quantas empresas dividem as vendas e de que forma) e o que isso indica sobre o tipo de concorrência.",
+              "dica": "Escolha um setor brasileiro, busque a participação de mercado das maiores empresas e calcule a concentração. O número ganha sentido quando vem de um caso real."
             },
             {
               "id": "eg-5-2",
@@ -394,7 +426,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-5-aula-2-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "Os dois extremos das estruturas de mercado. Na concorrência perfeita a empresa aceita o preço do mercado; no monopólio ela escolhe o preço. Nos dois casos, o lucro máximo está onde a receita marginal é igual ao custo marginal.",
+              "dica": "Resolva o mesmo mercado nas duas estruturas e compare preço e quantidade. A diferença é o custo do monopólio para o consumidor."
             },
             {
               "id": "eg-5-3",
@@ -418,7 +452,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-5-aula-3-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "A concorrência monopolística: muitas empresas com produtos diferenciados e sem barreiras de entrada. A aula distingue diferenciação vertical e horizontal e mostra o que acontece quando novas empresas entram.",
+              "dica": "Classifique produtos do dia a dia: a diferença está no desempenho (vertical) ou na preferência e na localização (horizontal)?"
             },
             {
               "id": "eg-5-4",
@@ -442,7 +478,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-5-aula-4-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "O oligopólio pelo modelo de Cournot: duas empresas escolhem quantidades, cada uma reagindo à outra, até chegar ao equilíbrio.",
+              "dica": "Escreva o lucro de cada empresa, derive e iguale a zero para achar as curvas de reação. O equilíbrio está onde as duas curvas se cruzam."
             },
             {
               "id": "eg-5-5",
@@ -460,9 +498,12 @@
                   "nome": "Vídeo da aula",
                   "url": "https://youtu.be/PW7bjT2w4Cg"
                 }
-              ]
+              ],
+              "descricao": "Um estudo de caso com duas fábricas de chocolates finos que concorrem em preço, analisado pelo modelo de Bertrand com produtos diferenciados.",
+              "dica": "Compare com Cournot: aqui a variável de decisão é o preço, não a quantidade. Repare em como isso muda o resultado."
             }
-          ]
+          ],
+          "descricao": "Como o número de empresas e a diferenciação dos produtos mudam preços e lucros: da concorrência perfeita ao monopólio, passando pela concorrência monopolística e pelo oligopólio."
         },
         {
           "id": "eg-6",
@@ -490,7 +531,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-6-aula-1-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "O comprometimento estratégico: decisões difíceis de reverter, como ampliar a capacidade, que mudam o que o concorrente espera e podem dar vantagem a quem age primeiro.",
+              "dica": "Refaça o exemplo da aula duas vezes, com decisão simultânea e com a Empresa 1 decidindo primeiro, e compare os equilíbrios."
             },
             {
               "id": "eg-6-2",
@@ -514,7 +557,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-6-aula-2-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "A dinâmica da rivalidade de preços: o que torna a concorrência mais intensa, por que alguns mercados evitam guerras de preço e como as empresas chegam ao equilíbrio de Cournot passo a passo.",
+              "dica": "Siga no gráfico das curvas de reação o caminho de Q₁⁰ até o equilíbrio. Desenhar os passos ajuda a entender a convergência."
             },
             {
               "id": "eg-6-3",
@@ -538,9 +583,12 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-6-aula-3-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "A análise do setor pelas cinco forças competitivas de Porter: ameaça de entrada, rivalidade, substitutos e poder de negociação de fornecedores e compradores.",
+              "dica": "Aplique as cinco forças a um setor que você conhece e dê uma nota de intensidade a cada uma. É um bom exercício de fixação."
             }
-          ]
+          ],
+          "descricao": "A concorrência em movimento: compromissos estratégicos difíceis de reverter, guerras de preço e a análise do setor pelas cinco forças de Porter."
         },
         {
           "id": "eg-7",
@@ -556,7 +604,9 @@
                   "nome": "Slides da aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-7-aula-1-slides.pdf"
                 }
-              ]
+              ],
+              "descricao": "Por que alguns mercados são regulados: monopólios naturais, indústrias de rede e externalidades, com exemplos como tarifas de telefonia e de eletricidade, vigilância sanitária e normas de segurança.",
+              "dica": "Para cada exemplo de regulação dos slides, identifique qual falha de mercado ele tenta corrigir."
             },
             {
               "id": "eg-7-2",
@@ -568,7 +618,9 @@
                   "nome": "Slides da aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-7-aula-2-slides.pdf"
                 }
-              ]
+              ],
+              "descricao": "A economia da inovação contada pela história do pensamento econômico, de Adam Smith e David Ricardo em diante, e o papel da inovação no crescimento.",
+              "dica": "Monte uma linha do tempo com cada autor e a ideia central dele sobre crescimento e inovação."
             },
             {
               "id": "eg-7-3",
@@ -580,11 +632,16 @@
                   "nome": "Slides da aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-7-aula-3-slides.pdf"
                 }
-              ]
+              ],
+              "descricao": "Uma introdução à sustentabilidade como tema da economia gerencial.",
+              "dica": "Os slides são curtos: use-os como ponto de partida e anote as dúvidas para levar à aula."
             }
-          ]
+          ],
+          "descricao": "Temas que fecham a disciplina: regulação de mercados, economia da inovação e sustentabilidade."
         }
-      ]
+      ],
+      "cronograma": [],
+      "duvidas": ""
     },
     {
       "id": "fc1",
@@ -624,7 +681,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-1-aula-1-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "As três demonstrações principais: o balanço patrimonial (a fotografia da empresa), a DRE (o resultado do período) e a demonstração do fluxo de caixa (de onde vêm e para onde vão os recursos).",
+              "dica": "Baixe as demonstrações de uma empresa listada na bolsa e localize nelas cada conta vista na aula. Ler um balanço real é o melhor treino."
             },
             {
               "id": "fc1-1-2",
@@ -648,7 +707,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-1-aula-2-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "Análise vertical (cada conta como percentual do total) e horizontal (a evolução de cada conta no tempo), aplicadas ao balanço e à DRE da Hipotética S/A.",
+              "dica": "Refaça na planilha o cálculo dos estoques da Hipotética S/A (16,3% em 20X3 e 13,6% em 20X2) e depois aplique o mesmo às outras contas."
             },
             {
               "id": "fc1-1-3",
@@ -672,7 +733,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-1-aula-3-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "Os índices de liquidez, atividade, endividamento, rentabilidade e valor de mercado: o que cada um mede e como interpretar a alta ou a queda.",
+              "dica": "Para cada índice, escreva numa linha o que ele responde (por exemplo: \"a empresa paga as contas de curto prazo?\"). Decorar fórmula sem saber a pergunta não ajuda."
             },
             {
               "id": "fc1-1-4",
@@ -696,7 +759,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-1-aula-4-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "O capital de giro líquido e os ciclos operacional e financeiro: o tempo entre comprar a matéria-prima, pagar o fornecedor, vender e receber.",
+              "dica": "Desenhe a linha do tempo do ciclo com os prazos médios de estoque, de recebimento e de pagamento. O ciclo financeiro aparece sozinho no desenho."
             },
             {
               "id": "fc1-1-5",
@@ -708,7 +773,9 @@
                   "nome": "Slides da aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-1-aula-5-slides.pdf"
                 }
-              ]
+              ],
+              "descricao": "Indicadores que complementam a análise: margem de contribuição, markup, NOPAT, EVA, ROIC e a relação preço/lucro.",
+              "dica": "Calcule o NOPAT antes do EVA e do ROIC: os dois partem dele."
             },
             {
               "id": "fc1-1-6",
@@ -732,9 +799,12 @@
                   "nome": "Notebook em Python",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-1-aula-6-codigo.ipynb"
                 }
-              ]
+              ],
+              "descricao": "Laboratório em Python: uma rotina em Jupyter que calcula os índices financeiros da Klabin a partir das demonstrações publicadas pela empresa.",
+              "dica": "Siga o passo a passo dos slides com o notebook aberto. Depois troque a Klabin por outra empresa e compare os índices."
             }
-          ]
+          ],
+          "descricao": "Como ler uma empresa pelos números: balanço patrimonial, DRE e fluxo de caixa, análise horizontal e vertical, índices financeiros e ciclo financeiro, com um laboratório em Python usando dados da Klabin."
         },
         {
           "id": "fc1-2",
@@ -762,7 +832,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-2-aula-1-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "O valor do dinheiro no tempo: por que R$ 50 hoje valem mais que R$ 50 daqui a seis meses, juros simples e compostos, valor presente e valor futuro.",
+              "dica": "Refaça a tabela de juros simples e compostos dos slides (R$ 1.000 a 10% ao ano por 4 anos) na calculadora ou na planilha."
             },
             {
               "id": "fc1-2-2",
@@ -786,7 +858,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-2-aula-2-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "Política de prazos e descontos a clientes: quanto custa dar desconto para receber antes e como o prazo de pagamento mexe com as vendas e com o risco de crédito.",
+              "dica": "Resolva o exercício do desconto de 5% para pagamento em 10 dias trazendo tudo a valor presente antes de comparar."
             },
             {
               "id": "fc1-2-3",
@@ -810,7 +884,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-2-aula-3-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "Como projetar o fluxo de caixa dos próximos meses separando recebimentos, pagamentos, investimentos e financiamentos, para prever sobras e faltas de caixa.",
+              "dica": "Monte a projeção do segundo trimestre do exemplo numa planilha, mês a mês. Errar a defasagem das vendas a prazo é o engano mais comum."
             },
             {
               "id": "fc1-2-4",
@@ -834,9 +910,12 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-2-aula-4-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "O capital de giro e o capital de giro líquido: a troca entre rentabilidade e risco de manter mais ou menos dinheiro aplicado no curto prazo.",
+              "dica": "Pense nos dois lados: mais capital de giro deixa a empresa mais segura e menos rentável. Explique essa troca com as suas palavras."
             }
-          ]
+          ],
+          "descricao": "As decisões financeiras do dia a dia: valor do dinheiro no tempo, política de prazos e descontos a clientes, projeção do fluxo de caixa e gestão do capital de giro."
         },
         {
           "id": "fc1-3",
@@ -864,7 +943,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-3-aula-1-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "Como medir retorno e risco: retorno de uma ação com dividendos, capitalização contínua, retorno esperado versus histórico, variância e desvio padrão.",
+              "dica": "Calcule o retorno do exemplo (ação comprada a R$ 20, dividendo de R$ 0,50 e preço final de R$ 22) nas duas formas, discreta e contínua."
             },
             {
               "id": "fc1-3-2",
@@ -888,7 +969,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-3-aula-2-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "Risco sistemático e não sistemático e o modelo de fator único, que usa um índice de mercado como o Ibovespa para explicar o retorno de cada ação pelo beta.",
+              "dica": "Baixe os preços de uma ação e do Ibovespa, calcule os retornos e faça a regressão na planilha. A inclinação é o beta."
             },
             {
               "id": "fc1-3-3",
@@ -912,7 +995,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-3-aula-3-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "O CAPM: as premissas do modelo, a ligação com a carteira de Markowitz e a relação entre beta e retorno esperado.",
+              "dica": "Leia as premissas com atenção. Boa parte das críticas ao CAPM nasce delas."
             },
             {
               "id": "fc1-3-4",
@@ -936,9 +1021,12 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-3-aula-4-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "O risco de crédito: probabilidade de inadimplência, exposição e perda em caso de inadimplência, e a diferença entre perda esperada e perda inesperada.",
+              "dica": "Monte um exemplo com números simples: perda esperada = probabilidade × exposição × fração perdida."
             }
-          ]
+          ],
+          "descricao": "Como medir e precificar o risco: retorno e desvio padrão, risco sistemático e não sistemático, o modelo de fator único, o CAPM e o risco de crédito."
         },
         {
           "id": "fc1-4",
@@ -966,7 +1054,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-4-aula-1-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "As ações como capital próprio: ações ordinárias e preferenciais, companhia aberta e fechada, e a ordem dos direitos de acionistas e credores.",
+              "dica": "Monte uma tabela comparando ordinárias e preferenciais: voto, dividendos e prioridade na liquidação."
             },
             {
               "id": "fc1-4-2",
@@ -990,11 +1080,16 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-4-aula-2-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "Os títulos de renda fixa: valor nominal, vencimento e cupons, títulos prefixados e pós-fixados, públicos e privados, com exemplos do Tesouro Nacional.",
+              "dica": "Abra o site do Tesouro Direto e identifique, entre os títulos à venda, quais são prefixados e quais são pós-fixados."
             }
-          ]
+          ],
+          "descricao": "Os instrumentos com que a empresa se financia: ações (capital próprio) e títulos de renda fixa (dívida)."
         }
-      ]
+      ],
+      "cronograma": [],
+      "duvidas": ""
     },
     {
       "id": "fc2",
@@ -1034,7 +1129,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-1-aula-1-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "Como montar o fluxo de caixa de um projeto: investimento inicial, despesas pré-operacionais, previsão de receitas, custos e impostos, até chegar ao fluxo de caixa líquido.",
+              "dica": "Escolha um negócio simples (uma lanchonete, por exemplo) e liste tudo o que entra no investimento inicial. Depois projete três anos de entradas e saídas."
             },
             {
               "id": "fc2-1-2",
@@ -1058,7 +1155,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-1-aula-2-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "O valor presente líquido e a taxa interna de retorno, os dois critérios centrais do orçamento de capital, com o exemplo do projeto de R$ 800 descontado a 12%.",
+              "dica": "Calcule o VPL do exemplo à mão e confira na planilha com as funções VPL e TIR. Repare que a função VPL do Excel não inclui o investimento da data zero."
             },
             {
               "id": "fc2-1-3",
@@ -1082,9 +1181,12 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-1-aula-3-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "Critérios que complementam o VPL: o payback simples e o descontado, com as limitações de cada um.",
+              "dica": "Refaça a conta do payback de 7,5 anos do exemplo e depois a versão descontada. A diferença mostra o que o payback simples deixa de fora."
             }
-          ]
+          ],
+          "descricao": "Como decidir se um projeto vale o investimento: construção do fluxo de caixa, VPL, TIR, payback e outros critérios."
         },
         {
           "id": "fc2-2",
@@ -1112,7 +1214,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-2-aula-1-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "A escolha entre capital próprio e de terceiros e as proposições de Modigliani e Miller: quando a estrutura de capital muda o valor da empresa e por que a dívida encarece o capital próprio.",
+              "dica": "Acompanhe o exemplo das empresas A (sem dívida) e B (com dívida) duas vezes, sem impostos e com impostos, e veja onde o valor muda."
             },
             {
               "id": "fc2-2-2",
@@ -1136,7 +1240,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-2-aula-2-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "O custo médio ponderado de capital (CMPC): como estimar o custo do capital próprio (pelo modelo de dividendos ou pelo CAPM) e o custo da dívida depois dos impostos.",
+              "dica": "Monte o CMPC do exemplo numa planilha com cada peso e cada custo numa célula. Fica fácil ver o efeito de mudar a proporção de dívida."
             },
             {
               "id": "fc2-2-3",
@@ -1160,9 +1266,12 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-2-aula-3-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "Três formas de avaliar um projeto financiado com dívida (VPL sem financiamento mais benefício fiscal, fluxo do capital próprio e CMPC) e por que, na prática, elas nem sempre chegam ao mesmo número.",
+              "dica": "Resolva o caso simplificado com perpetuidades pelos três métodos. Chegar ao mesmo VPL é a prova de que as contas estão certas."
             }
-          ]
+          ],
+          "descricao": "Qual taxa usar para descontar o fluxo de caixa: estrutura de capital (Modigliani e Miller), custo médio ponderado de capital e o efeito do financiamento no valor do projeto."
         },
         {
           "id": "fc2-3",
@@ -1184,7 +1293,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-3-aula-1-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "Como o Sistema Financeiro Nacional se organiza: os órgãos normativos (CMN, CNSP, CNPC), os supervisores (Banco Central, CVM, SUSEP, PREVIC) e os operadores.",
+              "dica": "Desenhe o organograma do SFN em três camadas: quem faz as regras, quem fiscaliza e quem opera."
             },
             {
               "id": "fc2-3-2",
@@ -1202,7 +1313,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-3-aula-2-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "A diferença legal entre valores mobiliários e não mobiliários e os principais instrumentos do mercado brasileiro, como debêntures, CRI, CRA, FII, LCI e LCA.",
+              "dica": "Faça uma tabela com cada sigla, quem emite, quem regula e se é valor mobiliário. As siglas se confundem fácil."
             },
             {
               "id": "fc2-3-3",
@@ -1220,7 +1333,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-3-aula-3-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "O que são derivativos e como funcionam os contratos a termo e futuros, com o exemplo de uma produtora de soja que trava hoje o preço da venda futura.",
+              "dica": "Para cada exemplo, pergunte quem está protegido e contra qual risco. É o que diferencia hedge de especulação."
             },
             {
               "id": "fc2-3-4",
@@ -1238,11 +1353,16 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-3-aula-4-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "Swaps (trocas de fluxos de caixa, como dólar contra DI) e opções de compra e de venda: direitos, obrigações, prêmio e preço de exercício.",
+              "dica": "Desenhe o gráfico de lucro no vencimento de uma call e de uma put, comprada e vendida. Os quatro gráficos resumem a aula."
             }
-          ]
+          ],
+          "descricao": "Onde a empresa capta e protege recursos: a organização do Sistema Financeiro Nacional, os instrumentos financeiros e os derivativos (termo, futuros, swaps e opções)."
         }
-      ]
+      ],
+      "cronograma": [],
+      "duvidas": ""
     },
     {
       "id": "sem",
@@ -1282,7 +1402,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-1-aula-1-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "O valor do dinheiro no tempo: por que um valor hoje vale mais que o mesmo valor no futuro, juros compostos, valor presente e valor futuro.",
+              "dica": "Pratique a fórmula VF = VP × (1 + i)ⁿ nos dois sentidos, do presente para o futuro e de volta. Todo o resto do curso usa esse movimento."
             },
             {
               "id": "sem-1-2",
@@ -1306,7 +1428,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-1-aula-2-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "Como montar o fluxo de caixa de um projeto: investimento inicial, despesas pré-operacionais, receitas, custos e impostos projetados.",
+              "dica": "Escolha um projeto do seu interesse e liste os itens do investimento inicial antes de projetar o fluxo. Ele pode virar o caso do seu seminário."
             },
             {
               "id": "sem-1-3",
@@ -1330,7 +1454,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-1-aula-3-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "VPL e TIR, os critérios centrais do orçamento de capital, com o exemplo do projeto de R$ 800 descontado a 12%.",
+              "dica": "Calcule o VPL do exemplo à mão e confira na planilha. Depois ache a TIR testando taxas até o VPL zerar."
             },
             {
               "id": "sem-1-4",
@@ -1354,7 +1480,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-1-aula-4-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "Payback simples e descontado e outros critérios que complementam o VPL, com as limitações de cada um.",
+              "dica": "Compare dois projetos com o mesmo payback e fluxos diferentes. É o exemplo que mostra por que o payback sozinho não basta."
             },
             {
               "id": "sem-1-5",
@@ -1366,9 +1494,12 @@
                   "nome": "Pacote de arquivos (zip)",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-1-aula-5-codigo.zip"
                 }
-              ]
+              ],
+              "descricao": "A avaliação de projetos feita em R com Quarto: o código calcula os indicadores do módulo e gera o relatório.",
+              "dica": "Rode o código como está, depois mude o fluxo de caixa e veja o relatório se refazer."
             }
-          ]
+          ],
+          "descricao": "A base da avaliação de investimentos: valor do dinheiro no tempo, fluxo de caixa de projetos, VPL, TIR e payback, com uma análise feita em R e Quarto."
         },
         {
           "id": "sem-2",
@@ -1396,7 +1527,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-2-aula-1-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "A árvore de decisão: alternativas, estados da natureza, probabilidades e valores esperados, resolvendo um problema de investimento sob incerteza.",
+              "dica": "Desenhe a árvore à mão antes de calcular: nós de decisão em quadrado e de incerteza em círculo. Depois resolva da direita para a esquerda."
             },
             {
               "id": "sem-2-2",
@@ -1420,7 +1553,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-2-aula-2-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "Processos estocásticos e a simulação de Monte Carlo para gerar cenários de preços e de fluxo de caixa e medir o risco de um projeto.",
+              "dica": "Comece com uma variável só, gere uns 1.000 cenários na planilha e faça o histograma do VPL. Ver a distribuição ajuda a entender o método."
             },
             {
               "id": "sem-2-3",
@@ -1444,14 +1579,19 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-2-aula-3-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "As opções reais: por que investimentos irreversíveis, incerteza e flexibilidade gerencial pedem mais que o VPL, com foco no valor da opção de esperar.",
+              "dica": "Reveja a aula de opções financeiras: a analogia entre a opção de esperar e uma opção de compra é a chave do tema."
             },
             {
               "id": "sem-2-4",
               "titulo": "Exercício Excel",
-              "materiais": []
+              "materiais": [],
+              "descricao": "Exercício de opções reais para resolver em Excel.",
+              "dica": "Tente montar a planilha do zero antes de consultar a solução."
             }
-          ]
+          ],
+          "descricao": "Como tratar a incerteza nos projetos: árvores de decisão, simulação de Monte Carlo e o valor da flexibilidade pela teoria das opções reais."
         },
         {
           "id": "sem-3",
@@ -1473,7 +1613,9 @@
                   "nome": "Notebook em Python",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-3-aula-1-codigo.ipynb"
                 }
-              ]
+              ],
+              "descricao": "Laboratório em Python: uma rotina em Jupyter que calcula os índices financeiros da Klabin a partir das demonstrações publicadas pela empresa.",
+              "dica": "Siga o passo a passo dos slides com o notebook aberto. Depois troque a Klabin por outra empresa e compare os índices."
             },
             {
               "id": "sem-3-2",
@@ -1491,7 +1633,9 @@
                   "nome": "Notebook em Python",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-3-aula-2-codigo.ipynb"
                 }
-              ]
+              ],
+              "descricao": "Laboratório em Python sobre o modelo de Markowitz: retorno e risco de uma carteira, carteiras eficientes e a fronteira eficiente.",
+              "dica": "Comece com duas ações e veja a curva risco-retorno se formar. Depois acrescente ativos."
             },
             {
               "id": "sem-3-3",
@@ -1509,9 +1653,12 @@
                   "nome": "Notebook em Python",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-3-aula-3-codigo.ipynb"
                 }
-              ]
+              ],
+              "descricao": "Laboratório em Python sobre o risco de mercado: o cálculo do VaR e as métricas próximas (CVaR, testes de stress, CFaR e EaR) e onde são usadas.",
+              "dica": "Calcule o VaR histórico de uma ação e compare com o VaR paramétrico. A diferença diz muito sobre as caudas da distribuição."
             }
-          ]
+          ],
+          "descricao": "Laboratórios em Python: índices financeiros da Klabin, otimização de carteiras pelo modelo de Markowitz e cálculo do VaR."
         },
         {
           "id": "sem-4",
@@ -1527,16 +1674,21 @@
                   "nome": "Slides da aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-4-aula-1-slides.pdf"
                 }
-              ]
+              ],
+              "descricao": "Slides em inglês sobre a estratégia brasileira para administrar o risco cambial em crises: metas de inflação, regimes de câmbio e reservas internacionais.",
+              "dica": "São mais de 100 slides: leia primeiro o sumário e use os quatro tópicos dele como roteiro."
             },
             {
               "id": "sem-4-2",
               "titulo": "Política Fiscal (em construção)",
               "materiais": []
             }
-          ]
+          ],
+          "descricao": "Política econômica e finanças: metas de inflação, regimes de câmbio, reservas internacionais e as estratégias do Brasil diante de crises."
         }
-      ]
+      ],
+      "cronograma": [],
+      "duvidas": ""
     },
     {
       "id": "pfc",
@@ -1576,7 +1728,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/pfc/modulo-1-aula-1-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "As demonstrações financeiras obrigatórias (balanço, DRE, fluxo de caixa, DVA e DMPL), os regimes de competência e de caixa e o que cada demonstração mostra sobre a empresa.",
+              "dica": "Pegue as demonstrações de uma companhia aberta e encontre cada uma das cinco. Repare no que muda entre o lucro da DRE e o caixa gerado no período."
             },
             {
               "id": "pfc-1-2",
@@ -1600,7 +1754,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/pfc/modulo-1-aula-2-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "A padronização das demonstrações e a análise vertical, horizontal e por índices, com a Hipotética S/A como exemplo.",
+              "dica": "Aplique a análise vertical e a horizontal à empresa que você escolheu na aula anterior e escreva três conclusões sobre ela."
             },
             {
               "id": "pfc-1-3",
@@ -1624,14 +1780,17 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-2-aula-1-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "A estrutura de capital pelas proposições I e II de Modigliani e Miller: quando a dívida muda o valor da empresa e por que ela encarece o capital próprio.",
+              "dica": "Acompanhe o exemplo das empresas A (sem dívida) e B (com dívida) com e sem impostos e veja exatamente onde o valor muda."
             },
             {
               "id": "pfc-1-4",
               "titulo": "Exercícios",
               "materiais": []
             }
-          ]
+          ],
+          "descricao": "As demonstrações financeiras obrigatórias, a análise por padronização e índices e a escolha entre capital próprio e de terceiros (Modigliani e Miller)."
         },
         {
           "id": "pfc-2",
@@ -1659,7 +1818,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/pfc/modulo-2-aula-1-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "O valor do dinheiro no tempo: juros compostos, valor presente e futuro, séries de pagamentos e equivalência de taxas.",
+              "dica": "Resolva o exemplo do empréstimo de R$ 1.000 a 1% ao mês por 10 meses na calculadora e na planilha, para dominar as duas ferramentas."
             },
             {
               "id": "pfc-2-2",
@@ -1683,7 +1844,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/pfc/modulo-2-aula-2-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "O planejamento de curto prazo: a demonstração do fluxo de caixa, a projeção mês a mês de recebimentos e pagamentos e o ciclo financeiro.",
+              "dica": "Monte a projeção do segundo trimestre do exemplo numa planilha. A defasagem das vendas a prazo é onde mais se erra."
             },
             {
               "id": "pfc-2-3",
@@ -1707,14 +1870,17 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/pfc/modulo-2-aula-3-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "A administração do caixa pelo modelo Fleuriet: contas cíclicas e erráticas, necessidade de capital de giro (NCG), capital de giro (CDG) e saldo de tesouraria (ST).",
+              "dica": "Reclassifique o balanço de uma empresa real nas contas do modelo Fleuriet e calcule NCG, CDG e ST. O sinal do saldo de tesouraria diz muito."
             },
             {
               "id": "pfc-2-4",
               "titulo": "Exercícios",
               "materiais": []
             }
-          ]
+          ],
+          "descricao": "A gestão financeira de curto prazo: valor do dinheiro no tempo, projeção do fluxo de caixa, ciclo financeiro e administração do caixa pelo modelo Fleuriet."
         },
         {
           "id": "pfc-3",
@@ -1742,7 +1908,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/pfc/modulo-3-aula-1-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "As métricas de retorno e risco (retorno esperado versus histórico, variância e desvio padrão) e a separação entre risco sistemático e não sistemático.",
+              "dica": "Calcule o retorno do exemplo (ação comprada a R$ 20, dividendo de R$ 0,50 e preço final de R$ 22) de forma discreta e contínua."
             },
             {
               "id": "pfc-3-2",
@@ -1766,7 +1934,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/pfc/modulo-3-aula-2-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "O CAPM, com as premissas e a ligação com a carteira de Markowitz, e o custo do capital de terceiros a partir do risco de crédito.",
+              "dica": "Estime o custo do capital próprio de uma empresa real pelo CAPM, anotando de onde vieram a taxa livre de risco, o beta e o prêmio de mercado."
             },
             {
               "id": "pfc-3-3",
@@ -1784,16 +1954,21 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-2-aula-2-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "O custo médio ponderado de capital (CMPC): custo do capital próprio pelo modelo de dividendos ou pelo CAPM, custo da dívida depois dos impostos e o peso de cada fonte.",
+              "dica": "Monte o CMPC do exemplo numa planilha e mude a proporção de dívida para ver o efeito no resultado."
             },
             {
               "id": "pfc-3-4",
               "titulo": "Exercícios",
               "materiais": []
             }
-          ]
+          ],
+          "descricao": "Risco, retorno e custo de capital: métricas de risco, risco sistemático, CAPM, custo da dívida e custo médio ponderado de capital."
         }
-      ]
+      ],
+      "cronograma": [],
+      "duvidas": ""
     },
     {
       "id": "aep",
@@ -1833,7 +2008,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-1-aula-1-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "O valor do dinheiro no tempo: por que um valor hoje vale mais que o mesmo valor no futuro, juros compostos, valor presente e valor futuro.",
+              "dica": "Pratique VF = VP × (1 + i)ⁿ nos dois sentidos. Descontar o fluxo de caixa, que é o centro da disciplina, é esse mesmo movimento."
             },
             {
               "id": "aep-1-2",
@@ -1857,7 +2034,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-1-aula-1-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "Como montar o fluxo de caixa livre de um projeto: investimento inicial, despesas pré-operacionais, receitas, custos e impostos.",
+              "dica": "Escolha um projeto do seu interesse e liste o investimento inicial item por item. Esse fluxo vai servir de base nas próximas aulas."
             },
             {
               "id": "aep-1-3",
@@ -1881,7 +2060,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-1-aula-2-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "VPL e TIR, os critérios centrais do orçamento de capital, com o exemplo do projeto de R$ 800 descontado a 12% e os cuidados ao comparar projetos.",
+              "dica": "Calcule o VPL do exemplo à mão e confira na planilha. Depois mude a taxa e veja em que ponto o VPL troca de sinal: é a TIR."
             },
             {
               "id": "aep-1-4",
@@ -1905,9 +2086,12 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-1-aula-3-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "Payback simples e descontado e outros critérios complementares, com as limitações de cada um.",
+              "dica": "Refaça a conta do payback de 7,5 anos do exemplo e depois a versão descontada."
             }
-          ]
+          ],
+          "descricao": "A avaliação clássica de projetos: valor do dinheiro no tempo, fluxo de caixa do projeto, VPL, TIR e payback."
         },
         {
           "id": "aep-2",
@@ -1935,7 +2119,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-2-aula-1-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "A estrutura de capital pelas proposições de Modigliani e Miller: quando a dívida muda o valor da empresa e por que ela aumenta o custo do capital próprio.",
+              "dica": "Acompanhe o exemplo das empresas A (sem dívida) e B (com dívida) com e sem impostos e veja onde o valor muda."
             },
             {
               "id": "aep-2-2",
@@ -1959,7 +2145,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/pfc/modulo-3-aula-1-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "As métricas de retorno e risco e o risco sistemático, que é o risco que a taxa de desconto precisa remunerar.",
+              "dica": "Calcule o retorno do exemplo (ação comprada a R$ 20, dividendo de R$ 0,50 e preço final de R$ 22) e depois o desvio padrão de uma série real."
             },
             {
               "id": "aep-2-3",
@@ -1983,7 +2171,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/pfc/modulo-3-aula-2-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "O custo do capital próprio pelo CAPM, com as premissas e a ligação com Markowitz, e o custo do capital de terceiros a partir do risco de crédito.",
+              "dica": "Estime o custo do capital próprio de uma empresa do setor do seu projeto pelo CAPM, anotando a fonte de cada número."
             },
             {
               "id": "aep-2-4",
@@ -2007,7 +2197,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-2-aula-2-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "O cálculo do custo médio ponderado de capital (CMPC) e por que uma taxa errada leva a aceitar projetos ruins ou recusar projetos bons.",
+              "dica": "Monte o CMPC numa planilha e recalcule o VPL do seu projeto com ele."
             },
             {
               "id": "aep-2-5",
@@ -2031,9 +2223,12 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-2-aula-3-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "Três formas de avaliar um projeto financiado com dívida (VPL sem financiamento mais benefício fiscal, fluxo do capital próprio e CMPC) e quando elas coincidem.",
+              "dica": "Resolva o caso simplificado com perpetuidades pelos três métodos. Se o VPL não for igual nos três, há erro na conta."
             }
-          ]
+          ],
+          "descricao": "Qual taxa de desconto usar: estrutura de capital, risco sistemático, CAPM, custo médio ponderado de capital e o efeito do financiamento no valor do projeto."
         },
         {
           "id": "aep-3",
@@ -2061,7 +2256,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-2-aula-1-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "A árvore de decisão: alternativas, estados da natureza, probabilidades e valores esperados, aplicada a um problema de investimento.",
+              "dica": "Desenhe a árvore à mão antes de calcular e resolva da direita para a esquerda."
             },
             {
               "id": "aep-3-2",
@@ -2085,7 +2282,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-2-aula-2-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "Processos estocásticos e simulação de Monte Carlo para gerar cenários e obter a distribuição do VPL de um projeto.",
+              "dica": "Comece simulando uma variável só e faça o histograma do VPL. Depois acrescente as outras incertezas."
             },
             {
               "id": "aep-3-3",
@@ -2109,9 +2308,12 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-2-aula-3-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "A teoria das opções reais: por que investimentos irreversíveis, incerteza e flexibilidade gerencial pedem mais que o VPL, e quanto vale a opção de esperar.",
+              "dica": "Compare o VPL tradicional com o valor da opção no mesmo projeto. A diferença é o valor da flexibilidade."
             }
-          ]
+          ],
+          "descricao": "Além do VPL: árvores de decisão, simulação de Monte Carlo e opções reais para projetos com incerteza e flexibilidade."
         },
         {
           "id": "aep-4",
@@ -2139,11 +2341,16 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/aep/modulo-4-aula-1-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "Estudo de caso de uma planta de hidrogênio verde por eletrólise integrada a energia eólica, avaliada de três formas: VPL tradicional, simulação de cenários e opções reais.",
+              "dica": "Leia o sumário da nota de aula primeiro: as três abordagens chegam a conclusões diferentes, e entender o porquê é o objetivo do caso."
             }
-          ]
+          ],
+          "descricao": "Um estudo de caso completo, o projeto de hidrogênio verde, avaliado com todas as ferramentas da disciplina."
         }
-      ]
+      ],
+      "cronograma": [],
+      "duvidas": ""
     },
     {
       "id": "fv",
@@ -2183,7 +2390,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fv/modulo-1-aula-1-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "Os principais gases de efeito estufa e as fontes de emissão, o Acordo de Paris e as metas de 2°C e 1,5°C, e os efeitos do aquecimento global que chegam às empresas e aos investidores.",
+              "dica": "Escolha um setor e liste as principais fontes de emissão dele. Isso ajuda a entender, nas próximas aulas, quem perde e quem ganha com a transição."
             },
             {
               "id": "fv-1-2",
@@ -2201,7 +2410,9 @@
                   "nome": "Vídeo da aula",
                   "url": "https://youtu.be/6RcPHWMELe4"
                 }
-              ]
+              ],
+              "descricao": "Ativos encalhados (stranded assets): investimentos que podem perder valor com a transição para uma economia de emissão líquida zero, como os de carvão, gás e petróleo.",
+              "dica": "Relacione o tema com a destruição criativa de Schumpeter, citada nos slides: o que muda quando a causa da obsolescência é o clima?"
             },
             {
               "id": "fv-1-3",
@@ -2219,9 +2430,12 @@
                   "nome": "Vídeo da aula",
                   "url": "https://youtu.be/bGIxglEc9X4"
                 }
-              ]
+              ],
+              "descricao": "Como os projetos verdes se financiam: capital próprio e de terceiros, mercado de ações e de dívida, e o caminho do dinheiro do investidor até o projeto.",
+              "dica": "Desenhe o fluxo do dinheiro, do investidor ao projeto, marcando onde entra cada instituição financeira."
             }
-          ]
+          ],
+          "descricao": "Por que o clima virou assunto de finanças: gases de efeito estufa e Acordo de Paris, ativos encalhados e como o sistema financeiro canaliza capital para projetos verdes."
         },
         {
           "id": "fv-2",
@@ -2249,7 +2463,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fv/modulo-2-aula-1-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "O que é um crédito de carbono (uma tonelada de CO₂ equivalente evitada ou retirada), o sistema de cap and trade, os mercados voluntário e regulado e a origem no Protocolo de Kyoto e no Acordo de Paris.",
+              "dica": "Refaça o exemplo do cap and trade dos slides com as Empresas A e B e confira quem vende e quem compra créditos."
             },
             {
               "id": "fv-2-2",
@@ -2273,7 +2489,9 @@
                   "nome": "Nota de aula",
                   "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fv/modulo-2-aula-2-nota-de-aula.pdf"
                 }
-              ]
+              ],
+              "descricao": "A Política Nacional de Biocombustíveis (RenovaBio, Lei nº 13.576/2017): objetivos, metas de redução de emissões, créditos de descarbonização (CBIOs) e certificação de biocombustíveis.",
+              "dica": "Compare o CBIO com o crédito de carbono da aula anterior: quem emite, quem é obrigado a comprar e o que cada um certifica."
             },
             {
               "id": "fv-2-3",
@@ -2291,9 +2509,12 @@
                   "nome": "Vídeo da aula",
                   "url": "https://youtu.be/yEzYGfC4Tjs"
                 }
-              ]
+              ],
+              "descricao": "Os títulos sustentáveis (green, social, sustainability e sustainability-linked bonds): o que os diferencia e como financiam projetos ambientais e sociais.",
+              "dica": "Procure uma emissão real de green bond brasileira e identifique nela a categoria e o uso dos recursos."
             }
-          ]
+          ],
+          "descricao": "Os mercados e instrumentos que estão se formando: mercado de carbono, RenovaBio e créditos de descarbonização, e títulos verdes (green bonds)."
         },
         {
           "id": "fv-3",
@@ -2315,7 +2536,9 @@
                   "nome": "Vídeo da aula",
                   "url": "https://youtu.be/LJCmay7xs_8"
                 }
-              ]
+              ],
+              "descricao": "A regulação que envolve o hidrogênio verde no Brasil, com o papel da ANEEL na geração, transmissão e comercialização de energia elétrica.",
+              "dica": "Monte um quadro com cada órgão citado e o que ele regula no caminho da energia renovável até o hidrogênio."
             },
             {
               "id": "fv-3-2",
@@ -2333,7 +2556,9 @@
                   "nome": "Vídeo da aula",
                   "url": "https://youtu.be/dryE6BCJn94"
                 }
-              ]
+              ],
+              "descricao": "A certificação de projetos de hidrogênio verde e por que ela importa para acessar o mercado de títulos verdes.",
+              "dica": "Ligue esta aula à de green bonds: a certificação é o que permite ao projeto se apresentar como verde ao investidor."
             },
             {
               "id": "fv-3-3",
@@ -2351,11 +2576,16 @@
                   "nome": "Vídeo da aula",
                   "url": "https://youtu.be/6nsQfgfU1j8"
                 }
-              ]
+              ],
+              "descricao": "Como estruturar o financiamento de projetos de hidrogênio verde: identificar os riscos e atribuí-los a quem tem melhores condições de assumi-los (patrocinadores, seguradoras, financiadores ou governo).",
+              "dica": "São 42 slides: faça uma matriz de riscos com o risco, quem assume e o instrumento usado, e preencha enquanto lê."
             }
-          ]
+          ],
+          "descricao": "O hidrogênio verde como caso aplicado: regulação no Brasil, certificação e a estruturação do financiamento desses projetos."
         }
-      ]
+      ],
+      "cronograma": [],
+      "duvidas": ""
     }
   ],
   "laboratorio": [

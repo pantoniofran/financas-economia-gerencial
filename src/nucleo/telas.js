@@ -1,5 +1,7 @@
 import { TIPOS, NIVEIS, CATEGORIAS_PUBLICACAO, avisosValidos, avisosRecentes, acharAula, videoPrincipal } from './conteudo.js';
 import { idDoYoutube } from './youtube.js';
+import { ehNovo, novidades, proximosEventos, linkAgenda, dataCurta, TIPOS_EVENTO } from './agenda.js';
+import { contarVistas } from './progresso.js';
 
 // ---------- utilidades ----------
 
@@ -31,6 +33,13 @@ const paragrafos = (t) => String(t ?? '').split(/\n{2,}/).map((p) => p.trim()).f
 
 // Nome com barra ("Sustentáveis/Verdes") pode quebrar depois da barra, e não no meio da palavra.
 const nomeQuebravel = (t) => esc(t).replace(/\//g, '/<wbr>');
+
+// Na lista de aulas, só a primeira frase da descrição: o resto fica na página da aula.
+const primeiraFrase = (t) => {
+  const texto = String(t ?? '').trim().split(/\n/)[0];
+  const fim = texto.search(/[.!?](\s|$)/);
+  return fim > 0 ? texto.slice(0, fim + 1) : texto;
+};
 
 // Texto de uma linha: em leitura devolve o texto; em edição, um trecho editável ligado ao caminho.
 function campo(caminho, valor, ctx, vazio) {
@@ -101,14 +110,31 @@ const ICONES = {
   planilha: '<rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M3 10h18M3 15h18M9 4v16"/>',
   codigo: '<path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 6l-3 12"/>',
   link: '<path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/>',
+  baixar: '<path d="M12 4v11M7 10l5 5 5-5M5 20h14"/>',
 };
+
+// Selo do que o professor adicionou nos últimos 14 dias. Só para quem lê.
+const seloNovo = (data, ctx) => (!ctx.editando && ehNovo(data, ctx.hoje) ? '<span class="selo-novo">Novo</span>' : '');
+const vistasDe = (ctx) => ctx.progresso?.vistas ?? {};
+const barraDeProgresso = (feitas, total) => `<span class="barra-progresso" aria-hidden="true"><span style="width:${Math.round((feitas / total) * 100)}%"></span></span>`;
 const icone = (tipo) => `<svg class="ic" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">${ICONES[tipo] ?? ICONES.link}</svg>`;
 
 // Caixa de material: o que é e de onde vem, com a área inteira clicável.
 // O tipo só aparece quando o nome não o diz: "Slides da aula" já basta, "Sorvete" precisa de "Planilha".
-function caixaDoMaterial(mat) {
+function caixaDoMaterial(mat, ctx) {
   const info = mat.nome === TIPOS[mat.tipo]?.nome ? formato(mat) : `${esc(rotuloDoTipo(mat))} · ${formato(mat)}`;
-  return `<li><a class="caixa caixa-material" href="${esc(mat.url)}" target="_blank" rel="noopener">${icone(mat.tipo)}<span class="caixa-info">${info}</span><span class="caixa-titulo">${esc(mat.nome)}</span><span class="caixa-acao">Abrir ↗<span class="sr"> em nova aba</span></span></a></li>`;
+  return `<li><a class="caixa caixa-material" href="${esc(mat.url)}" target="_blank" rel="noopener">${icone(mat.tipo)}<span class="caixa-info">${info}${seloNovo(mat.adicionadoEm, ctx)}</span><span class="caixa-titulo">${esc(mat.nome)}</span><span class="caixa-acao">Abrir ↗<span class="sr"> em nova aba</span></span></a></li>`;
+}
+
+// Resultado da busca: desenhado à parte, para a página não perder o foco do campo a cada letra.
+const ROTULO_DA_BUSCA = { disciplina: 'Disciplina', modulo: 'Módulo', aula: 'Aula', material: 'Material', texto: 'Texto' };
+export function resultadosDaBusca(lista, consulta) {
+  if (!String(consulta ?? '').trim()) return '';
+  if (!lista.length) {
+    return `<section class="resultados"><h2 class="secao">Busca</h2><p class="suave">Nada encontrado para "${esc(consulta)}". Tente outra palavra, como o nome da aula ou da disciplina.</p></section>`;
+  }
+  const item = (r) => `<li><a class="caixa" href="${esc(r.rota ?? r.url)}"${r.url ? ' target="_blank" rel="noopener"' : ''}><span class="caixa-info">${ROTULO_DA_BUSCA[r.tipo]} · ${esc(r.contexto)}</span><span class="caixa-titulo">${esc(r.titulo)}</span></a></li>`;
+  return `<section class="resultados"><h2 class="secao">Busca <small>${plural(lista.length, 'resultado', 'resultados')}</small></h2><ul class="caixas compactas">${lista.map(item).join('')}</ul></section>`;
 }
 
 function cabecalho(c, rota) {
@@ -117,7 +143,7 @@ function cabecalho(c, rota) {
   return `<header class="topo"><a class="marca" href="#inicio">${esc(c.site.titulo)}</a><nav aria-label="Seções">${itens}</nav></header>`;
 }
 
-const rodape = (c) => `<footer class="rodape"><span>${esc(c.site.professor)} · ${esc(c.site.instituicao)}</span><a href="#sobre">Contato</a></footer>`;
+const rodape = (c, ctx) => `<footer class="rodape"><span>${esc(c.site.professor)} · ${esc(c.site.instituicao)}</span><span class="rodape-links">${ctx.siteUrl ? '<a href="#qr">QR codes para a sala</a>' : ''}<a href="#sobre">Contato</a></span></footer>`;
 
 export function barraEdicao(ctx) {
   if (!ctx.podeEditar) return '';
@@ -149,6 +175,7 @@ function abertura(c, ctx) {
 <p class="eye">${esc(c.site.professor)} · ${esc(c.site.instituicao)}</p>
 <h1>${campo('site.chamada', c.site.chamada, ctx, 'Frase de abertura')}</h1>
 <p class="abertura-resumo">${resumo}</p>
+${ctx.editando ? '' : `<form class="busca" role="search" action="#" novalidate><label class="sr" for="busca">Buscar no site</label><input id="busca" name="busca" type="search" placeholder="Buscar aula, material ou texto" autocomplete="off" enterkeyhint="search"></form>`}
 </div></div>`;
 }
 
@@ -158,8 +185,24 @@ function telaInicio(c, ctx) {
     const capa = ctx.midia[`capa-${d.id}`];
     const nAvisos = avisosValidos(d.avisos, ctx.hoje).length;
     const info = d.modulos.length ? `${plural(d.modulos.length, 'módulo', 'módulos')} · ${plural(contarAulas(d), 'aula', 'aulas')}` : '';
-    return `<li><a class="caixa${capa ? ' com-arte' : ''}" href="#d-${d.id}">${capa ? `<img src="${esc(capa)}" alt="" loading="lazy" width="1280" height="720">` : ''}<span class="caixa-corpo"><span class="caixa-titulo">${nomeQuebravel(d.nome)}</span>${info ? `<span class="caixa-info">${info}</span>` : ''}${nAvisos ? `<span class="caixa-destaque">${plural(nAvisos, 'aviso', 'avisos')}</span>` : ''}<span class="caixa-acao">Ver aulas ›</span></span></a></li>`;
+    const { vistas, total } = contarVistas(d, vistasDe(ctx));
+    const progresso = vistas ? `<span class="caixa-progresso">${barraDeProgresso(vistas, total)}<span>${vistas} de ${total} vistas</span></span>` : '';
+    return `<li><a class="caixa${capa ? ' com-arte' : ''}" href="#d-${d.id}">${capa ? `<img src="${esc(capa)}" alt="" loading="lazy" width="1280" height="720">` : ''}<span class="caixa-corpo"><span class="caixa-titulo">${nomeQuebravel(d.nome)}</span>${info ? `<span class="caixa-info">${info}</span>` : ''}${progresso}${nAvisos ? `<span class="caixa-destaque">${plural(nAvisos, 'aviso', 'avisos')}</span>` : ''}<span class="caixa-acao">Ver aulas ›</span></span></a></li>`;
   };
+  // Última aula aberta neste aparelho.
+  const ultima = !ctx.editando && ctx.progresso?.ultima ? acharAula(c, ctx.progresso.ultima) : null;
+  const continuar = ultima
+    ? `<section><a class="caixa caixa-continuar" href="#a-${ultima.aula.id}"><span class="caixa-info">Continuar de onde parei · ${esc(ultima.disciplina.nome)}</span><span class="caixa-titulo">${esc(ultima.aula.titulo)}</span><span class="caixa-acao">Abrir a aula ›</span></a></section>`
+    : '';
+  // O que o professor adicionou nos últimos 14 dias.
+  const novas = ctx.editando ? [] : novidades(c, ctx.hoje).slice(0, 6);
+  const novidade = (n) => {
+    const destino = n.tipo === 'texto' ? `#t-${n.texto.id}` : `#a-${n.aula.id}`;
+    const rotulo = { aula: 'Aula nova', material: 'Material novo', texto: 'Texto novo' }[n.tipo];
+    const onde = n.tipo === 'texto' ? 'Textos' : `${esc(n.disciplina.nome)} · ${esc(n.aula.titulo)}`;
+    return `<li><a class="caixa" href="${destino}"><span class="caixa-info"><span class="selo-novo">${rotulo}</span> ${dataBR(n.data)}</span><span class="caixa-titulo">${esc(n.titulo)}</span><span class="caixa-info">${n.tipo === 'aula' ? esc(n.disciplina.nome) : onde}</span></a></li>`;
+  };
+  const secaoNovidades = novas.length ? `<section><h2 class="secao">Novidades</h2><ul class="caixas compactas">${novas.map(novidade).join('')}</ul></section>` : '';
   const nivel = (chave) => {
     const lista = c.disciplinas.filter((d) => d.nivel === chave);
     if (!lista.length) return '';
@@ -174,7 +217,10 @@ function telaInicio(c, ctx) {
     ['sobre', 'Sobre o professor', 'Formação, orientações e contato'],
   ];
   return `${abertura(c, ctx)}<div class="col larga">
+<div id="resultados" aria-live="polite"></div>
+${continuar}
 ${recentes.length ? `<section><h2 class="secao">Avisos</h2><ul class="caixas">${recentes.map(({ disciplina, aviso }) => `<li><a class="caixa caixa-aviso" href="#d-${disciplina.id}"><span class="caixa-info">${esc(disciplina.nome)}</span><span class="caixa-titulo">${esc(aviso.texto)}</span></a></li>`).join('')}</ul></section>` : ''}
+${secaoNovidades}
 ${nivel('graduacao')}${nivel('pos')}
 <section><h2 class="secao">Mais no site</h2><ul class="caixas compactas">${atalhos.map(([r, nome, info]) => `<li><a class="caixa" href="#${r}"><span class="caixa-titulo">${nome}</span><span class="caixa-info">${info}</span></a></li>`).join('')}</ul></section>
 </div>`;
@@ -201,7 +247,7 @@ function ficha(d, base, ctx) {
 
 function chip(mat, lista, k, ctx) {
   if (!ctx.editando) {
-    return `<a class="chip" href="${esc(mat.url)}" target="_blank" rel="noopener" title="${esc(mat.nome)}">${icone(mat.tipo)}${esc(rotuloDoChip(mat))}<span class="sr"> (${esc(mat.nome)}, abre em nova aba)</span></a>`;
+    return `<a class="chip" href="${esc(mat.url)}" target="_blank" rel="noopener" title="${esc(mat.nome)}">${icone(mat.tipo)}${esc(rotuloDoChip(mat))}${seloNovo(mat.adicionadoEm, ctx)}<span class="sr"> (${esc(mat.nome)}, abre em nova aba)</span></a>`;
   }
   const alvo = `data-lista="${lista}" data-i="${k}"`;
   if (ctx.confirmando === `${lista}.${k}`) {
@@ -215,13 +261,54 @@ function linhaDaAula(a, ia, m, bm, ctx) {
   const titulo = ctx.editando
     ? `${campo(`${ba}.titulo`, a.titulo, ctx, 'Título da aula')}<a class="abrir" href="#a-${a.id}">abrir</a>`
     : `<a href="#a-${a.id}">${esc(a.titulo)}</a>`;
-  return `<li class="aula"><div><small>Aula ${ia + 1}</small><div class="aula-titulo">${titulo}</div><div class="mats">${a.materiais.map((mat, k) => chip(mat, `${ba}.materiais`, k, ctx)).join('')}${novoMaterial(ctx, `${ba}.materiais`, 'material', 'chip novo')}</div></div>${ferramentas(`${bm}.aulas`, ia, m.aulas.length, ctx, 'aula')}</li>`;
+  const vista = !ctx.editando && vistasDe(ctx)[a.id] ? '<span class="vista">✓ vista</span>' : '';
+  return `<li class="aula${vista ? ' aula-vista' : ''}"><div><small>Aula ${ia + 1}${vista}${seloNovo(a.adicionadoEm, ctx)}</small><div class="aula-titulo">${titulo}</div>${ctx.editando ? '' : (tem(a.descricao) ? `<p class="aula-resumo">${esc(primeiraFrase(a.descricao))}</p>` : '')}<div class="mats">${a.materiais.map((mat, k) => chip(mat, `${ba}.materiais`, k, ctx)).join('')}${novoMaterial(ctx, `${ba}.materiais`, 'material', 'chip novo')}</div></div>${ferramentas(`${bm}.aulas`, ia, m.aulas.length, ctx, 'aula')}</li>`;
 }
 
 function modulo(m, im, d, base, ctx) {
   const bm = `${base}.modulos.${im}`;
   const aulas = m.aulas.map((a, ia) => ({ a, ia })).filter(({ a }) => ctx.editando || tem(a.titulo));
-  return `<section class="modulo" id="m-${m.id}" tabindex="-1"><div class="linha-titulo"><h2><span class="num" aria-hidden="true">${im + 1}</span><span class="sr">Módulo ${im + 1}: </span>${campo(`${bm}.titulo`, m.titulo, ctx, 'Título do módulo')}</h2>${ferramentas(`${base}.modulos`, im, d.modulos.length, ctx, 'módulo')}</div><ol class="aulas">${aulas.map(({ a, ia }) => linhaDaAula(a, ia, m, bm, ctx)).join('')}</ol>${adicionar(ctx, 'aula', `${bm}.aulas`, 'Nova aula')}</section>`;
+  return `<section class="modulo" id="m-${m.id}" tabindex="-1"><div class="linha-titulo"><h2><span class="num" aria-hidden="true">${im + 1}</span><span class="sr">Módulo ${im + 1}: </span>${campo(`${bm}.titulo`, m.titulo, ctx, 'Título do módulo')}</h2>${ferramentas(`${base}.modulos`, im, d.modulos.length, ctx, 'módulo')}</div>${ctx.editando ? `<div class="prosa modulo-descricao">${bloco(`${bm}.descricao`, m.descricao, ctx, 'O que o aluno vai ver neste módulo')}</div>` : (tem(m.descricao) ? `<div class="prosa modulo-descricao">${paragrafos(m.descricao)}</div>` : '')}<ol class="aulas">${aulas.map(({ a, ia }) => linhaDaAula(a, ia, m, bm, ctx)).join('')}</ol>${adicionar(ctx, 'aula', `${bm}.aulas`, 'Nova aula')}${baixarModulo(m, ctx)}</section>`;
+}
+
+// Zip com os arquivos do módulo, gerado na publicação do site dos alunos.
+function baixarModulo(m, ctx) {
+  const zip = ctx.zips?.[m.id];
+  if (ctx.editando || !zip) return '';
+  return `<a class="baixar" href="${esc(zip.url)}">${icone('baixar')}Baixar os materiais do módulo <small>ZIP · ${zip.tamanho}</small></a>`;
+}
+
+// Link de dúvidas: endereço da web abre em nova aba; e-mail vira mailto; vazio leva ao contato do professor.
+function linkDeDuvida(valor) {
+  const v = String(valor ?? '').trim();
+  if (/^https?:\/\//.test(v)) return { href: v, nova: true };
+  if (/^[^\s@]+@[^\s@]+$/.test(v)) return { href: `mailto:${v}`, nova: false };
+  return { href: '#sobre', nova: false };
+}
+
+function cronograma(d, base, ctx) {
+  const eventos = d.cronograma ?? [];
+  if (ctx.editando) {
+    const tipos = (e) => Object.entries(TIPOS_EVENTO).map(([t, r]) => `<option value="${t}"${t === e.tipo ? ' selected' : ''}>${r}</option>`).join('');
+    const linha = (e, k) => `<li class="evento editavel"><div><input type="date" id="ev-data-${e.id}" data-campo="${base}.cronograma.${k}.data" value="${esc(e.data)}" aria-label="Data"> <select id="ev-tipo-${e.id}" data-campo="${base}.cronograma.${k}.tipo" aria-label="Tipo">${tipos(e)}</select> ${campo(`${base}.cronograma.${k}.titulo`, e.titulo, ctx, 'O que acontece nesse dia')}</div>${ferramentas(`${base}.cronograma`, k, eventos.length, ctx, 'data')}</li>`;
+    return `<section class="cronograma" aria-label="Cronograma"><h2 class="eye">Cronograma</h2><ul class="eventos">${eventos.map(linha).join('')}</ul>${adicionar(ctx, 'evento', `${base}.cronograma`, 'Nova data')}</section>`;
+  }
+  const proximos = proximosEventos(eventos, ctx.hoje);
+  if (!proximos.length) return '';
+  const linha = (e) => `<li class="evento"><span class="evento-data">${dataCurta(e.data)}</span><span class="evento-tipo tipo-${esc(e.tipo)}">${TIPOS_EVENTO[e.tipo] ?? 'Evento'}</span><span class="evento-titulo">${esc(e.titulo)}</span><a class="evento-agenda" href="${esc(linkAgenda(e, d.nome))}" target="_blank" rel="noopener">+ Agenda<span class="sr"> (Google Agenda)</span></a></li>`;
+  return `<section class="cronograma" aria-label="Próximas datas"><h2 class="eye">Próximas datas</h2><ul class="eventos">${proximos.map(linha).join('')}</ul></section>`;
+}
+
+function acoesDaDisciplina(d, base, ctx) {
+  if (ctx.editando) {
+    return `<label class="campo-linha" for="duvidas-${d.id}">Link para dúvidas (grupo, formulário ou e-mail) <input type="text" id="duvidas-${d.id}" data-campo="${base}.duvidas" value="${esc(d.duvidas ?? '')}" placeholder="https://… ou e-mail"></label>`;
+  }
+  const { vistas, total } = contarVistas(d, vistasDe(ctx));
+  const duvida = linkDeDuvida(d.duvidas);
+  const progresso = total
+    ? `<p class="progresso-linha">${barraDeProgresso(vistas, total)}<span>${vistas ? `Você viu ${vistas} de ${plural(total, 'aula', 'aulas')}` : `${plural(total, 'aula', 'aulas')}. Marque as que já viu.`}</span></p>`
+    : '';
+  return `<div class="disciplina-acoes">${progresso}<a class="btn-duvida" href="${esc(duvida.href)}"${duvida.nova ? ' target="_blank" rel="noopener"' : ''}>Tirar dúvida</a></div>`;
 }
 
 function telaDisciplina(c, id, ctx) {
@@ -235,7 +322,8 @@ function telaDisciplina(c, id, ctx) {
   return `<div class="col">
 ${capa ? `<div class="capa"><img src="${esc(capa)}" alt="" width="1280" height="720"></div>` : ''}<p class="eye"><a href="#inicio">‹ Disciplinas</a> · ${NIVEIS[d.nivel]}</p>
 <h1>${ctx.editando ? campo(`${base}.nome`, d.nome, ctx, 'Nome da disciplina') : nomeQuebravel(d.nome)}</h1>
-${avisos(d, base, ctx)}${ficha(d, base, ctx)}${indice}
+${acoesDaDisciplina(d, base, ctx)}
+${avisos(d, base, ctx)}${cronograma(d, base, ctx)}${ficha(d, base, ctx)}${indice}
 ${d.modulos.map((m, im) => modulo(m, im, d, base, ctx)).join('')}
 ${d.modulos.length || ctx.editando ? '' : '<p class="suave">As aulas desta disciplina ainda não foram publicadas.</p>'}
 ${adicionar(ctx, 'modulo', `${base}.modulos`, 'Novo módulo')}
@@ -266,17 +354,53 @@ function telaAula(c, id, ctx) {
   const video = videoPrincipal(a);
   const linhas = a.materiais.map((mat, k) => ({ mat, k })).filter(({ mat }) => ctx.editando || mat !== video);
   const vazio = `<p class="suave">${video ? 'Esta aula tem apenas o vídeo.' : 'Esta aula ainda não tem materiais.'}</p>`;
-  const materiais = ctx.editando
-    ? `<ul class="lista mat-lista">${linhas.map(({ mat, k }) => linhaDoMaterial(mat, lista, k, a.materiais.length, ctx)).join('')}</ul>`
-    : (linhas.length ? `<ul class="caixas compactas">${linhas.map(({ mat }) => caixaDoMaterial(mat)).join('')}</ul>` : vazio);
+  const ba = `disciplinas.${idx}.modulos.${im}.aulas.${ia}`;
   const vizinha = (aula, rotulo) => (aula ? `<a class="caixa" href="#a-${aula.id}"><span class="caixa-info">${rotulo}</span><span class="caixa-titulo">${esc(aula.titulo)}</span></a>` : '<span></span>');
-  return `<div class="col">
-<p class="eye"><a href="#d-${d.id}">‹ ${esc(d.nome)}</a> · Módulo ${im + 1} · Aula ${ia + 1}</p>
-<h1>${campo(`disciplinas.${idx}.modulos.${im}.aulas.${ia}.titulo`, a.titulo, ctx, 'Título da aula')}</h1>
+  const vizinhas = `<nav class="vizinhas" aria-label="Outras aulas">${vizinha(anterior, '‹ Aula anterior')}${vizinha(proxima, 'Próxima aula ›')}</nav>`;
+  const cabecalhoDaAula = `<p class="eye"><a href="#d-${d.id}">‹ ${esc(d.nome)}</a> · Módulo ${im + 1} · Aula ${ia + 1}${seloNovo(a.adicionadoEm, ctx)}</p>
+<h1>${campo(`${ba}.titulo`, a.titulo, ctx, 'Título da aula')}</h1>`;
+  const visto = Boolean(vistasDe(ctx)[a.id]);
+  const botaoVista = ctx.editando ? '' : `<button type="button" class="btn-vista${visto ? ' feita' : ''}" data-op="vista" data-aula="${a.id}" aria-pressed="${visto}">${visto ? '✓ Aula vista' : 'Marcar como vista'}</button>`;
+
+  if (ctx.editando) {
+    return `<div class="col">${cabecalhoDaAula}
+<section class="sobre-aula"><h2 class="eye">Nesta aula</h2><div class="prosa">${bloco(`${ba}.descricao`, a.descricao, ctx, 'O que o aluno vai ver nesta aula')}</div><h2 class="eye">Dica de estudo</h2><div class="prosa">${bloco(`${ba}.dica`, a.dica, ctx, 'Uma dica para estudar esta aula')}</div></section>
 ${video ? player(video, a, d, ctx) : ''}
-<section><h2 class="eye">Materiais desta aula</h2>${materiais}${novoMaterial(ctx, lista, 'Novo material')}</section>
-<nav class="vizinhas" aria-label="Outras aulas">${vizinha(anterior, '‹ Aula anterior')}${vizinha(proxima, 'Próxima aula ›')}</nav>
-</div>`;
+<section><h2 class="eye">Materiais desta aula</h2><ul class="lista mat-lista">${linhas.map(({ mat, k }) => linhaDoMaterial(mat, lista, k, a.materiais.length, ctx)).join('')}</ul>${novoMaterial(ctx, lista, 'Novo material')}</section>
+${vizinhas}</div>`;
+  }
+
+  const descricao = tem(a.descricao) ? `<div class="descricao-aula"><h2 class="eye">Nesta aula</h2><div class="prosa">${paragrafos(a.descricao)}</div></div>` : '';
+  const dica = tem(a.dica) ? `<aside class="dica"><b>Dica de estudo</b>${paragrafos(a.dica)}</aside>` : '';
+
+  // Modo de estudo (site dos alunos): vídeo e PDF lado a lado, sem sair da página.
+  // No Claude não dá para embutir vídeo nem PDF, então a aula fica com links.
+  const pdfs = a.materiais.filter((mat) => mat !== video && formato(mat) === 'PDF');
+  if (ctx.ambiente === 'local' && (video || pdfs.length)) {
+    const outros = linhas.filter(({ mat }) => !pdfs.includes(mat)).map(({ mat }) => caixaDoMaterial(mat, ctx)).join('');
+    const abas = pdfs.length > 1
+      ? `<div class="abas" role="tablist" aria-label="Material para acompanhar">${pdfs.map((mat, k) => `<button type="button" role="tab" class="aba" data-op="ler" data-pdf="${esc(mat.url)}" aria-selected="${k === 0}">${icone(mat.tipo)}${esc(rotuloDoChip(mat))}</button>`).join('')}</div>`
+      : '';
+    const leitor = pdfs.length
+      ? `<div class="estudo-material">${abas}<div class="leitor" data-pdf="${esc(pdfs[0].url)}" aria-label="Leitor do material"><p class="leitor-aviso">Carregando o material…</p></div><p class="leitor-rodape"><a href="${esc(pdfs[0].url)}" target="_blank" rel="noopener" data-leitor-link>Abrir o PDF em nova aba ↗</a></p></div>`
+      : '';
+    return `<div class="col col-estudo">${cabecalhoDaAula}
+${descricao}
+<div class="estudo${pdfs.length ? '' : ' so-video'}">${video ? `<div class="estudo-video">${player(video, a, d, ctx)}${botaoVista}</div>` : ''}${leitor}</div>
+${video ? '' : botaoVista}
+${dica}
+${outros ? `<section><h2 class="eye">Outros materiais</h2><ul class="caixas compactas">${outros}</ul></section>` : ''}
+${vizinhas}</div>`;
+  }
+
+  const materiais = linhas.length ? `<ul class="caixas compactas">${linhas.map(({ mat }) => caixaDoMaterial(mat, ctx)).join('')}</ul>` : vazio;
+  return `<div class="col">${cabecalhoDaAula}
+${descricao}
+${video ? player(video, a, d, ctx) : ''}
+${botaoVista}
+${dica}
+<section><h2 class="eye">Materiais desta aula</h2>${materiais}</section>
+${vizinhas}</div>`;
 }
 
 // ---------- laboratório, textos ----------
@@ -284,7 +408,7 @@ ${video ? player(video, a, d, ctx) : ''}
 function telaLaboratorio(c, ctx) {
   const itens = (g, ig) => (ctx.editando
     ? `<ul class="lista mat-lista">${g.itens.map((it, k) => linhaDoMaterial(it, `laboratorio.${ig}.itens`, k, g.itens.length, ctx)).join('')}</ul>`
-    : `<ul class="caixas compactas">${g.itens.map(caixaDoMaterial).join('')}</ul>`);
+    : `<ul class="caixas compactas">${g.itens.map((it) => caixaDoMaterial(it, ctx)).join('')}</ul>`);
   const grupo = (g, ig) => `<section><h2 class="eye">${campo(`laboratorio.${ig}.grupo`, g.grupo, ctx, 'Nome do grupo')}</h2>${itens(g, ig)}${novoMaterial(ctx, `laboratorio.${ig}.itens`, 'Novo item')}</section>`;
   return `<div class="col larga"><h1>Laboratório</h1><p class="lead">${campo('site.laboratorio', c.site.laboratorio, ctx, 'Apresentação do laboratório')}</p>${c.laboratorio.map(grupo).join('')}</div>`;
 }
@@ -380,6 +504,21 @@ ${f.erro ? `<p class="erro" role="alert">${esc(f.erro)}</p>` : ''}
 </form></div>`;
 }
 
+// ---------- QR codes para a sala ----------
+
+// O desenho de cada QR é feito pelo programa da página (principal.js), a partir do data-qr.
+function telaQR(c, ctx) {
+  const base = ctx.siteUrl;
+  if (!base) return tela404();
+  const cartao = (titulo, url) => `<li class="qr-cartao"><div class="qr" data-qr="${esc(url)}" role="img" aria-label="QR code: ${esc(titulo)}"></div><span class="caixa-titulo">${esc(titulo)}</span><span class="qr-url">${esc(url.replace(/^https:\/\//, ''))}</span></li>`;
+  return `<div class="col larga">
+<p class="eye"><a href="#inicio">‹ Disciplinas</a></p>
+<h1>QR codes para a sala</h1>
+<p class="lead">Para projetar no primeiro slide ou imprimir no plano de ensino. Cada código abre a disciplina no site dos alunos.</p>
+<ul class="qrs">${cartao('Site completo', base)}${c.disciplinas.map((d) => cartao(d.nome, `${base}#d-${d.id}`)).join('')}</ul>
+</div>`;
+}
+
 // ---------- entrada ----------
 
 export function renderizar(c, rota, ctx) {
@@ -392,8 +531,9 @@ export function renderizar(c, rota, ctx) {
     texto: () => telaTexto(c, rota.id, ctx),
     pesquisa: () => telaPesquisa(c, ctx),
     sobre: () => telaSobre(c, ctx),
+    qr: () => telaQR(c, ctx),
   };
   const corpo = (Object.hasOwn(telas, rota.nome) ? telas[rota.nome] : tela404)();
   const mensagem = ctx.mensagem ? `<p class="msg" role="status">${esc(ctx.mensagem)}</p>` : '';
-  return `${barraEdicao(ctx)}${cabecalho(c, rota)}<main id="conteudo-principal" tabindex="-1">${corpo}</main>${rodape(c)}${mensagem}${formularioMaterial(ctx.formulario)}`;
+  return `${barraEdicao(ctx)}${cabecalho(c, rota)}<main id="conteudo-principal" tabindex="-1">${corpo}</main>${rodape(c, ctx)}${mensagem}${formularioMaterial(ctx.formulario)}`;
 }

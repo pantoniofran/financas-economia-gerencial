@@ -1,0 +1,62 @@
+{
+  "modulos": {
+    "1": "A base da avaliação de investimentos: valor do dinheiro no tempo, fluxo de caixa de projetos, VPL, TIR e payback, com uma análise feita em R e Quarto.",
+    "2": "Como tratar a incerteza nos projetos: árvores de decisão, simulação de Monte Carlo e o valor da flexibilidade pela teoria das opções reais.",
+    "3": "Laboratórios em Python: índices financeiros da Klabin, otimização de carteiras pelo modelo de Markowitz e cálculo do VaR.",
+    "4": "Política econômica e finanças: metas de inflação, regimes de câmbio, reservas internacionais e as estratégias do Brasil diante de crises."
+  },
+  "aulas": {
+    "sem-1-1": {
+      "descricao": "O valor do dinheiro no tempo: por que um valor hoje vale mais que o mesmo valor no futuro, juros compostos, valor presente e valor futuro.",
+      "dica": "Pratique a fórmula VF = VP × (1 + i)ⁿ nos dois sentidos, do presente para o futuro e de volta. Todo o resto do curso usa esse movimento."
+    },
+    "sem-1-2": {
+      "descricao": "Como montar o fluxo de caixa de um projeto: investimento inicial, despesas pré-operacionais, receitas, custos e impostos projetados.",
+      "dica": "Escolha um projeto do seu interesse e liste os itens do investimento inicial antes de projetar o fluxo. Ele pode virar o caso do seu seminário."
+    },
+    "sem-1-3": {
+      "descricao": "VPL e TIR, os critérios centrais do orçamento de capital, com o exemplo do projeto de R$ 800 descontado a 12%.",
+      "dica": "Calcule o VPL do exemplo à mão e confira na planilha. Depois ache a TIR testando taxas até o VPL zerar."
+    },
+    "sem-1-4": {
+      "descricao": "Payback simples e descontado e outros critérios que complementam o VPL, com as limitações de cada um.",
+      "dica": "Compare dois projetos com o mesmo payback e fluxos diferentes. É o exemplo que mostra por que o payback sozinho não basta."
+    },
+    "sem-1-5": {
+      "descricao": "A avaliação de projetos feita em R com Quarto: o código calcula os indicadores do módulo e gera o relatório.",
+      "dica": "Rode o código como está, depois mude o fluxo de caixa e veja o relatório se refazer."
+    },
+    "sem-2-1": {
+      "descricao": "A árvore de decisão: alternativas, estados da natureza, probabilidades e valores esperados, resolvendo um problema de investimento sob incerteza.",
+      "dica": "Desenhe a árvore à mão antes de calcular: nós de decisão em quadrado e de incerteza em círculo. Depois resolva da direita para a esquerda."
+    },
+    "sem-2-2": {
+      "descricao": "Processos estocásticos e a simulação de Monte Carlo para gerar cenários de preços e de fluxo de caixa e medir o risco de um projeto.",
+      "dica": "Comece com uma variável só, gere uns 1.000 cenários na planilha e faça o histograma do VPL. Ver a distribuição ajuda a entender o método."
+    },
+    "sem-2-3": {
+      "descricao": "As opções reais: por que investimentos irreversíveis, incerteza e flexibilidade gerencial pedem mais que o VPL, com foco no valor da opção de esperar.",
+      "dica": "Reveja a aula de opções financeiras: a analogia entre a opção de esperar e uma opção de compra é a chave do tema."
+    },
+    "sem-2-4": {
+      "descricao": "Exercício de opções reais para resolver em Excel.",
+      "dica": "Tente montar a planilha do zero antes de consultar a solução."
+    },
+    "sem-3-1": {
+      "descricao": "Laboratório em Python: uma rotina em Jupyter que calcula os índices financeiros da Klabin a partir das demonstrações publicadas pela empresa.",
+      "dica": "Siga o passo a passo dos slides com o notebook aberto. Depois troque a Klabin por outra empresa e compare os índices."
+    },
+    "sem-3-2": {
+      "descricao": "Laboratório em Python sobre o modelo de Markowitz: retorno e risco de uma carteira, carteiras eficientes e a fronteira eficiente.",
+      "dica": "Comece com duas ações e veja a curva risco-retorno se formar. Depois acrescente ativos."
+    },
+    "sem-3-3": {
+      "descricao": "Laboratório em Python sobre o risco de mercado: o cálculo do VaR e as métricas próximas (CVaR, testes de stress, CFaR e EaR) e onde são usadas.",
+      "dica": "Calcule o VaR histórico de uma ação e compare com o VaR paramétrico. A diferença diz muito sobre as caudas da distribuição."
+    },
+    "sem-4-1": {
+      "descricao": "Slides em inglês sobre a estratégia brasileira para administrar o risco cambial em crises: metas de inflação, regimes de câmbio e reservas internacionais.",
+      "dica": "São mais de 100 slides: leia primeiro o sumário e use os quatro tópicos dele como roteiro."
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "modulos": {
+    "1": "Como ler uma empresa pelos números: balanço patrimonial, DRE e fluxo de caixa, análise horizontal e vertical, índices financeiros e ciclo financeiro, com um laboratório em Python usando dados da Klabin.",
+    "2": "As decisões financeiras do dia a dia: valor do dinheiro no tempo, política de prazos e descontos a clientes, projeção do fluxo de caixa e gestão do capital de giro.",
+    "3": "Como medir e precificar o risco: retorno e desvio padrão, risco sistemático e não sistemático, o modelo de fator único, o CAPM e o risco de crédito.",
+    "4": "Os instrumentos com que a empresa se financia: ações (capital próprio) e títulos de renda fixa (dívida)."
+  },
+  "aulas": {
+    "fc1-1-1": {
+      "descricao": "As três demonstrações principais: o balanço patrimonial (a fotografia da empresa), a DRE (o resultado do período) e a demonstração do fluxo de caixa (de onde vêm e para onde vão os recursos).",
+      "dica": "Baixe as demonstrações de uma empresa listada na bolsa e localize nelas cada conta vista na aula. Ler um balanço real é o melhor treino."
+    },
+    "fc1-1-2": {
+      "descricao": "Análise vertical (cada conta como percentual do total) e horizontal (a evolução de cada conta no tempo), aplicadas ao balanço e à DRE da Hipotética S/A.",
+      "dica": "Refaça na planilha o cálculo dos estoques da Hipotética S/A (16,3% em 20X3 e 13,6% em 20X2) e depois aplique o mesmo às outras contas."
+    },
+    "fc1-1-3": {
+      "descricao": "Os índices de liquidez, atividade, endividamento, rentabilidade e valor de mercado: o que cada um mede e como interpretar a alta ou a queda.",
+      "dica": "Para cada índice, escreva numa linha o que ele responde (por exemplo: \"a empresa paga as contas de curto prazo?\"). Decorar fórmula sem saber a pergunta não ajuda."
+    },
+    "fc1-1-4": {
+      "descricao": "O capital de giro líquido e os ciclos operacional e financeiro: o tempo entre comprar a matéria-prima, pagar o fornecedor, vender e receber.",
+      "dica": "Desenhe a linha do tempo do ciclo com os prazos médios de estoque, de recebimento e de pagamento. O ciclo financeiro aparece sozinho no desenho."
+    },
+    "fc1-1-5": {
+      "descricao": "Indicadores que complementam a análise: margem de contribuição, markup, NOPAT, EVA, ROIC e a relação preço/lucro.",
+      "dica": "Calcule o NOPAT antes do EVA e do ROIC: os dois partem dele."
+    },
+    "fc1-1-6": {
+      "descricao": "Laboratório em Python: uma rotina em Jupyter que calcula os índices financeiros da Klabin a partir das demonstrações publicadas pela empresa.",
+      "dica": "Siga o passo a passo dos slides com o notebook aberto. Depois troque a Klabin por outra empresa e compare os índices."
+    },
+    "fc1-2-1": {
+      "descricao": "O valor do dinheiro no tempo: por que R$ 50 hoje valem mais que R$ 50 daqui a seis meses, juros simples e compostos, valor presente e valor futuro.",
+      "dica": "Refaça a tabela de juros simples e compostos dos slides (R$ 1.000 a 10% ao ano por 4 anos) na calculadora ou na planilha."
+    },
+    "fc1-2-2": {
+      "descricao": "Política de prazos e descontos a clientes: quanto custa dar desconto para receber antes e como o prazo de pagamento mexe com as vendas e com o risco de crédito.",
+      "dica": "Resolva o exercício do desconto de 5% para pagamento em 10 dias trazendo tudo a valor presente antes de comparar."
+    },
+    "fc1-2-3": {
+      "descricao": "Como projetar o fluxo de caixa dos próximos meses separando recebimentos, pagamentos, investimentos e financiamentos, para prever sobras e faltas de caixa.",
+      "dica": "Monte a projeção do segundo trimestre do exemplo numa planilha, mês a mês. Errar a defasagem das vendas a prazo é o engano mais comum."
+    },
+    "fc1-2-4": {
+      "descricao": "O capital de giro e o capital de giro líquido: a troca entre rentabilidade e risco de manter mais ou menos dinheiro aplicado no curto prazo.",
+      "dica": "Pense nos dois lados: mais capital de giro deixa a empresa mais segura e menos rentável. Explique essa troca com as suas palavras."
+    },
+    "fc1-3-1": {
+      "descricao": "Como medir retorno e risco: retorno de uma ação com dividendos, capitalização contínua, retorno esperado versus histórico, variância e desvio padrão.",
+      "dica": "Calcule o retorno do exemplo (ação comprada a R$ 20, dividendo de R$ 0,50 e preço final de R$ 22) nas duas formas, discreta e contínua."
+    },
+    "fc1-3-2": {
+      "descricao": "Risco sistemático e não sistemático e o modelo de fator único, que usa um índice de mercado como o Ibovespa para explicar o retorno de cada ação pelo beta.",
+      "dica": "Baixe os preços de uma ação e do Ibovespa, calcule os retornos e faça a regressão na planilha. A inclinação é o beta."
+    },
+    "fc1-3-3": {
+      "descricao": "O CAPM: as premissas do modelo, a ligação com a carteira de Markowitz e a relação entre beta e retorno esperado.",
+      "dica": "Leia as premissas com atenção. Boa parte das críticas ao CAPM nasce delas."
+    },
+    "fc1-3-4": {
+      "descricao": "O risco de crédito: probabilidade de inadimplência, exposição e perda em caso de inadimplência, e a diferença entre perda esperada e perda inesperada.",
+      "dica": "Monte um exemplo com números simples: perda esperada = probabilidade × exposição × fração perdida."
+    },
+    "fc1-4-1": {
+      "descricao": "As ações como capital próprio: ações ordinárias e preferenciais, companhia aberta e fechada, e a ordem dos direitos de acionistas e credores.",
+      "dica": "Monte uma tabela comparando ordinárias e preferenciais: voto, dividendos e prioridade na liquidação."
+    },
+    "fc1-4-2": {
+      "descricao": "Os títulos de renda fixa: valor nominal, vencimento e cupons, títulos prefixados e pós-fixados, públicos e privados, com exemplos do Tesouro Nacional.",
+      "dica": "Abra o site do Tesouro Direto e identifique, entre os títulos à venda, quais são prefixados e quais são pós-fixados."
+    }
+  }
+}

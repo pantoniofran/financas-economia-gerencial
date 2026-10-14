@@ -8,7 +8,8 @@ const RAIZ = join(import.meta.dirname, 'dist', process.argv[2] ?? 'local');
 const PORTA = Number(process.argv[3] ?? 4173);
 const TIPOS = {
   '.html': 'text/html; charset=utf-8', '.webp': 'image/webp', '.jpg': 'image/jpeg',
-  '.png': 'image/png', '.mp4': 'video/mp4',
+  '.png': 'image/png', '.mp4': 'video/mp4', '.js': 'text/javascript; charset=utf-8',
+  '.pdf': 'application/pdf', '.zip': 'application/zip',
 };
 
 createServer(async (req, res) => {

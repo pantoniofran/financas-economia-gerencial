@@ -56,7 +56,7 @@ test('novoItem cria cada tipo com os campos que as telas esperam', () => {
   const r = () => 0;
   assert.deepEqual(novoItem('aviso', '2026-10-13', r), { id: 'av-00000', texto: '', ate: '' });
   assert.deepEqual(novoItem('modulo', '2026-10-13', r), { id: 'mo-00000', titulo: '', aulas: [] });
-  assert.deepEqual(novoItem('aula', '2026-10-13', r), { id: 'au-00000', titulo: '', materiais: [] });
+  assert.deepEqual(novoItem('aula', '2026-10-13', r), { id: 'au-00000', titulo: '', materiais: [], adicionadoEm: '2026-10-13' });
   assert.deepEqual(novoItem('texto', '2026-10-13', r), { id: 'tx-00000', titulo: '', data: '2026-10-13', resumo: '', corpo: '' });
   assert.deepEqual(novoItem('projeto', '2026-10-13', r), { id: 'pj-00000', titulo: '', descricao: '' });
   assert.deepEqual(novoItem('publicacao', '2026-10-13', r), { id: 'pb-00000', ano: '2026', tipo: 'artigo', referencia: '' });

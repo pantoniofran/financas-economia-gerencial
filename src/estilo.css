@@ -102,7 +102,7 @@ small { font-size: var(--t-meta); }
 .caixas.indice .caixa { padding: var(--e3); }
 /* Palavra longa numa caixa estreita quebra com hífen ("Desenvolvi-mento"), e não no meio da sílaba. */
 /* Só palavras de 12 letras ou mais levam hífen; sem isso, "Avaliação" era partida mesmo cabendo na linha. */
-.caixas.indice .caixa-titulo { font-size: var(--t-corpo); text-wrap: wrap; overflow-wrap: break-word; hyphens: auto; hyphenate-limit-chars: 12 5 5; }
+.caixas.compactas.indice .caixa-titulo { font-size: var(--t-corpo); text-wrap: wrap; overflow-wrap: break-word; hyphens: auto; hyphenate-limit-chars: 12 5 5; }
 .caixa { display: flex; flex-direction: column; gap: var(--e1); width: 100%; height: 100%; min-height: 3.5rem; padding: var(--e4); border: 1px solid var(--linha); border-radius: var(--raio); background: var(--fundo); color: var(--tinta); font: inherit; text-align: left; text-decoration: none; transition: border-color var(--rapido) var(--saida), background-color var(--rapido) var(--saida), transform var(--rapido) var(--saida); }
 .caixa:hover { border-color: var(--verde); background: var(--papel); }
 .caixa:active { transform: scale(.985); }
@@ -310,6 +310,102 @@ input[type="date"], select, .ano-in { min-height: 2.5rem; border: 1px solid var(
 @media (min-width: 40rem) {
   .folha-fundo { place-items: center; }
   .folha { border-radius: var(--raio); padding-inline: var(--e5); }
+}
+
+/* Busca: dentro da faixa de abertura, logo abaixo do resumo. */
+.busca { max-width: 32rem; margin-top: var(--e2); }
+.busca input { width: 100%; min-height: 3rem; border: 1px solid transparent; border-radius: 999px; padding: 0 var(--e5); background: var(--fundo); color: var(--tinta); font-size: var(--t-corpo); }
+.busca input::placeholder { color: var(--suave); }
+.busca input:focus { outline: 2px solid var(--ouro-claro); outline-offset: 2px; }
+#resultados:empty { display: none; }
+.resultados { display: grid; gap: var(--e4); }
+
+/* Progresso do aluno */
+.barra-progresso { display: block; height: 6px; border-radius: 999px; background: var(--linha); overflow: hidden; }
+.barra-progresso > span { display: block; height: 100%; border-radius: inherit; background: var(--verde); }
+.caixa-progresso { display: grid; gap: var(--e1); margin-top: var(--e2); font-size: var(--t-meta); color: var(--suave); }
+.progresso-linha { display: grid; grid-template-columns: minmax(6rem, 12rem) auto; align-items: center; gap: var(--e3); font-size: var(--t-meta); color: var(--suave); }
+.disciplina-acoes { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--e3) var(--e5); }
+.btn-duvida { display: inline-flex; align-items: center; min-height: var(--toque); padding: 0 var(--e5); border-radius: 999px; background: var(--verde); color: var(--sobre-verde); font-weight: 600; text-decoration: none; transition: background-color var(--rapido) var(--saida); }
+.btn-duvida:hover { background: color-mix(in srgb, var(--verde) 86%, var(--tinta)); }
+.caixa-continuar { border-color: var(--verde); background: var(--papel); }
+.vista { margin-left: var(--e2); color: var(--verde); font-weight: 600; }
+.aula-vista .aula-titulo a { color: var(--suave); }
+.aula-resumo { margin-top: var(--e1); color: var(--suave); text-wrap: pretty; }
+.btn-vista { justify-self: start; min-height: var(--toque); padding: 0 var(--e4); border: 1px solid var(--verde); border-radius: 999px; background: none; color: var(--verde); font-weight: 600; transition: background-color var(--rapido) var(--saida), color var(--rapido) var(--saida); }
+.btn-vista:hover { background: var(--papel); }
+.btn-vista.feita { background: var(--verde); color: var(--sobre-verde); }
+
+/* Selo "Novo": o que o professor adicionou nos últimos 14 dias. */
+.selo-novo { display: inline-block; margin-left: var(--e2); padding: 0 var(--e2); border-radius: 999px; background: var(--ouro-fundo); color: var(--ouro); font: 600 .75rem/1.6 var(--sans); letter-spacing: .04em; text-transform: uppercase; vertical-align: .1em; }
+.caixa-info > .selo-novo:first-child { margin-left: 0; }
+.chip .selo-novo { margin-left: 0; }
+
+/* Cronograma */
+.eventos { display: grid; border-top: 1px solid var(--linha); }
+.evento { display: flex; flex-wrap: wrap; align-items: center; gap: var(--e2) var(--e3); padding: var(--e3) 0; border-bottom: 1px solid var(--linha); }
+.evento.editavel { justify-content: space-between; }
+.evento.editavel > div { display: flex; flex-wrap: wrap; align-items: center; gap: var(--e2); min-width: 0; flex: 1; }
+.evento-data { flex: 0 0 5.5rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+.evento-tipo { padding: 0 var(--e2); border-radius: 999px; background: var(--papel); color: var(--suave); font-size: var(--t-meta); font-weight: 600; }
+.evento-tipo.tipo-prova { background: var(--ouro-fundo); color: var(--ouro); }
+.evento-titulo { flex: 1 1 10rem; min-width: 0; }
+.evento-agenda { display: inline-flex; align-items: center; min-height: var(--toque); font-size: var(--t-meta); font-weight: 600; text-decoration: none; }
+.evento-agenda:hover { text-decoration: underline; }
+.campo-linha { display: grid; gap: var(--e1); font: 600 var(--t-meta) var(--sans); color: var(--suave); }
+.campo-linha input { min-height: var(--toque); border: 1px solid var(--linha); border-radius: var(--raio-p); padding: 0 var(--e3); background: var(--fundo); font-weight: 400; color: var(--tinta); }
+
+/* Módulo: o que o aluno vai ver e o zip com tudo. */
+.modulo-descricao { margin-top: var(--e3); font-size: var(--t-corpo); color: var(--suave); }
+.baixar { display: inline-flex; align-items: center; gap: var(--e2); min-height: var(--toque); margin-bottom: var(--e3); font-size: var(--t-meta); font-weight: 600; text-decoration: none; }
+.baixar:hover { text-decoration: underline; }
+.baixar small { font-weight: 400; }
+
+/* Aula: o que o aluno vai ver e a dica do professor */
+.descricao-aula { display: grid; gap: var(--e2); }
+.dica { display: grid; gap: var(--e2); padding: var(--e4); border-left: 3px solid var(--ouro-claro); border-radius: 0 var(--raio-p) var(--raio-p) 0; background: var(--ouro-fundo); }
+.dica b { font: 600 var(--t-meta)/1.4 var(--sans); letter-spacing: .07em; text-transform: uppercase; color: var(--ouro); }
+.sobre-aula { display: grid; gap: var(--e3); }
+
+/* Modo de estudo: vídeo e material lado a lado no desktop; no celular, um sobre o outro. */
+.col.col-estudo { max-width: calc(80rem + 2 * var(--margem)); }
+.col-estudo > :not(.estudo) { width: 100%; max-width: var(--largura); }
+.estudo { display: grid; gap: var(--e4); align-items: start; }
+.estudo-video { display: grid; gap: var(--e3); }
+.estudo-material { display: grid; gap: var(--e2); min-width: 0; }
+/* O leitor rola por dentro: a dica e as outras aulas continuam logo abaixo, sem uma apostila de 40 páginas no caminho. */
+.leitor { height: min(78vh, 52rem); overflow: auto; overscroll-behavior: contain; display: grid; align-content: start; gap: var(--e3); padding: var(--e3); border-radius: var(--raio); background: var(--papel); }
+.pagina-pdf { width: 100%; background: #fff; border-radius: 2px; box-shadow: 0 1px 3px rgba(20, 27, 23, .18); }
+.pagina-pdf img { display: block; width: 100%; height: 100%; border-radius: inherit; }
+.leitor-aviso { align-self: center; padding: var(--e6) var(--e4); text-align: center; color: var(--suave); }
+.leitor-rodape { font-size: var(--t-meta); }
+.abas { display: flex; flex-wrap: wrap; gap: var(--e2); }
+.aba { display: inline-flex; align-items: center; gap: var(--e2); min-height: var(--toque); padding: 0 var(--e4); border: 1px solid var(--linha); border-radius: 999px; background: none; font-size: var(--t-meta); font-weight: 600; color: var(--suave); transition: border-color var(--rapido) var(--saida), background-color var(--rapido) var(--saida); }
+.aba:hover { border-color: var(--verde); color: var(--tinta); }
+.aba[aria-selected="true"] { background: var(--tinta); border-color: var(--tinta); color: var(--fundo); }
+/* No celular, o vídeo que está tocando gruda no topo enquanto o aluno rola o material. */
+@media (max-width: 63.99rem) {
+  .estudo.tocando .estudo-video { position: sticky; top: 0; z-index: 2; padding-block: var(--e2); background: var(--fundo); }
+  .estudo.tocando .btn-vista { display: none; }
+  .leitor { height: 70vh; }
+}
+@media (min-width: 64rem) {
+  .estudo { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); }
+  .estudo.so-video { grid-template-columns: minmax(0, var(--largura)); }
+  .estudo-video { position: sticky; top: var(--e4); }
+}
+
+/* QR codes para a sala: fundo branco sempre, para o celular ler mesmo no tema escuro. */
+.qrs { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 13rem), 1fr)); gap: var(--e4); }
+.qr-cartao { display: grid; gap: var(--e2); align-content: start; padding: var(--e4); border: 1px solid var(--linha); border-radius: var(--raio); }
+.qr { aspect-ratio: 1; background: #fff; border-radius: var(--raio-p); }
+.qr svg { display: block; width: 100%; height: 100%; }
+.qr-cartao .caixa-titulo { font-size: var(--t-leitura); }
+.qr-url { font-size: var(--t-meta); color: var(--suave); overflow-wrap: anywhere; }
+.rodape-links { display: flex; flex-wrap: wrap; gap: var(--e4); }
+@media print {
+  .topo, .rodape, .btn-editar, .lead { display: none; }
+  .qr-cartao { break-inside: avoid; }
 }
 
 /* Movimento */

@@ -1,4 +1,5 @@
-import { renderizar, interpretarRota, barraEdicao } from '../nucleo/telas.js';
+import qrcode from 'qrcode-generator';
+import { renderizar, interpretarRota, barraEdicao, resultadosDaBusca } from '../nucleo/telas.js';
 import { TIPOS, hojeISO, validarConteudo } from '../nucleo/conteudo.js';
 import { aplicar, novoItem } from '../nucleo/edicao.js';
 import { ler } from '../nucleo/caminhos.js';
@@ -7,10 +8,14 @@ import { idDoYoutube, urlValida } from '../nucleo/youtube.js';
 import { documentoCompleto, RESET_PADRAO } from '../nucleo/documento.js';
 import { hash, decidirRascunho } from '../nucleo/rascunho.js';
 import { SEM_ESCRITA, NAO_REPETIR, mensagemDePublicacao, mensagemDeEnvio } from '../nucleo/mensagens.js';
+import { lerProgresso, alternarVista, registrarUltima } from '../nucleo/progresso.js';
+import { indiceDeBusca, buscar } from '../nucleo/busca.js';
 import { criarArmazenamento, armazenamentoDeEnsaio } from './armazenamento.js';
+import { abrirLeitor, fecharLeitor } from './leitor.js';
 
 const CHAVE_RASCUNHO = 'rascunho-v1';
 const CHAVE_ENSAIO = 'publicado-ensaio';
+const CHAVE_PROGRESSO = 'progresso-v1';
 const LIMITE_ARQUIVO = 20 * 1024 * 1024;
 
 // O armazenamento do navegador pode falhar (janela privada, bloqueio): o site segue sem rascunho.
@@ -18,6 +23,7 @@ const cofre = {
   ler(chave) { try { return JSON.parse(localStorage.getItem(chave)); } catch { return null; } },
   gravar(chave, valor) { try { localStorage.setItem(chave, JSON.stringify(valor)); } catch { /* segue */ } },
   limpar(chave) { try { localStorage.removeItem(chave); } catch { /* segue */ } },
+  texto(chave) { try { return localStorage.getItem(chave); } catch { return null; } },
 };
 
 const lerBloco = (id) => JSON.parse(document.getElementById(id).textContent);
@@ -42,21 +48,33 @@ const estado = {
   publicando: false, confirmando: null, formulario: null, mensagem: '',
 };
 const tocados = new Set();
+// Aulas vistas e a última aberta: ficam só no navegador do aluno.
+let progresso = lerProgresso(cofre.texto(CHAVE_PROGRESSO));
+let busca = { conteudo: null, indice: [] };
 let armazenamento = null;
 
 const atual = () => estado.rascunho ?? publicado;
-const contexto = () => ({ ...estado, hoje: hojeISO(), ambiente: config.ambiente, midia: config.midia ?? {} });
+const contexto = () => ({
+  ...estado, hoje: hojeISO(), ambiente: config.ambiente, midia: config.midia ?? {},
+  progresso, siteUrl: config.siteUrl, zips: config.zips ?? {},
+});
 const fragmento = (html) => document.createRange().createContextualFragment(html);
 
 // ---------- desenho ----------
 
 function desenhar({ foco } = {}) {
-  app.innerHTML = renderizar(atual(), interpretarRota(location.hash), contexto());
+  fecharLeitor();
+  const rota = interpretarRota(location.hash);
+  if (rota.nome === 'aula' && !estado.editando && progresso.ultima !== rota.id) guardarProgresso(registrarUltima(progresso, rota.id));
+  app.innerHTML = renderizar(atual(), rota, contexto());
   // O título da aba acompanha a tela, para o histórico e para leitores de tela.
   const titulo = app.querySelector('h1')?.textContent.trim();
   document.title = titulo && location.hash && location.hash !== '#inicio' ? `${titulo} · ${config.titulo}` : config.titulo;
   if (!SO_TEXTO) for (const el of app.querySelectorAll('.ed')) el.contentEditable = 'true';
   iniciarVideo();
+  desenharQRs();
+  const leitor = app.querySelector('.leitor[data-pdf]');
+  if (leitor) abrirLeitor(leitor, enderecoDoPdf(leitor.dataset.pdf));
   if (foco) app.querySelector(foco)?.focus();
 }
 
@@ -79,6 +97,52 @@ function iniciarVideo() {
   };
   if ('requestIdleCallback' in window) requestIdleCallback(carregar, { timeout: 2000 });
   else setTimeout(carregar, 600);
+}
+
+function guardarProgresso(novo) {
+  progresso = novo;
+  cofre.gravar(CHAVE_PROGRESSO, progresso);
+}
+
+function desenharQRs() {
+  for (const el of app.querySelectorAll('.qr[data-qr]')) {
+    const q = qrcode(0, 'M');
+    q.addData(el.dataset.qr);
+    q.make();
+    el.innerHTML = q.createSvgTag({ cellSize: 4, margin: 8, scalable: true });
+  }
+}
+
+// No site dos alunos os PDFs estão na mesma casa: o leitor os busca pelo caminho, sem depender de outro endereço.
+function enderecoDoPdf(url) {
+  return config.arquivosLocais && config.siteUrl && url.startsWith(config.siteUrl) ? url.slice(config.siteUrl.length) : url;
+}
+
+// Resultado da busca: só a área de resultados muda, para o campo não perder o foco a cada letra.
+function pesquisar(consulta) {
+  const alvo = app.querySelector('#resultados');
+  if (!alvo) return;
+  if (busca.conteudo !== atual()) busca = { conteudo: atual(), indice: indiceDeBusca(atual()) };
+  const termo = consulta.trim();
+  alvo.innerHTML = termo.length >= 2 ? resultadosDaBusca(buscar(busca.indice, termo), termo) : '';
+}
+
+// Marcar a aula como vista sem redesenhar: o vídeo que está tocando continua.
+function marcarVista(botao) {
+  guardarProgresso(alternarVista(progresso, botao.dataset.aula, hojeISO()));
+  const visto = Boolean(progresso.vistas[botao.dataset.aula]);
+  botao.classList.toggle('feita', visto);
+  botao.setAttribute('aria-pressed', String(visto));
+  botao.textContent = visto ? '✓ Aula vista' : 'Marcar como vista';
+}
+
+function trocarMaterial(aba) {
+  for (const outra of aba.closest('.abas').querySelectorAll('.aba')) outra.setAttribute('aria-selected', String(outra === aba));
+  const area = aba.closest('.estudo-material');
+  const leitor = area.querySelector('.leitor');
+  leitor.dataset.pdf = aba.dataset.pdf;
+  area.querySelector('[data-leitor-link]').href = aba.dataset.pdf;
+  abrirLeitor(leitor, enderecoDoPdf(aba.dataset.pdf));
 }
 
 // ---------- edição ----------
@@ -191,7 +255,7 @@ function concluirFormulario() {
     return desenhar({ foco: '#mat-nome' });
   }
   estado.formulario = null;
-  mudar({ op: 'adicionar', lista: f.lista, item: { id: novoId('ma'), tipo: f.tipo, nome, url } });
+  mudar({ op: 'adicionar', lista: f.lista, item: { id: novoId('ma'), tipo: f.tipo, nome, url, adicionadoEm: hojeISO() } });
 }
 
 // ---------- ações avulsas ----------
@@ -203,6 +267,8 @@ function tocar(botao) {
   quadro.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
   quadro.title = botao.getAttribute('aria-label');
   botao.replaceWith(quadro);
+  // No modo de estudo, o vídeo que está tocando acompanha a leitura no celular.
+  quadro.closest('.estudo')?.classList.add('tocando');
 }
 
 async function copiar(botao) {
@@ -255,12 +321,15 @@ function aoClicar(e) {
     case 'cancelar-material': estado.formulario = null; return desenhar();
     case 'copiar': return copiar(b);
     case 'tocar': return tocar(b);
+    case 'vista': return marcarVista(b);
+    case 'ler': return trocarMaterial(b);
     default: return undefined;
   }
 }
 
 function aoDigitar(e) {
   const el = e.target;
+  if (el.id === 'busca') return pesquisar(el.value);
   if (el.matches('.ed[data-campo]')) {
     const bruto = el.textContent.replace(/\u00a0/g, ' ');
     const valor = el.classList.contains('ed-bloco') ? bruto : bruto.replace(/\s*\n\s*/g, ' ');

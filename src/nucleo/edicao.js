@@ -12,7 +12,8 @@ export function aplicar(conteudo, op) {
     case 'remover':
       return gravar(conteudo, op.lista, remover(ler(conteudo, op.lista), op.i));
     case 'adicionar':
-      return gravar(conteudo, op.lista, inserir(ler(conteudo, op.lista), op.item));
+      // Disciplina antiga pode não ter a lista ainda (cronograma, por exemplo).
+      return gravar(conteudo, op.lista, inserir(ler(conteudo, op.lista) ?? [], op.item));
     default:
       throw new Error(`operação desconhecida: ${op.op}`);
   }
@@ -23,7 +24,8 @@ export function novoItem(tipo, hoje, rand) {
   switch (tipo) {
     case 'aviso': return { id: novoId('av', rand), texto: '', ate: '' };
     case 'modulo': return { id: novoId('mo', rand), titulo: '', aulas: [] };
-    case 'aula': return { id: novoId('au', rand), titulo: '', materiais: [] };
+    case 'aula': return { id: novoId('au', rand), titulo: '', materiais: [], adicionadoEm: hoje };
+    case 'evento': return { id: novoId('ev', rand), data: '', tipo: 'aula', titulo: '' };
     case 'texto': return { id: novoId('tx', rand), titulo: '', data: hoje, resumo: '', corpo: '' };
     case 'projeto': return { id: novoId('pj', rand), titulo: '', descricao: '' };
     case 'publicacao': return { id: novoId('pb', rand), ano, tipo: 'artigo', referencia: '' };

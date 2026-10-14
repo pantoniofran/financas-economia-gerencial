@@ -1,0 +1,49 @@
+{
+  "modulos": {
+    "1": "Como decidir se um projeto vale o investimento: construção do fluxo de caixa, VPL, TIR, payback e outros critérios.",
+    "2": "Qual taxa usar para descontar o fluxo de caixa: estrutura de capital (Modigliani e Miller), custo médio ponderado de capital e o efeito do financiamento no valor do projeto.",
+    "3": "Onde a empresa capta e protege recursos: a organização do Sistema Financeiro Nacional, os instrumentos financeiros e os derivativos (termo, futuros, swaps e opções)."
+  },
+  "aulas": {
+    "fc2-1-1": {
+      "descricao": "Como montar o fluxo de caixa de um projeto: investimento inicial, despesas pré-operacionais, previsão de receitas, custos e impostos, até chegar ao fluxo de caixa líquido.",
+      "dica": "Escolha um negócio simples (uma lanchonete, por exemplo) e liste tudo o que entra no investimento inicial. Depois projete três anos de entradas e saídas."
+    },
+    "fc2-1-2": {
+      "descricao": "O valor presente líquido e a taxa interna de retorno, os dois critérios centrais do orçamento de capital, com o exemplo do projeto de R$ 800 descontado a 12%.",
+      "dica": "Calcule o VPL do exemplo à mão e confira na planilha com as funções VPL e TIR. Repare que a função VPL do Excel não inclui o investimento da data zero."
+    },
+    "fc2-1-3": {
+      "descricao": "Critérios que complementam o VPL: o payback simples e o descontado, com as limitações de cada um.",
+      "dica": "Refaça a conta do payback de 7,5 anos do exemplo e depois a versão descontada. A diferença mostra o que o payback simples deixa de fora."
+    },
+    "fc2-2-1": {
+      "descricao": "A escolha entre capital próprio e de terceiros e as proposições de Modigliani e Miller: quando a estrutura de capital muda o valor da empresa e por que a dívida encarece o capital próprio.",
+      "dica": "Acompanhe o exemplo das empresas A (sem dívida) e B (com dívida) duas vezes, sem impostos e com impostos, e veja onde o valor muda."
+    },
+    "fc2-2-2": {
+      "descricao": "O custo médio ponderado de capital (CMPC): como estimar o custo do capital próprio (pelo modelo de dividendos ou pelo CAPM) e o custo da dívida depois dos impostos.",
+      "dica": "Monte o CMPC do exemplo numa planilha com cada peso e cada custo numa célula. Fica fácil ver o efeito de mudar a proporção de dívida."
+    },
+    "fc2-2-3": {
+      "descricao": "Três formas de avaliar um projeto financiado com dívida (VPL sem financiamento mais benefício fiscal, fluxo do capital próprio e CMPC) e por que, na prática, elas nem sempre chegam ao mesmo número.",
+      "dica": "Resolva o caso simplificado com perpetuidades pelos três métodos. Chegar ao mesmo VPL é a prova de que as contas estão certas."
+    },
+    "fc2-3-1": {
+      "descricao": "Como o Sistema Financeiro Nacional se organiza: os órgãos normativos (CMN, CNSP, CNPC), os supervisores (Banco Central, CVM, SUSEP, PREVIC) e os operadores.",
+      "dica": "Desenhe o organograma do SFN em três camadas: quem faz as regras, quem fiscaliza e quem opera."
+    },
+    "fc2-3-2": {
+      "descricao": "A diferença legal entre valores mobiliários e não mobiliários e os principais instrumentos do mercado brasileiro, como debêntures, CRI, CRA, FII, LCI e LCA.",
+      "dica": "Faça uma tabela com cada sigla, quem emite, quem regula e se é valor mobiliário. As siglas se confundem fácil."
+    },
+    "fc2-3-3": {
+      "descricao": "O que são derivativos e como funcionam os contratos a termo e futuros, com o exemplo de uma produtora de soja que trava hoje o preço da venda futura.",
+      "dica": "Para cada exemplo, pergunte quem está protegido e contra qual risco. É o que diferencia hedge de especulação."
+    },
+    "fc2-3-4": {
+      "descricao": "Swaps (trocas de fluxos de caixa, como dólar contra DI) e opções de compra e de venda: direitos, obrigações, prêmio e preço de exercício.",
+      "dica": "Desenhe o gráfico de lucro no vencimento de uma call e de uma put, comprada e vendida. Os quatro gráficos resumem a aula."
+    }
+  }
+}
