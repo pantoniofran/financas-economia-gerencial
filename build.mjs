@@ -67,6 +67,8 @@ const cabeca = [
 ].join('');
 await mkdir('dist/site', { recursive: true });
 await cp('midia', 'dist/site/midia', { recursive: true, filter: (origem) => !/[\\/]bruto$/.test(origem) }).catch(() => {});
+// Os materiais das aulas (antes no Wix) moram no site público; a versão do Claude aponta para cá.
+await cp('arquivos', 'dist/site/arquivos', { recursive: true }).catch(() => {});
 const configDoSite = { ambiente: 'local', ensaio: false, titulo: TITULO, fontes: FONTES, midia: await lerJSON('src/midia.local.json', {}) };
 const site = documentoCompleto({ titulo: TITULO, fontes: FONTES, css, js, conteudo, config: configDoSite })
   .replace('<html>', '<html lang="pt-BR">')
