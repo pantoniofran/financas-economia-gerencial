@@ -1,0 +1,109 @@
+{
+  "modulos": {
+    "1": "As bases de microeconomia que sustentam o resto da disciplina: como a demanda se forma, quanto custa produzir e como a empresa escolhe a quantidade que maximiza o lucro.",
+    "2": "Como decidir quando o resultado depende também do que o concorrente faz: jogos sequenciais, jogos simultâneos e o equilíbrio de Nash.",
+    "3": "Por que algumas empresas crescem, diversificam ou compram fornecedores, e quando vale mais a pena comprar no mercado: escala, escopo, integração vertical e custos de transação.",
+    "4": "O conflito entre o dono (principal) e quem administra (agente), e os mecanismos de governança que reduzem esse problema.",
+    "5": "Como o número de empresas e a diferenciação dos produtos mudam preços e lucros: da concorrência perfeita ao monopólio, passando pela concorrência monopolística e pelo oligopólio.",
+    "6": "A concorrência em movimento: compromissos estratégicos difíceis de reverter, guerras de preço e a análise do setor pelas cinco forças de Porter.",
+    "7": "Temas que fecham a disciplina: regulação de mercados, economia da inovação e sustentabilidade."
+  },
+  "aulas": {
+    "eg-1-1": {
+      "descricao": "A relação entre preço e quantidade demandada, escrita como P = a − b × Q. Com o exemplo do sorvete, você vê como as demandas individuais se somam na demanda de mercado e também como funciona a curva de oferta.",
+      "dica": "Monte você mesmo a demanda de mercado do exemplo: some, a cada preço, as quantidades de cada consumidor. É o raciocínio que volta em todas as aulas seguintes."
+    },
+    "eg-1-2": {
+      "descricao": "A função de produção Cobb-Douglas, o produto marginal e os rendimentos de escala (constantes, crescentes e decrescentes), chegando às curvas de custo da firma.",
+      "dica": "Teste a regra dos rendimentos de escala com números: dobre os dois insumos na Cobb-Douglas e veja se a produção dobra, mais que dobra ou menos."
+    },
+    "eg-1-3": {
+      "descricao": "Receita total, receita marginal e a regra de ouro da firma: o lucro é máximo quando a receita marginal é igual ao custo marginal. A aula também separa lucro econômico de lucro contábil.",
+      "dica": "Derive RMg = a − 2bQ a partir de RT = aQ − bQ² e iguale ao custo marginal. Fazer a conta uma vez à mão fixa o procedimento."
+    },
+    "eg-1-4": {
+      "descricao": "Exercícios resolvidos sobre demanda, custos e maximização de lucro, acompanhados de uma planilha.",
+      "dica": "Abra a planilha e tente resolver cada exercício antes de ver a resolução no vídeo. Pause e compare."
+    },
+    "eg-1-5": {
+      "descricao": "A maximização do lucro quando a empresa vende vários produtos, cada um com a própria curva de demanda e o próprio custo variável. A margem de contribuição de cada produto vira um problema de pesquisa operacional.",
+      "dica": "Comece com um produto só e confira se o resultado bate com a aula anterior; depois acrescente os outros. A lógica é a mesma, só a conta cresce."
+    },
+    "eg-2-1": {
+      "descricao": "O que é um jogo: empresas cujas decisões dependem umas das outras. A partir do exemplo da guerra entre Alfa e Beta, você vê os elementos de um jogo e como resolver jogos sequenciais.",
+      "dica": "Desenhe a árvore do jogo e resolva de trás para frente: comece pela última decisão e suba até a primeira."
+    },
+    "eg-2-2": {
+      "descricao": "Jogos em que as empresas decidem ao mesmo tempo, sem saber a escolha do rival. A aula define estratégia dominante e dominada e mostra como achar a melhor resposta de cada jogador.",
+      "dica": "Antes de procurar o equilíbrio, risque as estratégias dominadas da tabela. Muitas vezes o jogo fica pequeno o bastante para resolver de cabeça."
+    },
+    "eg-2-3": {
+      "descricao": "O equilíbrio de Nash: a combinação em que cada empresa já está na melhor resposta ao que as outras fazem. O exemplo é a empresa ALFA decidindo se amplia a capacidade diante de uma concorrente estrangeira.",
+      "dica": "Use o procedimento da nota de aula: marque na tabela a melhor resposta de um jogador, depois a do outro. A célula com as duas marcas é o equilíbrio."
+    },
+    "eg-3-1": {
+      "descricao": "Economias e deseconomias de escala, a curva de custo total médio e os fatores que a movem, como o tamanho das instalações. A aula também trata das economias de escopo, quando produzir junto sai mais barato.",
+      "dica": "Pense numa empresa que você conhece e identifique onde ela ganha com escala e onde ganha com escopo. Exemplos próprios fixam melhor que os do livro."
+    },
+    "eg-3-2": {
+      "descricao": "A cadeia vertical, da matéria-prima à venda, e a escolha entre fazer dentro de casa ou comprar de outras empresas. O exemplo é a cadeia do aço, da mineradora à siderúrgica.",
+      "dica": "Para cada etapa da cadeia do aço, pergunte: o que a siderúrgica ganha e o que perde ao integrar essa etapa? Essa lista de prós e contras é o centro da aula."
+    },
+    "eg-3-3": {
+      "descricao": "Por que os contratos são quase sempre incompletos (racionalidade limitada, desempenho difícil de medir e informação assimétrica) e como os custos de transação explicam a existência e o tamanho das empresas.",
+      "dica": "Relacione esta aula com a anterior: os custos de transação são o argumento que decide entre comprar no mercado e integrar verticalmente."
+    },
+    "eg-4-1": {
+      "descricao": "A relação entre o principal (o dono) e o agente (o administrador), por que os objetivos dos dois divergem e como monitoramento e incentivos por desempenho reduzem o problema.",
+      "dica": "Procure um caso real de conflito entre acionistas e executivos e identifique nele as duas condições do problema de agência: objetivos diferentes e informação difícil de observar."
+    },
+    "eg-4-2": {
+      "descricao": "A estrutura de governança de uma empresa: Conselho de Administração, Conselho Fiscal, Comitê de Auditoria e diretoria, com o papel de cada um em riscos e controles.",
+      "dica": "Desenhe o organograma da governança, com quem se subordina a quem. Ajuda a não confundir Conselho Fiscal com Comitê de Auditoria."
+    },
+    "eg-5-1": {
+      "descricao": "Como medir o grau de concentração de um mercado (quantas empresas dividem as vendas e de que forma) e o que isso indica sobre o tipo de concorrência.",
+      "dica": "Escolha um setor brasileiro, busque a participação de mercado das maiores empresas e calcule a concentração. O número ganha sentido quando vem de um caso real."
+    },
+    "eg-5-2": {
+      "descricao": "Os dois extremos das estruturas de mercado. Na concorrência perfeita a empresa aceita o preço do mercado; no monopólio ela escolhe o preço. Nos dois casos, o lucro máximo está onde a receita marginal é igual ao custo marginal.",
+      "dica": "Resolva o mesmo mercado nas duas estruturas e compare preço e quantidade. A diferença é o custo do monopólio para o consumidor."
+    },
+    "eg-5-3": {
+      "descricao": "A concorrência monopolística: muitas empresas com produtos diferenciados e sem barreiras de entrada. A aula distingue diferenciação vertical e horizontal e mostra o que acontece quando novas empresas entram.",
+      "dica": "Classifique produtos do dia a dia: a diferença está no desempenho (vertical) ou na preferência e na localização (horizontal)?"
+    },
+    "eg-5-4": {
+      "descricao": "O oligopólio pelo modelo de Cournot: duas empresas escolhem quantidades, cada uma reagindo à outra, até chegar ao equilíbrio.",
+      "dica": "Escreva o lucro de cada empresa, derive e iguale a zero para achar as curvas de reação. O equilíbrio está onde as duas curvas se cruzam."
+    },
+    "eg-5-5": {
+      "descricao": "Um estudo de caso com duas fábricas de chocolates finos que concorrem em preço, analisado pelo modelo de Bertrand com produtos diferenciados.",
+      "dica": "Compare com Cournot: aqui a variável de decisão é o preço, não a quantidade. Repare em como isso muda o resultado."
+    },
+    "eg-6-1": {
+      "descricao": "O comprometimento estratégico: decisões difíceis de reverter, como ampliar a capacidade, que mudam o que o concorrente espera e podem dar vantagem a quem age primeiro.",
+      "dica": "Refaça o exemplo da aula duas vezes, com decisão simultânea e com a Empresa 1 decidindo primeiro, e compare os equilíbrios."
+    },
+    "eg-6-2": {
+      "descricao": "A dinâmica da rivalidade de preços: o que torna a concorrência mais intensa, por que alguns mercados evitam guerras de preço e como as empresas chegam ao equilíbrio de Cournot passo a passo.",
+      "dica": "Siga no gráfico das curvas de reação o caminho de Q₁⁰ até o equilíbrio. Desenhar os passos ajuda a entender a convergência."
+    },
+    "eg-6-3": {
+      "descricao": "A análise do setor pelas cinco forças competitivas de Porter: ameaça de entrada, rivalidade, substitutos e poder de negociação de fornecedores e compradores.",
+      "dica": "Aplique as cinco forças a um setor que você conhece e dê uma nota de intensidade a cada uma. É um bom exercício de fixação."
+    },
+    "eg-7-1": {
+      "descricao": "Por que alguns mercados são regulados: monopólios naturais, indústrias de rede e externalidades, com exemplos como tarifas de telefonia e de eletricidade, vigilância sanitária e normas de segurança.",
+      "dica": "Para cada exemplo de regulação dos slides, identifique qual falha de mercado ele tenta corrigir."
+    },
+    "eg-7-2": {
+      "descricao": "A economia da inovação contada pela história do pensamento econômico, de Adam Smith e David Ricardo em diante, e o papel da inovação no crescimento.",
+      "dica": "Monte uma linha do tempo com cada autor e a ideia central dele sobre crescimento e inovação."
+    },
+    "eg-7-3": {
+      "descricao": "Uma introdução à sustentabilidade como tema da economia gerencial.",
+      "dica": "Os slides são curtos: use-os como ponto de partida e anote as dúvidas para levar à aula."
+    }
+  }
+}

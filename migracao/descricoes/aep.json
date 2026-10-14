@@ -1,0 +1,62 @@
+{
+  "modulos": {
+    "1": "A avaliação clássica de projetos: valor do dinheiro no tempo, fluxo de caixa do projeto, VPL, TIR e payback.",
+    "2": "Qual taxa de desconto usar: estrutura de capital, risco sistemático, CAPM, custo médio ponderado de capital e o efeito do financiamento no valor do projeto.",
+    "3": "Além do VPL: árvores de decisão, simulação de Monte Carlo e opções reais para projetos com incerteza e flexibilidade.",
+    "4": "Um estudo de caso completo, o projeto de hidrogênio verde, avaliado com todas as ferramentas da disciplina."
+  },
+  "aulas": {
+    "aep-1-1": {
+      "descricao": "O valor do dinheiro no tempo: por que um valor hoje vale mais que o mesmo valor no futuro, juros compostos, valor presente e valor futuro.",
+      "dica": "Pratique VF = VP × (1 + i)ⁿ nos dois sentidos. Descontar o fluxo de caixa, que é o centro da disciplina, é esse mesmo movimento."
+    },
+    "aep-1-2": {
+      "descricao": "Como montar o fluxo de caixa livre de um projeto: investimento inicial, despesas pré-operacionais, receitas, custos e impostos.",
+      "dica": "Escolha um projeto do seu interesse e liste o investimento inicial item por item. Esse fluxo vai servir de base nas próximas aulas."
+    },
+    "aep-1-3": {
+      "descricao": "VPL e TIR, os critérios centrais do orçamento de capital, com o exemplo do projeto de R$ 800 descontado a 12% e os cuidados ao comparar projetos.",
+      "dica": "Calcule o VPL do exemplo à mão e confira na planilha. Depois mude a taxa e veja em que ponto o VPL troca de sinal: é a TIR."
+    },
+    "aep-1-4": {
+      "descricao": "Payback simples e descontado e outros critérios complementares, com as limitações de cada um.",
+      "dica": "Refaça a conta do payback de 7,5 anos do exemplo e depois a versão descontada."
+    },
+    "aep-2-1": {
+      "descricao": "A estrutura de capital pelas proposições de Modigliani e Miller: quando a dívida muda o valor da empresa e por que ela aumenta o custo do capital próprio.",
+      "dica": "Acompanhe o exemplo das empresas A (sem dívida) e B (com dívida) com e sem impostos e veja onde o valor muda."
+    },
+    "aep-2-2": {
+      "descricao": "As métricas de retorno e risco e o risco sistemático, que é o risco que a taxa de desconto precisa remunerar.",
+      "dica": "Calcule o retorno do exemplo (ação comprada a R$ 20, dividendo de R$ 0,50 e preço final de R$ 22) e depois o desvio padrão de uma série real."
+    },
+    "aep-2-3": {
+      "descricao": "O custo do capital próprio pelo CAPM, com as premissas e a ligação com Markowitz, e o custo do capital de terceiros a partir do risco de crédito.",
+      "dica": "Estime o custo do capital próprio de uma empresa do setor do seu projeto pelo CAPM, anotando a fonte de cada número."
+    },
+    "aep-2-4": {
+      "descricao": "O cálculo do custo médio ponderado de capital (CMPC) e por que uma taxa errada leva a aceitar projetos ruins ou recusar projetos bons.",
+      "dica": "Monte o CMPC numa planilha e recalcule o VPL do seu projeto com ele."
+    },
+    "aep-2-5": {
+      "descricao": "Três formas de avaliar um projeto financiado com dívida (VPL sem financiamento mais benefício fiscal, fluxo do capital próprio e CMPC) e quando elas coincidem.",
+      "dica": "Resolva o caso simplificado com perpetuidades pelos três métodos. Se o VPL não for igual nos três, há erro na conta."
+    },
+    "aep-3-1": {
+      "descricao": "A árvore de decisão: alternativas, estados da natureza, probabilidades e valores esperados, aplicada a um problema de investimento.",
+      "dica": "Desenhe a árvore à mão antes de calcular e resolva da direita para a esquerda."
+    },
+    "aep-3-2": {
+      "descricao": "Processos estocásticos e simulação de Monte Carlo para gerar cenários e obter a distribuição do VPL de um projeto.",
+      "dica": "Comece simulando uma variável só e faça o histograma do VPL. Depois acrescente as outras incertezas."
+    },
+    "aep-3-3": {
+      "descricao": "A teoria das opções reais: por que investimentos irreversíveis, incerteza e flexibilidade gerencial pedem mais que o VPL, e quanto vale a opção de esperar.",
+      "dica": "Compare o VPL tradicional com o valor da opção no mesmo projeto. A diferença é o valor da flexibilidade."
+    },
+    "aep-4-1": {
+      "descricao": "Estudo de caso de uma planta de hidrogênio verde por eletrólise integrada a energia eólica, avaliada de três formas: VPL tradicional, simulação de cenários e opções reais.",
+      "dica": "Leia o sumário da nota de aula primeiro: as três abordagens chegam a conclusões diferentes, e entender o porquê é o objetivo do caso."
+    }
+  }
+}
