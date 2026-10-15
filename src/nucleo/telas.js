@@ -259,8 +259,23 @@ function chip(mat, lista, k, ctx) {
   return `<span class="chip">${esc(rotuloDoChip(mat))}<button type="button" data-op="remover" ${alvo} aria-label="Remover ${esc(mat.nome)}">×</button></span>`;
 }
 
+// O que a aula tem, em palavras, sem link: os materiais se abrem dentro da aula, com o vídeo e os slides lado a lado.
+const resumoDosMateriais = (a) => [...new Set(a.materiais.map((mat) => mat.tipo))]
+  .map((tipo) => `<span class="aula-tem">${icone(tipo)}${esc(TIPOS[tipo]?.rotulo ?? 'Material')}</span>`).join('');
+
 function linhaDaAula(a, ia, m, bm, ctx) {
   const ba = `${bm}.aulas.${ia}`;
+  if (!ctx.editando) {
+    // A aula inteira é um cartão que leva à tela de estudo. Antes, os botões de cada material abriam o arquivo
+    // solto em outra aba, e o aluno nunca chegava ao vídeo com os slides ao lado.
+    const vista = Boolean(vistasDe(ctx)[a.id]);
+    const temVideo = a.materiais.some((mat) => mat.tipo === 'video');
+    return `<li class="aula aula-leitura${vista ? ' aula-vista' : ''}"><a class="aula-cartao" href="#a-${a.id}">
+<span class="aula-num" aria-hidden="true">${vista ? '✓' : ia + 1}</span>
+<span class="aula-corpo"><small>Aula ${ia + 1}${vista ? '<span class="vista">· vista</span>' : ''}${seloNovo(a.adicionadoEm, ctx)}</small><span class="aula-titulo">${esc(a.titulo)}</span>${tem(a.descricao) ? `<span class="aula-resumo">${esc(primeiraFrase(a.descricao))}</span>` : ''}${a.materiais.length ? `<span class="aula-materiais">${resumoDosMateriais(a)}</span>` : ''}</span>
+<span class="aula-ir">${temVideo ? 'Assistir' : 'Estudar'} ›</span>
+</a></li>`;
+  }
   const titulo = ctx.editando
     ? `${campo(`${ba}.titulo`, a.titulo, ctx, 'Título da aula')}<a class="abrir" href="#a-${a.id}">abrir</a>`
     : `<a href="#a-${a.id}">${esc(a.titulo)}</a>`;
@@ -327,7 +342,22 @@ function acoesDaDisciplina(c, d, base, ctx) {
   const progresso = total
     ? `<p class="progresso-linha">${barraDeProgresso(vistas, total)}<span>${vistas ? `Você viu ${vistas} de ${plural(total, 'aula', 'aulas')}` : `${plural(total, 'aula', 'aulas')}. Marque as que já viu.`}</span></p>`
     : '';
-  return `<div class="disciplina-acoes">${progresso}${botaoDeDuvida(c, d, ctx, { rotulo: 'Tirar dúvida', classe: 'btn-duvida' })}</div>`;
+  return `<div class="disciplina-acoes">${botaoDeEstudo(d, ctx)}${botaoDeDuvida(c, d, ctx, { rotulo: 'Tirar dúvida', classe: 'btn-duvida leve' })}${progresso}</div>`;
+}
+
+// O caminho mais curto até a tela de estudo: a última aula aberta nesta disciplina, senão a primeira ainda não vista.
+function botaoDeEstudo(d, ctx) {
+  const aulas = d.modulos.flatMap((m, im) => m.aulas.map((a, ia) => ({ a, im, ia })).filter((x) => tem(x.a.titulo)));
+  if (!aulas.length) return '';
+  const vistas = vistasDe(ctx);
+  const ultima = aulas.find((x) => x.a.id === ctx.progresso?.ultima);
+  const proxima = aulas.find((x) => !vistas[x.a.id]);
+  const [alvo, rotulo] = ultima && !vistas[ultima.a.id]
+    ? [ultima, 'Continuar de onde parei']
+    : proxima
+      ? [proxima, proxima === aulas[0] ? 'Começar pela primeira aula' : 'Próxima aula']
+      : [aulas[0], 'Rever desde a primeira aula'];
+  return `<a class="btn-estudar" href="#a-${alvo.a.id}"><span class="btn-estudar-play" aria-hidden="true"></span><span><b>${rotulo}</b><small>Módulo ${alvo.im + 1} · Aula ${alvo.ia + 1}: ${esc(alvo.a.titulo)}</small></span></a>`;
 }
 
 function telaDisciplina(c, id, ctx) {

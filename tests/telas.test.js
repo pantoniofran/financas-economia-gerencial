@@ -35,7 +35,9 @@ test('início lista disciplinas por nível e só os avisos válidos', () => {
 
 test('disciplina em leitura: material com nome visível e nenhum controle de edição', () => {
   const html = ver('#d-eg');
-  assert.match(html, /<a class="chip" href="https:\/\/exemplo\.com\/a\.pdf" target="_blank" rel="noopener"[^>]*><svg class="ic"[\s\S]*?<\/svg>Slides</);
+  // O material aparece com o nome do tipo, dentro do cartão da aula; o arquivo se abre na tela de estudo.
+  assert.match(html, /<span class="aula-tem"><svg class="ic"[\s\S]*?<\/svg>Slides<\/span>/);
+  assert.ok(!html.includes('href="https://exemplo.com/a.pdf"'));
   assert.ok(html.includes('href="#a-eg-1-1"'));
   // Ações de leitor (copiar o e-mail, marcar aula) podem existir; de edição, não.
   assert.ok(!/data-op="(editar|remover|subir|descer|adicionar|novo-material)"|contenteditable|data-campo/.test(html));
