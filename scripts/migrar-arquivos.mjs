@@ -6,7 +6,7 @@
 import { readFileSync, writeFileSync, existsSync, statSync, mkdirSync } from 'node:fs';
 import { dirname } from 'node:path';
 
-const SITE = (process.argv[2] ?? 'https://pedrolofiego.github.io/financas-economia-gerencial/').replace(/\/?$/, '/');
+const SITE = (process.argv[2] ?? 'https://pantoniofran.github.io/financas-economia-gerencial/').replace(/\/?$/, '/');
 const conteudo = JSON.parse(readFileSync('src/conteudo.json', 'utf8'));
 const doWix = (url) => /filesusr\.com/.test(url);
 
