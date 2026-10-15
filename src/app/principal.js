@@ -1,5 +1,5 @@
 import qrcode from 'qrcode-generator';
-import { renderizar, interpretarRota, barraEdicao, resultadosDaBusca } from '../nucleo/telas.js';
+import { renderizar, interpretarRota, barraEdicao, resultadosDaBusca, previaDoLaboratorio } from '../nucleo/telas.js';
 import { TIPOS, hojeISO, validarConteudo } from '../nucleo/conteudo.js';
 import { aplicar, novoItem } from '../nucleo/edicao.js';
 import { ler } from '../nucleo/caminhos.js';
@@ -56,7 +56,7 @@ let armazenamento = null;
 const atual = () => estado.rascunho ?? publicado;
 const contexto = () => ({
   ...estado, hoje: hojeISO(), ambiente: config.ambiente, midia: config.midia ?? {},
-  progresso, siteUrl: config.siteUrl, zips: config.zips ?? {},
+  progresso, siteUrl: config.siteUrl, zips: config.zips ?? {}, previas: config.previas ?? {},
 });
 const fragmento = (html) => document.createRange().createContextualFragment(html);
 
@@ -82,6 +82,14 @@ function navegar() {
   Object.assign(estado, { confirmando: null, formulario: null, mensagem: '' });
   // Troca imediata, sem animação: uma transição entre telas chegou a travar no meio em aba sem foco.
   desenhar();
+  // Vindo de uma aula ("Para praticar"), o Laboratório abre já no material.
+  const rota = interpretarRota(location.hash);
+  const item = rota.nome === 'laboratorio' && rota.id ? document.getElementById(`item-${rota.id}`) : null;
+  if (item) {
+    item.scrollIntoView({ block: 'center' });
+    item.focus({ preventScroll: true });
+    return;
+  }
   scrollTo(0, 0);
   document.getElementById('conteudo-principal')?.focus({ preventScroll: true });
 }
@@ -143,6 +151,27 @@ function trocarMaterial(aba) {
   leitor.dataset.pdf = aba.dataset.pdf;
   area.querySelector('[data-leitor-link]').href = aba.dataset.pdf;
   abrirLeitor(leitor, enderecoDoPdf(aba.dataset.pdf));
+}
+
+// Prévia de um material do Laboratório numa janela por cima da página.
+function abrirPrevia(id) {
+  const it = atual().laboratorio.flatMap((g) => g.itens).find((x) => x.id === id);
+  if (!it) return;
+  const janela = document.createElement('dialog');
+  janela.className = 'previa';
+  janela.setAttribute('aria-labelledby', 'previa-titulo');
+  janela.innerHTML = previaDoLaboratorio(it, contexto());
+  // Dentro do #app, para os botões da janela (tocar o vídeo, fechar) usarem os mesmos eventos da página.
+  app.append(janela);
+  janela.addEventListener('close', () => {
+    fecharLeitor();
+    janela.remove();
+  });
+  // Clique no fundo escuro, fora da janela, fecha.
+  janela.addEventListener('click', (e) => { if (e.target === janela) janela.close(); });
+  janela.showModal();
+  const leitor = janela.querySelector('.leitor[data-pdf]');
+  if (leitor) abrirLeitor(leitor, enderecoDoPdf(leitor.dataset.pdf));
 }
 
 // ---------- edição ----------
@@ -323,6 +352,8 @@ function aoClicar(e) {
     case 'tocar': return tocar(b);
     case 'vista': return marcarVista(b);
     case 'ler': return trocarMaterial(b);
+    case 'previa': return abrirPrevia(b.dataset.item);
+    case 'fechar-previa': return b.closest('dialog')?.close();
     default: return undefined;
   }
 }
@@ -348,6 +379,9 @@ function aoMudar(e) {
   const el = e.target;
   if (el.matches('input[data-campo], select[data-campo]')) {
     return mudar({ op: 'gravar', caminho: el.dataset.campo, valor: el.value });
+  }
+  if (el.matches('select[data-relacionar]') && el.value) {
+    return mudar({ op: 'adicionar', lista: el.dataset.relacionar, item: el.value });
   }
   const f = estado.formulario;
   if (!f || el.form?.id !== 'form-material') return undefined;

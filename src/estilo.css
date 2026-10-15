@@ -386,13 +386,78 @@ input[type="date"], select, .ano-in { min-height: 2.5rem; border: 1px solid var(
 /* No celular, o vídeo que está tocando gruda no topo enquanto o aluno rola o material. */
 @media (max-width: 63.99rem) {
   .estudo.tocando .estudo-video { position: sticky; top: 0; z-index: 2; padding-block: var(--e2); background: var(--fundo); }
-  .estudo.tocando .btn-vista { display: none; }
+  .estudo.tocando .aula-acoes { display: none; }
   .leitor { height: 70vh; }
 }
 @media (min-width: 64rem) {
   .estudo { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); }
   .estudo.so-video { grid-template-columns: minmax(0, var(--largura)); }
   .estudo-video { position: sticky; top: var(--e4); }
+}
+
+/* Ações da aula: marcar como vista e tirar dúvida, lado a lado. */
+.aula-acoes { display: flex; flex-wrap: wrap; align-items: center; gap: var(--e2); }
+.btn-duvida.leve { background: none; color: var(--verde); border: 1px solid var(--linha); }
+.btn-duvida.leve:hover { background: var(--papel); border-color: var(--verde); }
+
+/* Laboratório: cada material é um cartão que diz o que é, onde se usa e deixa espiar antes de baixar. */
+.lab-grupo { scroll-margin-top: var(--e4); }
+.lab-grupo:focus { outline: 0; }
+.lab-grupo-descricao { max-width: 46rem; color: var(--suave); text-wrap: pretty; }
+.lab-itens { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 27rem), 1fr)); gap: var(--e4); }
+.lab-item { display: flex; flex-direction: column; gap: var(--e3); padding: var(--e4); border: 1px solid var(--linha); border-radius: var(--raio); background: var(--fundo); scroll-margin-top: var(--e6); transition: border-color var(--rapido) var(--saida), box-shadow .6s var(--saida); }
+.lab-item:hover { border-color: color-mix(in srgb, var(--verde) 45%, var(--linha)); }
+.lab-item:focus { outline: 0; }
+/* Vindo de uma aula, o material procurado aparece marcado. */
+.lab-item.destaque { border-color: var(--verde); box-shadow: 0 0 0 3px color-mix(in srgb, var(--verde) 22%, transparent); }
+.lab-capa { position: relative; display: block; aspect-ratio: 16 / 9; max-height: 14rem; border-radius: var(--raio-p); background: var(--palco); overflow: hidden; }
+.lab-capa img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.lab-tipo { display: flex; align-items: center; gap: var(--e2); }
+.lab-tipo .ic { width: 1.25rem; height: 1.25rem; color: var(--verde); }
+.lab-capa .play { width: 36px; height: 36px; margin: -18px 0 0 -18px; }
+.lab-capa .play::after { left: 14px; top: 11px; border-left-width: 11px; border-top-width: 7px; border-bottom-width: 7px; }
+.lab-corpo { display: flex; flex-direction: column; gap: var(--e2); min-width: 0; flex: 1; }
+.lab-corpo h3 { font: 500 var(--t-titulo)/1.25 var(--serifa); text-wrap: balance; }
+.lab-descricao { color: var(--suave); text-wrap: pretty; }
+.lab-aulas { display: grid; gap: var(--e2); }
+.lab-aulas > div { display: flex; flex-wrap: wrap; gap: var(--e2); }
+.lab-aula { display: inline-grid; padding: var(--e1) var(--e3); border: 1px solid var(--linha); border-radius: var(--raio-p); color: var(--tinta); text-decoration: none; font-size: var(--t-meta); line-height: 1.35; transition: border-color var(--rapido) var(--saida), background-color var(--rapido) var(--saida); }
+.lab-aula small { font-size: .75rem; }
+.lab-aula:hover { border-color: var(--verde); background: var(--papel); }
+.lab-acoes { display: flex; flex-wrap: wrap; gap: var(--e2); margin-top: auto; padding-top: var(--e2); }
+.btn-previa, .btn-abrir { display: inline-flex; align-items: center; min-height: var(--toque); padding: 0 var(--e4); border-radius: 999px; font: 600 var(--t-meta)/1 var(--sans); text-decoration: none; transition: background-color var(--rapido) var(--saida), border-color var(--rapido) var(--saida); }
+.btn-previa { border: 0; background: var(--verde); color: var(--sobre-verde); }
+.btn-previa:hover { background: color-mix(in srgb, var(--verde) 86%, var(--tinta)); }
+.btn-abrir { border: 1px solid var(--linha); color: var(--verde); }
+.btn-abrir:hover { border-color: var(--verde); background: var(--papel); }
+/* Edição do laboratório */
+.lab-edicao-corpo { display: grid; gap: var(--e2); flex: 1; min-width: 0; }
+.lab-relacoes { display: flex; flex-wrap: wrap; align-items: center; gap: var(--e2); }
+.lab-relacoes small { flex-basis: 100%; }
+.lab-relacoes select { max-width: 100%; }
+
+/* Janela de prévia */
+.previa { width: min(100% - 2 * var(--e4), 60rem); max-height: calc(100dvh - 2 * var(--e4)); padding: 0; border: 0; border-radius: var(--raio); background: var(--fundo); color: var(--tinta); box-shadow: 0 20px 60px var(--sombra); }
+.previa[open] { display: flex; flex-direction: column; }
+.previa::backdrop { background: var(--sombra); }
+.previa-topo { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--e3); padding: var(--e4) var(--e5); border-bottom: 1px solid var(--linha); }
+.previa-topo h2 { font-size: var(--t-titulo); }
+.previa-fechar { flex: none; width: var(--toque); height: var(--toque); border: 0; border-radius: 50%; background: var(--papel); font-size: 1.5rem; line-height: 1; }
+.previa-fechar:hover { background: var(--linha); }
+.previa-corpo { display: grid; gap: var(--e3); padding: var(--e4) var(--e5); overflow: auto; min-height: 0; }
+.previa-corpo .leitor { height: min(70dvh, 48rem); }
+.previa-rodape { display: flex; justify-content: flex-end; padding: var(--e3) var(--e5); border-top: 1px solid var(--linha); }
+.previa-nota { color: var(--suave); font-size: var(--t-meta); }
+.previa-tabela { overflow: auto; border: 1px solid var(--linha); border-radius: var(--raio-p); }
+.previa-tabela table { border-collapse: collapse; font-size: var(--t-meta); white-space: nowrap; }
+.previa-tabela td { padding: var(--e1) var(--e3); border: 1px solid var(--linha); }
+.previa-tabela td.valor { text-align: right; font-variant-numeric: tabular-nums; }
+.previa-tabela tr:first-child td { font-weight: 600; }
+.previa-codigo { margin: 0; padding: var(--e4); overflow: auto; border-radius: var(--raio-p); background: var(--palco); color: var(--sobre-palco); font: .8125rem/1.55 ui-monospace, 'Cascadia Code', Consolas, monospace; }
+.previa-pastas { display: grid; gap: var(--e2); }
+.previa-pastas li { display: flex; align-items: center; gap: var(--e2); padding: var(--e2) var(--e3); border: 1px solid var(--linha); border-radius: var(--raio-p); }
+@media (max-width: 40rem) {
+  .previa-topo, .previa-corpo, .previa-rodape { padding-inline: var(--e4); }
 }
 
 /* QR codes para a sala: fundo branco sempre, para o celular ler mesmo no tema escuro. */

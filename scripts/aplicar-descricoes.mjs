@@ -2,6 +2,7 @@
 // Texto que o professor já escreveu no site não é substituído.
 // Uso: node scripts/aplicar-descricoes.mjs
 import { readFile, writeFile, readdir } from 'node:fs/promises';
+import { acharAula } from '../src/nucleo/conteudo.js';
 
 const conteudo = JSON.parse(await readFile('src/conteudo.json', 'utf8'));
 const textos = {};
@@ -37,6 +38,23 @@ for (const d of conteudo.disciplinas) {
     });
     revisao.push('');
   });
+}
+
+// Laboratório: o que é cada material e em quais aulas ele entra.
+const lab = textos.laboratorio;
+if (lab) {
+  revisao.push('## Laboratório', '');
+  for (const g of conteudo.laboratorio) {
+    if (vazio(g.descricao) && lab.grupos[g.grupo]) { g.descricao = lab.grupos[g.grupo]; aplicadas += 1; }
+    revisao.push(`### ${g.grupo}`, '', `> ${g.descricao ?? ''}`, '');
+    for (const it of g.itens) {
+      const novo = lab.itens[it.id];
+      if (novo && vazio(it.descricao)) { it.descricao = novo.descricao; aplicadas += 1; }
+      if (novo && !it.aulas?.length && novo.aulas.length) { it.aulas = novo.aulas; aplicadas += 1; }
+      revisao.push(`- **${it.nome}**: ${it.descricao ?? ''}`, `  - Aulas: ${(it.aulas ?? []).map((id) => { const x = acharAula(conteudo, id); return x ? `${x.disciplina.nome}, ${x.aula.titulo}` : id; }).join('; ') || 'nenhuma'}`);
+    }
+    revisao.push('');
+  }
 }
 
 await writeFile('src/conteudo.json', `${JSON.stringify(conteudo, null, 2)}\n`);

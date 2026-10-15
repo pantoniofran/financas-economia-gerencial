@@ -63,3 +63,49 @@ test('QR codes: um para o site e um por disciplina', () => {
 test('a busca encontra a aula pela descrição', () => {
   assert.equal(buscar(indiceDeBusca(comTextos()), 'sorvete')[0].rota, '#a-eg-1-1');
 });
+
+function comLaboratorio() {
+  const c = conteudoExemplo();
+  const it = c.laboratorio[0].itens[0];
+  it.descricao = 'Preços de ações e o exercício de regressão.';
+  it.aulas = ['eg-1-1', 'nao-existe'];
+  c.laboratorio[0].descricao = 'Modelos em Excel.';
+  return c;
+}
+
+test('laboratório: cartão explica o material, liga às aulas e oferece prévia', () => {
+  const ctx = { ...leitura, previas: { 'https://exemplo.com/capm.xls': { tipo: 'tabela', abas: ['Plan1'], aba: 'Plan1', linhas: [['Mês', 'EmpA']], tamanho: '150 KB' } } };
+  const html = ver('#laboratorio', ctx, comLaboratorio());
+  assert.match(html, /Modelos em Excel\./);
+  assert.match(html, /Preços de ações e o exercício de regressão\./);
+  assert.match(html, /Usado nas aulas[\s\S]*href="#a-eg-1-1"/);
+  assert.match(html, /Planilha · Excel · 150 KB/);
+  assert.match(html, /data-op="previa" data-item="lab-1"/);
+  assert.match(html, /href="https:\/\/exemplo.com\/capm.xls" download/);
+});
+
+test('laboratório: vindo da aula, o material aparece destacado, e a aula mostra o que praticar', () => {
+  const c = comLaboratorio();
+  assert.match(ver('#l-lab-1', leitura, c), /class="lab-item destaque" id="item-lab-1"/);
+  assert.match(ver('#a-eg-1-1', leitura, c), /Para praticar no Laboratório[\s\S]*href="#l-lab-1"/);
+});
+
+test('prévia de planilha mostra o trecho e as abas', async () => {
+  const { previaDoLaboratorio } = await import('../src/nucleo/telas.js');
+  const it = comLaboratorio().laboratorio[0].itens[0];
+  const html = previaDoLaboratorio(it, { ...leitura, previas: { [it.url]: { tipo: 'tabela', abas: ['Preços', 'Plan1'], aba: 'Plan1', linhas: [['Mês', '1,5']] } } });
+  assert.match(html, /Trecho da aba <b>Plan1<\/b>\. A planilha tem 2 abas: Preços, Plan1\./);
+  assert.match(html, /<td class="valor">1,5<\/td>/);
+});
+
+test('tirar dúvida abre o e-mail do professor com disciplina e aula no assunto', () => {
+  const c = conteudoExemplo();
+  c.sobre.email = 'prof@exemplo.com';
+  const aula = ver('#a-eg-1-1', leitura, c);
+  const href = decodeURIComponent(/class="btn-duvida leve" href="([^"]+)"/.exec(aula)[1].replaceAll('&amp;', '&'));
+  assert.match(href, /^mailto:prof@exemplo\.com\?subject=\[Economia Gerencial\] Dúvida - Módulo 1, Aula 1: Curva de Demanda&body=/);
+  const disc = decodeURIComponent(/class="btn-duvida" href="([^"]+)"/.exec(ver('#d-eg', leitura, c))[1].replaceAll('&amp;', '&'));
+  assert.match(disc, /subject=\[Economia Gerencial\] Dúvida&/);
+  c.disciplinas[0].duvidas = 'https://forms.exemplo/x';
+  assert.match(ver('#d-eg', leitura, c), /class="btn-duvida" href="https:\/\/forms.exemplo\/x" target="_blank"/);
+});

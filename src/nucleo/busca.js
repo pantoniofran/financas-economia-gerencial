@@ -25,7 +25,7 @@ export function indiceDeBusca(c) {
     });
   }
   for (const g of c.laboratorio) for (const it of g.itens) {
-    itens.push({ tipo: 'material', titulo: it.nome, contexto: `Laboratório · ${g.grupo}`, url: it.url, extra: TIPOS[it.tipo]?.rotulo });
+    itens.push({ tipo: 'material', titulo: it.nome, contexto: `Laboratório · ${g.grupo}`, rota: `#l-${it.id}`, extra: `${TIPOS[it.tipo]?.rotulo ?? ''} ${it.descricao ?? ''}` });
   }
   for (const t of c.textos) {
     if (t.titulo.trim()) itens.push({ tipo: 'texto', titulo: t.titulo, contexto: 'Texto do professor', rota: `#t-${t.id}`, extra: `${t.resumo} ${t.corpo}` });
