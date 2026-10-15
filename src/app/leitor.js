@@ -86,14 +86,16 @@ async function desenharPagina(doc, folha, minha) {
   try {
     const n = Number(folha.dataset.pagina);
     const pagina = await doc.getPage(n);
-    const largura = Math.max(folha.clientWidth, 320) * Math.min(devicePixelRatio || 1, 2);
+    // Com folga de duas vezes os pixels da tela (e pelo menos 1.400): letra miúda de slide fica nítida,
+    // também em tela cheia. O teto segura a memória do celular.
+    const largura = Math.min(2400, Math.max(1400, folha.clientWidth * (devicePixelRatio || 1) * 2));
     const viewport = pagina.getViewport({ scale: largura / pagina.getViewport({ scale: 1 }).width });
     const canvas = document.createElement('canvas');
     canvas.width = Math.round(viewport.width);
     canvas.height = Math.round(viewport.height);
     await pagina.render({ canvasContext: canvas.getContext('2d'), viewport }).promise;
     if (minha !== vez) return;
-    const blob = await new Promise((r) => canvas.toBlob(r, 'image/webp', 0.9));
+    const blob = await new Promise((r) => canvas.toBlob(r, 'image/webp', 0.95));
     if (minha !== vez || !blob) return;
     const img = new Image();
     img.alt = `Página ${n} de ${doc.numPages}`;

@@ -75,6 +75,8 @@ function desenhar({ foco } = {}) {
   desenharQRs();
   const leitor = app.querySelector('.leitor[data-pdf]');
   if (leitor) abrirLeitor(leitor, enderecoDoPdf(leitor.dataset.pdf));
+  // O iPhone não deixa pôr um trecho da página em tela cheia: lá o botão nem aparece.
+  if (document.fullscreenEnabled) for (const b of app.querySelectorAll('[data-op="tela-cheia"]')) b.hidden = false;
   if (foco) app.querySelector(foco)?.focus();
 }
 
@@ -305,8 +307,14 @@ async function copiar(botao) {
     await navigator.clipboard.writeText(botao.dataset.texto);
     botao.textContent = 'Copiado';
   } catch {
+    // Sem acesso à área de transferência: seleciona o texto para o aluno copiar à mão.
+    const alvo = document.getElementById('email');
+    if (!alvo) {
+      botao.replaceWith(Object.assign(document.createElement('span'), { className: 'copiar-manual', textContent: botao.dataset.texto }));
+      return;
+    }
     const faixa = document.createRange();
-    faixa.selectNodeContents(document.getElementById('email'));
+    faixa.selectNodeContents(alvo);
     const selecao = getSelection();
     selecao.removeAllRanges();
     selecao.addRange(faixa);
@@ -354,6 +362,7 @@ function aoClicar(e) {
     case 'ler': return trocarMaterial(b);
     case 'previa': return abrirPrevia(b.dataset.item);
     case 'fechar-previa': return b.closest('dialog')?.close();
+    case 'tela-cheia': return b.closest('.estudo-material')?.querySelector('.leitor')?.requestFullscreen();
     default: return undefined;
   }
 }

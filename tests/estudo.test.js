@@ -98,14 +98,18 @@ test('prévia de planilha mostra o trecho e as abas', async () => {
   assert.match(html, /<td class="valor">1,5<\/td>/);
 });
 
-test('tirar dúvida abre o e-mail do professor com disciplina e aula no assunto', () => {
+test('tirar dúvida: escolha entre Gmail, Outlook, programa de e-mail ou copiar, com disciplina e aula no assunto', () => {
   const c = conteudoExemplo();
   c.sobre.email = 'prof@exemplo.com';
   const aula = ver('#a-eg-1-1', leitura, c);
-  const href = decodeURIComponent(/class="btn-duvida leve" href="([^"]+)"/.exec(aula)[1].replaceAll('&amp;', '&'));
-  assert.match(href, /^mailto:prof@exemplo\.com\?subject=\[Economia Gerencial\] Dúvida - Módulo 1, Aula 1: Curva de Demanda&body=/);
-  const disc = decodeURIComponent(/class="btn-duvida" href="([^"]+)"/.exec(ver('#d-eg', leitura, c))[1].replaceAll('&amp;', '&'));
-  assert.match(disc, /subject=\[Economia Gerencial\] Dúvida&/);
+  const hrefs = [...aula.matchAll(/class="btn-abrir" href="([^"]+)" target="_blank"/g)].map((m) => decodeURIComponent(m[1].replaceAll('&amp;', '&')));
+  const assunto = '[Economia Gerencial] Dúvida - Módulo 1, Aula 1: Curva de Demanda';
+  assert.ok(hrefs.some((h) => h.startsWith('https://mail.google.com/mail/?view=cm&fs=1&to=prof@exemplo.com&su=' + assunto)));
+  assert.ok(hrefs.some((h) => h.startsWith('https://outlook.office.com/mail/deeplink/compose?to=prof@exemplo.com&subject=' + assunto)));
+  assert.ok(hrefs.some((h) => h.startsWith('mailto:prof@exemplo.com?subject=' + assunto)));
+  assert.ok(aula.includes('<summary class="btn-duvida leve">Tirar dúvida sobre esta aula</summary>'));
+  assert.ok(aula.includes(`data-op="copiar" data-texto="prof@exemplo.com\n${assunto}"`));
+  assert.ok(ver('#d-eg', leitura, c).includes('assunto <b>[Economia Gerencial] Dúvida</b>'));
   c.disciplinas[0].duvidas = 'https://forms.exemplo/x';
-  assert.match(ver('#d-eg', leitura, c), /class="btn-duvida" href="https:\/\/forms.exemplo\/x" target="_blank"/);
+  assert.ok(ver('#d-eg', leitura, c).includes('<a class="btn-duvida" href="https://forms.exemplo/x" target="_blank"'));
 });

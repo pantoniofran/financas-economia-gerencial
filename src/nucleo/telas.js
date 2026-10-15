@@ -284,18 +284,28 @@ function baixarModulo(m, ctx) {
 }
 
 // Botão de dúvida. Se o professor deu um endereço da web (grupo, formulário), abre em nova aba.
-// Senão abre o e-mail já endereçado a ele, com a disciplina (e a aula) no assunto, para ele saber de onde vem a pergunta.
+// Senão a mensagem vai para o e-mail dele, com a disciplina (e a aula) no assunto, para ele saber de onde vem a pergunta.
+// Um link mailto sozinho não basta: quem usa Gmail ou Outlook no navegador não tem programa de e-mail, e o clique
+// não faz nada. Por isso o aluno escolhe onde escrever, e ainda pode copiar endereço e assunto.
 const ehEmail = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
-export function linkDeDuvida(c, d, ctx, aula = null) {
+export function botaoDeDuvida(c, d, ctx, { aula = null, rotulo, classe }) {
   const v = String(d.duvidas ?? '').trim();
-  if (/^https?:\/\//.test(v)) return ` href="${esc(v)}" target="_blank" rel="noopener"`;
+  if (/^https?:\/\//.test(v)) return `<a class="${classe}" href="${esc(v)}" target="_blank" rel="noopener">${rotulo}</a>`;
   const email = ehEmail(v) ? v : String(c.sobre?.email ?? '').trim();
-  if (!ehEmail(email)) return ' href="#sobre"';
+  if (!ehEmail(email)) return `<a class="${classe}" href="#sobre">${rotulo}</a>`;
   const assunto = `[${d.nome}] Dúvida${aula ? ` - Módulo ${aula.im + 1}, Aula ${aula.ia + 1}: ${aula.titulo}` : ''}`;
   const corpo = `Professor,\n\nTenho uma dúvida sobre ${aula ? `a aula "${aula.titulo}"` : 'a disciplina'} de ${d.nome}:\n\n\n\nNome:\nMatrícula:\n`;
-  const href = `mailto:${email}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(corpo)}`;
-  // No Claude a página roda dentro de uma moldura que não troca de endereço: o e-mail abre por fora.
-  return ` href="${esc(href)}"${ctx.ambiente === 'artifact' ? ' target="_blank" rel="noopener"' : ''}`;
+  const q = encodeURIComponent;
+  const opcoes = [
+    ['Gmail', `https://mail.google.com/mail/?view=cm&fs=1&to=${q(email)}&su=${q(assunto)}&body=${q(corpo)}`],
+    ['Outlook', `https://outlook.office.com/mail/deeplink/compose?to=${q(email)}&subject=${q(assunto)}&body=${q(corpo)}`],
+    ['Programa de e-mail', `mailto:${email}?subject=${q(assunto)}&body=${q(corpo)}`],
+  ];
+  // Tudo abre em outra aba: no Claude a página roda numa moldura que não pode trocar de endereço.
+  return `<details class="duvida"><summary class="${classe}">${rotulo}</summary><div class="duvida-painel">
+<p>Sua mensagem vai para <b>${esc(email)}</b> com o assunto <b>${esc(assunto)}</b>. Onde você quer escrever?</p>
+<div class="duvida-opcoes">${opcoes.map(([nome, href]) => `<a class="btn-abrir" href="${esc(href)}" target="_blank" rel="noopener">${nome}</a>`).join('')}<button type="button" class="btn-abrir" data-op="copiar" data-texto="${esc(`${email}\n${assunto}`)}">Copiar e-mail e assunto</button></div>
+</div></details>`;
 }
 
 function cronograma(d, base, ctx) {
@@ -319,7 +329,7 @@ function acoesDaDisciplina(c, d, base, ctx) {
   const progresso = total
     ? `<p class="progresso-linha">${barraDeProgresso(vistas, total)}<span>${vistas ? `Você viu ${vistas} de ${plural(total, 'aula', 'aulas')}` : `${plural(total, 'aula', 'aulas')}. Marque as que já viu.`}</span></p>`
     : '';
-  return `<div class="disciplina-acoes">${progresso}<a class="btn-duvida"${linkDeDuvida(c, d, ctx)}>Tirar dúvida</a></div>`;
+  return `<div class="disciplina-acoes">${progresso}${botaoDeDuvida(c, d, ctx, { rotulo: 'Tirar dúvida', classe: 'btn-duvida' })}</div>`;
 }
 
 function telaDisciplina(c, id, ctx) {
@@ -372,7 +382,7 @@ function telaAula(c, id, ctx) {
 <h1>${campo(`${ba}.titulo`, a.titulo, ctx, 'Título da aula')}</h1>`;
   const visto = Boolean(vistasDe(ctx)[a.id]);
   // A dúvida sai daqui com a aula no assunto do e-mail.
-  const botaoVista = ctx.editando ? '' : `<div class="aula-acoes"><button type="button" class="btn-vista${visto ? ' feita' : ''}" data-op="vista" data-aula="${a.id}" aria-pressed="${visto}">${visto ? '✓ Aula vista' : 'Marcar como vista'}</button><a class="btn-duvida leve"${linkDeDuvida(c, d, ctx, { ...a, im, ia })}>Tirar dúvida sobre esta aula</a></div>`;
+  const botaoVista = ctx.editando ? '' : `<div class="aula-acoes"><button type="button" class="btn-vista${visto ? ' feita' : ''}" data-op="vista" data-aula="${a.id}" aria-pressed="${visto}">${visto ? '✓ Aula vista' : 'Marcar como vista'}</button>${botaoDeDuvida(c, d, ctx, { aula: { ...a, im, ia }, rotulo: 'Tirar dúvida sobre esta aula', classe: 'btn-duvida leve' })}</div>`;
 
   if (ctx.editando) {
     return `<div class="col">${cabecalhoDaAula}
@@ -394,7 +404,7 @@ ${vizinhas}</div>`;
       ? `<div class="abas" role="tablist" aria-label="Material para acompanhar">${pdfs.map((mat, k) => `<button type="button" role="tab" class="aba" data-op="ler" data-pdf="${esc(mat.url)}" aria-selected="${k === 0}">${icone(mat.tipo)}${esc(rotuloDoChip(mat))}</button>`).join('')}</div>`
       : '';
     const leitor = pdfs.length
-      ? `<div class="estudo-material">${abas}<div class="leitor" data-pdf="${esc(pdfs[0].url)}" aria-label="Leitor do material"><p class="leitor-aviso">Carregando o material…</p></div><p class="leitor-rodape"><a href="${esc(pdfs[0].url)}" target="_blank" rel="noopener" data-leitor-link>Abrir o PDF em nova aba ↗</a></p></div>`
+      ? `<div class="estudo-material">${abas}<div class="leitor" data-pdf="${esc(pdfs[0].url)}" aria-label="Leitor do material"><p class="leitor-aviso">Carregando o material…</p></div><p class="leitor-rodape"><button type="button" class="btn-abrir" data-op="tela-cheia" hidden>Ver em tela cheia</button><a href="${esc(pdfs[0].url)}" target="_blank" rel="noopener" data-leitor-link>Abrir o PDF em nova aba ↗</a></p></div>`
       : '';
     return `<div class="col col-estudo">${cabecalhoDaAula}
 ${descricao}

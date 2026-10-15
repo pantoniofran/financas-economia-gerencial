@@ -378,7 +378,10 @@ input[type="date"], select, .ano-in { min-height: 2.5rem; border: 1px solid var(
 .pagina-pdf { width: 100%; background: #fff; border-radius: 2px; box-shadow: 0 1px 3px rgba(20, 27, 23, .18); }
 .pagina-pdf img { display: block; width: 100%; height: 100%; border-radius: inherit; }
 .leitor-aviso { align-self: center; padding: var(--e6) var(--e4); text-align: center; color: var(--suave); }
-.leitor-rodape { font-size: var(--t-meta); }
+.leitor-rodape { display: flex; flex-wrap: wrap; align-items: center; gap: var(--e2) var(--e4); font-size: var(--t-meta); }
+/* Em tela cheia o leitor ocupa a tela toda, com as páginas centralizadas numa largura confortável de ler. */
+.leitor:fullscreen { height: 100vh; padding: var(--e5); justify-items: center; }
+.leitor:fullscreen .pagina-pdf { max-width: min(100%, 75rem); }
 .abas { display: flex; flex-wrap: wrap; gap: var(--e2); }
 .aba { display: inline-flex; align-items: center; gap: var(--e2); min-height: var(--toque); padding: 0 var(--e4); border: 1px solid var(--linha); border-radius: 999px; background: none; font-size: var(--t-meta); font-weight: 600; color: var(--suave); transition: border-color var(--rapido) var(--saida), background-color var(--rapido) var(--saida); }
 .aba:hover { border-color: var(--verde); color: var(--tinta); }
@@ -399,6 +402,17 @@ input[type="date"], select, .ano-in { min-height: 2.5rem; border: 1px solid var(
 .aula-acoes { display: flex; flex-wrap: wrap; align-items: center; gap: var(--e2); }
 .btn-duvida.leve { background: none; color: var(--verde); border: 1px solid var(--linha); }
 .btn-duvida.leve:hover { background: var(--papel); border-color: var(--verde); }
+/* Dúvida por e-mail: o botão abre, logo abaixo, a escolha de onde escrever. */
+.duvida > summary { list-style: none; cursor: pointer; }
+.duvida > summary::-webkit-details-marker { display: none; }
+.duvida > summary::after { content: '▾'; margin-left: var(--e2); font-size: .8em; }
+.duvida[open] { flex-basis: 100%; }
+.duvida[open] > summary::after { content: '▴'; }
+.duvida-painel { display: grid; gap: var(--e3); max-width: 40rem; margin-top: var(--e3); padding: var(--e4); border: 1px solid var(--linha); border-radius: var(--raio); background: var(--papel); font-size: var(--t-meta); }
+.duvida-painel b { overflow-wrap: anywhere; }
+.duvida-opcoes { display: flex; flex-wrap: wrap; gap: var(--e2); }
+.duvida-opcoes .btn-abrir { background: var(--fundo); }
+.copiar-manual { white-space: pre-wrap; user-select: all; padding: var(--e2) var(--e3); border: 1px dashed var(--linha); border-radius: var(--raio-p); }
 
 /* Laboratório: cada material é um cartão que diz o que é, onde se usa e deixa espiar antes de baixar. */
 .lab-grupo { scroll-margin-top: var(--e4); }
