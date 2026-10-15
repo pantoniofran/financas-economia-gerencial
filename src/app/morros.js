@@ -1,62 +1,71 @@
-// Movimento da abertura: a cada 14 segundos as curvas de finanças formam um morro da Chapada,
-// ficam um tempo, voltam a ser curvas e formam o próximo.
-import { CENAS, demanda, oferta, precos, caminho, caminhoFechado, interpolar } from '../nucleo/chapada.js';
+// Movimento da abertura: cada morro é desenhado na tela, traço a traço, como quem desenha à mão:
+// o contorno da esquerda para a direita, a base do paredão, as quinas, as camadas da rocha e a mata.
+// Depois de um tempo os traços voltam pelo mesmo caminho e o próximo morro começa. Um morro a cada 14 segundos.
+import { CENAS, tracosDaCena } from '../nucleo/chapada.js';
 
-const CURVAS = 1500; // curvas paradas
-const IDA = 3000; // curvas viram morro
-const MORRO = 7000; // morro parado, com o nome
-const VOLTA = 2500; // morro volta a ser curva (no total, 14 segundos por morro)
-
-// Começa e termina devagar, para a mudança parecer natural.
-const devagar = (t) => (t < 0.5 ? 4 * t ** 3 : 1 - (-2 * t + 2) ** 3 / 2);
+const INTERVALO = 14000;
+const APAGAR = 1700;
+const TRACO = 'cubic-bezier(.45, .05, .35, 1)';
 
 let parar = null;
 
-export function iniciarMorros(svg) {
+export function iniciarMorros(arte) {
   parar?.();
   parar = null;
-  // Quem pediu menos movimento vê só o primeiro morro, como vem do servidor.
+  const svg = arte?.querySelector('svg.chapada');
+  // Quem pediu menos movimento vê o primeiro morro já desenhado, parado.
   if (!svg || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const [serra, morro, detalhes, vale] = ['serra', 'morros', 'detalhes', 'vale'].map((n) => svg.querySelector(`.chapada-${n}`));
-  const nome = svg.querySelector('.chapada-nome');
-  let cancelado = false;
-  let espera = 0;
-  let quadro = 0;
+  const grupo = svg.querySelector('.chapada-cena');
+  const nome = arte.querySelector('.chapada-nome');
+  const animacoes = new Set();
+  const esperas = new Set();
   let n = 0;
 
-  // t = 0: curvas; t = 1: morro. A área do morro, as camadas de rocha e o nome aparecem junto (variável --morro no CSS).
-  const desenhar = (cena, t) => {
-    serra.setAttribute('d', caminho(interpolar(oferta, cena.serra, t)));
-    morro.setAttribute('d', caminhoFechado(interpolar(demanda, cena.morro, t)));
-    vale.setAttribute('d', caminho(interpolar(precos, cena.vale, t)));
-    svg.style.setProperty('--morro', t.toFixed(3));
+  const animar = (el, quadros, opcoes) => {
+    const a = el.animate(quadros, { fill: 'both', ...opcoes });
+    animacoes.add(a);
+    a.finished.then(() => animacoes.delete(a), () => {});
   };
-  const mover = (cena, de, para, duracao, depois) => {
-    const inicio = performance.now();
-    const passo = (agora) => {
-      if (cancelado) return;
-      const k = Math.min(1, (agora - inicio) / duracao);
-      desenhar(cena, de + (para - de) * devagar(k));
-      if (k < 1) quadro = requestAnimationFrame(passo);
-      else depois();
-    };
-    quadro = requestAnimationFrame(passo);
+  const depois = (ms, fazer) => {
+    const id = setTimeout(() => { esperas.delete(id); fazer(); }, ms);
+    esperas.add(id);
   };
-  const esperar = (ms, depois) => { espera = setTimeout(depois, ms); };
-  const proximo = () => {
-    const cena = CENAS[n % CENAS.length];
-    n += 1;
-    detalhes.setAttribute('d', cena.detalhes);
+  // O traço aparece do começo para o fim: o tracejado do tamanho do traço desliza até cobri-lo.
+  const desenhar = (cena) => {
+    grupo.innerHTML = tracosDaCena(cena);
     nome.textContent = cena.nome;
-    nome.setAttribute('x', cena.rotulo);
-    esperar(CURVAS, () => mover(cena, 0, 1, IDA, () => esperar(MORRO, () => mover(cena, 1, 0, VOLTA, proximo))));
+    let fim = 0;
+    for (const p of grupo.children) {
+      const total = p.getTotalLength();
+      const atraso = Number(p.dataset.atraso);
+      const duracao = Number(p.dataset.duracao);
+      p.style.strokeDasharray = `${total} ${total}`;
+      animar(p, [{ strokeDashoffset: total }, { strokeDashoffset: 0 }], { duration: duracao, delay: atraso, easing: TRACO });
+      fim = Math.max(fim, atraso + duracao);
+    }
+    // O nome se escreve da esquerda para a direita, quando o desenho termina.
+    animar(nome, [{ clipPath: 'inset(0 100% 0 0)' }, { clipPath: 'inset(0 0 0 0)' }], { duration: 800, delay: fim - 300, easing: 'ease-out' });
+  };
+  // Os traços voltam pelo mesmo caminho, do fim para o começo.
+  const apagar = () => {
+    for (const p of grupo.children) {
+      const total = p.getTotalLength();
+      animar(p, [{ strokeDashoffset: 0 }, { strokeDashoffset: total }], { duration: APAGAR, easing: 'ease-in' });
+    }
+    animar(nome, [{ clipPath: 'inset(0 0 0 0)' }, { clipPath: 'inset(0 0 0 100%)' }], { duration: 600, easing: 'ease-in' });
+  };
+  const ciclo = () => {
+    for (const a of animacoes) a.cancel();
+    animacoes.clear();
+    desenhar(CENAS[n % CENAS.length]);
+    n += 1;
+    depois(INTERVALO - APAGAR - 300, apagar);
+    depois(INTERVALO, ciclo);
   };
 
-  desenhar(CENAS[0], 0);
-  proximo();
+  ciclo();
   parar = () => {
-    cancelado = true;
-    clearTimeout(espera);
-    cancelAnimationFrame(quadro);
+    for (const id of esperas) clearTimeout(id);
+    for (const a of animacoes) a.cancel();
   };
 }
