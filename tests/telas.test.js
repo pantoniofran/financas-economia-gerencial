@@ -37,7 +37,8 @@ test('disciplina em leitura: material com nome visível e nenhum controle de edi
   const html = ver('#d-eg');
   assert.match(html, /<a class="chip" href="https:\/\/exemplo\.com\/a\.pdf" target="_blank" rel="noopener"[^>]*><svg class="ic"[\s\S]*?<\/svg>Slides</);
   assert.ok(html.includes('href="#a-eg-1-1"'));
-  assert.ok(!/data-op=|contenteditable|data-campo/.test(html));
+  // Ações de leitor (copiar o e-mail, marcar aula) podem existir; de edição, não.
+  assert.ok(!/data-op="(editar|remover|subir|descer|adicionar|novo-material)"|contenteditable|data-campo/.test(html));
 });
 
 test('ficha vazia não aparece em leitura; campo preenchido aparece sozinho', () => {
