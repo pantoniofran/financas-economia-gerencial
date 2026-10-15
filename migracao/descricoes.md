@@ -446,3 +446,55 @@ Escritas a partir das notas de aula e dos slides do professor. Ele pode corrigir
   - Nesta aula: Como estruturar o financiamento de projetos de hidrogênio verde: identificar os riscos e atribuí-los a quem tem melhores condições de assumi-los (patrocinadores, seguradoras, financiadores ou governo).
   - Dica: São 42 slides: faça uma matriz de riscos com o risco, quem assume e o instrumento usado, e preencha enquanto lê.
 
+## Laboratório
+
+### Notas
+
+> O livro de anotações de aula do professor, para consulta em todas as disciplinas.
+
+- **Notas de aula**: O livro "Finanças e Gestão Integrada de Riscos: anotações de aulas" (2022), com 297 páginas e 14 capítulos: demonstrações financeiras, estatística aplicada, risco e retorno, taxa de juros, avaliação de projetos, processos estocásticos, derivativos, risco de mercado e de crédito, opções reais, project finance e gestão de riscos não financeiros.
+  - Aulas: nenhuma
+
+### Planilhas
+
+> Modelos em Excel com os exemplos das aulas montados. Abra, confira as contas e troque os números para ver o que muda.
+
+- **Planilha de índices financeiros**: Balanço e DRE da Hipotética S/A com todos os índices calculados (liquidez, atividade, endividamento, rentabilidade e valor de mercado). A aba de instruções explica como repetir a análise com uma empresa real, como Weg, Klabin, Suzano ou Magazine Luiza.
+  - Aulas: Finanças Corporativas 1, Análise horiz./vertical; Finanças Corporativas 1, Análise de índices; Finanças Corporativas 1, Índices complementares; Finanças Corporativas, Análise das D.F.
+- **Planilha do modelo CAPM**: Preços mensais de seis ações brasileiras (Usiminas, Petrobras, Vale, Oi, Cesp e Itaú), com os retornos, a fronteira eficiente de Markowitz e um exercício de regressão do CAPM e do modelo de um fator contra o Ibovespa.
+  - Aulas: Finanças Corporativas 1, Modelo de fator único; Finanças Corporativas 1, O modelo CAPM; Finanças Corporativas, CAPM e cap. de terceiros; Avaliação Econômica de Projetos, Cap. próprio e de terc.; Seminários em Finanças, Otimização Portfolio - Python
+- **Planilha: opções reais em projeto solar**: Avaliação de uma usina solar de 10 MW: fluxo de caixa e VPL, simulação de cenários de produção e de preço da energia no mercado livre, e o valor da flexibilidade por opções reais (Black & Scholes).
+  - Aulas: Seminários em Finanças, Simulação de Monte Carlo; Seminários em Finanças, A opção de espera; Avaliação Econômica de Projetos, Simulação de Monte Carlo; Avaliação Econômica de Projetos, Opções reais
+- **Planilha: projeto de hidrogênio verde**: A planilha do estudo de caso de hidrogênio verde: CAPEX e OPEX da planta, fluxo de caixa determinístico, simulação de cenários e avaliação por opções reais (binomial e Black & Scholes), com premissas de financiamento do BNDES.
+  - Aulas: Avaliação Econômica de Projetos, Caso 1: H2 verde; Finanças Sustentáveis/Verdes, Financiamento
+- **Planilha: maximização com três produtos**: Maximização do lucro de uma empresa com três produtos, cada um com a sua curva de demanda e o seu custo variável, sujeita a um orçamento máximo. É o exemplo da aula de cesta de produtos, resolvido com o Solver.
+  - Aulas: Economia Gerencial, Cesta de produtos (Pesq Oper)
+
+### R e código
+
+> Para quem quer automatizar as análises: instalação do R, scripts prontos e os notebooks da disciplina de Seminários.
+
+- **Vídeo: instalação do R**: Passo a passo para instalar o R e o RStudio no computador. Comece por aqui antes dos outros materiais em R.
+  - Aulas: Seminários em Finanças, Análise no R-Quarto
+- **Vídeo: introdução ao R**: Primeiros passos no R: variáveis, data frames, bibliotecas, gráficos e como editar e rodar um script.
+  - Aulas: Seminários em Finanças, Análise no R-Quarto
+- **Vídeo: cálculo de retornos no R**: Como baixar os preços de ações no R e calcular os retornos, o mesmo cálculo da aula de métricas de risco e retorno.
+  - Aulas: Finanças Corporativas 1, Métricas; Finanças Corporativas, Risco sistemático; Avaliação Econômica de Projetos, Risco sistemático
+- **Script em R: dados do Banco Central**: Script que baixa da API do Banco Central as séries do IPCA, do dólar (PTAX) e da Selic, junta tudo numa tabela e ajusta uma regressão do IPCA contra câmbio e juros. Antes de rodar, troque o caminho do arquivo na linha do write.csv por uma pasta do seu computador.
+  - Aulas: nenhuma
+- **Repositório no GitHub: Seminários em Finanças**: Repositório do professor com os notebooks em Python da disciplina de Seminários: análise tradicional de projetos, índices das demonstrações financeiras, otimização de carteiras, projeto solar, risco de mercado e valuation.
+  - Aulas: Seminários em Finanças, Demonst. Financeiras - Python; Seminários em Finanças, Otimização Portfolio - Python; Seminários em Finanças, Risco de Mercado - Python
+
+### Vídeos
+
+> Vídeos curtos com exemplos resolvidos passo a passo.
+
+- **Vídeo: maximização de lucro**: Exemplo aplicado numa hamburgueria: curva de demanda, estrutura de custos, receita total e o ponto de lucro máximo.
+  - Aulas: Economia Gerencial, Maximizar Lucro
+- **Vídeo: programação linear**: Introdução à programação linear e à otimização, o conceito de preço sombra e a solução com o Solver do Excel.
+  - Aulas: Economia Gerencial, Cesta de produtos (Pesq Oper)
+- **Vídeo: critérios de decisão**: Os critérios para decidir entre alternativas sob incerteza: minimax, maximax, mínimo arrependimento, maior probabilidade e valor esperado.
+  - Aulas: Seminários em Finanças, Árvore de decisão; Avaliação Econômica de Projetos, Árvore de decisão
+- **Vídeo: árvore de decisão**: A árvore de decisão aplicada à decisão de investimento em projetos.
+  - Aulas: Seminários em Finanças, Árvore de decisão; Avaliação Econômica de Projetos, Árvore de decisão
+

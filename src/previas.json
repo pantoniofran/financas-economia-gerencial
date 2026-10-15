@@ -1,0 +1,681 @@
+{
+  "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/laboratorio/notas-de-aula.pdf": {
+    "tamanho": "2,2 MB",
+    "paginas": 297
+  },
+  "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/laboratorio/planilha-de-indices-financeiros.xlsx": {
+    "tamanho": "102 KB",
+    "tipo": "tabela",
+    "abas": [
+      "BP",
+      "DRE",
+      "Índices",
+      "IlustraCalc",
+      "LinkDados",
+      "AlunosEmpresa",
+      "Instruções"
+    ],
+    "aba": "Índices",
+    "linhas": [
+      [
+        "",
+        "Dias ano",
+        "360",
+        ""
+      ],
+      [
+        "Índices",
+        "20X3",
+        "20X2",
+        "Quantidade de ações ordinárias"
+      ],
+      [
+        "Liquidez",
+        "",
+        "",
+        "Quantidade de ações preferenciais"
+      ],
+      [
+        "Índice de liquidez corrente",
+        "1,36",
+        "1,03",
+        ""
+      ],
+      [
+        "Índice de liquidez seca",
+        "0,7782",
+        "0,5981",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "Preço da ação ordinária (R$/unid)"
+      ],
+      [
+        "Atividade",
+        "",
+        "",
+        "Preço da ação preferencial (R$/unid)"
+      ],
+      [
+        "Giro do ativo total",
+        "1,82",
+        "1,87",
+        "Valor de mercado da dívida de longo prazo"
+      ],
+      [
+        "Giro de contas a receber",
+        "92,96",
+        "71,38",
+        "Valor de reposição dos ativos (milhões de R$)"
+      ],
+      [
+        "Prazo médio de recebimento",
+        "3,87",
+        "5,04",
+        ""
+      ],
+      [
+        "Giro de contas a pagar",
+        "15,03",
+        "17,60",
+        ""
+      ],
+      [
+        "Prazo médio de contas a pagar",
+        "23,95",
+        "20,45",
+        ""
+      ],
+      [
+        "Giro de estoques",
+        "7,30",
+        "9,44",
+        ""
+      ],
+      [
+        "Endividamento",
+        "",
+        "",
+        "Valor total ações ordinárias"
+      ]
+    ]
+  },
+  "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/laboratorio/planilha-do-modelo-capm.xls": {
+    "tamanho": "150 KB",
+    "tipo": "tabela",
+    "abas": [
+      "Preços",
+      "Fronteira",
+      "AvalPrelim",
+      "Plan1"
+    ],
+    "aba": "Plan1",
+    "linhas": [
+      [
+        "Exercício de regressão - CAPM e modelo de um fator",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Mês",
+        "EmpA",
+        "Ibovespa",
+        "Selic (%) ao mês",
+        "",
+        ""
+      ],
+      [
+        "1",
+        "13,84",
+        "47.639",
+        "0,0079",
+        "",
+        ""
+      ],
+      [
+        "2",
+        "12,80",
+        "47.094",
+        "0,0081",
+        "-0,0751",
+        "-0,0114"
+      ],
+      [
+        "3",
+        "14,86",
+        "50.415",
+        "0,0083",
+        "0,1609",
+        "0,0705"
+      ],
+      [
+        "4",
+        "16,56",
+        "51.627",
+        "0,0085",
+        "0,1144",
+        "0,0240"
+      ],
+      [
+        "5",
+        "16,65",
+        "51.239",
+        "0,0087",
+        "0,0054",
+        "-0,0075"
+      ],
+      [
+        "6",
+        "17,29",
+        "53.168",
+        "0,0087",
+        "0,0384",
+        "0,0376"
+      ],
+      [
+        "7",
+        "19,10",
+        "55.829",
+        "0,0087",
+        "0,1047",
+        "0,0500"
+      ],
+      [
+        "8",
+        "23,36",
+        "61.288",
+        "0,0087",
+        "0,2230",
+        "0,0978"
+      ],
+      [
+        "9",
+        "18,09",
+        "54.116",
+        "0,0087",
+        "-0,2256",
+        "-0,1170"
+      ],
+      [
+        "10",
+        "15,28",
+        "54.629",
+        "0,0087",
+        "-0,1553",
+        "0,0095"
+      ],
+      [
+        "11",
+        "12,84",
+        "54.664",
+        "0,0087",
+        "-0,1597",
+        "0,0006"
+      ],
+      [
+        "12",
+        "10,02",
+        "50.007",
+        "0,0089",
+        "-0,2196",
+        "-0,0852"
+      ]
+    ]
+  },
+  "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/laboratorio/planilha-maximizacao-com-tres-produtos.xlsx": {
+    "tamanho": "12 KB",
+    "tipo": "tabela",
+    "abas": [
+      "Planilha1"
+    ],
+    "aba": "Planilha1",
+    "linhas": [
+      [
+        "Maximizar Lucro em um negócio com três produtos",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Custo Fixo",
+        "5.000",
+        "F",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Custo Variável unitário",
+        "",
+        "Prod 1",
+        "",
+        "Prod 2",
+        "",
+        "Prod 3"
+      ],
+      [
+        "",
+        "c1",
+        "5",
+        "c2",
+        "8",
+        "c3",
+        "10"
+      ],
+      [
+        "Curva de demanda",
+        "",
+        "Prod 1",
+        "",
+        "Prod 2",
+        "",
+        "Prod 3"
+      ],
+      [
+        "",
+        "a1",
+        "14",
+        "a2",
+        "20",
+        "a3",
+        "25"
+      ],
+      [
+        "",
+        "b1",
+        "0,0050",
+        "b2",
+        "0,0100",
+        "b3",
+        "0,0150"
+      ],
+      [
+        "Soma dos custos",
+        "15.000,00",
+        "=B3+I11+J11+K11",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Orçamento máximo",
+        "15.000",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Lucro Total",
+        "5.376,57",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "=(I14-I11)+(J14-J11)+(K14-K11)-$B$3",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    ]
+  },
+  "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/laboratorio/planilha-opcoes-reais-em-projeto-solar.xlsx": {
+    "tamanho": "2,9 MB",
+    "tipo": "tabela",
+    "abas": [
+      "CB_DATA_",
+      "Plan4",
+      "Plan1",
+      "VPI1",
+      "VPOi",
+      "PreçoLivre",
+      "Produção",
+      "AleatProd",
+      "AleatLivre",
+      "Black&Scholes",
+      "BNDES",
+      "IPCA",
+      "NotaAula"
+    ],
+    "aba": "Plan1",
+    "linhas": [
+      [
+        "Investimento total",
+        "50.000.000",
+        "Taxa_desconto",
+        "0,1500",
+        "dividendo",
+        "0,0500"
+      ],
+      [
+        "Total MW",
+        "10",
+        "Taxa Liv Risco",
+        "0,0700",
+        "Fator",
+        "0,2000"
+      ],
+      [
+        "Produção anual MWh",
+        "17.520",
+        "sigma_Preço",
+        "0,0200",
+        "Invest MW",
+        "5.000.000"
+      ],
+      [
+        "Capital próprio",
+        "50.000.000",
+        "tx_cresc_Normal",
+        "0,0500",
+        "Custo Manutenção",
+        "0,0100"
+      ],
+      [
+        "Custo Manutenção por MW",
+        "50.000",
+        "T(ano)",
+        "1",
+        "miManutenção",
+        "0,0500"
+      ],
+      [
+        "Custos totais de manutenção",
+        "500.000",
+        "Num passos",
+        "4",
+        "Perda de potência",
+        "-0,0075"
+      ],
+      [
+        "Percentual financiável",
+        "0",
+        "DeltaT",
+        "0,2500",
+        "Varia irradiação",
+        "0,0500"
+      ],
+      [
+        "Preço mercado livre",
+        "500",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Faturamento",
+        "8.760.000",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Outros custos",
+        "0,0050",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "VP0",
+        "68.820.591,43",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "VPL",
+        "18.820.591,43",
+        "Cenário com CO2",
+        "",
+        "0",
+        ""
+      ],
+      [
+        "Média_Ret_VP",
+        "0,1323",
+        "",
+        "Preço CO2 ini",
+        "Preço CO2 fin",
+        "Cresce por ano"
+      ],
+      [
+        "DesvPadRet",
+        "0,1222",
+        "CO2",
+        "0",
+        "0",
+        "0"
+      ]
+    ]
+  },
+  "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/laboratorio/planilha-projeto-de-hidrogenio-verde.xlsx": {
+    "tamanho": "2,9 MB",
+    "tipo": "tabela",
+    "abas": [
+      "CB_DATA_",
+      "Capex-Opex",
+      "Determinístico",
+      "Painel",
+      "VPI1",
+      "VPOi",
+      "PreçoLivre",
+      "Produção",
+      "Binomial",
+      "Black&Scholes",
+      "BNDES",
+      "IPCA",
+      "NotaAula",
+      "AleatProd",
+      "AleatLivre"
+    ],
+    "aba": "Determinístico",
+    "linhas": [
+      [
+        "Fluxo de caixa",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      [
+        "Receita",
+        "",
+        "52.500.000",
+        "55.125.000",
+        "57.881.250",
+        "60.775.312,50",
+        "63.814.078,12"
+      ],
+      [
+        "Custosvariáveis",
+        "",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "Custos fixos",
+        "",
+        "20.894.195,22",
+        "21.938.904,98",
+        "23.035.850,23",
+        "24.187.642,74",
+        "25.397.024,88"
+      ],
+      [
+        "Lucro bruto",
+        "",
+        "31.605.804,78",
+        "33.186.095,02",
+        "34.845.399,77",
+        "36.587.669,76",
+        "38.417.053,25"
+      ],
+      [
+        "Depreciação",
+        "",
+        "9.064.978,33",
+        "9.064.978,33",
+        "9.064.978,33",
+        "9.064.978,33",
+        "9.064.978,33"
+      ],
+      [
+        "Juros",
+        "",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "LAIR",
+        "",
+        "22.540.826,45",
+        "24.121.116,69",
+        "25.780.421,44",
+        "27.522.691,43",
+        "29.352.074,91"
+      ],
+      [
+        "IR",
+        "",
+        "5.635.206,61",
+        "6.030.279,17",
+        "6.445.105,36",
+        "6.880.672,86",
+        "7.338.018,73"
+      ],
+      [
+        "Lucro líquido",
+        "",
+        "16.905.619,84",
+        "18.090.837,51",
+        "19.335.316,08",
+        "20.642.018,57",
+        "22.014.056,19"
+      ],
+      [
+        "Amortização",
+        "",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "Fluxo de caixa",
+        "-181.299.566,67",
+        "25.970.598,17",
+        "27.155.815,85",
+        "28.400.294,41",
+        "29.706.996,90",
+        "31.079.034,52"
+      ],
+      [
+        "Taxas",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    ]
+  },
+  "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/laboratorio/script-em-r-dados-do-banco-central.txt": {
+    "tamanho": "3 KB",
+    "tipo": "codigo",
+    "linhas": [
+      "# Instalar pacotes necessários",
+      "# install.packages(\"httr\")",
+      "# install.packages(\"jsonlite\")",
+      "",
+      "library(quantmod)",
+      "library(lubridate)",
+      "library(tidyverse)",
+      "",
+      "# Carregar pacotes",
+      "library(httr)",
+      "library(jsonlite)",
+      "library(dplyr)",
+      "",
+      "rm(list = ls())",
+      "",
+      "#IPCA = 433",
+      "#Taxa de cambio = 3696",
+      "#Selic mensal = 4189",
+      "",
+      "# URL da API do Banco Central do Brasil",
+      "urlIPCA <- \"https://api.bcb.gov.br/dados/serie/bcdata.sgs.433/dados?formato=json\"",
+      "urlPTAX <- \"https://api.bcb.gov.br/dados/serie/bcdata.sgs.3696/dados?formato=json\"",
+      "urlSELIC <- \"https://api.bcb.gov.br/dados/serie/bcdata.sgs.4189/dados?formato=json\"",
+      "",
+      "# Fazer a requisição GET",
+      "responseIPCA <- GET(urlIPCA)",
+      "responsePTAX <- GET(urlPTAX)",
+      "responseSELIC <- GET(urlSELIC)",
+      "",
+      "dataIPCA <- content(responseIPCA, \"text\")",
+      "dataIPCA <- fromJSON(dataIPCA)",
+      "",
+      "dataPTAX <- content(responsePTAX, \"text\")",
+      "dataPTAX <- fromJSON(dataPTAX)",
+      "",
+      "dataSELIC <- content(responseSELIC, \"text\")",
+      "dataSELIC <- fromJSON(dataSELIC)",
+      "",
+      "",
+      "dataAll <- merge(dataIPCA,dataPTAX, by = \"data\", all = TRUE)"
+    ]
+  },
+  "https://github.com/pantoniofran/GitSeminarioFinancas.git": {
+    "tipo": "pastas",
+    "itens": [
+      "AnaliseTrad",
+      "IndicesDemFinanceiras",
+      "Otimizacao",
+      "ProjSolar",
+      "RiscoMercado",
+      "Valuation"
+    ]
+  }
+}

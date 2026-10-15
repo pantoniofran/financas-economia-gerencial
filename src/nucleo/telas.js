@@ -15,8 +15,8 @@ export function dataBR(iso) {
 
 export function interpretarRota(hash) {
   const h = String(hash ?? '').replace(/^#/, '') || 'inicio';
-  const m = /^([adt])-(.+)$/.exec(h);
-  return m ? { nome: { a: 'aula', d: 'disciplina', t: 'texto' }[m[1]], id: m[2] } : { nome: h };
+  const m = /^([adtl])-(.+)$/.exec(h);
+  return m ? { nome: { a: 'aula', d: 'disciplina', t: 'texto', l: 'laboratorio' }[m[1]], id: m[2] } : { nome: h };
 }
 
 const tem = (v) => Boolean(String(v ?? '').trim());
@@ -123,8 +123,13 @@ const icone = (tipo) => `<svg class="ic" viewBox="0 0 24 24" width="20" height="
 // O tipo só aparece quando o nome não o diz: "Slides da aula" já basta, "Sorvete" precisa de "Planilha".
 function caixaDoMaterial(mat, ctx) {
   const info = mat.nome === TIPOS[mat.tipo]?.nome ? formato(mat) : `${esc(rotuloDoTipo(mat))} · ${formato(mat)}`;
-  return `<li><a class="caixa caixa-material" href="${esc(mat.url)}" target="_blank" rel="noopener">${icone(mat.tipo)}<span class="caixa-info">${info}${seloNovo(mat.adicionadoEm, ctx)}</span><span class="caixa-titulo">${esc(mat.nome)}</span><span class="caixa-acao">Abrir ↗<span class="sr"> em nova aba</span></span></a></li>`;
+  return `<li><a class="caixa caixa-material" href="${esc(mat.url)}"${atributosDoLink(mat.url)}>${icone(mat.tipo)}<span class="caixa-info">${info}${seloNovo(mat.adicionadoEm, ctx)}</span><span class="caixa-titulo">${esc(mat.nome)}</span><span class="caixa-acao">${acaoDoLink(mat.url)}</span></a></li>`;
 }
+
+// Arquivo de usar no computador (planilha, notebook, script) é baixado; o navegador mostraria um notebook como texto cru.
+const ehDownload = (url) => /\.(ipynb|xlsx?|zip|txt|r|py)$/i.test(String(url).split(/[?#]/)[0]);
+const atributosDoLink = (url) => `${ehDownload(url) ? ' download' : ''} target="_blank" rel="noopener"`;
+const acaoDoLink = (url) => (ehDownload(url) ? 'Baixar ↓' : 'Abrir ↗<span class="sr"> em nova aba</span>');
 
 // Resultado da busca: desenhado à parte, para a página não perder o foco do campo a cada letra.
 const ROTULO_DA_BUSCA = { disciplina: 'Disciplina', modulo: 'Módulo', aula: 'Aula', material: 'Material', texto: 'Texto' };
@@ -278,12 +283,19 @@ function baixarModulo(m, ctx) {
   return `<a class="baixar" href="${esc(zip.url)}">${icone('baixar')}Baixar os materiais do módulo <small>ZIP · ${zip.tamanho}</small></a>`;
 }
 
-// Link de dúvidas: endereço da web abre em nova aba; e-mail vira mailto; vazio leva ao contato do professor.
-function linkDeDuvida(valor) {
-  const v = String(valor ?? '').trim();
-  if (/^https?:\/\//.test(v)) return { href: v, nova: true };
-  if (/^[^\s@]+@[^\s@]+$/.test(v)) return { href: `mailto:${v}`, nova: false };
-  return { href: '#sobre', nova: false };
+// Botão de dúvida. Se o professor deu um endereço da web (grupo, formulário), abre em nova aba.
+// Senão abre o e-mail já endereçado a ele, com a disciplina (e a aula) no assunto, para ele saber de onde vem a pergunta.
+const ehEmail = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+export function linkDeDuvida(c, d, ctx, aula = null) {
+  const v = String(d.duvidas ?? '').trim();
+  if (/^https?:\/\//.test(v)) return ` href="${esc(v)}" target="_blank" rel="noopener"`;
+  const email = ehEmail(v) ? v : String(c.sobre?.email ?? '').trim();
+  if (!ehEmail(email)) return ' href="#sobre"';
+  const assunto = `[${d.nome}] Dúvida${aula ? ` - Módulo ${aula.im + 1}, Aula ${aula.ia + 1}: ${aula.titulo}` : ''}`;
+  const corpo = `Professor,\n\nTenho uma dúvida sobre ${aula ? `a aula "${aula.titulo}"` : 'a disciplina'} de ${d.nome}:\n\n\n\nNome:\nMatrícula:\n`;
+  const href = `mailto:${email}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(corpo)}`;
+  // No Claude a página roda dentro de uma moldura que não troca de endereço: o e-mail abre por fora.
+  return ` href="${esc(href)}"${ctx.ambiente === 'artifact' ? ' target="_blank" rel="noopener"' : ''}`;
 }
 
 function cronograma(d, base, ctx) {
@@ -299,16 +311,15 @@ function cronograma(d, base, ctx) {
   return `<section class="cronograma" aria-label="Próximas datas"><h2 class="eye">Próximas datas</h2><ul class="eventos">${proximos.map(linha).join('')}</ul></section>`;
 }
 
-function acoesDaDisciplina(d, base, ctx) {
+function acoesDaDisciplina(c, d, base, ctx) {
   if (ctx.editando) {
-    return `<label class="campo-linha" for="duvidas-${d.id}">Link para dúvidas (grupo, formulário ou e-mail) <input type="text" id="duvidas-${d.id}" data-campo="${base}.duvidas" value="${esc(d.duvidas ?? '')}" placeholder="https://… ou e-mail"></label>`;
+    return `<label class="campo-linha" for="duvidas-${d.id}">Dúvidas dos alunos: em branco, chegam no e-mail da página Sobre. Para usar outro canal, escreva o link do grupo ou formulário, ou outro e-mail. <input type="text" id="duvidas-${d.id}" data-campo="${base}.duvidas" value="${esc(d.duvidas ?? '')}" placeholder="https://… ou e-mail"></label>`;
   }
   const { vistas, total } = contarVistas(d, vistasDe(ctx));
-  const duvida = linkDeDuvida(d.duvidas);
   const progresso = total
     ? `<p class="progresso-linha">${barraDeProgresso(vistas, total)}<span>${vistas ? `Você viu ${vistas} de ${plural(total, 'aula', 'aulas')}` : `${plural(total, 'aula', 'aulas')}. Marque as que já viu.`}</span></p>`
     : '';
-  return `<div class="disciplina-acoes">${progresso}<a class="btn-duvida" href="${esc(duvida.href)}"${duvida.nova ? ' target="_blank" rel="noopener"' : ''}>Tirar dúvida</a></div>`;
+  return `<div class="disciplina-acoes">${progresso}<a class="btn-duvida"${linkDeDuvida(c, d, ctx)}>Tirar dúvida</a></div>`;
 }
 
 function telaDisciplina(c, id, ctx) {
@@ -322,7 +333,7 @@ function telaDisciplina(c, id, ctx) {
   return `<div class="col">
 ${capa ? `<div class="capa"><img src="${esc(capa)}" alt="" width="1280" height="720"></div>` : ''}<p class="eye"><a href="#inicio">‹ Disciplinas</a> · ${NIVEIS[d.nivel]}</p>
 <h1>${ctx.editando ? campo(`${base}.nome`, d.nome, ctx, 'Nome da disciplina') : nomeQuebravel(d.nome)}</h1>
-${acoesDaDisciplina(d, base, ctx)}
+${acoesDaDisciplina(c, d, base, ctx)}
 ${avisos(d, base, ctx)}${cronograma(d, base, ctx)}${ficha(d, base, ctx)}${indice}
 ${d.modulos.map((m, im) => modulo(m, im, d, base, ctx)).join('')}
 ${d.modulos.length || ctx.editando ? '' : '<p class="suave">As aulas desta disciplina ainda não foram publicadas.</p>'}
@@ -360,7 +371,8 @@ function telaAula(c, id, ctx) {
   const cabecalhoDaAula = `<p class="eye"><a href="#d-${d.id}">‹ ${esc(d.nome)}</a> · Módulo ${im + 1} · Aula ${ia + 1}${seloNovo(a.adicionadoEm, ctx)}</p>
 <h1>${campo(`${ba}.titulo`, a.titulo, ctx, 'Título da aula')}</h1>`;
   const visto = Boolean(vistasDe(ctx)[a.id]);
-  const botaoVista = ctx.editando ? '' : `<button type="button" class="btn-vista${visto ? ' feita' : ''}" data-op="vista" data-aula="${a.id}" aria-pressed="${visto}">${visto ? '✓ Aula vista' : 'Marcar como vista'}</button>`;
+  // A dúvida sai daqui com a aula no assunto do e-mail.
+  const botaoVista = ctx.editando ? '' : `<div class="aula-acoes"><button type="button" class="btn-vista${visto ? ' feita' : ''}" data-op="vista" data-aula="${a.id}" aria-pressed="${visto}">${visto ? '✓ Aula vista' : 'Marcar como vista'}</button><a class="btn-duvida leve"${linkDeDuvida(c, d, ctx, { ...a, im, ia })}>Tirar dúvida sobre esta aula</a></div>`;
 
   if (ctx.editando) {
     return `<div class="col">${cabecalhoDaAula}
@@ -390,6 +402,7 @@ ${descricao}
 ${video ? '' : botaoVista}
 ${dica}
 ${outros ? `<section><h2 class="eye">Outros materiais</h2><ul class="caixas compactas">${outros}</ul></section>` : ''}
+${paraPraticar(c, a, ctx)}
 ${vizinhas}</div>`;
   }
 
@@ -400,17 +413,112 @@ ${video ? player(video, a, d, ctx) : ''}
 ${botaoVista}
 ${dica}
 <section><h2 class="eye">Materiais desta aula</h2>${materiais}</section>
+${paraPraticar(c, a, ctx)}
 ${vizinhas}</div>`;
 }
 
 // ---------- laboratório, textos ----------
 
-function telaLaboratorio(c, ctx) {
-  const itens = (g, ig) => (ctx.editando
-    ? `<ul class="lista mat-lista">${g.itens.map((it, k) => linhaDoMaterial(it, `laboratorio.${ig}.itens`, k, g.itens.length, ctx)).join('')}</ul>`
-    : `<ul class="caixas compactas">${g.itens.map((it) => caixaDoMaterial(it, ctx)).join('')}</ul>`);
-  const grupo = (g, ig) => `<section><h2 class="eye">${campo(`laboratorio.${ig}.grupo`, g.grupo, ctx, 'Nome do grupo')}</h2>${itens(g, ig)}${novoMaterial(ctx, `laboratorio.${ig}.itens`, 'Novo item')}</section>`;
-  return `<div class="col larga"><h1>Laboratório</h1><p class="lead">${campo('site.laboratorio', c.site.laboratorio, ctx, 'Apresentação do laboratório')}</p>${c.laboratorio.map(grupo).join('')}</div>`;
+// Cada material do Laboratório diz o que é, em quais aulas entra e deixa espiar o conteúdo antes de baixar.
+const aulasDoItem = (c, it) => (it.aulas ?? []).map((id) => acharAula(c, id)).filter(Boolean);
+
+function infoDoItem(it, previa) {
+  const partes = [rotuloDoTipo(it), formato(it)];
+  if (previa?.paginas) partes.push(`${previa.paginas} páginas`);
+  if (previa?.tamanho) partes.push(previa.tamanho);
+  return partes.join(' · ');
+}
+
+// Vídeo e PDF se veem no próprio site dos alunos; planilha, script e repositório, pelo trecho gerado no build.
+function temPrevia(it, previa, ctx) {
+  if (idDoYoutube(it.url) || formato(it) === 'PDF') return ctx.ambiente === 'local';
+  return Boolean(previa?.tipo);
+}
+
+// Vídeo mostra a miniatura do YouTube; no Claude imagens de fora não carregam, e fica só o ícone ao lado do tipo.
+function capaDoItem(it, ctx) {
+  const yt = idDoYoutube(it.url);
+  return yt && ctx.ambiente === 'local'
+    ? `<span class="lab-capa"><img src="https://i.ytimg.com/vi/${yt}/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"><span class="play"></span></span>`
+    : '';
+}
+
+const chipDaAula = (x) => `<a class="lab-aula" href="#a-${x.aula.id}"><span>${esc(x.aula.titulo)}</span><small>${esc(x.disciplina.nome)} · Módulo ${x.im + 1}</small></a>`;
+
+function cartaoDoLaboratorio(c, it, ctx, destaque) {
+  const previa = ctx.previas?.[it.url];
+  const aulas = aulasDoItem(c, it);
+  const ver = temPrevia(it, previa, ctx)
+    ? `<button type="button" class="btn-previa" data-op="previa" data-item="${esc(it.id)}">${idDoYoutube(it.url) ? 'Assistir aqui' : 'Ver prévia'}</button>`
+    : '';
+  return `<li class="lab-item${destaque ? ' destaque' : ''}" id="item-${esc(it.id)}" tabindex="-1">${capaDoItem(it, ctx)}<div class="lab-corpo">
+<span class="caixa-info lab-tipo">${icone(it.tipo)}${esc(infoDoItem(it, previa))}${seloNovo(it.adicionadoEm, ctx)}</span>
+<h3>${esc(it.nome)}</h3>
+${tem(it.descricao) ? `<p class="lab-descricao">${esc(it.descricao)}</p>` : ''}
+${aulas.length ? `<div class="lab-aulas"><span class="eye">Usado nas aulas</span><div>${aulas.map(chipDaAula).join('')}</div></div>` : ''}
+<div class="lab-acoes">${ver}<a class="btn-abrir" href="${esc(it.url)}"${atributosDoLink(it.url)}>${acaoDoLink(it.url)}</a></div>
+</div></li>`;
+}
+
+// Em edição: nome, descrição e as aulas relacionadas (escolhidas numa lista, sem digitar código de aula).
+function linhaDoLaboratorio(c, it, lista, k, n, ctx) {
+  const ba = `${lista}.${k}`;
+  const relacionadas = it.aulas ?? [];
+  const chips = relacionadas.map((id, j) => {
+    const x = acharAula(c, id);
+    const nome = x ? x.aula.titulo : id;
+    // A disciplina vai junto: há aulas de mesmo nome em disciplinas diferentes.
+    return `<span class="chip">${esc(nome)}${x ? ` <small>${esc(x.disciplina.nome)}</small>` : ''}<button type="button" data-op="remover-sim" data-lista="${ba}.aulas" data-i="${j}" aria-label="Tirar a relação com ${esc(nome)}">×</button></span>`;
+  }).join('');
+  const opcoes = c.disciplinas.map((d) => `<optgroup label="${esc(d.nome)}">${d.modulos.flatMap((m, im) => m.aulas
+    .filter((a) => tem(a.titulo) && !relacionadas.includes(a.id))
+    .map((a) => `<option value="${a.id}">Módulo ${im + 1} · ${esc(a.titulo)}</option>`)).join('')}</optgroup>`).join('');
+  return `<li class="editavel lab-edicao"><div class="lab-edicao-corpo"><span>${campo(`${ba}.nome`, it.nome, ctx, 'Nome do material')} <small>${esc(rotuloDoTipo(it))}</small></span>
+<div class="prosa">${bloco(`${ba}.descricao`, it.descricao, ctx, 'O que tem neste material e como usar')}</div>
+<div class="lab-relacoes"><small>Aulas relacionadas</small>${chips}<select data-relacionar="${ba}.aulas" aria-label="Relacionar com uma aula"><option value="">+ Relacionar com uma aula…</option>${opcoes}</select></div>
+</div>${ferramentas(lista, k, n, ctx, 'material')}</li>`;
+}
+
+function telaLaboratorio(c, ctx, destaque) {
+  const intro = `<h1>Laboratório</h1><p class="lead">${campo('site.laboratorio', c.site.laboratorio, ctx, 'Apresentação do laboratório')}</p>`;
+  if (ctx.editando) {
+    const grupo = (g, ig) => `<section><h2 class="eye">${campo(`laboratorio.${ig}.grupo`, g.grupo, ctx, 'Nome do grupo')}</h2><div class="prosa">${bloco(`laboratorio.${ig}.descricao`, g.descricao, ctx, 'Para que serve este grupo')}</div><ul class="lista mat-lista">${g.itens.map((it, k) => linhaDoLaboratorio(c, it, `laboratorio.${ig}.itens`, k, g.itens.length, ctx)).join('')}</ul>${novoMaterial(ctx, `laboratorio.${ig}.itens`, 'Novo item')}</section>`;
+    return `<div class="col larga">${intro}${c.laboratorio.map(grupo).join('')}</div>`;
+  }
+  const grupos = c.laboratorio.map((g, ig) => ({ g, ig })).filter(({ g }) => g.itens.length);
+  // Atalhos para os grupos, no mesmo formato do índice de módulos.
+  const atalhos = `<nav aria-label="Grupos do laboratório"><ul class="caixas compactas indice">${grupos.map(({ g, ig }) => `<li><button type="button" class="caixa" data-ir="grupo-${ig}"><span class="caixa-info">${plural(g.itens.length, 'material', 'materiais')}</span><span class="caixa-titulo">${esc(g.grupo)}</span></button></li>`).join('')}</ul></nav>`;
+  const grupo = ({ g, ig }) => `<section class="lab-grupo" id="grupo-${ig}" tabindex="-1"><h2 class="secao">${esc(g.grupo)} <small>${plural(g.itens.length, 'material', 'materiais')}</small></h2>${tem(g.descricao) ? `<p class="lab-grupo-descricao">${esc(g.descricao)}</p>` : ''}<ul class="lab-itens">${g.itens.map((it) => cartaoDoLaboratorio(c, it, ctx, it.id === destaque)).join('')}</ul></section>`;
+  return `<div class="col larga">${intro}${atalhos}${grupos.map(grupo).join('')}</div>`;
+}
+
+// Conteúdo da janela de prévia, aberta pelo programa da página.
+export function previaDoLaboratorio(it, ctx) {
+  const previa = ctx.previas?.[it.url];
+  let corpo = '';
+  if (idDoYoutube(it.url)) {
+    corpo = player(it, { titulo: it.nome }, { id: '' }, ctx);
+  } else if (formato(it) === 'PDF') {
+    corpo = `<div class="leitor" data-pdf="${esc(it.url)}"><p class="leitor-aviso">Carregando o material…</p></div>`;
+  } else if (previa?.tipo === 'tabela') {
+    const celula = (v) => `<td${/^-?[\d.]+(,\d+)?$/.test(v) ? ' class="valor"' : ''}>${esc(v)}</td>`;
+    corpo = `<p class="previa-nota">Trecho da aba <b>${esc(previa.aba)}</b>. A planilha tem ${plural(previa.abas.length, 'aba', 'abas')}: ${previa.abas.map(esc).join(', ')}.</p>
+<div class="previa-tabela"><table>${previa.linhas.map((l) => `<tr>${l.map(celula).join('')}</tr>`).join('')}</table></div>`;
+  } else if (previa?.tipo === 'codigo') {
+    corpo = `<p class="previa-nota">As primeiras ${previa.linhas.length} linhas.</p><pre class="previa-codigo"><code>${esc(previa.linhas.join('\n'))}</code></pre>`;
+  } else if (previa?.tipo === 'pastas') {
+    corpo = `<p class="previa-nota">Pastas do repositório, uma por tema:</p><ul class="previa-pastas">${previa.itens.map((p) => `<li>${icone('codigo')}${esc(p)}</li>`).join('')}</ul>`;
+  }
+  return `<div class="previa-topo"><div><span class="caixa-info">${esc(infoDoItem(it, previa))}</span><h2 id="previa-titulo">${esc(it.nome)}</h2></div><button type="button" class="previa-fechar" data-op="fechar-previa" aria-label="Fechar a prévia">×</button></div>
+<div class="previa-corpo">${corpo}</div>
+<div class="previa-rodape"><a class="btn-abrir" href="${esc(it.url)}"${atributosDoLink(it.url)}>${acaoDoLink(it.url)}</a></div>`;
+}
+
+// Na aula: o que o Laboratório tem para praticar o assunto.
+function paraPraticar(c, a, ctx) {
+  const itens = c.laboratorio.flatMap((g) => g.itens.filter((it) => (it.aulas ?? []).includes(a.id)));
+  if (!itens.length || ctx.editando) return '';
+  return `<section><h2 class="eye">Para praticar no Laboratório</h2><ul class="caixas compactas">${itens.map((it) => `<li><a class="caixa caixa-material" href="#l-${it.id}">${icone(it.tipo)}<span class="caixa-info">${esc(rotuloDoTipo(it))} · ${formato(it)}</span><span class="caixa-titulo">${esc(it.nome)}</span><span class="caixa-acao">Ver no Laboratório ›</span></a></li>`).join('')}</ul></section>`;
 }
 
 function telaTextos(c, ctx) {
@@ -526,7 +634,7 @@ export function renderizar(c, rota, ctx) {
     inicio: () => telaInicio(c, ctx),
     disciplina: () => telaDisciplina(c, rota.id, ctx),
     aula: () => telaAula(c, rota.id, ctx),
-    laboratorio: () => telaLaboratorio(c, ctx),
+    laboratorio: () => telaLaboratorio(c, ctx, rota.id),
     textos: () => telaTextos(c, ctx),
     texto: () => telaTexto(c, rota.id, ctx),
     pesquisa: () => telaPesquisa(c, ctx),

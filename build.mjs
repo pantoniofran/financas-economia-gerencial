@@ -36,6 +36,8 @@ const URL_DO_SITE = (process.env.SITE_URL ?? 'https://pedrolofiego.github.io/fin
 const semSimbolos = (t) => t.replace(/[<>:"/\\|?*\u0000-\u001f]/g, '').replace(/\s+/g, ' ').trim().slice(0, 80);
 const tamanhoLegivel = (bytes) => `${(bytes / 1048576).toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 1 })} MB`;
 const zips = {};
+// Trechos das planilhas e scripts do Laboratório (gerados por scripts/preparar-previas.py).
+const previas = await lerJSON('src/previas.json', {});
 const arquivosDosZips = {};
 for (const d of conteudo.disciplinas) {
   for (const [im, m] of d.modulos.entries()) {
@@ -75,7 +77,7 @@ const saidas = [
   ['local', 'dist/local/index.html', documentoCompleto],
 ];
 for (const [ambiente, arquivo, montar] of saidas) {
-  const config = { ambiente, titulo: TITULO, fontes: FONTES, midia: await lerJSON(`src/midia.${ambiente}.json`, {}), siteUrl: URL_DO_SITE, zips };
+  const config = { ambiente, titulo: TITULO, fontes: FONTES, midia: await lerJSON(`src/midia.${ambiente}.json`, {}), siteUrl: URL_DO_SITE, zips, previas };
   const html = montar({ titulo: TITULO, fontes: FONTES, css, js, conteudo, config });
   await writeFile(arquivo, html);
   console.log(`${arquivo}: ${Math.round(Buffer.byteLength(html) / 1024)} KB`);
@@ -110,7 +112,7 @@ for (const [caminho, dados] of Object.entries(arquivosDosZips)) await writeFile(
 await copiarPdfjs('dist/site');
 const configDoSite = {
   ambiente: 'local', ensaio: false, titulo: TITULO, fontes: FONTES, midia: await lerJSON('src/midia.local.json', {}),
-  siteUrl: URL_DO_SITE, zips, arquivosLocais: true,
+  siteUrl: URL_DO_SITE, zips, previas, arquivosLocais: true,
 };
 const site = documentoCompleto({ titulo: TITULO, fontes: FONTES, css, js, conteudo, config: configDoSite })
   .replace('<html>', '<html lang="pt-BR">')

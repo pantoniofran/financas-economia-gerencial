@@ -1,0 +1,113 @@
+{
+  "grupos": {
+    "Notas": "O livro de anotações de aula do professor, para consulta em todas as disciplinas.",
+    "Planilhas": "Modelos em Excel com os exemplos das aulas montados. Abra, confira as contas e troque os números para ver o que muda.",
+    "R e código": "Para quem quer automatizar as análises: instalação do R, scripts prontos e os notebooks da disciplina de Seminários.",
+    "Vídeos": "Vídeos curtos com exemplos resolvidos passo a passo."
+  },
+  "itens": {
+    "lab-1": {
+      "descricao": "O livro \"Finanças e Gestão Integrada de Riscos: anotações de aulas\" (2022), com 297 páginas e 14 capítulos: demonstrações financeiras, estatística aplicada, risco e retorno, taxa de juros, avaliação de projetos, processos estocásticos, derivativos, risco de mercado e de crédito, opções reais, project finance e gestão de riscos não financeiros.",
+      "aulas": []
+    },
+    "lab-2": {
+      "descricao": "Balanço e DRE da Hipotética S/A com todos os índices calculados (liquidez, atividade, endividamento, rentabilidade e valor de mercado). A aba de instruções explica como repetir a análise com uma empresa real, como Weg, Klabin, Suzano ou Magazine Luiza.",
+      "aulas": [
+        "fc1-1-2",
+        "fc1-1-3",
+        "fc1-1-5",
+        "pfc-1-2"
+      ]
+    },
+    "lab-3": {
+      "descricao": "Preços mensais de seis ações brasileiras (Usiminas, Petrobras, Vale, Oi, Cesp e Itaú), com os retornos, a fronteira eficiente de Markowitz e um exercício de regressão do CAPM e do modelo de um fator contra o Ibovespa.",
+      "aulas": [
+        "fc1-3-2",
+        "fc1-3-3",
+        "pfc-3-2",
+        "aep-2-3",
+        "sem-3-2"
+      ]
+    },
+    "lab-4": {
+      "descricao": "Avaliação de uma usina solar de 10 MW: fluxo de caixa e VPL, simulação de cenários de produção e de preço da energia no mercado livre, e o valor da flexibilidade por opções reais (Black & Scholes).",
+      "aulas": [
+        "sem-2-2",
+        "sem-2-3",
+        "aep-3-2",
+        "aep-3-3"
+      ]
+    },
+    "lab-5": {
+      "descricao": "A planilha do estudo de caso de hidrogênio verde: CAPEX e OPEX da planta, fluxo de caixa determinístico, simulação de cenários e avaliação por opções reais (binomial e Black & Scholes), com premissas de financiamento do BNDES.",
+      "aulas": [
+        "aep-4-1",
+        "fv-3-3"
+      ]
+    },
+    "lab-6": {
+      "descricao": "Maximização do lucro de uma empresa com três produtos, cada um com a sua curva de demanda e o seu custo variável, sujeita a um orçamento máximo. É o exemplo da aula de cesta de produtos, resolvido com o Solver.",
+      "aulas": [
+        "eg-1-5"
+      ]
+    },
+    "lab-7": {
+      "descricao": "Passo a passo para instalar o R e o RStudio no computador. Comece por aqui antes dos outros materiais em R.",
+      "aulas": [
+        "sem-1-5"
+      ]
+    },
+    "lab-8": {
+      "descricao": "Primeiros passos no R: variáveis, data frames, bibliotecas, gráficos e como editar e rodar um script.",
+      "aulas": [
+        "sem-1-5"
+      ]
+    },
+    "lab-9": {
+      "descricao": "Como baixar os preços de ações no R e calcular os retornos, o mesmo cálculo da aula de métricas de risco e retorno.",
+      "aulas": [
+        "fc1-3-1",
+        "pfc-3-1",
+        "aep-2-2"
+      ]
+    },
+    "lab-10": {
+      "descricao": "Script que baixa da API do Banco Central as séries do IPCA, do dólar (PTAX) e da Selic, junta tudo numa tabela e ajusta uma regressão do IPCA contra câmbio e juros. Antes de rodar, troque o caminho do arquivo na linha do write.csv por uma pasta do seu computador.",
+      "aulas": []
+    },
+    "lab-11": {
+      "descricao": "Repositório do professor com os notebooks em Python da disciplina de Seminários: análise tradicional de projetos, índices das demonstrações financeiras, otimização de carteiras, projeto solar, risco de mercado e valuation.",
+      "aulas": [
+        "sem-3-1",
+        "sem-3-2",
+        "sem-3-3"
+      ]
+    },
+    "lab-12": {
+      "descricao": "Exemplo aplicado numa hamburgueria: curva de demanda, estrutura de custos, receita total e o ponto de lucro máximo.",
+      "aulas": [
+        "eg-1-3"
+      ]
+    },
+    "lab-13": {
+      "descricao": "Introdução à programação linear e à otimização, o conceito de preço sombra e a solução com o Solver do Excel.",
+      "aulas": [
+        "eg-1-5"
+      ]
+    },
+    "lab-14": {
+      "descricao": "Os critérios para decidir entre alternativas sob incerteza: minimax, maximax, mínimo arrependimento, maior probabilidade e valor esperado.",
+      "aulas": [
+        "sem-2-1",
+        "aep-3-1"
+      ]
+    },
+    "lab-15": {
+      "descricao": "A árvore de decisão aplicada à decisão de investimento em projetos.",
+      "aulas": [
+        "sem-2-1",
+        "aep-3-1"
+      ]
+    }
+  }
+}
