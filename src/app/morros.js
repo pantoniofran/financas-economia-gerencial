@@ -13,8 +13,10 @@ export function iniciarMorros(arte) {
   parar?.();
   parar = null;
   const svg = arte?.querySelector('svg.chapada');
-  // Quem pediu menos movimento vê o primeiro morro já desenhado, parado.
-  if (!svg || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  // Navegador que não sabe animar fica com o primeiro morro já desenhado, que vem pronto do servidor.
+  // A opção do sistema de reduzir animações não para o desenho: ele é lento e não desloca nada na tela,
+  // e muitos computadores vêm com essa opção ligada sem que a pessoa saiba, o que deixava o morro sempre parado.
+  if (!svg || typeof svg.animate !== 'function') return;
   const grupo = svg.querySelector('.chapada-cena');
   const nome = arte.querySelector('.chapada-nome');
   const animacoes = new Set();
