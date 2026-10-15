@@ -12,6 +12,7 @@ import { lerProgresso, alternarVista, registrarUltima } from '../nucleo/progress
 import { indiceDeBusca, buscar } from '../nucleo/busca.js';
 import { criarArmazenamento, armazenamentoDeEnsaio } from './armazenamento.js';
 import { abrirLeitor, fecharLeitor } from './leitor.js';
+import { iniciarMorros } from './morros.js';
 
 const CHAVE_RASCUNHO = 'rascunho-v1';
 const CHAVE_ENSAIO = 'publicado-ensaio';
@@ -38,7 +39,6 @@ const ENSAIO = config.ambiente === 'local' && config.ensaio !== false && new URL
 const publicado = (ENSAIO && cofre.ler(CHAVE_ENSAIO)) || lerBloco('conteudo');
 const hashPublicado = hash(JSON.stringify(publicado));
 const app = document.getElementById('app');
-const movimentoReduzido = matchMedia('(prefers-reduced-motion: reduce)');
 const SO_TEXTO = (() => {
   try { document.createElement('div').contentEditable = 'plaintext-only'; return true; } catch { return false; }
 })();
@@ -71,7 +71,7 @@ function desenhar({ foco } = {}) {
   const titulo = app.querySelector('h1')?.textContent.trim();
   document.title = titulo && location.hash && location.hash !== '#inicio' ? `${titulo} · ${config.titulo}` : config.titulo;
   if (!SO_TEXTO) for (const el of app.querySelectorAll('.ed')) el.contentEditable = 'true';
-  iniciarVideo();
+  iniciarMorros(app.querySelector('svg.chapada'));
   desenharQRs();
   const leitor = app.querySelector('.leitor[data-pdf]');
   if (leitor) abrirLeitor(leitor, enderecoDoPdf(leitor.dataset.pdf));
@@ -94,19 +94,6 @@ function navegar() {
   }
   scrollTo(0, 0);
   document.getElementById('conteudo-principal')?.focus({ preventScroll: true });
-}
-
-function iniciarVideo() {
-  const video = app.querySelector('video[data-src]');
-  if (!video || movimentoReduzido.matches) return;
-  const carregar = () => {
-    // A classe vai no contêiner: o vídeo aparece e a imagem de espera some, senão as duas linhas se sobrepõem.
-    video.addEventListener('playing', () => video.parentElement.classList.add('tocando'), { once: true });
-    video.src = video.dataset.src;
-    video.play().catch(() => { /* reprodução automática recusada: fica a imagem */ });
-  };
-  if ('requestIdleCallback' in window) requestIdleCallback(carregar, { timeout: 2000 });
-  else setTimeout(carregar, 600);
 }
 
 function guardarProgresso(novo) {
