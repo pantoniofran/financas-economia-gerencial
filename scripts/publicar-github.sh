@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Publica a versão pública do site (dist/site) no GitHub Pages.
-# Só os arquivos do site vão para o GitHub, no ramo gh-pages; o código-fonte e a pasta
-# migracao/ ficam neste computador.
+# Os arquivos do site vão para o ramo gh-pages, refeito do zero a cada publicação.
+# O código-fonte vai separado, para o ramo main (git push origin main).
 #
 # Uso: bash scripts/publicar-github.sh https://github.com/USUARIO/REPOSITORIO.git
 set -euo pipefail
