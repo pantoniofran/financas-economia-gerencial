@@ -157,22 +157,23 @@ small { font-size: var(--t-meta); }
 .abertura-resumo { color: var(--faixa-suave); }
 .abertura .ed { outline-color: var(--faixa-suave); }
 .abertura .ed:hover { background: none; }
-/* Ao fundo, as curvas que viram os morros da Chapada (src/nucleo/chapada.js). No celular, bem apagadas atrás do texto. */
+/* Ao fundo, os morros da Chapada desenhados traço a traço (src/nucleo/chapada.js). No celular, bem apagados atrás do texto. */
 .abertura-arte { position: absolute; inset: 0; --arte-opacidade: .28; }
 /* No desktop a arte fica na metade direita, fora do caminho do título. */
 @media (min-width: 48rem) {
-  .abertura-arte { left: 50%; --arte-opacidade: .7; }
-  /* As linhas surgem aos poucos à esquerda, sem corte reto. */
-  .abertura-arte .chapada { -webkit-mask-image: linear-gradient(to right, transparent, #000 22%); mask-image: linear-gradient(to right, transparent, #000 22%); }
+  .abertura-arte { left: 50%; --arte-opacidade: .75; }
+  /* O desenho surge aos poucos à esquerda, sem corte reto. */
+  .abertura-arte .chapada { -webkit-mask-image: linear-gradient(to right, transparent, #000 14%); mask-image: linear-gradient(to right, transparent, #000 14%); }
 }
-/* Linhas claras sobre a faixa verde. A área do morro tem a cor da faixa: esconde a serra de trás e só aparece
-   quando as curvas já viraram morro (--morro vai de 0, curvas, a 1, morro). Camadas de rocha e nome chegam no fim. */
+/* Traço claro sobre a faixa verde: o contorno mais forte, a rocha e a mata cada vez mais leves. */
 .chapada { position: absolute; inset: 0; width: 100%; height: 100%; opacity: var(--arte-opacidade); }
-.chapada path { vector-effect: non-scaling-stroke; stroke-linejoin: round; }
-.chapada-serra, .chapada-vale { fill: none; stroke: var(--faixa-suave); stroke-width: 1.5; }
-.chapada-morros { fill: var(--faixa); fill-opacity: var(--morro, 1); stroke: var(--sobre-faixa); stroke-width: 2; }
-.chapada-detalhes { fill: none; stroke: var(--faixa-suave); stroke-width: 1; stroke-linecap: round; opacity: clamp(0, calc((var(--morro, 1) - .6) * 2.5), .85); }
-.chapada-nome { fill: var(--ouro-claro); font: 600 17px var(--sans); letter-spacing: .1em; text-transform: uppercase; opacity: clamp(0, calc((var(--morro, 1) - .75) * 4), 1); }
+.chapada path { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.t-contorno { stroke: var(--sobre-faixa); stroke-width: 2.6; }
+.t-cruz { stroke: var(--sobre-faixa); stroke-width: 2.2; }
+.t-base, .t-quina { stroke: var(--faixa-suave); stroke-width: 1.8; }
+.t-camada { stroke: var(--faixa-suave); stroke-width: 1.1; opacity: .7; }
+.t-mata { stroke: var(--faixa-suave); stroke-width: 1.1; opacity: .5; }
+.chapada-nome { position: absolute; right: 6%; bottom: var(--e4); font: 600 var(--t-meta)/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--ouro-claro); opacity: var(--arte-opacidade); }
 /* No celular a arte fica atrás do texto, bem apagada: o nome do morro só disputaria a leitura. */
 @media (max-width: 47.99rem) {
   .chapada-nome { display: none; }

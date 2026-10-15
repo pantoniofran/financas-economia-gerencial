@@ -71,7 +71,7 @@ function desenhar({ foco } = {}) {
   const titulo = app.querySelector('h1')?.textContent.trim();
   document.title = titulo && location.hash && location.hash !== '#inicio' ? `${titulo} · ${config.titulo}` : config.titulo;
   if (!SO_TEXTO) for (const el of app.querySelectorAll('.ed')) el.contentEditable = 'true';
-  iniciarMorros(app.querySelector('svg.chapada'));
+  iniciarMorros(app.querySelector('.abertura-arte'));
   desenharQRs();
   const leitor = app.querySelector('.leitor[data-pdf]');
   if (leitor) abrirLeitor(leitor, enderecoDoPdf(leitor.dataset.pdf));

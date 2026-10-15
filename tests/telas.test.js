@@ -203,7 +203,7 @@ test('abertura com os morros da Chapada; capa da disciplina só com mídia', () 
   const inicio = ver('#inicio');
   assert.match(inicio, /class="abertura-resumo">2 disciplinas · 3 aulas · 2 materiais</);
   assert.match(inicio, /<div class="abertura-arte"><svg class="chapada"[^>]*aria-hidden="true"/);
-  assert.ok(inicio.includes('>Morro do Pai Inácio</text>'));
+  assert.ok(inicio.includes('>Morro do Pai Inácio</span>'));
   assert.ok(!ver('#d-eg').includes('class="capa"'));
   assert.ok(ver('#d-eg', { ...leitura, midia: { 'capa-eg': '/_blob/c' } }).includes('<div class="capa"><img src="/_blob/c"'));
 });
