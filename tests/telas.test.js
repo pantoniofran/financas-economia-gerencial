@@ -198,11 +198,12 @@ test('nome com barra pode quebrar depois da barra', () => {
   assert.ok(!ver('#d-eg', edicao, c).includes('<wbr>'));
 });
 
-test('capa e abertura só aparecem quando há mídia', () => {
-  // A faixa de abertura existe sempre, com o resumo do site; a arte de fundo só com mídia.
-  assert.match(ver('#inicio'), /class="abertura-resumo">2 disciplinas · 3 aulas · 2 materiais</);
-  assert.ok(!ver('#inicio').includes('abertura-arte'));
-  const midia = { poster: '/_blob/p', hero: '/_blob/h', 'capa-eg': '/_blob/c' };
-  assert.match(ver('#inicio', { ...leitura, midia }), /<video[^>]*data-src="\/_blob\/h"/);
-  assert.ok(ver('#d-eg', { ...leitura, midia }).includes('<div class="capa"><img src="/_blob/c"'));
+test('abertura com os morros da Chapada; capa da disciplina só com mídia', () => {
+  // A faixa de abertura tem sempre o resumo do site e, ao fundo, o desenho dos morros (feito no próprio site).
+  const inicio = ver('#inicio');
+  assert.match(inicio, /class="abertura-resumo">2 disciplinas · 3 aulas · 2 materiais</);
+  assert.match(inicio, /<div class="abertura-arte"><svg class="chapada"[^>]*aria-hidden="true"/);
+  assert.ok(inicio.includes('>Morro do Pai Inácio</text>'));
+  assert.ok(!ver('#d-eg').includes('class="capa"'));
+  assert.ok(ver('#d-eg', { ...leitura, midia: { 'capa-eg': '/_blob/c' } }).includes('<div class="capa"><img src="/_blob/c"'));
 });

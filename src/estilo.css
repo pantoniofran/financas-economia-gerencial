@@ -157,20 +157,27 @@ small { font-size: var(--t-meta); }
 .abertura-resumo { color: var(--faixa-suave); }
 .abertura .ed { outline-color: var(--faixa-suave); }
 .abertura .ed:hover { background: none; }
-/* As curvas são verdes sobre branco no arquivo: invertidas, ficam claras, e o fundo some sobre o verde. */
-/* A opacidade vai na imagem, e não no contêiner: um contêiner translúcido isolaria a mistura e o fundo preto apareceria. */
+/* Ao fundo, as curvas que viram os morros da Chapada (src/nucleo/chapada.js). No celular, bem apagadas atrás do texto. */
 .abertura-arte { position: absolute; inset: 0; --arte-opacidade: .28; }
-/* No desktop as curvas ficam na metade direita, fora do caminho do título. */
+/* No desktop a arte fica na metade direita, fora do caminho do título. */
 @media (min-width: 48rem) {
   .abertura-arte { left: 50%; --arte-opacidade: .7; }
-  /* A máscara vai na imagem (no contêiner ela isolaria a mistura): as curvas surgem aos poucos, sem corte reto. */
-  .abertura-arte img, .abertura-arte video { -webkit-mask-image: linear-gradient(to right, transparent, #000 30%); mask-image: linear-gradient(to right, transparent, #000 30%); }
+  /* As linhas surgem aos poucos à esquerda, sem corte reto. */
+  .abertura-arte .chapada { -webkit-mask-image: linear-gradient(to right, transparent, #000 22%); mask-image: linear-gradient(to right, transparent, #000 22%); }
 }
-.abertura-arte img, .abertura-arte video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: var(--arte-opacidade); filter: invert(1) hue-rotate(180deg); mix-blend-mode: screen; transition: opacity .8s var(--saida); }
+/* Linhas claras sobre a faixa verde. A área do morro tem a cor da faixa: esconde a serra de trás e só aparece
+   quando as curvas já viraram morro (--morro vai de 0, curvas, a 1, morro). Camadas de rocha e nome chegam no fim. */
+.chapada { position: absolute; inset: 0; width: 100%; height: 100%; opacity: var(--arte-opacidade); }
+.chapada path { vector-effect: non-scaling-stroke; stroke-linejoin: round; }
+.chapada-serra, .chapada-vale { fill: none; stroke: var(--faixa-suave); stroke-width: 1.5; }
+.chapada-morros { fill: var(--faixa); fill-opacity: var(--morro, 1); stroke: var(--sobre-faixa); stroke-width: 2; }
+.chapada-detalhes { fill: none; stroke: var(--faixa-suave); stroke-width: 1; stroke-linecap: round; opacity: clamp(0, calc((var(--morro, 1) - .6) * 2.5), .85); }
+.chapada-nome { fill: var(--ouro-claro); font: 600 17px var(--sans); letter-spacing: .1em; text-transform: uppercase; opacity: clamp(0, calc((var(--morro, 1) - .75) * 4), 1); }
+/* No celular a arte fica atrás do texto, bem apagada: o nome do morro só disputaria a leitura. */
+@media (max-width: 47.99rem) {
+  .chapada-nome { display: none; }
+}
 /* Abertura baixa: as caixas das disciplinas precisam aparecer sem rolar. */
-.abertura-arte video { opacity: 0; }
-.abertura-arte.tocando video { opacity: var(--arte-opacidade); }
-.abertura-arte.tocando img { opacity: 0; }
 /* A capa é uma ilustração pequena acima do título, alinhada à coluna. */
 .capa { overflow: hidden; border-radius: var(--raio); background: var(--papel); }
 .capa img { display: block; width: 100%; height: auto; aspect-ratio: 21 / 9; object-fit: cover; }

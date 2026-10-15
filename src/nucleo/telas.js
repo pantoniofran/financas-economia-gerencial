@@ -2,6 +2,7 @@ import { TIPOS, NIVEIS, CATEGORIAS_PUBLICACAO, avisosValidos, avisosRecentes, ac
 import { idDoYoutube } from './youtube.js';
 import { ehNovo, novidades, proximosEventos, linkAgenda, dataCurta, TIPOS_EVENTO } from './agenda.js';
 import { contarVistas } from './progresso.js';
+import { desenhoDaChapada } from './chapada.js';
 
 // ---------- utilidades ----------
 
@@ -168,11 +169,8 @@ const tela404 = () => '<div class="col"><h1>Página não encontrada</h1><p>O end
 
 // Faixa de abertura: quem é, o que tem no site e, ao fundo, as curvas em movimento.
 function abertura(c, ctx) {
-  const m = ctx.midia;
-  const video = m.hero && !ctx.editando
-    ? `<video muted loop playsinline preload="none" aria-hidden="true" data-src="${esc(m.hero)}"></video>`
-    : '';
-  const arte = m.poster ? `<div class="abertura-arte"><img src="${esc(m.poster)}" alt="" width="1280" height="480">${video}</div>` : '';
+  // Ao fundo, as curvas de finanças que viram os morros da Chapada Diamantina.
+  const arte = `<div class="abertura-arte">${desenhoDaChapada()}</div>`;
   const aulas = c.disciplinas.reduce((n, d) => n + contarAulas(d), 0);
   const materiais = c.disciplinas.reduce((n, d) => n + d.modulos.reduce((k, mo) => k + mo.aulas.reduce((j, a) => j + a.materiais.length, 0), 0), 0);
   const resumo = [plural(c.disciplinas.length, 'disciplina', 'disciplinas'), plural(aulas, 'aula', 'aulas'), plural(materiais, 'material', 'materiais')].join(' · ');
