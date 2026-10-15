@@ -32,7 +32,7 @@
                   "id": "eg-1-1-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-1-aula-1-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-1-aula-1-slides.pdf"
                 },
                 {
                   "id": "eg-1-1-m2",
@@ -44,7 +44,7 @@
                   "id": "eg-1-1-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-1-aula-1-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-1-aula-1-nota-de-aula.pdf"
                 }
               ],
               "descricao": "A relação entre preço e quantidade demandada, escrita como P = a − b × Q. Com o exemplo do sorvete, você vê como as demandas individuais se somam na demanda de mercado e também como funciona a curva de oferta.",
@@ -58,7 +58,7 @@
                   "id": "eg-1-2-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-1-aula-2-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-1-aula-2-slides.pdf"
                 },
                 {
                   "id": "eg-1-2-m2",
@@ -70,7 +70,7 @@
                   "id": "eg-1-2-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-1-aula-2-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-1-aula-2-nota-de-aula.pdf"
                 }
               ],
               "descricao": "A função de produção Cobb-Douglas, o produto marginal e os rendimentos de escala (constantes, crescentes e decrescentes), chegando às curvas de custo da firma.",
@@ -84,7 +84,7 @@
                   "id": "eg-1-3-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-1-aula-3-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-1-aula-3-slides.pdf"
                 },
                 {
                   "id": "eg-1-3-m2",
@@ -96,7 +96,7 @@
                   "id": "eg-1-3-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-1-aula-3-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-1-aula-3-nota-de-aula.pdf"
                 }
               ],
               "descricao": "Receita total, receita marginal e a regra de ouro da firma: o lucro é máximo quando a receita marginal é igual ao custo marginal. A aula também separa lucro econômico de lucro contábil.",
@@ -116,7 +116,7 @@
                   "id": "eg-1-4-m2",
                   "tipo": "planilha",
                   "nome": "Planilha",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-1-aula-4-planilha.xlsx"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-1-aula-4-planilha.xlsx"
                 }
               ],
               "descricao": "Exercícios resolvidos sobre demanda, custos e maximização de lucro, acompanhados de uma planilha.",
@@ -136,7 +136,7 @@
                   "id": "eg-1-5-m2",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-1-aula-5-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-1-aula-5-nota-de-aula.pdf"
                 }
               ],
               "descricao": "A maximização do lucro quando a empresa vende vários produtos, cada um com a própria curva de demanda e o próprio custo variável. A margem de contribuição de cada produto vira um problema de pesquisa operacional.",
@@ -157,7 +157,7 @@
                   "id": "eg-2-1-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-2-aula-1-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-2-aula-1-slides.pdf"
                 },
                 {
                   "id": "eg-2-1-m2",
@@ -169,7 +169,7 @@
                   "id": "eg-2-1-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-2-aula-1-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-2-aula-1-nota-de-aula.pdf"
                 }
               ],
               "descricao": "O que é um jogo: empresas cujas decisões dependem umas das outras. A partir do exemplo da guerra entre Alfa e Beta, você vê os elementos de um jogo e como resolver jogos sequenciais.",
@@ -183,7 +183,7 @@
                   "id": "eg-2-2-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-2-aula-2-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-2-aula-2-slides.pdf"
                 },
                 {
                   "id": "eg-2-2-m2",
@@ -195,7 +195,7 @@
                   "id": "eg-2-2-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-2-aula-2-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-2-aula-2-nota-de-aula.pdf"
                 }
               ],
               "descricao": "Jogos em que as empresas decidem ao mesmo tempo, sem saber a escolha do rival. A aula define estratégia dominante e dominada e mostra como achar a melhor resposta de cada jogador.",
@@ -209,7 +209,7 @@
                   "id": "eg-2-3-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-2-aula-3-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-2-aula-3-slides.pdf"
                 },
                 {
                   "id": "eg-2-3-m2",
@@ -221,7 +221,7 @@
                   "id": "eg-2-3-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-2-aula-3-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-2-aula-3-nota-de-aula.pdf"
                 }
               ],
               "descricao": "O equilíbrio de Nash: a combinação em que cada empresa já está na melhor resposta ao que as outras fazem. O exemplo é a empresa ALFA decidindo se amplia a capacidade diante de uma concorrente estrangeira.",
@@ -242,7 +242,7 @@
                   "id": "eg-3-1-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-3-aula-1-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-3-aula-1-slides.pdf"
                 },
                 {
                   "id": "eg-3-1-m2",
@@ -254,7 +254,7 @@
                   "id": "eg-3-1-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-3-aula-1-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-3-aula-1-nota-de-aula.pdf"
                 }
               ],
               "descricao": "Economias e deseconomias de escala, a curva de custo total médio e os fatores que a movem, como o tamanho das instalações. A aula também trata das economias de escopo, quando produzir junto sai mais barato.",
@@ -268,7 +268,7 @@
                   "id": "eg-3-2-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-3-aula-2-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-3-aula-2-slides.pdf"
                 },
                 {
                   "id": "eg-3-2-m2",
@@ -280,7 +280,7 @@
                   "id": "eg-3-2-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-3-aula-2-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-3-aula-2-nota-de-aula.pdf"
                 }
               ],
               "descricao": "A cadeia vertical, da matéria-prima à venda, e a escolha entre fazer dentro de casa ou comprar de outras empresas. O exemplo é a cadeia do aço, da mineradora à siderúrgica.",
@@ -294,7 +294,7 @@
                   "id": "eg-3-3-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-3-aula-3-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-3-aula-3-slides.pdf"
                 },
                 {
                   "id": "eg-3-3-m2",
@@ -306,7 +306,7 @@
                   "id": "eg-3-3-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-3-aula-3-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-3-aula-3-nota-de-aula.pdf"
                 }
               ],
               "descricao": "Por que os contratos são quase sempre incompletos (racionalidade limitada, desempenho difícil de medir e informação assimétrica) e como os custos de transação explicam a existência e o tamanho das empresas.",
@@ -327,7 +327,7 @@
                   "id": "eg-4-1-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-4-aula-1-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-4-aula-1-slides.pdf"
                 },
                 {
                   "id": "eg-4-1-m2",
@@ -339,7 +339,7 @@
                   "id": "eg-4-1-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-4-aula-1-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-4-aula-1-nota-de-aula.pdf"
                 }
               ],
               "descricao": "A relação entre o principal (o dono) e o agente (o administrador), por que os objetivos dos dois divergem e como monitoramento e incentivos por desempenho reduzem o problema.",
@@ -353,7 +353,7 @@
                   "id": "eg-4-2-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-4-aula-2-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-4-aula-2-slides.pdf"
                 },
                 {
                   "id": "eg-4-2-m2",
@@ -365,7 +365,7 @@
                   "id": "eg-4-2-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-4-aula-2-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-4-aula-2-nota-de-aula.pdf"
                 }
               ],
               "descricao": "A estrutura de governança de uma empresa: Conselho de Administração, Conselho Fiscal, Comitê de Auditoria e diretoria, com o papel de cada um em riscos e controles.",
@@ -386,7 +386,7 @@
                   "id": "eg-5-1-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-5-aula-1-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-5-aula-1-slides.pdf"
                 },
                 {
                   "id": "eg-5-1-m2",
@@ -398,7 +398,7 @@
                   "id": "eg-5-1-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-5-aula-1-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-5-aula-1-nota-de-aula.pdf"
                 }
               ],
               "descricao": "Como medir o grau de concentração de um mercado (quantas empresas dividem as vendas e de que forma) e o que isso indica sobre o tipo de concorrência.",
@@ -412,7 +412,7 @@
                   "id": "eg-5-2-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-5-aula-2-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-5-aula-2-slides.pdf"
                 },
                 {
                   "id": "eg-5-2-m2",
@@ -424,7 +424,7 @@
                   "id": "eg-5-2-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-5-aula-2-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-5-aula-2-nota-de-aula.pdf"
                 }
               ],
               "descricao": "Os dois extremos das estruturas de mercado. Na concorrência perfeita a empresa aceita o preço do mercado; no monopólio ela escolhe o preço. Nos dois casos, o lucro máximo está onde a receita marginal é igual ao custo marginal.",
@@ -438,7 +438,7 @@
                   "id": "eg-5-3-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-5-aula-3-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-5-aula-3-slides.pdf"
                 },
                 {
                   "id": "eg-5-3-m2",
@@ -450,7 +450,7 @@
                   "id": "eg-5-3-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-5-aula-3-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-5-aula-3-nota-de-aula.pdf"
                 }
               ],
               "descricao": "A concorrência monopolística: muitas empresas com produtos diferenciados e sem barreiras de entrada. A aula distingue diferenciação vertical e horizontal e mostra o que acontece quando novas empresas entram.",
@@ -464,7 +464,7 @@
                   "id": "eg-5-4-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-5-aula-4-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-5-aula-4-slides.pdf"
                 },
                 {
                   "id": "eg-5-4-m2",
@@ -476,7 +476,7 @@
                   "id": "eg-5-4-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-5-aula-4-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-5-aula-4-nota-de-aula.pdf"
                 }
               ],
               "descricao": "O oligopólio pelo modelo de Cournot: duas empresas escolhem quantidades, cada uma reagindo à outra, até chegar ao equilíbrio.",
@@ -490,7 +490,7 @@
                   "id": "eg-5-5-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-5-aula-5-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-5-aula-5-slides.pdf"
                 },
                 {
                   "id": "eg-5-5-m2",
@@ -517,7 +517,7 @@
                   "id": "eg-6-1-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-6-aula-1-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-6-aula-1-slides.pdf"
                 },
                 {
                   "id": "eg-6-1-m2",
@@ -529,7 +529,7 @@
                   "id": "eg-6-1-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-6-aula-1-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-6-aula-1-nota-de-aula.pdf"
                 }
               ],
               "descricao": "O comprometimento estratégico: decisões difíceis de reverter, como ampliar a capacidade, que mudam o que o concorrente espera e podem dar vantagem a quem age primeiro.",
@@ -543,7 +543,7 @@
                   "id": "eg-6-2-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-6-aula-2-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-6-aula-2-slides.pdf"
                 },
                 {
                   "id": "eg-6-2-m2",
@@ -555,7 +555,7 @@
                   "id": "eg-6-2-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-6-aula-2-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-6-aula-2-nota-de-aula.pdf"
                 }
               ],
               "descricao": "A dinâmica da rivalidade de preços: o que torna a concorrência mais intensa, por que alguns mercados evitam guerras de preço e como as empresas chegam ao equilíbrio de Cournot passo a passo.",
@@ -569,7 +569,7 @@
                   "id": "eg-6-3-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-6-aula-3-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-6-aula-3-slides.pdf"
                 },
                 {
                   "id": "eg-6-3-m2",
@@ -581,7 +581,7 @@
                   "id": "eg-6-3-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-6-aula-3-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-6-aula-3-nota-de-aula.pdf"
                 }
               ],
               "descricao": "A análise do setor pelas cinco forças competitivas de Porter: ameaça de entrada, rivalidade, substitutos e poder de negociação de fornecedores e compradores.",
@@ -602,7 +602,7 @@
                   "id": "eg-7-1-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-7-aula-1-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-7-aula-1-slides.pdf"
                 }
               ],
               "descricao": "Por que alguns mercados são regulados: monopólios naturais, indústrias de rede e externalidades, com exemplos como tarifas de telefonia e de eletricidade, vigilância sanitária e normas de segurança.",
@@ -616,7 +616,7 @@
                   "id": "eg-7-2-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-7-aula-2-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-7-aula-2-slides.pdf"
                 }
               ],
               "descricao": "A economia da inovação contada pela história do pensamento econômico, de Adam Smith e David Ricardo em diante, e o papel da inovação no crescimento.",
@@ -630,7 +630,7 @@
                   "id": "eg-7-3-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/eg/modulo-7-aula-3-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/eg/modulo-7-aula-3-slides.pdf"
                 }
               ],
               "descricao": "Uma introdução à sustentabilidade como tema da economia gerencial.",
@@ -667,7 +667,7 @@
                   "id": "fc1-1-1-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-1-aula-1-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc1/modulo-1-aula-1-slides.pdf"
                 },
                 {
                   "id": "fc1-1-1-m2",
@@ -679,7 +679,7 @@
                   "id": "fc1-1-1-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-1-aula-1-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc1/modulo-1-aula-1-nota-de-aula.pdf"
                 }
               ],
               "descricao": "As três demonstrações principais: o balanço patrimonial (a fotografia da empresa), a DRE (o resultado do período) e a demonstração do fluxo de caixa (de onde vêm e para onde vão os recursos).",
@@ -693,7 +693,7 @@
                   "id": "fc1-1-2-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-1-aula-2-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc1/modulo-1-aula-2-slides.pdf"
                 },
                 {
                   "id": "fc1-1-2-m2",
@@ -705,7 +705,7 @@
                   "id": "fc1-1-2-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-1-aula-2-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc1/modulo-1-aula-2-nota-de-aula.pdf"
                 }
               ],
               "descricao": "Análise vertical (cada conta como percentual do total) e horizontal (a evolução de cada conta no tempo), aplicadas ao balanço e à DRE da Hipotética S/A.",
@@ -719,7 +719,7 @@
                   "id": "fc1-1-3-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-1-aula-3-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc1/modulo-1-aula-3-slides.pdf"
                 },
                 {
                   "id": "fc1-1-3-m2",
@@ -731,7 +731,7 @@
                   "id": "fc1-1-3-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-1-aula-3-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc1/modulo-1-aula-3-nota-de-aula.pdf"
                 }
               ],
               "descricao": "Os índices de liquidez, atividade, endividamento, rentabilidade e valor de mercado: o que cada um mede e como interpretar a alta ou a queda.",
@@ -745,7 +745,7 @@
                   "id": "fc1-1-4-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-1-aula-4-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc1/modulo-1-aula-4-slides.pdf"
                 },
                 {
                   "id": "fc1-1-4-m2",
@@ -757,7 +757,7 @@
                   "id": "fc1-1-4-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-1-aula-4-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc1/modulo-1-aula-4-nota-de-aula.pdf"
                 }
               ],
               "descricao": "O capital de giro líquido e os ciclos operacional e financeiro: o tempo entre comprar a matéria-prima, pagar o fornecedor, vender e receber.",
@@ -771,7 +771,7 @@
                   "id": "fc1-1-5-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-1-aula-5-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc1/modulo-1-aula-5-slides.pdf"
                 }
               ],
               "descricao": "Indicadores que complementam a análise: margem de contribuição, markup, NOPAT, EVA, ROIC e a relação preço/lucro.",
@@ -785,7 +785,7 @@
                   "id": "fc1-1-6-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-1-aula-6-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc1/modulo-1-aula-6-slides.pdf"
                 },
                 {
                   "id": "fc1-1-6-m2",
@@ -797,7 +797,7 @@
                   "id": "fc1-1-6-m3",
                   "tipo": "codigo",
                   "nome": "Notebook em Python",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-1-aula-6-codigo.ipynb"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc1/modulo-1-aula-6-codigo.ipynb"
                 }
               ],
               "descricao": "Laboratório em Python: uma rotina em Jupyter que calcula os índices financeiros da Klabin a partir das demonstrações publicadas pela empresa.",
@@ -818,7 +818,7 @@
                   "id": "fc1-2-1-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-2-aula-1-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc1/modulo-2-aula-1-slides.pdf"
                 },
                 {
                   "id": "fc1-2-1-m2",
@@ -830,7 +830,7 @@
                   "id": "fc1-2-1-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-2-aula-1-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc1/modulo-2-aula-1-nota-de-aula.pdf"
                 }
               ],
               "descricao": "O valor do dinheiro no tempo: por que R$ 50 hoje valem mais que R$ 50 daqui a seis meses, juros simples e compostos, valor presente e valor futuro.",
@@ -844,7 +844,7 @@
                   "id": "fc1-2-2-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-2-aula-2-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc1/modulo-2-aula-2-slides.pdf"
                 },
                 {
                   "id": "fc1-2-2-m2",
@@ -856,7 +856,7 @@
                   "id": "fc1-2-2-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-2-aula-2-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc1/modulo-2-aula-2-nota-de-aula.pdf"
                 }
               ],
               "descricao": "Política de prazos e descontos a clientes: quanto custa dar desconto para receber antes e como o prazo de pagamento mexe com as vendas e com o risco de crédito.",
@@ -870,7 +870,7 @@
                   "id": "fc1-2-3-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-2-aula-3-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc1/modulo-2-aula-3-slides.pdf"
                 },
                 {
                   "id": "fc1-2-3-m2",
@@ -882,7 +882,7 @@
                   "id": "fc1-2-3-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-2-aula-3-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc1/modulo-2-aula-3-nota-de-aula.pdf"
                 }
               ],
               "descricao": "Como projetar o fluxo de caixa dos próximos meses separando recebimentos, pagamentos, investimentos e financiamentos, para prever sobras e faltas de caixa.",
@@ -896,7 +896,7 @@
                   "id": "fc1-2-4-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-2-aula-4-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc1/modulo-2-aula-4-slides.pdf"
                 },
                 {
                   "id": "fc1-2-4-m2",
@@ -908,7 +908,7 @@
                   "id": "fc1-2-4-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-2-aula-4-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc1/modulo-2-aula-4-nota-de-aula.pdf"
                 }
               ],
               "descricao": "O capital de giro e o capital de giro líquido: a troca entre rentabilidade e risco de manter mais ou menos dinheiro aplicado no curto prazo.",
@@ -929,7 +929,7 @@
                   "id": "fc1-3-1-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-3-aula-1-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc1/modulo-3-aula-1-slides.pdf"
                 },
                 {
                   "id": "fc1-3-1-m2",
@@ -941,7 +941,7 @@
                   "id": "fc1-3-1-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-3-aula-1-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc1/modulo-3-aula-1-nota-de-aula.pdf"
                 }
               ],
               "descricao": "Como medir retorno e risco: retorno de uma ação com dividendos, capitalização contínua, retorno esperado versus histórico, variância e desvio padrão.",
@@ -955,7 +955,7 @@
                   "id": "fc1-3-2-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-3-aula-2-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc1/modulo-3-aula-2-slides.pdf"
                 },
                 {
                   "id": "fc1-3-2-m2",
@@ -967,7 +967,7 @@
                   "id": "fc1-3-2-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-3-aula-2-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc1/modulo-3-aula-2-nota-de-aula.pdf"
                 }
               ],
               "descricao": "Risco sistemático e não sistemático e o modelo de fator único, que usa um índice de mercado como o Ibovespa para explicar o retorno de cada ação pelo beta.",
@@ -981,7 +981,7 @@
                   "id": "fc1-3-3-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-3-aula-3-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc1/modulo-3-aula-3-slides.pdf"
                 },
                 {
                   "id": "fc1-3-3-m2",
@@ -993,7 +993,7 @@
                   "id": "fc1-3-3-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-3-aula-3-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc1/modulo-3-aula-3-nota-de-aula.pdf"
                 }
               ],
               "descricao": "O CAPM: as premissas do modelo, a ligação com a carteira de Markowitz e a relação entre beta e retorno esperado.",
@@ -1007,7 +1007,7 @@
                   "id": "fc1-3-4-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-3-aula-4-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc1/modulo-3-aula-4-slides.pdf"
                 },
                 {
                   "id": "fc1-3-4-m2",
@@ -1019,7 +1019,7 @@
                   "id": "fc1-3-4-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-3-aula-4-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc1/modulo-3-aula-4-nota-de-aula.pdf"
                 }
               ],
               "descricao": "O risco de crédito: probabilidade de inadimplência, exposição e perda em caso de inadimplência, e a diferença entre perda esperada e perda inesperada.",
@@ -1040,7 +1040,7 @@
                   "id": "fc1-4-1-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-4-aula-1-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc1/modulo-4-aula-1-slides.pdf"
                 },
                 {
                   "id": "fc1-4-1-m2",
@@ -1052,7 +1052,7 @@
                   "id": "fc1-4-1-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-4-aula-1-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc1/modulo-4-aula-1-nota-de-aula.pdf"
                 }
               ],
               "descricao": "As ações como capital próprio: ações ordinárias e preferenciais, companhia aberta e fechada, e a ordem dos direitos de acionistas e credores.",
@@ -1066,7 +1066,7 @@
                   "id": "fc1-4-2-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-4-aula-2-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc1/modulo-4-aula-2-slides.pdf"
                 },
                 {
                   "id": "fc1-4-2-m2",
@@ -1078,7 +1078,7 @@
                   "id": "fc1-4-2-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc1/modulo-4-aula-2-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc1/modulo-4-aula-2-nota-de-aula.pdf"
                 }
               ],
               "descricao": "Os títulos de renda fixa: valor nominal, vencimento e cupons, títulos prefixados e pós-fixados, públicos e privados, com exemplos do Tesouro Nacional.",
@@ -1115,7 +1115,7 @@
                   "id": "fc2-1-1-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-1-aula-1-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc2/modulo-1-aula-1-slides.pdf"
                 },
                 {
                   "id": "fc2-1-1-m2",
@@ -1127,7 +1127,7 @@
                   "id": "fc2-1-1-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-1-aula-1-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc2/modulo-1-aula-1-nota-de-aula.pdf"
                 }
               ],
               "descricao": "Como montar o fluxo de caixa de um projeto: investimento inicial, despesas pré-operacionais, previsão de receitas, custos e impostos, até chegar ao fluxo de caixa líquido.",
@@ -1141,7 +1141,7 @@
                   "id": "fc2-1-2-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-1-aula-2-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc2/modulo-1-aula-2-slides.pdf"
                 },
                 {
                   "id": "fc2-1-2-m2",
@@ -1153,7 +1153,7 @@
                   "id": "fc2-1-2-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-1-aula-2-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc2/modulo-1-aula-2-nota-de-aula.pdf"
                 }
               ],
               "descricao": "O valor presente líquido e a taxa interna de retorno, os dois critérios centrais do orçamento de capital, com o exemplo do projeto de R$ 800 descontado a 12%.",
@@ -1167,7 +1167,7 @@
                   "id": "fc2-1-3-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-1-aula-3-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc2/modulo-1-aula-3-slides.pdf"
                 },
                 {
                   "id": "fc2-1-3-m2",
@@ -1179,7 +1179,7 @@
                   "id": "fc2-1-3-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-1-aula-3-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc2/modulo-1-aula-3-nota-de-aula.pdf"
                 }
               ],
               "descricao": "Critérios que complementam o VPL: o payback simples e o descontado, com as limitações de cada um.",
@@ -1200,7 +1200,7 @@
                   "id": "fc2-2-1-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-2-aula-1-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc2/modulo-2-aula-1-slides.pdf"
                 },
                 {
                   "id": "fc2-2-1-m2",
@@ -1212,7 +1212,7 @@
                   "id": "fc2-2-1-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-2-aula-1-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc2/modulo-2-aula-1-nota-de-aula.pdf"
                 }
               ],
               "descricao": "A escolha entre capital próprio e de terceiros e as proposições de Modigliani e Miller: quando a estrutura de capital muda o valor da empresa e por que a dívida encarece o capital próprio.",
@@ -1226,7 +1226,7 @@
                   "id": "fc2-2-2-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-2-aula-2-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc2/modulo-2-aula-2-slides.pdf"
                 },
                 {
                   "id": "fc2-2-2-m2",
@@ -1238,7 +1238,7 @@
                   "id": "fc2-2-2-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-2-aula-2-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc2/modulo-2-aula-2-nota-de-aula.pdf"
                 }
               ],
               "descricao": "O custo médio ponderado de capital (CMPC): como estimar o custo do capital próprio (pelo modelo de dividendos ou pelo CAPM) e o custo da dívida depois dos impostos.",
@@ -1252,7 +1252,7 @@
                   "id": "fc2-2-3-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-2-aula-3-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc2/modulo-2-aula-3-slides.pdf"
                 },
                 {
                   "id": "fc2-2-3-m2",
@@ -1264,7 +1264,7 @@
                   "id": "fc2-2-3-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-2-aula-3-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc2/modulo-2-aula-3-nota-de-aula.pdf"
                 }
               ],
               "descricao": "Três formas de avaliar um projeto financiado com dívida (VPL sem financiamento mais benefício fiscal, fluxo do capital próprio e CMPC) e por que, na prática, elas nem sempre chegam ao mesmo número.",
@@ -1285,13 +1285,13 @@
                   "id": "fc2-3-1-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-3-aula-1-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc2/modulo-3-aula-1-slides.pdf"
                 },
                 {
                   "id": "fc2-3-1-m2",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-3-aula-1-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc2/modulo-3-aula-1-nota-de-aula.pdf"
                 }
               ],
               "descricao": "Como o Sistema Financeiro Nacional se organiza: os órgãos normativos (CMN, CNSP, CNPC), os supervisores (Banco Central, CVM, SUSEP, PREVIC) e os operadores.",
@@ -1305,13 +1305,13 @@
                   "id": "fc2-3-2-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-3-aula-2-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc2/modulo-3-aula-2-slides.pdf"
                 },
                 {
                   "id": "fc2-3-2-m2",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-3-aula-2-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc2/modulo-3-aula-2-nota-de-aula.pdf"
                 }
               ],
               "descricao": "A diferença legal entre valores mobiliários e não mobiliários e os principais instrumentos do mercado brasileiro, como debêntures, CRI, CRA, FII, LCI e LCA.",
@@ -1325,13 +1325,13 @@
                   "id": "fc2-3-3-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-3-aula-3-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc2/modulo-3-aula-3-slides.pdf"
                 },
                 {
                   "id": "fc2-3-3-m2",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-3-aula-3-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc2/modulo-3-aula-3-nota-de-aula.pdf"
                 }
               ],
               "descricao": "O que são derivativos e como funcionam os contratos a termo e futuros, com o exemplo de uma produtora de soja que trava hoje o preço da venda futura.",
@@ -1345,13 +1345,13 @@
                   "id": "fc2-3-4-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-3-aula-4-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc2/modulo-3-aula-4-slides.pdf"
                 },
                 {
                   "id": "fc2-3-4-m2",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-3-aula-4-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc2/modulo-3-aula-4-nota-de-aula.pdf"
                 }
               ],
               "descricao": "Swaps (trocas de fluxos de caixa, como dólar contra DI) e opções de compra e de venda: direitos, obrigações, prêmio e preço de exercício.",
@@ -1388,7 +1388,7 @@
                   "id": "sem-1-1-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-1-aula-1-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/sem/modulo-1-aula-1-slides.pdf"
                 },
                 {
                   "id": "sem-1-1-m2",
@@ -1400,7 +1400,7 @@
                   "id": "sem-1-1-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-1-aula-1-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/sem/modulo-1-aula-1-nota-de-aula.pdf"
                 }
               ],
               "descricao": "O valor do dinheiro no tempo: por que um valor hoje vale mais que o mesmo valor no futuro, juros compostos, valor presente e valor futuro.",
@@ -1414,7 +1414,7 @@
                   "id": "sem-1-2-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-1-aula-2-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/sem/modulo-1-aula-2-slides.pdf"
                 },
                 {
                   "id": "sem-1-2-m2",
@@ -1426,7 +1426,7 @@
                   "id": "sem-1-2-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-1-aula-2-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/sem/modulo-1-aula-2-nota-de-aula.pdf"
                 }
               ],
               "descricao": "Como montar o fluxo de caixa de um projeto: investimento inicial, despesas pré-operacionais, receitas, custos e impostos projetados.",
@@ -1440,7 +1440,7 @@
                   "id": "sem-1-3-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-1-aula-3-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/sem/modulo-1-aula-3-slides.pdf"
                 },
                 {
                   "id": "sem-1-3-m2",
@@ -1452,7 +1452,7 @@
                   "id": "sem-1-3-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-1-aula-3-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/sem/modulo-1-aula-3-nota-de-aula.pdf"
                 }
               ],
               "descricao": "VPL e TIR, os critérios centrais do orçamento de capital, com o exemplo do projeto de R$ 800 descontado a 12%.",
@@ -1466,7 +1466,7 @@
                   "id": "sem-1-4-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-1-aula-3-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc2/modulo-1-aula-3-slides.pdf"
                 },
                 {
                   "id": "sem-1-4-m2",
@@ -1478,7 +1478,7 @@
                   "id": "sem-1-4-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-1-aula-4-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/sem/modulo-1-aula-4-nota-de-aula.pdf"
                 }
               ],
               "descricao": "Payback simples e descontado e outros critérios que complementam o VPL, com as limitações de cada um.",
@@ -1492,7 +1492,7 @@
                   "id": "sem-1-5-m1",
                   "tipo": "codigo",
                   "nome": "Pacote de arquivos (zip)",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-1-aula-5-codigo.zip"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/sem/modulo-1-aula-5-codigo.zip"
                 }
               ],
               "descricao": "A avaliação de projetos feita em R com Quarto: o código calcula os indicadores do módulo e gera o relatório.",
@@ -1513,7 +1513,7 @@
                   "id": "sem-2-1-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-2-aula-1-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/sem/modulo-2-aula-1-slides.pdf"
                 },
                 {
                   "id": "sem-2-1-m2",
@@ -1525,7 +1525,7 @@
                   "id": "sem-2-1-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-2-aula-1-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/sem/modulo-2-aula-1-nota-de-aula.pdf"
                 }
               ],
               "descricao": "A árvore de decisão: alternativas, estados da natureza, probabilidades e valores esperados, resolvendo um problema de investimento sob incerteza.",
@@ -1539,7 +1539,7 @@
                   "id": "sem-2-2-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-2-aula-2-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/sem/modulo-2-aula-2-slides.pdf"
                 },
                 {
                   "id": "sem-2-2-m2",
@@ -1551,7 +1551,7 @@
                   "id": "sem-2-2-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-2-aula-2-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/sem/modulo-2-aula-2-nota-de-aula.pdf"
                 }
               ],
               "descricao": "Processos estocásticos e a simulação de Monte Carlo para gerar cenários de preços e de fluxo de caixa e medir o risco de um projeto.",
@@ -1565,7 +1565,7 @@
                   "id": "sem-2-3-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-2-aula-3-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/sem/modulo-2-aula-3-slides.pdf"
                 },
                 {
                   "id": "sem-2-3-m2",
@@ -1577,7 +1577,7 @@
                   "id": "sem-2-3-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-2-aula-3-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/sem/modulo-2-aula-3-nota-de-aula.pdf"
                 }
               ],
               "descricao": "As opções reais: por que investimentos irreversíveis, incerteza e flexibilidade gerencial pedem mais que o VPL, com foco no valor da opção de esperar.",
@@ -1605,13 +1605,13 @@
                   "id": "sem-3-1-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-3-aula-1-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/sem/modulo-3-aula-1-slides.pdf"
                 },
                 {
                   "id": "sem-3-1-m2",
                   "tipo": "codigo",
                   "nome": "Notebook em Python",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-3-aula-1-codigo.ipynb"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/sem/modulo-3-aula-1-codigo.ipynb"
                 }
               ],
               "descricao": "Laboratório em Python: uma rotina em Jupyter que calcula os índices financeiros da Klabin a partir das demonstrações publicadas pela empresa.",
@@ -1625,13 +1625,13 @@
                   "id": "sem-3-2-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-3-aula-2-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/sem/modulo-3-aula-2-slides.pdf"
                 },
                 {
                   "id": "sem-3-2-m2",
                   "tipo": "codigo",
                   "nome": "Notebook em Python",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-3-aula-2-codigo.ipynb"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/sem/modulo-3-aula-2-codigo.ipynb"
                 }
               ],
               "descricao": "Laboratório em Python sobre o modelo de Markowitz: retorno e risco de uma carteira, carteiras eficientes e a fronteira eficiente.",
@@ -1645,13 +1645,13 @@
                   "id": "sem-3-3-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-3-aula-3-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/sem/modulo-3-aula-3-slides.pdf"
                 },
                 {
                   "id": "sem-3-3-m2",
                   "tipo": "codigo",
                   "nome": "Notebook em Python",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-3-aula-3-codigo.ipynb"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/sem/modulo-3-aula-3-codigo.ipynb"
                 }
               ],
               "descricao": "Laboratório em Python sobre o risco de mercado: o cálculo do VaR e as métricas próximas (CVaR, testes de stress, CFaR e EaR) e onde são usadas.",
@@ -1672,7 +1672,7 @@
                   "id": "sem-4-1-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-4-aula-1-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/sem/modulo-4-aula-1-slides.pdf"
                 }
               ],
               "descricao": "Slides em inglês sobre a estratégia brasileira para administrar o risco cambial em crises: metas de inflação, regimes de câmbio e reservas internacionais.",
@@ -1714,7 +1714,7 @@
                   "id": "pfc-1-1-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/pfc/modulo-1-aula-1-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/pfc/modulo-1-aula-1-slides.pdf"
                 },
                 {
                   "id": "pfc-1-1-m2",
@@ -1726,7 +1726,7 @@
                   "id": "pfc-1-1-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/pfc/modulo-1-aula-1-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/pfc/modulo-1-aula-1-nota-de-aula.pdf"
                 }
               ],
               "descricao": "As demonstrações financeiras obrigatórias (balanço, DRE, fluxo de caixa, DVA e DMPL), os regimes de competência e de caixa e o que cada demonstração mostra sobre a empresa.",
@@ -1740,7 +1740,7 @@
                   "id": "pfc-1-2-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/pfc/modulo-1-aula-2-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/pfc/modulo-1-aula-2-slides.pdf"
                 },
                 {
                   "id": "pfc-1-2-m2",
@@ -1752,7 +1752,7 @@
                   "id": "pfc-1-2-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/pfc/modulo-1-aula-2-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/pfc/modulo-1-aula-2-nota-de-aula.pdf"
                 }
               ],
               "descricao": "A padronização das demonstrações e a análise vertical, horizontal e por índices, com a Hipotética S/A como exemplo.",
@@ -1766,7 +1766,7 @@
                   "id": "pfc-1-3-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/pfc/modulo-1-aula-3-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/pfc/modulo-1-aula-3-slides.pdf"
                 },
                 {
                   "id": "pfc-1-3-m2",
@@ -1778,7 +1778,7 @@
                   "id": "pfc-1-3-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-2-aula-1-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc2/modulo-2-aula-1-nota-de-aula.pdf"
                 }
               ],
               "descricao": "A estrutura de capital pelas proposições I e II de Modigliani e Miller: quando a dívida muda o valor da empresa e por que ela encarece o capital próprio.",
@@ -1804,7 +1804,7 @@
                   "id": "pfc-2-1-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/pfc/modulo-2-aula-1-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/pfc/modulo-2-aula-1-slides.pdf"
                 },
                 {
                   "id": "pfc-2-1-m2",
@@ -1816,7 +1816,7 @@
                   "id": "pfc-2-1-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/pfc/modulo-2-aula-1-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/pfc/modulo-2-aula-1-nota-de-aula.pdf"
                 }
               ],
               "descricao": "O valor do dinheiro no tempo: juros compostos, valor presente e futuro, séries de pagamentos e equivalência de taxas.",
@@ -1830,7 +1830,7 @@
                   "id": "pfc-2-2-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/pfc/modulo-2-aula-2-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/pfc/modulo-2-aula-2-slides.pdf"
                 },
                 {
                   "id": "pfc-2-2-m2",
@@ -1842,7 +1842,7 @@
                   "id": "pfc-2-2-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/pfc/modulo-2-aula-2-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/pfc/modulo-2-aula-2-nota-de-aula.pdf"
                 }
               ],
               "descricao": "O planejamento de curto prazo: a demonstração do fluxo de caixa, a projeção mês a mês de recebimentos e pagamentos e o ciclo financeiro.",
@@ -1856,7 +1856,7 @@
                   "id": "pfc-2-3-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/pfc/modulo-2-aula-3-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/pfc/modulo-2-aula-3-slides.pdf"
                 },
                 {
                   "id": "pfc-2-3-m2",
@@ -1868,7 +1868,7 @@
                   "id": "pfc-2-3-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/pfc/modulo-2-aula-3-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/pfc/modulo-2-aula-3-nota-de-aula.pdf"
                 }
               ],
               "descricao": "A administração do caixa pelo modelo Fleuriet: contas cíclicas e erráticas, necessidade de capital de giro (NCG), capital de giro (CDG) e saldo de tesouraria (ST).",
@@ -1894,7 +1894,7 @@
                   "id": "pfc-3-1-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/pfc/modulo-3-aula-1-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/pfc/modulo-3-aula-1-slides.pdf"
                 },
                 {
                   "id": "pfc-3-1-m2",
@@ -1906,7 +1906,7 @@
                   "id": "pfc-3-1-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/pfc/modulo-3-aula-1-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/pfc/modulo-3-aula-1-nota-de-aula.pdf"
                 }
               ],
               "descricao": "As métricas de retorno e risco (retorno esperado versus histórico, variância e desvio padrão) e a separação entre risco sistemático e não sistemático.",
@@ -1920,7 +1920,7 @@
                   "id": "pfc-3-2-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/pfc/modulo-3-aula-2-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/pfc/modulo-3-aula-2-slides.pdf"
                 },
                 {
                   "id": "pfc-3-2-m2",
@@ -1932,7 +1932,7 @@
                   "id": "pfc-3-2-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/pfc/modulo-3-aula-2-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/pfc/modulo-3-aula-2-nota-de-aula.pdf"
                 }
               ],
               "descricao": "O CAPM, com as premissas e a ligação com a carteira de Markowitz, e o custo do capital de terceiros a partir do risco de crédito.",
@@ -1946,13 +1946,13 @@
                   "id": "pfc-3-3-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/pfc/modulo-3-aula-3-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/pfc/modulo-3-aula-3-slides.pdf"
                 },
                 {
                   "id": "pfc-3-3-m2",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-2-aula-2-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc2/modulo-2-aula-2-nota-de-aula.pdf"
                 }
               ],
               "descricao": "O custo médio ponderado de capital (CMPC): custo do capital próprio pelo modelo de dividendos ou pelo CAPM, custo da dívida depois dos impostos e o peso de cada fonte.",
@@ -1994,7 +1994,7 @@
                   "id": "aep-1-1-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-1-aula-1-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/sem/modulo-1-aula-1-slides.pdf"
                 },
                 {
                   "id": "aep-1-1-m2",
@@ -2006,7 +2006,7 @@
                   "id": "aep-1-1-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-1-aula-1-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/sem/modulo-1-aula-1-nota-de-aula.pdf"
                 }
               ],
               "descricao": "O valor do dinheiro no tempo: por que um valor hoje vale mais que o mesmo valor no futuro, juros compostos, valor presente e valor futuro.",
@@ -2020,7 +2020,7 @@
                   "id": "aep-1-2-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-1-aula-1-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc2/modulo-1-aula-1-slides.pdf"
                 },
                 {
                   "id": "aep-1-2-m2",
@@ -2032,7 +2032,7 @@
                   "id": "aep-1-2-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-1-aula-1-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc2/modulo-1-aula-1-nota-de-aula.pdf"
                 }
               ],
               "descricao": "Como montar o fluxo de caixa livre de um projeto: investimento inicial, despesas pré-operacionais, receitas, custos e impostos.",
@@ -2046,7 +2046,7 @@
                   "id": "aep-1-3-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-1-aula-2-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc2/modulo-1-aula-2-slides.pdf"
                 },
                 {
                   "id": "aep-1-3-m2",
@@ -2058,7 +2058,7 @@
                   "id": "aep-1-3-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-1-aula-2-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc2/modulo-1-aula-2-nota-de-aula.pdf"
                 }
               ],
               "descricao": "VPL e TIR, os critérios centrais do orçamento de capital, com o exemplo do projeto de R$ 800 descontado a 12% e os cuidados ao comparar projetos.",
@@ -2072,7 +2072,7 @@
                   "id": "aep-1-4-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-1-aula-3-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc2/modulo-1-aula-3-slides.pdf"
                 },
                 {
                   "id": "aep-1-4-m2",
@@ -2084,7 +2084,7 @@
                   "id": "aep-1-4-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-1-aula-3-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc2/modulo-1-aula-3-nota-de-aula.pdf"
                 }
               ],
               "descricao": "Payback simples e descontado e outros critérios complementares, com as limitações de cada um.",
@@ -2105,7 +2105,7 @@
                   "id": "aep-2-1-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-2-aula-1-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc2/modulo-2-aula-1-slides.pdf"
                 },
                 {
                   "id": "aep-2-1-m2",
@@ -2117,7 +2117,7 @@
                   "id": "aep-2-1-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-2-aula-1-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc2/modulo-2-aula-1-nota-de-aula.pdf"
                 }
               ],
               "descricao": "A estrutura de capital pelas proposições de Modigliani e Miller: quando a dívida muda o valor da empresa e por que ela aumenta o custo do capital próprio.",
@@ -2131,7 +2131,7 @@
                   "id": "aep-2-2-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/aep/modulo-2-aula-2-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/aep/modulo-2-aula-2-slides.pdf"
                 },
                 {
                   "id": "aep-2-2-m2",
@@ -2143,7 +2143,7 @@
                   "id": "aep-2-2-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/pfc/modulo-3-aula-1-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/pfc/modulo-3-aula-1-nota-de-aula.pdf"
                 }
               ],
               "descricao": "As métricas de retorno e risco e o risco sistemático, que é o risco que a taxa de desconto precisa remunerar.",
@@ -2157,7 +2157,7 @@
                   "id": "aep-2-3-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/aep/modulo-2-aula-3-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/aep/modulo-2-aula-3-slides.pdf"
                 },
                 {
                   "id": "aep-2-3-m2",
@@ -2169,7 +2169,7 @@
                   "id": "aep-2-3-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/pfc/modulo-3-aula-2-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/pfc/modulo-3-aula-2-nota-de-aula.pdf"
                 }
               ],
               "descricao": "O custo do capital próprio pelo CAPM, com as premissas e a ligação com Markowitz, e o custo do capital de terceiros a partir do risco de crédito.",
@@ -2183,7 +2183,7 @@
                   "id": "aep-2-4-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/aep/modulo-2-aula-4-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/aep/modulo-2-aula-4-slides.pdf"
                 },
                 {
                   "id": "aep-2-4-m2",
@@ -2195,7 +2195,7 @@
                   "id": "aep-2-4-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-2-aula-2-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc2/modulo-2-aula-2-nota-de-aula.pdf"
                 }
               ],
               "descricao": "O cálculo do custo médio ponderado de capital (CMPC) e por que uma taxa errada leva a aceitar projetos ruins ou recusar projetos bons.",
@@ -2209,7 +2209,7 @@
                   "id": "aep-2-5-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-2-aula-3-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc2/modulo-2-aula-3-slides.pdf"
                 },
                 {
                   "id": "aep-2-5-m2",
@@ -2221,7 +2221,7 @@
                   "id": "aep-2-5-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fc2/modulo-2-aula-3-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fc2/modulo-2-aula-3-nota-de-aula.pdf"
                 }
               ],
               "descricao": "Três formas de avaliar um projeto financiado com dívida (VPL sem financiamento mais benefício fiscal, fluxo do capital próprio e CMPC) e quando elas coincidem.",
@@ -2242,7 +2242,7 @@
                   "id": "aep-3-1-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-2-aula-1-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/sem/modulo-2-aula-1-slides.pdf"
                 },
                 {
                   "id": "aep-3-1-m2",
@@ -2254,7 +2254,7 @@
                   "id": "aep-3-1-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-2-aula-1-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/sem/modulo-2-aula-1-nota-de-aula.pdf"
                 }
               ],
               "descricao": "A árvore de decisão: alternativas, estados da natureza, probabilidades e valores esperados, aplicada a um problema de investimento.",
@@ -2268,7 +2268,7 @@
                   "id": "aep-3-2-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-2-aula-2-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/sem/modulo-2-aula-2-slides.pdf"
                 },
                 {
                   "id": "aep-3-2-m2",
@@ -2280,7 +2280,7 @@
                   "id": "aep-3-2-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-2-aula-2-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/sem/modulo-2-aula-2-nota-de-aula.pdf"
                 }
               ],
               "descricao": "Processos estocásticos e simulação de Monte Carlo para gerar cenários e obter a distribuição do VPL de um projeto.",
@@ -2294,7 +2294,7 @@
                   "id": "aep-3-3-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-2-aula-3-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/sem/modulo-2-aula-3-slides.pdf"
                 },
                 {
                   "id": "aep-3-3-m2",
@@ -2306,7 +2306,7 @@
                   "id": "aep-3-3-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/sem/modulo-2-aula-3-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/sem/modulo-2-aula-3-nota-de-aula.pdf"
                 }
               ],
               "descricao": "A teoria das opções reais: por que investimentos irreversíveis, incerteza e flexibilidade gerencial pedem mais que o VPL, e quanto vale a opção de esperar.",
@@ -2327,7 +2327,7 @@
                   "id": "aep-4-1-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/aep/modulo-4-aula-1-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/aep/modulo-4-aula-1-slides.pdf"
                 },
                 {
                   "id": "aep-4-1-m2",
@@ -2339,7 +2339,7 @@
                   "id": "aep-4-1-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/aep/modulo-4-aula-1-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/aep/modulo-4-aula-1-nota-de-aula.pdf"
                 }
               ],
               "descricao": "Estudo de caso de uma planta de hidrogênio verde por eletrólise integrada a energia eólica, avaliada de três formas: VPL tradicional, simulação de cenários e opções reais.",
@@ -2376,7 +2376,7 @@
                   "id": "fv-1-1-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fv/modulo-1-aula-1-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fv/modulo-1-aula-1-slides.pdf"
                 },
                 {
                   "id": "fv-1-1-m2",
@@ -2388,7 +2388,7 @@
                   "id": "fv-1-1-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fv/modulo-1-aula-1-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fv/modulo-1-aula-1-nota-de-aula.pdf"
                 }
               ],
               "descricao": "Os principais gases de efeito estufa e as fontes de emissão, o Acordo de Paris e as metas de 2°C e 1,5°C, e os efeitos do aquecimento global que chegam às empresas e aos investidores.",
@@ -2402,7 +2402,7 @@
                   "id": "fv-1-2-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fv/modulo-1-aula-2-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fv/modulo-1-aula-2-slides.pdf"
                 },
                 {
                   "id": "fv-1-2-m2",
@@ -2422,7 +2422,7 @@
                   "id": "fv-1-3-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fv/modulo-1-aula-3-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fv/modulo-1-aula-3-slides.pdf"
                 },
                 {
                   "id": "fv-1-3-m2",
@@ -2449,7 +2449,7 @@
                   "id": "fv-2-1-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fv/modulo-2-aula-1-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fv/modulo-2-aula-1-slides.pdf"
                 },
                 {
                   "id": "fv-2-1-m2",
@@ -2461,7 +2461,7 @@
                   "id": "fv-2-1-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fv/modulo-2-aula-1-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fv/modulo-2-aula-1-nota-de-aula.pdf"
                 }
               ],
               "descricao": "O que é um crédito de carbono (uma tonelada de CO₂ equivalente evitada ou retirada), o sistema de cap and trade, os mercados voluntário e regulado e a origem no Protocolo de Kyoto e no Acordo de Paris.",
@@ -2475,7 +2475,7 @@
                   "id": "fv-2-2-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fv/modulo-2-aula-2-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fv/modulo-2-aula-2-slides.pdf"
                 },
                 {
                   "id": "fv-2-2-m2",
@@ -2487,7 +2487,7 @@
                   "id": "fv-2-2-m3",
                   "tipo": "notas",
                   "nome": "Nota de aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fv/modulo-2-aula-2-nota-de-aula.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fv/modulo-2-aula-2-nota-de-aula.pdf"
                 }
               ],
               "descricao": "A Política Nacional de Biocombustíveis (RenovaBio, Lei nº 13.576/2017): objetivos, metas de redução de emissões, créditos de descarbonização (CBIOs) e certificação de biocombustíveis.",
@@ -2501,7 +2501,7 @@
                   "id": "fv-2-3-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fv/modulo-2-aula-3-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fv/modulo-2-aula-3-slides.pdf"
                 },
                 {
                   "id": "fv-2-3-m2",
@@ -2528,7 +2528,7 @@
                   "id": "fv-3-1-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fv/modulo-3-aula-1-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fv/modulo-3-aula-1-slides.pdf"
                 },
                 {
                   "id": "fv-3-1-m2",
@@ -2548,7 +2548,7 @@
                   "id": "fv-3-2-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fv/modulo-3-aula-2-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fv/modulo-3-aula-2-slides.pdf"
                 },
                 {
                   "id": "fv-3-2-m2",
@@ -2568,7 +2568,7 @@
                   "id": "fv-3-3-m1",
                   "tipo": "slides",
                   "nome": "Slides da aula",
-                  "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/fv/modulo-3-aula-3-slides.pdf"
+                  "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/fv/modulo-3-aula-3-slides.pdf"
                 },
                 {
                   "id": "fv-3-3-m2",
@@ -2596,7 +2596,7 @@
           "id": "lab-1",
           "tipo": "notas",
           "nome": "Notas de aula",
-          "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/laboratorio/notas-de-aula.pdf",
+          "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/laboratorio/notas-de-aula.pdf",
           "descricao": "O livro \"Finanças e Gestão Integrada de Riscos: anotações de aulas\" (2022), com 297 páginas e 14 capítulos: demonstrações financeiras, estatística aplicada, risco e retorno, taxa de juros, avaliação de projetos, processos estocásticos, derivativos, risco de mercado e de crédito, opções reais, project finance e gestão de riscos não financeiros."
         }
       ],
@@ -2609,7 +2609,7 @@
           "id": "lab-2",
           "tipo": "planilha",
           "nome": "Planilha de índices financeiros",
-          "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/laboratorio/planilha-de-indices-financeiros.xlsx",
+          "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/laboratorio/planilha-de-indices-financeiros.xlsx",
           "descricao": "Balanço e DRE da Hipotética S/A com todos os índices calculados (liquidez, atividade, endividamento, rentabilidade e valor de mercado). A aba de instruções explica como repetir a análise com uma empresa real, como Weg, Klabin, Suzano ou Magazine Luiza.",
           "aulas": [
             "fc1-1-2",
@@ -2622,7 +2622,7 @@
           "id": "lab-3",
           "tipo": "planilha",
           "nome": "Planilha do modelo CAPM",
-          "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/laboratorio/planilha-do-modelo-capm.xls",
+          "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/laboratorio/planilha-do-modelo-capm.xls",
           "descricao": "Preços mensais de seis ações brasileiras (Usiminas, Petrobras, Vale, Oi, Cesp e Itaú), com os retornos, a fronteira eficiente de Markowitz e um exercício de regressão do CAPM e do modelo de um fator contra o Ibovespa.",
           "aulas": [
             "fc1-3-2",
@@ -2636,7 +2636,7 @@
           "id": "lab-4",
           "tipo": "planilha",
           "nome": "Planilha: opções reais em projeto solar",
-          "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/laboratorio/planilha-opcoes-reais-em-projeto-solar.xlsx",
+          "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/laboratorio/planilha-opcoes-reais-em-projeto-solar.xlsx",
           "descricao": "Avaliação de uma usina solar de 10 MW: fluxo de caixa e VPL, simulação de cenários de produção e de preço da energia no mercado livre, e o valor da flexibilidade por opções reais (Black & Scholes).",
           "aulas": [
             "sem-2-2",
@@ -2649,7 +2649,7 @@
           "id": "lab-5",
           "tipo": "planilha",
           "nome": "Planilha: projeto de hidrogênio verde",
-          "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/laboratorio/planilha-projeto-de-hidrogenio-verde.xlsx",
+          "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/laboratorio/planilha-projeto-de-hidrogenio-verde.xlsx",
           "descricao": "A planilha do estudo de caso de hidrogênio verde: CAPEX e OPEX da planta, fluxo de caixa determinístico, simulação de cenários e avaliação por opções reais (binomial e Black & Scholes), com premissas de financiamento do BNDES.",
           "aulas": [
             "aep-4-1",
@@ -2660,7 +2660,7 @@
           "id": "lab-6",
           "tipo": "planilha",
           "nome": "Planilha: maximização com três produtos",
-          "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/laboratorio/planilha-maximizacao-com-tres-produtos.xlsx",
+          "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/laboratorio/planilha-maximizacao-com-tres-produtos.xlsx",
           "descricao": "Maximização do lucro de uma empresa com três produtos, cada um com a sua curva de demanda e o seu custo variável, sujeita a um orçamento máximo. É o exemplo da aula de cesta de produtos, resolvido com o Solver.",
           "aulas": [
             "eg-1-5"
@@ -2708,7 +2708,7 @@
           "id": "lab-10",
           "tipo": "codigo",
           "nome": "Script em R: dados do Banco Central",
-          "url": "https://pedrolofiego.github.io/financas-economia-gerencial/arquivos/laboratorio/script-em-r-dados-do-banco-central.txt",
+          "url": "https://pantoniofran.github.io/financas-economia-gerencial/arquivos/laboratorio/script-em-r-dados-do-banco-central.txt",
           "descricao": "Script que baixa da API do Banco Central as séries do IPCA, do dólar (PTAX) e da Selic, junta tudo numa tabela e ajusta uma regressão do IPCA contra câmbio e juros. Antes de rodar, troque o caminho do arquivo na linha do write.csv por uma pasta do seu computador."
         },
         {

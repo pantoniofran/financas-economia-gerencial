@@ -29,7 +29,7 @@ if (/<\/style/i.test(css)) throw new Error('estilo.css contém "</style"');
 // "<!--" seguido de "<script" dentro de um script muda o modo do leitor de HTML e quebra a página.
 if (js.includes('<!--')) throw new Error('o programa contém "<!--"');
 
-const URL_DO_SITE = (process.env.SITE_URL ?? 'https://pedrolofiego.github.io/financas-economia-gerencial/').replace(/\/?$/, '/');
+const URL_DO_SITE = (process.env.SITE_URL ?? 'https://pantoniofran.github.io/financas-economia-gerencial/').replace(/\/?$/, '/');
 
 // Um zip por módulo com os arquivos que moram no site, para o aluno baixar tudo de uma vez.
 // Sem compressão: PDF e planilha já vêm comprimidos, e assim o zip sai na hora.

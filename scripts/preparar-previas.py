@@ -12,7 +12,7 @@ import fitz
 import openpyxl
 import xlrd
 
-BASE = 'https://pedrolofiego.github.io/financas-economia-gerencial/'
+BASE = 'https://pantoniofran.github.io/financas-economia-gerencial/'
 PASTA = 'arquivos/laboratorio/'
 # Aba mais representativa de cada planilha (a primeira nem sempre é: algumas começam com dados do Crystal Ball).
 ABA = {
