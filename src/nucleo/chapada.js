@@ -11,7 +11,7 @@ export const tracosDaCena = (cena) => cena.tracos
   .map((t) => `<path class="t-${t.tipo}" d="${t.d}" data-atraso="${t.atraso}" data-duracao="${t.duracao}"/>`)
   .join('');
 
-// Já vem desenhado: é o que fica parado para quem pediu menos movimento e enquanto o programa não carrega.
+// Já vem desenhado: é o que se vê enquanto o programa não carrega, ou num navegador que não sabe animar.
 export function desenhoDaChapada(cena = CENAS[0]) {
   return `<svg class="chapada" viewBox="0 0 ${LARGURA} ${ALTURA}" preserveAspectRatio="xMidYMax meet" aria-hidden="true" focusable="false"><g class="chapada-cena">${tracosDaCena(cena)}</g></svg><span class="chapada-nome" aria-hidden="true">${cena.nome}</span>`;
 }
