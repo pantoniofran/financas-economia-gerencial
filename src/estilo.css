@@ -1,11 +1,11 @@
 /* Layout: uma coluna de leitura; navegação em caixas com a informação à vista; uma única cor de ação. */
 :root {
-  /* Cor */
-  --fundo: #fbfcfa; --papel: #eef3ef; --tinta: #17201b; --suave: #5a665f; --linha: #dfe5e0;
-  --verde: #1d5a44; --sobre-verde: #fbfcfa; --erro: #9a3412;
-  --palco: #141b17; --sobre-palco: #f4f7f5; --sombra: rgba(20, 27, 23, .55);
-  --faixa: #143f30; --sobre-faixa: #f4f7f1; --faixa-suave: #b4cfc1;
-  --ouro: #855710; --ouro-claro: #e9bf6b; --ouro-fundo: #f6ecd6;
+  /* Cor: verde escuro, o padrão do site. Texto claro sobre fundo escuro, com a faixa de abertura num verde mais vivo. */
+  --fundo: #111613; --papel: #1a221d; --tinta: #e8eee9; --suave: #9aa8a0; --linha: #2a342e;
+  --verde: #86c9ab; --sobre-verde: #111613; --erro: #f0a27c;
+  --palco: #0b0f0d; --sobre-palco: #f4f7f5; --sombra: rgba(0, 0, 0, .65);
+  --faixa: #0f2e23; --sobre-faixa: #f4f7f1; --faixa-suave: #a9c7b8;
+  --ouro: #e3b55a; --ouro-claro: #e9bf6b; --ouro-fundo: #2a2415;
 
   /* Tipo: cinco tamanhos, com razão de cerca de 1,25 entre eles, mais um para leitura longa. */
   --serifa: 'Literata', Georgia, 'Times New Roman', serif;
@@ -16,7 +16,8 @@
   --t-titulo: 1.3125rem;
   --t-secao: 1.6875rem;
   --t-pagina: clamp(2rem, 1.45rem + 2.6vw, 2.75rem);
-  --entrelinha: 1.55;
+  /* Texto claro em fundo escuro pede um pouco mais de ar entre as linhas. */
+  --entrelinha: 1.62;
 
   /* Espaço: escala de 4 pt. */
   --e1: 4px; --e2: 8px; --e3: 12px; --e4: 16px; --e5: 24px; --e6: 32px; --e7: 48px;
@@ -27,8 +28,8 @@
   /* Forma e movimento */
   --raio: 10px; --raio-p: 6px;
   --rapido: .16s; --saida: cubic-bezier(.25, 1, .5, 1);
-  /* Um tema só: o site tem as mesmas cores em qualquer computador, com o sistema no modo claro ou escuro. */
-  color-scheme: light;
+  /* Um tema só: as mesmas cores em qualquer computador, esteja o sistema no modo claro ou escuro. */
+  color-scheme: dark;
 }
 
 /* Base */
@@ -198,7 +199,7 @@ small { font-size: var(--t-meta); }
 .col section.modulo:focus { outline: 0; border-color: var(--verde); }
 .linha-titulo { display: flex; justify-content: space-between; align-items: baseline; gap: var(--e3); }
 .linha-titulo h2 { min-width: 0; }
-.num { display: inline-grid; place-items: center; width: 2rem; height: 2rem; margin-right: var(--e3); border-radius: 50%; background: var(--faixa); color: var(--sobre-faixa); font: 600 var(--t-meta)/1 var(--sans); letter-spacing: 0; vertical-align: .25em; }
+.num { display: inline-grid; place-items: center; width: 2rem; height: 2rem; margin-right: var(--e3); border-radius: 50%; background: var(--verde); color: var(--sobre-verde); font: 600 var(--t-meta)/1 var(--sans); letter-spacing: 0; vertical-align: .25em; }
 .aulas { border-top: 1px solid var(--linha); }
 .aula { display: flex; justify-content: space-between; gap: var(--e3); padding: var(--e4) 0; border-bottom: 1px solid var(--linha); }
 .aula:last-child { border-bottom: 0; }
@@ -209,6 +210,34 @@ small { font-size: var(--t-meta); }
 .aula-titulo a:hover { color: var(--verde); text-decoration: underline; }
 .aula-titulo .abrir { font: 400 var(--t-meta) var(--sans); color: var(--verde); margin-left: var(--e3); }
 .mats { display: flex; flex-wrap: wrap; gap: var(--e2); margin-top: var(--e3); }
+/* Em leitura, cada aula é um cartão inteiro que leva à tela de estudo (vídeo e slides lado a lado). */
+.aulas:has(.aula-leitura) { display: grid; gap: var(--e2); padding-block: var(--e3); }
+.aula.aula-leitura { display: block; padding: 0; border: 0; }
+.aula-cartao { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: var(--e3) var(--e4); padding: var(--e3) var(--e4); border: 1px solid var(--linha); border-radius: var(--raio); background: var(--papel); color: var(--tinta); text-decoration: none; transition: border-color var(--rapido) var(--saida), background-color var(--rapido) var(--saida), transform var(--rapido) var(--saida); }
+.aula-cartao:hover { border-color: var(--verde); background: color-mix(in srgb, var(--verde) 10%, var(--papel)); }
+.aula-cartao:active { transform: scale(.99); }
+.aula-num { display: grid; place-items: center; width: 2.25rem; height: 2.25rem; border-radius: 50%; border: 1px solid var(--linha); color: var(--suave); font: 600 var(--t-meta)/1 var(--sans); }
+.aula-vista .aula-num { border-color: var(--verde); background: var(--verde); color: var(--sobre-verde); }
+.aula-corpo { display: grid; gap: var(--e1); min-width: 0; }
+.aula-cartao .aula-titulo { color: var(--tinta); }
+.aula-cartao:hover .aula-titulo { color: var(--verde); }
+.aula-materiais { display: flex; flex-wrap: wrap; gap: var(--e1) var(--e3); margin-top: var(--e1); }
+.aula-tem { display: inline-flex; align-items: center; gap: var(--e1); font-size: var(--t-meta); color: var(--suave); }
+.aula-tem .ic { width: 1rem; height: 1rem; color: var(--verde); }
+.aula-ir { display: inline-flex; align-items: center; min-height: var(--toque); padding: 0 var(--e4); border-radius: 999px; background: var(--verde); color: var(--sobre-verde); font: 600 var(--t-meta)/1 var(--sans); white-space: nowrap; }
+/* No celular o botão desce para baixo do texto, alinhado com o título. */
+@media (max-width: 40rem) {
+  .aula-cartao { grid-template-columns: auto minmax(0, 1fr); }
+  .aula-ir { grid-column: 2; justify-self: start; min-height: 2.5rem; }
+}
+/* Botão grande no topo da disciplina: começar ou continuar de onde parou. */
+.btn-estudar { display: inline-flex; align-items: center; gap: var(--e3); min-height: 3.5rem; padding: var(--e2) var(--e5) var(--e2) var(--e3); border-radius: 999px; background: var(--verde); color: var(--sobre-verde); text-decoration: none; transition: background-color var(--rapido) var(--saida), transform var(--rapido) var(--saida); }
+.btn-estudar:hover { background: color-mix(in srgb, var(--verde) 86%, var(--tinta)); }
+.btn-estudar:active { transform: scale(.98); }
+.btn-estudar b { display: block; font: 600 var(--t-corpo)/1.25 var(--sans); }
+.btn-estudar small { display: block; color: inherit; opacity: .8; font-size: var(--t-meta); }
+.btn-estudar-play { flex: none; position: relative; width: 2.5rem; height: 2.5rem; border-radius: 50%; background: var(--sobre-verde); }
+.btn-estudar-play::after { content: ''; position: absolute; left: 15px; top: 11px; border-left: 14px solid var(--verde); border-top: 9px solid transparent; border-bottom: 9px solid transparent; }
 .chip { display: inline-flex; align-items: center; gap: var(--e2); min-height: var(--toque); font: 600 var(--t-meta)/1.2 var(--sans); color: var(--verde); border: 1px solid var(--verde); border-radius: var(--raio); padding: 0 var(--e4); background: none; text-decoration: none; transition: background-color var(--rapido) var(--saida), color var(--rapido) var(--saida), transform var(--rapido) var(--saida); }
 a.chip:hover, button.chip:hover { background: var(--verde); color: var(--sobre-verde); }
 a.chip:active, button.chip:active { transform: scale(.97); }
@@ -316,7 +345,9 @@ input[type="date"], select, .ano-in { min-height: 2.5rem; border: 1px solid var(
 .barra-progresso > span { display: block; height: 100%; border-radius: inherit; background: var(--verde); }
 .caixa-progresso { display: grid; gap: var(--e1); margin-top: var(--e2); font-size: var(--t-meta); color: var(--suave); }
 .progresso-linha { display: grid; grid-template-columns: minmax(6rem, 12rem) auto; align-items: center; gap: var(--e3); font-size: var(--t-meta); color: var(--suave); }
-.disciplina-acoes { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--e3) var(--e5); }
+.disciplina-acoes { display: flex; flex-wrap: wrap; align-items: center; gap: var(--e3); }
+/* O progresso fica numa linha própria, embaixo dos botões. */
+.disciplina-acoes .progresso-linha { flex-basis: 100%; }
 .btn-duvida { display: inline-flex; align-items: center; min-height: var(--toque); padding: 0 var(--e5); border-radius: 999px; background: var(--verde); color: var(--sobre-verde); font-weight: 600; text-decoration: none; transition: background-color var(--rapido) var(--saida); }
 .btn-duvida:hover { background: color-mix(in srgb, var(--verde) 86%, var(--tinta)); }
 .caixa-continuar { border-color: var(--verde); background: var(--papel); }

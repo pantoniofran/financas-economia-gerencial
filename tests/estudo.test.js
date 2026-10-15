@@ -38,13 +38,13 @@ test('no Claude a aula fica com links, sem leitor embutido', () => {
 
 test('lista de aulas mostra só a primeira frase e o módulo mostra o que o aluno vai ver', () => {
   const html = ver('#d-eg', leitura, comTextos());
-  assert.match(html, /<p class="aula-resumo">A relação entre preço e quantidade\.<\/p>/);
+  assert.match(html, /<span class="aula-resumo">A relação entre preço e quantidade\.<\/span>/);
   assert.match(html, /modulo-descricao[^>]*><p>As bases de microeconomia\.<\/p>/);
 });
 
 test('progresso: aula vista marcada e contagem na disciplina', () => {
   const ctx = { ...leitura, progresso: { vistas: { 'eg-1-1': '2026-10-14' }, ultima: 'eg-1-1' } };
-  assert.match(ver('#d-eg', ctx), /✓ vista/);
+  assert.match(ver('#d-eg', ctx), /class="aula aula-leitura aula-vista"><a class="aula-cartao" href="#a-eg-1-1">/);
   assert.match(ver('#d-eg', ctx), /Você viu 1 de 3 aulas/);
   assert.match(ver('#inicio', ctx), /Continuar de onde parei/);
 });
@@ -111,5 +111,16 @@ test('tirar dúvida: escolha entre Gmail, Outlook, programa de e-mail ou copiar,
   assert.ok(aula.includes(`data-op="copiar" data-texto="prof@exemplo.com\n${assunto}"`));
   assert.ok(ver('#d-eg', leitura, c).includes('assunto <b>[Economia Gerencial] Dúvida</b>'));
   c.disciplinas[0].duvidas = 'https://forms.exemplo/x';
-  assert.ok(ver('#d-eg', leitura, c).includes('<a class="btn-duvida" href="https://forms.exemplo/x" target="_blank"'));
+  assert.ok(ver('#d-eg', leitura, c).includes('<a class="btn-duvida leve" href="https://forms.exemplo/x" target="_blank"'));
+});
+
+test('disciplina: cada aula é um cartão que leva à tela de estudo, e o topo tem o botão para começar ou continuar', () => {
+  const c = conteudoExemplo();
+  const nova = ver('#d-eg', leitura, c);
+  assert.match(nova, /<a class="btn-estudar" href="#a-eg-1-1">[\s\S]*?Começar pela primeira aula[\s\S]*?Módulo 1 · Aula 1: Curva de Demanda/);
+  assert.match(nova, /<a class="aula-cartao" href="#a-eg-1-1">[\s\S]*?Curva de Demanda[\s\S]*?Slides[\s\S]*?Assistir ›/);
+  const vista = ver('#d-eg', { ...leitura, progresso: { vistas: { 'eg-1-1': '2026-10-14' }, ultima: 'eg-1-1' } }, c);
+  assert.match(vista, /<a class="btn-estudar" href="#a-eg-1-2">[\s\S]*?Próxima aula/);
+  const parou = ver('#d-eg', { ...leitura, progresso: { vistas: {}, ultima: 'eg-2-1' } }, c);
+  assert.match(parou, /<a class="btn-estudar" href="#a-eg-2-1">[\s\S]*?Continuar de onde parei/);
 });
