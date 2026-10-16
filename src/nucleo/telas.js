@@ -149,7 +149,7 @@ function cabecalho(c, rota) {
   return `<header class="topo"><a class="marca" href="#inicio">${esc(c.site.titulo)}</a><nav aria-label="Seções">${itens}</nav></header>`;
 }
 
-const rodape = (c, ctx) => `<footer class="rodape"><span>${esc(c.site.professor)} · ${esc(c.site.instituicao)}</span><span class="rodape-links">${ctx.siteUrl ? '<a href="#qr">QR codes para a sala</a>' : ''}<a href="#sobre">Contato</a></span></footer>`;
+const rodape = (c, ctx) => `<footer class="rodape"><span>${esc(c.site.professor)}</span><span class="rodape-links">${ctx.siteUrl ? '<a href="#qr">QR codes para a sala</a>' : ''}<a href="#sobre">Contato</a></span></footer>`;
 
 export function barraEdicao(ctx) {
   if (!ctx.podeEditar) return '';
