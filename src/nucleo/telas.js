@@ -175,7 +175,7 @@ function abertura(c, ctx) {
   const materiais = c.disciplinas.reduce((n, d) => n + d.modulos.reduce((k, mo) => k + mo.aulas.reduce((j, a) => j + a.materiais.length, 0), 0), 0);
   const resumo = [plural(c.disciplinas.length, 'disciplina', 'disciplinas'), plural(aulas, 'aula', 'aulas'), plural(materiais, 'material', 'materiais')].join(' · ');
   return `<div class="abertura">${arte}<div class="abertura-texto">
-<p class="eye">${esc(c.site.professor)} · ${esc(c.site.instituicao)}</p>
+<p class="eye">${esc(c.site.professor)}</p>
 <h1>${campo('site.chamada', c.site.chamada, ctx, 'Frase de abertura')}</h1>
 <p class="abertura-resumo">${resumo}</p>
 ${ctx.editando ? '' : `<form class="busca" role="search" action="#" novalidate><label class="sr" for="busca">Buscar no site</label><input id="busca" name="busca" type="search" placeholder="Buscar aula, material ou texto" autocomplete="off" enterkeyhint="search"></form>`}
