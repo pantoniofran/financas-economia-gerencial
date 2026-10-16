@@ -1,0 +1,99 @@
+# Instalar pacotes necessários
+# install.packages("httr")
+# install.packages("jsonlite")
+
+library(quantmod)
+library(lubridate)
+library(tidyverse)
+
+# Carregar pacotes
+library(httr)
+library(jsonlite)
+library(dplyr)
+
+rm(list = ls())
+
+#IPCA = 433
+#Taxa de cambio = 3696
+#Selic mensal = 4189
+
+# URL da API do Banco Central do Brasil
+urlIPCA <- "https://api.bcb.gov.br/dados/serie/bcdata.sgs.433/dados?formato=json"
+urlPTAX <- "https://api.bcb.gov.br/dados/serie/bcdata.sgs.3696/dados?formato=json"
+urlSELIC <- "https://api.bcb.gov.br/dados/serie/bcdata.sgs.4189/dados?formato=json"
+
+# Fazer a requisição GET
+responseIPCA <- GET(urlIPCA)
+responsePTAX <- GET(urlPTAX)
+responseSELIC <- GET(urlSELIC)
+
+dataIPCA <- content(responseIPCA, "text")
+dataIPCA <- fromJSON(dataIPCA)
+
+dataPTAX <- content(responsePTAX, "text")
+dataPTAX <- fromJSON(dataPTAX)
+
+dataSELIC <- content(responseSELIC, "text")
+dataSELIC <- fromJSON(dataSELIC)
+
+
+dataAll <- merge(dataIPCA,dataPTAX, by = "data", all = TRUE)
+dataAll <- merge(dataAll, dataSELIC, by = "data", all = TRUE)
+dataAll <- na.omit(dataAll)
+
+colnames(dataAll) <- c("data", "IPCA", "PTAX", "SELIC")
+
+dataAll[['data']] <- as.POSIXct(dataAll[['data']], format = "%d/%m/%Y")
+dataAll <- dataAll[order(as.Date(dataAll$data, format="%d/%m/%Y")), ] 
+
+dataAllFilter <- dataAll %>% filter(data >= '2000-01-01')
+
+write.csv(dataAllFilter, "D:\\Afranc\\IPCA\\dadosR.csv")
+
+dados <- data.frame(
+  IPCA = as.numeric(dataAllFilter$IPCA),
+  PTAX = as.numeric(dataAllFilter$PTAX),
+  SELIC = as.numeric(dataAllFilter$SELIC)
+)
+
+# Ajustando o modelo de regressão linear múltipla com a nova variável
+modelo <- lm(IPCA ~ PTAX+SELIC, data = dados)
+
+# Resumo do modelo
+a=summary(modelo)
+print(a)
+
+
+#------------------------
+
+
+# Definindo os códigos das séries
+getSymbols("IR3TIB01CLM156N", src = "FRED", from = "2000-01-01")
+dad_S <- data.frame(get("IR3TIB01CLM156N"))
+jurosChile <- data.frame(data = rownames(dad_S), valor = dad_S$IR3TIB01CLM156N)
+
+getSymbols("CPALTT01CLM657N", src = "FRED", from = "2000-01-01")
+dad_S <- data.frame(get("CPALTT01CLM657N"))
+inflacaosChile <- data.frame(data = rownames(dad_S), valor = dad_S$CPALTT01CLM657N)
+
+getSymbols("CCUSSP02CLM650N", src = "FRED", from = "2000-01-01")
+dad_S <- data.frame(get("CCUSSP02CLM650N"))
+cambioChile <- data.frame(data = rownames(dad_S), valor = dad_S$CCUSSP02CLM650N)
+
+dataAllChile <- merge(inflacaosChile,cambioChile, by = "data", all = TRUE)
+dataAllChile <- merge(dataAllChile, jurosChile, by = "data", all = TRUE)
+dataAllChile <- na.omit(dataAllChile)
+colnames(dataAllChile) <- c("data", "Inflacao", "TaxaCambio", "TaxaJuros")
+
+dataAllFilterChile <- dataAllChile %>% filter(data >= '2000-01-01')
+
+# Visualizando os dados
+print(dataAllFilterChile)
+write.csv(dataAllFilter, "D:\\Afranc\\IPCA\\dadosChileR.csv")
+
+dataAllFilterChile <- dataAllFilterChile %>% dplyr::mutate(inflacao_lag1 = dplyr::lag(Inflacao))
+
+dataAllFilterChile <- dataAllFilterChile %>% mutate(difInflacao = Inflacao - inflacao_lag1)
+
+
+
